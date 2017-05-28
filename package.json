@@ -1,0 +1,26 @@
+{
+  "name": "alienworld-web",
+  "version": "1.0.0",
+  "description": "the front-end part of alienworld",
+  "main": "application.js",
+  "dependencies": {
+    "angular-ui-router": "0.3.2"
+  },
+  "devDependencies": {
+    "browser-sync": "2.18.2",
+    "del": "2.2.2",
+    "gulp": "3.9.1",
+    "gulp-cssnano": "2.1.2",
+    "gulp-if": "2.0.2",
+    "gulp-imagemin": "3.1.1",
+    "gulp-sass": "2.3.2",
+    "gulp-uglify": "2.0.0",
+    "gulp-useref": "3.1.2",
+    "run-sequence": "1.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Charles SHU",
+  "license": ""
+}

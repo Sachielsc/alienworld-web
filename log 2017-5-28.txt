@@ -1,8 +1,0 @@
-粗浅构架：
-
-个人介绍（做简介、双领域的简历）
-projects(我参加的项目)
-game world
-alien
-Community Hub(难！里面包含news, forum/discussion)
-联系我

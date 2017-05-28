@@ -1,0 +1,30 @@
+.sc .ratebox {
+  display: inline-block;
+  padding: 9px;
+  margin: 0 3px 0 3px;
+  font-size: 16px;
+  line-height: 0.5;
+  color: #333;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px; }
+
+.sc .ratebox-r {
+  background-color: #ea8e8e;
+  color: #f2dede;
+  border: 2px solid #f2dede; }
+
+.sc .ratebox-g {
+  background-color: #ea8e8e;
+  color: #f2dede;
+  border: 2px solid #f2dede; }
+
+.sc .ratebox-pg {
+  background-color: #ea8e8e;
+  color: #f2dede;
+  border: 2px solid #f2dede; }
+
+.sc .ratebox-m {
+  background-color: #ea8e8e;
+  color: #f2dede;
+  border: 2px solid #f2dede; }
