@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+    <head>
+        <title>AlienWorld</title>
+        <!-- produced by Charles SHU -->
+        <link rel="stylesheet" type="text/css" href="assets/bootstrapf.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/likedFont.css">
+        <!-- endbuild -->
+    </head>
+
+    <body>
+    <!-- <body ng-cloak> -->
+    <!-- The ngCloak directive is used to prevent the AngularJS html template from being briefly displayed by the browser in its raw (uncompiled) form while your application is loading. Use this directive to avoid the undesirable flicker effect caused by the html template display. -->
+        <div data-ng-controller="MainController">
+            <header class="aw-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">header</div>
+                        <div class="col">header</div>
+                        <div class="col">header</div>
+                    </div>
+                </div>
+            </header>
+            <nav>
+                <div class="container">
+                    <ul class="navbar-nav nav">
+                            <li class="col-md-3 col-lg-3 col-sm-3 col-xs-3" ui-sref-active="active"><a ui-sref="buy">Buy</a></li>
+                            <li class="col-md-3 col-lg-3 col-sm-3 col-xs-3" ><a ui-sref="manage.addProduct.step1">Sell</a></li>
+                            <li class="col-md-3 col-lg-3 col-sm-3 col-xs-3"  ui-sref-active="active"><a ui-sref="look">Look For</a></li>
+                            <li class="col-md-3 col-lg-3 col-sm-3 col-xs-3" ui-sref-active="active"><a ui-sref="manage">My Funtown</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <main>
+                <div data-ui-view></div>
+                <div id="notification-container"></div>
+            </main>
+        </div>
+        <!--build:js assets/js/funtown.min.js -->
+            <script src="assets/lib/angular/angular.js"></script>
+            <script src="assets/lib/angular/angular-ui-router.js"></script>
+            <script src="assets/lib/angular/angular-messages.js"></script>
+            <script src="assets/lib/angular/angular-sanitize.js"></script>
+            <script src="assets/lib/angular-strap/angular-strap.js"></script>
+            <script src="assets/lib/angular-strap/angular-strap.tpl.js"></script>
+            <script src="assets/lib/ng-flow.js"></script>
+        <!-- should like other angularjs files here -->
+        <!-- endbuild -->
+    </body>
+</html>
