@@ -1,7 +1,7 @@
 {
   "name": "alienworld-web",
   "version": "1.0.0",
-  "description": "the front-end part of alienworld",
+  "description": "the front-end part of Charles' alienworld",
   "main": "application.js",
   "dependencies": {
     "angular-ui-router": "0.3.2"

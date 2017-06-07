@@ -1,6 +1,4 @@
-.sc {
-
-	.ratebox {
+.ratebox {
 	display: inline-block;
 	padding: 9px;
 	margin: 0 3px 0 3px;
@@ -10,30 +8,29 @@
 	background-color: #f5f5f5;
 	border: 1px solid #ccc;
 	border-radius: 4px;
-	}
 
-	.ratebox-r {
+	&.ratebox-r {
 		background-color: #ea8e8e;
 		color: #f2dede;
 		border: 2px solid #f2dede;
 	}
 
-	.ratebox-g {
+	&.ratebox-g {
 		background-color: #ea8e8e;
 		color: #f2dede;
 		border: 2px solid #f2dede;
 	}
 
-	.ratebox-pg {
+	&.ratebox-pg {
 		background-color: #ea8e8e;
 		color: #f2dede;
 		border: 2px solid #f2dede;
 	}
 
-	.ratebox-m {
+	&.ratebox-m {
 		background-color: #ea8e8e;
 		color: #f2dede;
 		border: 2px solid #f2dede;
 	}
-
 }
+
