@@ -40,7 +40,9 @@
         <h4>Requirement:</h4>
             <p>So far, we give up on the compatibility of mobile devices. This website should display correctly on iPads, laptops and desktops only.</p>
     </div>
-	<div class="separator"></div>
+
+    <div class="separator"></div>
+    
     <div class="meeting">
         <h3>Meeting 10: May 27th</h3>
         <h4>Aaron's suggestion &amp; mission</h4>
@@ -64,7 +66,55 @@ I shall make the url of my itemdetail page as &quot;itemDetail?pid=1&quot;</i></
         </ul>
     </div>
 
+    <div class="separator"></div>
 
+    <div class="meeting">
+        <h3>Meeting 11: Jun 3rd</h3>
+        <h4>Wrote three functions for product.service:</h4>
+        <ul>
+            <li>1. Return a property value from an object item with another specified property value:
+        this.findAttributeType = function (attriType, arr) {
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i].attributeType == attriType){
+                    return arr[i].attributeValue;
+                }
+            }
+        }
+</li>
+            <li>2. Sorting an array by a specified property value:
+        this.reorderArreyByAttributeId = function (arr) {
+            arr.sort(function(a, b){return a.attributeId - b.attributeId});
+        }
+</li>
+            <li>3. Soft copy an array:
+        this.cloneArray = function (arr) {
+            var cloneOfA = JSON.parse(JSON.stringify(arr));
+            return cloneOfA;
+        }
+
+
+            </li>
+        </ul>
+
+        <h3>A deeper understanding of Git:</h3>
+        <ul>
+            <li>git command for config checking: git config --list</li>
+            <li>display the changes that have been made: git diff</li>
+            <li>[important] add all files to staging area: git add -A</li>
+            <li>[important] make a commit: git commit -m "initial commit"</li>
+            <li>[important] push my master branch to the origin project: git push origin master</li>
+            <li>check my commit log: git log</li>
+            <li>display all the branch info of this repository: git branch</li>
+            <li>display all the branch info of this repository, including the remote ones: git branch -a</li>
+            <li>[important] working on branches - create a branch: git branch charles-branch</li>
+            <li>[important] working on branches - move to a branch: git checkout charles-branch</li>
+            <li>[important] working on branches - after adding and commiting, push my branch to remote: git push -u origin charles-branch</li>
+            <br>
+            <li>bash command for listing every file: ls -la</li>
+        </ul>
+    </div>
+
+    <div class="separator"></div>
 
 
 </body>
