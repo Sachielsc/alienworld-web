@@ -1,5 +1,5 @@
 'use strict';
-var mainModule = angular.module('alienworld',['movies', 'games', 'community', 'contact']);
+var mainModule = angular.module('alienworld',['movies', 'games', 'community', 'contact', 'report']);
 	
 mainModule.config(['$stateProvider', function($stateProvider) {
 		$stateProvider
