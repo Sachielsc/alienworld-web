@@ -19,28 +19,28 @@ mainModule.config(['$stateProvider', function($stateProvider) {
 		// })
 		.state('page.home',{
 			url:'/home',
-			controller:'homeController',
-			templateUrl:'app/modules/home/views/page.home.view.html',
+			// controller:'homeController',
+			templateUrl:'app/modules/home/views/alienworld-home.view.html',
 		})
 		.state('page.movies',{
 			url:'/movies',
-			controller:'moviesController',
-			templateUrl:'app/modules/home/views/page.movies.view.html',
+			// controller:'moviesController',
+			templateUrl:'app/modules/movies/views/alienworld-movies.view.html',
 		})
 		.state('page.games',{
 			url:'/games',
-			controller:'gamesController',
-			templateUrl:'app/modules/home/views/page.games.view.html',
+			// controller:'gamesController',
+			templateUrl:'app/modules/games/views/alienworld-games.view.html',
 		})
 		.state('page.community',{
 			url:'/community',
-			controller:'communityController',
-			templateUrl:'app/modules/home/views/page.community.view.html',
+			// controller:'communityController',
+			templateUrl:'app/modules/community/views/alienworld-community.view.html',
 		})
-		.state('page.contact',{
-			url:'/contact',
-			controller:'contactController',
-			templateUrl:'app/modules/home/views/page.contact.view.html',
+		.state('page.about',{
+			url:'/about',
+			// controller:'aboutController',
+			templateUrl:'app/modules/about/views/alienworld-about.view.html',
 		})
 	}
 ]);
