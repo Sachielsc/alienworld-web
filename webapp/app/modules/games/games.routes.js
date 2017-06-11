@@ -2,12 +2,13 @@
 angular.module('games').config(['$stateProvider',
 	function($stateProvider) {
 		$stateProvider
-		.state('buy',{
-			url:'/buy',
-			templateUrl:'app/modules/buying/views/buy.view.html',
-			data: {
-				authRequired: true
-            }
-		})
+		// .state('login',{
+		// 	url:'/login',
+		// 	templateUrl:'app/modules/auth/views/login.view.html',
+		// 	controller:'LoginController',
+		// 	data: {
+		// 		authRequired: false
+  //           }
+		// })
 	}
 ])
