@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The report for project funtown</title>
+        <link rel="stylesheet" type="text/css" href="assets/lib/Bootstrap v3.3.7/bootstrap.css">
+    </head>
+
+<body>
+    <div class="container">
+        <div class="meeting">
+            <h3>Meeting 9: May 20th</h3>
+
+            <h4>Main dicussion about my previous work on the itemDetail page.</h4>
+            <h4>Following work assigned.</h4>
+            <h4>Aaron's suggestion &amp; mission:</h4>
+                <ul>
+                    <li>Modify my style on the font, size, line break, margin of the main body;</li>
+                    <li>Modify the style of headers;</li>
+                    <li>Change the colour of R icon;</li>
+                    <li>Always use a &lt;div&gt; to contain the whole page;</li>
+                    <li>Always give a large &lt;div&gt; a clear class name or names;</li>
+                    <li>Try to use sass syntax to write scss files. put subclass styles into the curve brackets of main classes.</li>
+                    <li>Use class="ratebox ratebox-R" to apply the general style and specified styles respectively.</li>
+                    <li>remove the "active" class name. Every class name without specific purpose should be removed.</li>
+                    <li>Rename all the class names following the rules above.</li>
+                </ul>
+            <h4>Aaron's instruction:</h4>
+                <ul>
+                    <li>A standardized structure should always be like this:
+                    <code><pre>
+&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-md-7"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre></code></li>
+                    <li>The name of classes should not follow the CamelCase rules. We should use lowercase words linked by dash</li>
+                </ul>
+            <h4>Requirement:</h4>
+                <p>So far, we give up on the compatibility of mobile devices. This website should display correctly on iPads, laptops and desktops only.</p>
+        </div>
+
+Report (Include as much detail as possible. Also, reflect on any milestones achieved and/or critical factors or incidences encountered. Continue on to the next page, if required.)
+
+About our project: Kedar and Jessica are joining our team and making the progress faster.
+
+A deeper understanding and use of Git:
+About git add: “git add -A” is equivalent to “git add .”. These two commands add all modified and new (untracked) files in the current directory and all subdirectories to the staging area (a.k.a. the index), thus preparing them to be included in the next git commit
+Set an alias for complicated git commands: $ git config --global alias.st status
+The difference between ‘git pull’ and ’git rebase’: when you pull your code from dev branch to master branch, it will only generate one commit on the master branch declaring all the modifications on the dev branch; while when you rebase your code from dev branch to master branch, it will bring all those commits on the dev branch to this master branch. In a nutshell, use ‘git rebase’.
+Three ways to make a change on a previous commit:
+1. Git revert: Reverting undoes a commit by creating a new commit. This is a safe way to undo changes, as it has no chance of re-writing the commit history.
+2. Git reset: move the head to the location where when the last change of this commit is done, also the next modifications in the following commits will EXIST as unstaged changes.
+3. Git checkout: This git checkout <commit> command can let you enter a 'detached HEAD' state to the commit position, where when the last change of this commit is done. You can look around, make experimental changes and commit them, and you can discard any commits you make in this state without impacting any branches by performing another checkout.
+Three distinct uses of ‘git checkout’:
+1. git checkout <branch>: To prepare for working on <branch>, switch to it by updating the index and the files in the working tree, and by pointing HEAD at the branch.
+2. git checkout <filename>: For those changed file that is TRACKED, i.e. changes that is not staged for commit yet, using this command will ERASE all the changes in working directory.
+For those files that are already staged, “git checkout <filename>” is useless. We can only use "git reset HEAD <file>" to unstage this file. And this command "git reset HEAD <file>" will not change this file, only unstage it and put it back to “Tracked files: changes not staged for commit” or “untracked files”
+3. git checkout <commit>: Enter a 'detached HEAD' state to the commit position, where when the last change of this commit is done. You can look around, make experimental changes and commit them, and you can discard any commits you make in this state without impacting any branches by performing another checkout.
+
+Dong Liang’s advice:
+Use “git push –force” when updates were rejected because the tip of your current branch is behind its remote counterpart. Note: do not use this in a team!
+Git reset --hard <commit> reset to a specified commit and ignore all the changes after this commit. equivalent to "git reset <commit>"+"git checkout ."
+
+
+
+About “console.log”
+[important] console.log is always a little "late" and you can't count on it when it comes to objects. Only primitives (strings etc.) will work directly. Of the former there is only one instance in memory, so when the console is fetching the data it may have changed already.
+Solution: always remember to use $log.debug instead.
+
+Some concepts about Git:
+Head: the default position you are working with
+Origin: representation of the coding
+Master: the main branch of the product
+
+Aaron’s advice:
+Always use standard and formal sentences in the commit, starting with a verb. Never use a sentence like “hope it will work”.
+
+Assignment:
+Study through the “git fetch”
+
+
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
