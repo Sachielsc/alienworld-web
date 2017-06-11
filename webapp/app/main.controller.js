@@ -1,7 +1,19 @@
 'use strict';
 
-var mainModule = angular.module('alienworld',['movies', 'games', 'community', 'about']);
-	
+var mainModule = angular.module('alienworld',['ui.router', 'movies', 'games', 'community', 'about']);
+
+mainModule.controller('MainController', ['$scope','$log', function($scope,$log){
+		$log.debug('mainModule.controller');
+		console.log('Here our main controller starts');
+
+		function init(){
+			// put some initialization code here
+		}
+
+		init();
+	}
+]);
+
 mainModule.config(['$stateProvider', function($stateProvider) {
 		$stateProvider
 		// .state('manage',{
@@ -17,45 +29,37 @@ mainModule.config(['$stateProvider', function($stateProvider) {
 		// 		authRequired: true
   //           }
 		// })
-		.state('page.home',{
+		.state('home',{
 			url:'/home',
 			// controller:'homeController',
 			templateUrl:'app/modules/home/views/alienworld-home.view.html',
 		})
-		.state('page.movies',{
+		.state('movies',{
 			url:'/movies',
 			// controller:'moviesController',
 			templateUrl:'app/modules/movies/views/alienworld-movies.view.html',
 		})
-		.state('page.games',{
+		.state('games',{
 			url:'/games',
 			// controller:'gamesController',
 			templateUrl:'app/modules/games/views/alienworld-games.view.html',
 		})
-		.state('page.community',{
+		.state('community',{
 			url:'/community',
 			// controller:'communityController',
 			templateUrl:'app/modules/community/views/alienworld-community.view.html',
 		})
-		.state('page.about',{
+		.state('about',{
 			url:'/about',
 			// controller:'aboutController',
 			templateUrl:'app/modules/about/views/alienworld-about.view.html',
-		})
+		});
+
+		console.log('mainModule.config');
 	}
 ]);
 
-mainModule.run([
-	]);
-
-mainModule.controller('MainController', ['$scope','$log', function($scope,$loge){
-		$log.debug('mainController');
-		console.log('Here our journey begins~');
-
-		function init(){
-			// put some initialization code here
-		}
-
-		init();
+mainModule.run(['$rootScope','$state','$log', function($rootScope,$state,$log){
+	$log.debug('mainModule.run');
 	}
 ]);
