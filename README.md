@@ -25,3 +25,6 @@ Charles recommends these websites to learn about the syntax of markdown document
 ## to do
 * 分级格式以及现在做的部分元素可以加入我的电影收藏
 
+## test
+This is the section I use for testing purposes.
+Hereby i made test 1
