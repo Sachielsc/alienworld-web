@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>The report for project funtown</title>
-        <link rel="stylesheet" type="text/css" href="assets/lib/Bootstrap v3.3.7/bootstrap.css">
+        <title>Charles' report for what he has done in work and projects</title>
+
     </head>
 
 <body>
@@ -23,7 +23,7 @@
             	<ol>
             		<li>Install Node.js and NPM<br>url: <i>https://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/</i></li>
             		<li>Install gulp<br>npm install gulp -g</li>
-            		<li>In the folder of your project, install local gulp<br>Npm install</li>
+            		<li>In the folder of your project, <b>install local gulp: <code>Npm install</code></b></li>
             		<li>Run “gulp watch” to keep track of your scss file modification</li>
             	</ol>
 
