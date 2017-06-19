@@ -10,7 +10,6 @@
   transition: all 1s ease;
   width: 100%;
   z-index: 1002;
-  display: block;
   position: fixed; }
   .aw-header .aw-header-content {
     width: 100%;
@@ -19,10 +18,9 @@
     .aw-header .aw-header-content .menu-button {
       height: 3px;
       background: #97ff77;
-      display: block;
+      position: absolute;
       font-size: 0;
       height: 4px;
-      left: 0;
       margin-top: -2px;
       top: 50%;
       -webkit-touch-callout: none;
