@@ -22,23 +22,59 @@ $aw-header-height: 100px;
     	color: #97ff77;
 
     	.menu-button {
-	    	height: 3px;
-	    	background: #97ff77;
-		    font-size: 0;
-		    height: 4px;
-		    margin-top: -2px;
-		    top: 50%;
-		    -webkit-touch-callout: none;
-		    -webkit-transition: all 1s ease;
-		    -moz-transition: all 1s ease;
-		    -o-transition: all 1s ease;
-		    transition: all 1s ease;
-		    -webkit-user-select: none;
-		    -khtml-user-select: none;
-		    -moz-user-select: none;
-		    -ms-user-select: none;
-		    user-select: none;
-		    width: 100%;
+    		left: 25px;
+		    margin-left: 0;
+		    top: 15px;
+		    width: 30px;
+			display: block;
+		    height: 40px;
+		    opacity: 1;
+		    position: relative;
+
+			&:hover {
+				opacity: 0.3;
+				-webkit-transition: all 0.4s ease;
+				   -moz-transition: all 0.4s ease;
+					 -o-transition: all 0.4s ease;
+					    transition: all 0.4s ease;
+			}
+
+    		span {
+    			height: 3px;
+		    	background: #97ff77;
+			    font-size: 0;
+			    margin-top: -2px;
+			    top: 50%;
+			    position: absolute;
+			    transition: all 1s ease;
+			    user-select: none;
+			    width: 100%;
+    		
+    		&::before {
+		    	background: #97ff77;    			
+    			position: absolute;
+    			transform: translateY(-250%);
+    			height: 100%;
+    			width: 100%;
+    			content: '';
+    			}
+
+    		&::after {
+		    	background: #97ff77;    			
+    			position: absolute;
+    			transform: translateY(250%);
+    			height: 100%;
+    			width: 100%;
+    			content: '';
+    			}
+    		}
+    	}
+
+    	.aw-title {
+    		a {
+    			text-decoration: none;
+    			color: #97ff77;   
+    		}
     	}
     }
 }
