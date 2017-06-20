@@ -1,5 +1,5 @@
 .aw-header {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.85);
   -webkit-box-shadow: 0px 4px 9px 1px rgba(0, 0, 0, 0.85);
   -moz-box-shadow: 0px 4px 9px 1px rgba(0, 0, 0, 0.85);
   box-shadow: 0px 4px 9px 1px rgba(0, 0, 0, 0.85);
@@ -14,11 +14,12 @@
   .aw-header .aw-header-content {
     width: 100%;
     position: absolute;
-    z-index: 1005; }
+    z-index: 1005;
+    margin: 0;
+    color: #97ff77; }
     .aw-header .aw-header-content .menu-button {
       height: 3px;
       background: #97ff77;
-      position: absolute;
       font-size: 0;
       height: 4px;
       margin-top: -2px;
