@@ -20,9 +20,15 @@
         <div data-ng-controller="MainController">
             <header class="aw-header container">
                 <div class="row aw-header-content">
-                    <div class="col-1 menu-button">menu icon</div>
-                    <div class="col-8">Charles' Alien World</div>
-                    <div class="col-3">(github + linkedin + facebook)</div>
+                    <div class="col-1">
+                        <a href="#" class="menu-button">
+                            <span>menu button here</span>
+                        </a>
+                    </div>
+                    <div class="col-8 aw-title" ui-sref-active="active"><a ui-sref="home">Charles' Alien World</a></div>
+                    <div class="col-1"><a href="https://github.com/Sachielsc">Github</a></div>
+                    <div class="col-1"><a href="https://www.linkedin.com/in/charles-shu/">Linkedin</a></div>
+                    <div class="col-1"><a href="https://www.facebook.com/chang.shu.184">Facebook</a></div>
                 </div>
             </header>
             <nav class="aw-nav">
