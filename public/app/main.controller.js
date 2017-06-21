@@ -4,8 +4,6 @@ var mainModule = angular.module('alienworld',['ui.router', 'movies', 'games', 'c
 
 mainModule.controller('MainController', ['$scope','$log', function($scope,$log){
 		$log.debug('mainModule.controller');
-		console.log('Here our main controller starts');
-
 		function init(){
 			// put some initialization code here
 		}
