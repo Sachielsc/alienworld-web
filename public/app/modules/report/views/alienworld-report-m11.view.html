@@ -11,24 +11,24 @@
             <h3>Meeting 11: Jun 3rd</h3>
             <h4>Wrote three functions for product.service:</h4>
             <ol>
-                <li>Return a property value from an object item with another specified property value:<code><pre>
+                <li>Return a property value from an object item with another specified property value:<pre><code>
 this.findAttributeType = function (attriType, arr) {
     for (var i = 0; i < arr.length; i++) {
         if (arr[i].attributeType == attriType){
             return arr[i].attributeValue;
         }
     }
-}</pre></code></li>
+}</code></pre></li>
             <li>Sorting an array by a specified property value:
-            <code><pre>
+            <pre><code>
 this.reorderArreyByAttributeId = function (arr) {
     arr.sort(function(a, b){return a.attributeId - b.attributeId});
-}</pre></code></li>
-            <li>Soft copy an array:<code><pre>
+}</code></pre></li>
+            <li>Soft copy an array:<pre><code>
 this.cloneArray = function (arr) {
     var cloneOfA = JSON.parse(JSON.stringify(arr));
     return cloneOfA;
-}</pre></code></li>
+}</code></pre></li>
             </ol>
 
             <h4>A deeper understanding of Git:</h4>
