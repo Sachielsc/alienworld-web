@@ -1,94 +1,120 @@
-$aw-header-height: 100px;
+$aw-header-height: 160px;
 
 .aw-header {
-	background: rgba(0, 0, 0, 0.85);
-    -webkit-box-shadow: 0px 4px 9px 1px rgba(0, 0, 0, 0.85);
-    -moz-box-shadow: 0px 4px 9px 1px rgba(0, 0, 0, 0.85);
-    box-shadow: 0px 4px 9px 1px rgba(0, 0, 0, 0.85);
-    height: $aw-header-height;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
-    width: 100%;
-    z-index: 1002;
-    position: fixed;
+	background: rgba(0, 0, 0, 1);
+	-webkit-box-shadow: 0px 4px 9px 1px rgba(0, 0, 0, 0.85);
+	-moz-box-shadow: 0px 4px 9px 1px rgba(0, 0, 0, 0.85);
+	box-shadow: 0px 4px 9px 1px rgba(0, 0, 0, 0.85);
+	height: $aw-header-height;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+	width: 100%;
+	z-index: 1002;
+	position: fixed;
 
-    .aw-header-content {
-    	width: 100%;
-    	position: absolute;
-    	z-index: 1005;
-    	margin: 0;
-    	color: #97ff77;
+	.aw-header-content {
+		height: $aw-header-height;
+		width: 100%;
+		position: absolute;
+		z-index: 1005;
+		margin: 0;
 
-    	.menu-button {
-    		left: 25px;
-		    margin-left: 0;
-		    top: 15px;
-		    width: 30px;
+		.menu-icon, .contact-icon {
+			margin-left: 0;
 			display: block;
-		    height: 40px;
-		    opacity: 1;
-		    position: relative;
-
+			height: 100%;
+			opacity: 0.4;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
 			&:hover {
-				opacity: 0.3;
-				-webkit-transition: all 0.4s ease;
-				   -moz-transition: all 0.4s ease;
-					 -o-transition: all 0.4s ease;
-					    transition: all 0.4s ease;
+				cursor:pointer;
+				opacity: 1;
+				-webkit-transition: all 2s ease;
+				   -moz-transition: all 2s ease;
+					 -o-transition: all 2s ease;
+						transition: all 2s ease;
 			}
+		}
 
-    		span {
-    			height: 3px;
-		    	background: #97ff77;
-			    font-size: 0;
-			    margin-top: -2px;
-			    top: 50%;
-			    position: absolute;
-			    transition: all 1s ease;
-			    user-select: none;
-			    width: 100%;
-    		
-    		&::before {
-		    	background: #97ff77;    			
-    			position: absolute;
-    			transform: translateY(-250%);
-    			height: 100%;
-    			width: 100%;
-    			content: '';
-    			}
-
-    		&::after {
-		    	background: #97ff77;    			
-    			position: absolute;
-    			transform: translateY(250%);
-    			height: 100%;
-    			width: 100%;
-    			content: '';
-    			}
-    		}
-    	}
-
-    	.aw-title {
-    		a {
-    			text-decoration: none;
-    			color: #97ff77;   
-    		}
-    	}
-    }
+		.aw-title {
+			a {
+				text-decoration: none;
+				color: #97ff77;
+				font-size: 300%;
+				font-variant: small-caps;
+				white-space: nowrap;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%);
+				&:hover {
+					color: #014c8c;
+					-webkit-transition: all 0.8s ease;
+					   -moz-transition: all 0.8s ease;
+						 -o-transition: all 0.8s ease;
+							transition: all 0.8s ease;
+				}
+			}
+		}
+	}
 }
 
 nav.aw-nav {
-    position: fixed;
-    top: $aw-header-height;
-    width: 100%;
+	position: fixed;
+	top: 140px;
+	width: 100%;
+	z-index: 1007;
+	a {
+		position:absolute;
+		left:50%;
+		transform: translateX(-50%);
+		color: #97ff77;
+		transition: all 0.8s ease;
+		white-space: nowrap;
+		text-decoration: none;
+		font-variant: small-caps;
+		&:hover {
+			font-size: 200%;
+			-webkit-transition: all 0.8s ease;
+			   -moz-transition: all 0.8s ease;
+				 -o-transition: all 0.8s ease;
+					transition: all 0.8s ease;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+		}
+		&.hover-red {
+			&:hover {
+				color: red;
+			}
+		}
+		&.hover-yellow {
+			&:hover {
+				color: yellow;
+			}
+		}
+		&.hover-purple {
+			&:hover {
+				color: purple;
+			}
+		}
+		&.hover-teal {
+			&:hover {
+				color: #014c8c;
+			}
+		}
+	}
 }
 
 body {
-    background-image: url("../images/bgi-light.jpg");
-    background-color: #F0F0F0;
-    z-index: 1000;
+	background-image: url("../images/bgi-light.jpg");
+	background-color: #F0F0F0;
+	z-index: 1000;
 }
 
 .ratebox {
