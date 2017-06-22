@@ -10,6 +10,7 @@ $aw-header-height: 160px;
 	height: $aw-header-height;
 	-webkit-transition: all 1s ease;
 	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
 	-o-transition: all 1s ease;
 	transition: all 1s ease;
 	width: 100%;
@@ -35,10 +36,11 @@ $aw-header-height: 160px;
 			&:hover {
 				cursor:pointer;
 				opacity: 1;
-				-webkit-transition: all 2s ease;
-				   -moz-transition: all 2s ease;
-					 -o-transition: all 2s ease;
-						transition: all 2s ease;
+				-webkit-transition: all 1s ease;
+				   -moz-transition: all 1s ease;
+				    -ms-transition: all 1s ease;
+					 -o-transition: all 1s ease;
+						transition: all 1s ease;
 			}
 		}
 
@@ -46,12 +48,19 @@ $aw-header-height: 160px;
 			.title-pic {
 				background: url("../images/titlebar.jpg");
 				background-size: 100% 100%;
-				opacity: 1;
 				top: 0;
 				left: 0;
 				bottom: 0;
 				right: 0;
 				position: absolute;
+				-webkit-transition: all 1.3s ease;
+				   -moz-transition: all 1.3s ease;
+				   	-ms-transition: all 1.3s ease;
+					 -o-transition: all 1.3s ease;
+						transition: all 1.3s ease;
+				&.ng-hide {
+					opacity: 0;
+				}
 			}
 
 			a {
@@ -64,12 +73,14 @@ $aw-header-height: 160px;
 				top: 50%;
 				left: 50%;
 				transform: translateX(-50%) translateY(-50%);
+				z-index: 1010;		
 				&:hover {
-					color: #014c8c;
-					-webkit-transition: all 0.8s ease;
-					   -moz-transition: all 0.8s ease;
-						 -o-transition: all 0.8s ease;
-							transition: all 0.8s ease;
+					color: white;
+					-webkit-transition: all 4s ease;
+					   -moz-transition: all 4s ease;
+					   	-ms-transition: all 4s ease;
+						 -o-transition: all 4s ease;
+							transition: all 4s ease;
 				}
 			}
 		}
@@ -78,11 +89,20 @@ $aw-header-height: 160px;
 
 // 2. The navigation menu
 
-nav.aw-nav {
+nav.aw-nav, div.aw-contact {
 	position: fixed;
 	top: $aw-header-height - 20px;
 	width: 100%;
 	z-index: 1007;
+	-webkit-transition: all 1.3s ease;
+	   -moz-transition: all 1.3s ease;
+	   	-ms-transition: all 1.3s ease;
+		 -o-transition: all 1.3s ease;
+			transition: all 1.3s ease;
+	&.ng-hide {
+		opacity: 0;
+	}
+
 	a {
 		position:absolute;
 		left:50%;
@@ -96,6 +116,7 @@ nav.aw-nav {
 			font-size: 200%;
 			-webkit-transition: all 0.8s ease;
 			   -moz-transition: all 0.8s ease;
+			    -ms-transition: all 0.8s ease;
 				 -o-transition: all 0.8s ease;
 					transition: all 0.8s ease;
 			position: absolute;
@@ -123,6 +144,12 @@ nav.aw-nav {
 				color: #014c8c;
 			}
 		}
+		&.hover-white {
+			&:hover {
+				color: white;
+			}
+		}
+
 	}
 }
 

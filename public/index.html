@@ -21,27 +21,34 @@
 			<header class="aw-header container">
 				<div class="row aw-header-content">
 					<div class="col-2">
-						<img src="assets/images/egg.jpeg" alt="menu icon" class="menu-icon" title="Menu" ng-click="navDisplayToggle = !navDisplayToggle">
+						<img src="assets/images/egg.jpeg" alt="menu icon" class="menu-icon" title="Menu" ng-click="navDisplayToggle = !navDisplayToggle; contactDisplayToggle=false">
 					</div>
-					<div class="col-8 aw-title" ui-sref-active="active"><div class="title-pic"></div><a ui-sref="home" title="Home Page">Charles' Alien World</a></div>
+					<div class="col-8 aw-title" ui-sref-active="active"><div class="title-pic" ng-init="picDisplayToggle = false" ng-show="picDisplayToggle"></div><a ui-sref="home" title="Home Page" ng-mouseover="picDisplayToggle = true" ng-mouseleave="picDisplayToggle = false" class="title-text">Charles' Alien World</a></div>
 					<div class="col-2">
-						<img src="assets/images/head.jpg" alt="contact me" class="contact-icon" title="Contact Me">
+						<img src="assets/images/head.jpg" alt="contact me" class="contact-icon" title="Contact Me" ng-click="contactDisplayToggle = !contactDisplayToggle; navDisplayToggle=false">
 					</div>
-<!--                     <div class="col-1"><a href="https://github.com/Sachielsc">Github</a></div>
-					<div class="col-1"><a href="https://www.linkedin.com/in/charles-shu/">Linkedin</a></div>
-					<div class="col-1"><a href="https://www.facebook.com/chang.shu.184">Facebook</a></div> -->
 				</div>
 			</header>
 			<nav class="aw-nav" ng-init="navDisplayToggle = false" ng-show="navDisplayToggle">
 				<ul class="row nav">
 					<li class="col-2"></li>
-					<li class="col-2" ui-sref-active="active"><a ui-sref="movies" class="hover-red">Alien Movies</a></li>
-					<li class="col-2" ui-sref-active="active"><a ui-sref="games" class="hover-purple">Alien Games</a></li>
-					<li class="col-2" ui-sref-active="active"><a ui-sref="community" class="hover-teal">Community Hub</a></li>
-					<li class="col-2" ui-sref-active="active"><a ui-sref="about" class="hover-yellow">About Me</a></li>
+					<li class="col-2" ui-sref-active="active"><a ui-sref="movies" class="hover-white">Alien Movies</a></li>
+					<li class="col-2" ui-sref-active="active"><a ui-sref="games" class="hover-white">Alien Games</a></li>
+					<li class="col-2" ui-sref-active="active"><a ui-sref="community" class="hover-white">Community Hub</a></li>
+					<li class="col-2" ui-sref-active="active"><a ui-sref="about" class="hover-white">About Me</a></li>
 					<li class="col-2"></li>
 				</ul>
 			</nav>
+			<div class="aw-contact" ng-init="contactDisplayToggle = false" ng-show="contactDisplayToggle">
+				<ul class="row nav">
+					<li class="col-2"></li>
+					<li class="col-2" ui-sref-active="active"><a ui-sref="movies" class="hover-white">LinkedIn</a></li>
+					<li class="col-2" ui-sref-active="active"><a ui-sref="games" class="hover-white">Github</a></li>
+					<li class="col-2" ui-sref-active="active"><a ui-sref="community" class="hover-white">Facebook</a></li>
+					<li class="col-2" ui-sref-active="active"><a ui-sref="about" class="hover-white">Twitter</a></li>
+					<li class="col-2"></li>
+				</ul>
+			</div>
 			<div class="aw-main">
 				<div data-ui-view>
 					<p>this is the original page.</p>
@@ -50,14 +57,13 @@
 
 		</div>
 
-		<!-- javascript -->
+		<!-- angular -->
 		<script src="assets/lib/angular/angular.js"></script>
 		<script src="assets/lib/angular/angular-ui-router.js"></script>
-		<script src="assets/lib/angular/angular-messages.js"></script>
-		<script src="assets/lib/angular/angular-sanitize.js"></script>
-		<script src="assets/lib/angular-strap/angular-strap.js"></script>
-		<script src="assets/lib/angular-strap/angular-strap.tpl.js"></script>
-		<script src="assets/lib/ng-flow.js"></script>
+		<script src="assets/lib/angular/angular-animate.js"></script>
+
+		<!-- jquery -->
+		<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> -->
 
 		<!-- controller -->
 		<script src="app/main.controller.js"></script>
