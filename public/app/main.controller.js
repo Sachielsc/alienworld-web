@@ -45,7 +45,7 @@ mainModule.config(['$stateProvider', function($stateProvider) {
 		.state('community',{
 			url:'/community',
 			// controller:'communityController',
-			templateUrl:'app/modules/community/views/alienworld-community.view.html',
+			templateUrl:'app/modules/report/views/alienworld-report-m11.view.html',
 		})
 		.state('about',{
 			url:'/about',
