@@ -1,3 +1,5 @@
+// 1. The title bar
+
 $aw-header-height: 160px;
 
 .aw-header {
@@ -17,7 +19,7 @@ $aw-header-height: 160px;
 	.aw-header-content {
 		height: $aw-header-height;
 		width: 100%;
-		position: absolute;
+		position: fixed;
 		z-index: 1005;
 		margin: 0;
 
@@ -41,6 +43,17 @@ $aw-header-height: 160px;
 		}
 
 		.aw-title {
+			.title-pic {
+				background: url("../images/titlebar.jpg");
+				background-size: 100% 100%;
+				opacity: 1;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				position: absolute;
+			}
+
 			a {
 				text-decoration: none;
 				color: #97ff77;
@@ -63,9 +76,11 @@ $aw-header-height: 160px;
 	}
 }
 
+// 2. The navigation menu
+
 nav.aw-nav {
 	position: fixed;
-	top: 140px;
+	top: $aw-header-height - 20px;
 	width: 100%;
 	z-index: 1007;
 	a {
@@ -111,11 +126,36 @@ nav.aw-nav {
 	}
 }
 
+// 3. The body
+
 body {
-	background-image: url("../images/bgi-light.jpg");
+	background-image: url("../images/bgi-dark.jpg");
 	background-color: #F0F0F0;
 	z-index: 1000;
 }
+
+.aw-main {
+	position: relative;
+	top: $aw-header-height + 30px;
+}
+
+.meeting, .assignment {
+	pre code {
+		display: block;
+	    padding: 9.5px;
+	    margin: 0 0 10px;
+	    font-size: 13px;
+	    line-height: 1.42857143;
+	    color: #333;
+	    word-break: break-all;
+	    word-wrap: break-word;
+	    background-color: #f5f5f5;
+	    border: 1px solid #ccc;
+	    border-radius: 4px;
+	}
+}
+
+// 4. Misc
 
 .ratebox {
 	display: inline-block;
