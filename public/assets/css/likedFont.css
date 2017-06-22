@@ -15,7 +15,7 @@
   .aw-header .aw-header-content {
     height: 160px;
     width: 100%;
-    position: absolute;
+    position: fixed;
     z-index: 1005;
     margin: 0; }
     .aw-header .aw-header-content .menu-icon, .aw-header .aw-header-content .contact-icon {
@@ -34,6 +34,15 @@
         -moz-transition: all 2s ease;
         -o-transition: all 2s ease;
         transition: all 2s ease; }
+    .aw-header .aw-header-content .aw-title .title-pic {
+      background: url("../images/titlebar.jpg");
+      background-size: 100% 100%;
+      opacity: 1;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute; }
     .aw-header .aw-header-content .aw-title a {
       text-decoration: none;
       color: #97ff77;
@@ -85,9 +94,26 @@ nav.aw-nav {
       color: #014c8c; }
 
 body {
-  background-image: url("../images/bgi-light.jpg");
+  background-image: url("../images/bgi-dark.jpg");
   background-color: #F0F0F0;
   z-index: 1000; }
+
+.aw-main {
+  position: relative;
+  top: 190px; }
+
+.meeting pre code, .assignment pre code {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px; }
 
 .ratebox {
   display: inline-block;
