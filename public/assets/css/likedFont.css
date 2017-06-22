@@ -6,6 +6,7 @@
   height: 160px;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease;
   width: 100%;
@@ -30,19 +31,26 @@
       .aw-header .aw-header-content .menu-icon:hover, .aw-header .aw-header-content .contact-icon:hover {
         cursor: pointer;
         opacity: 1;
-        -webkit-transition: all 2s ease;
-        -moz-transition: all 2s ease;
-        -o-transition: all 2s ease;
-        transition: all 2s ease; }
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease; }
     .aw-header .aw-header-content .aw-title .title-pic {
       background: url("../images/titlebar.jpg");
       background-size: 100% 100%;
-      opacity: 1;
       top: 0;
       left: 0;
       bottom: 0;
       right: 0;
-      position: absolute; }
+      position: absolute;
+      -webkit-transition: all 1.3s ease;
+      -moz-transition: all 1.3s ease;
+      -ms-transition: all 1.3s ease;
+      -o-transition: all 1.3s ease;
+      transition: all 1.3s ease; }
+      .aw-header .aw-header-content .aw-title .title-pic.ng-hide {
+        opacity: 0; }
     .aw-header .aw-header-content .aw-title a {
       text-decoration: none;
       color: #97ff77;
@@ -52,20 +60,29 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translateX(-50%) translateY(-50%); }
+      transform: translateX(-50%) translateY(-50%);
+      z-index: 1010; }
       .aw-header .aw-header-content .aw-title a:hover {
-        color: #014c8c;
-        -webkit-transition: all 0.8s ease;
-        -moz-transition: all 0.8s ease;
-        -o-transition: all 0.8s ease;
-        transition: all 0.8s ease; }
+        color: white;
+        -webkit-transition: all 4s ease;
+        -moz-transition: all 4s ease;
+        -ms-transition: all 4s ease;
+        -o-transition: all 4s ease;
+        transition: all 4s ease; }
 
-nav.aw-nav {
+nav.aw-nav, div.aw-contact {
   position: fixed;
   top: 140px;
   width: 100%;
-  z-index: 1007; }
-  nav.aw-nav a {
+  z-index: 1007;
+  -webkit-transition: all 1.3s ease;
+  -moz-transition: all 1.3s ease;
+  -ms-transition: all 1.3s ease;
+  -o-transition: all 1.3s ease;
+  transition: all 1.3s ease; }
+  nav.aw-nav.ng-hide, div.aw-contact.ng-hide {
+    opacity: 0; }
+  nav.aw-nav a, div.aw-contact a {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -74,24 +91,27 @@ nav.aw-nav {
     white-space: nowrap;
     text-decoration: none;
     font-variant: small-caps; }
-    nav.aw-nav a:hover {
+    nav.aw-nav a:hover, div.aw-contact a:hover {
       font-size: 200%;
       -webkit-transition: all 0.8s ease;
       -moz-transition: all 0.8s ease;
+      -ms-transition: all 0.8s ease;
       -o-transition: all 0.8s ease;
       transition: all 0.8s ease;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translateX(-50%) translateY(-50%); }
-    nav.aw-nav a.hover-red:hover {
+    nav.aw-nav a.hover-red:hover, div.aw-contact a.hover-red:hover {
       color: red; }
-    nav.aw-nav a.hover-yellow:hover {
+    nav.aw-nav a.hover-yellow:hover, div.aw-contact a.hover-yellow:hover {
       color: yellow; }
-    nav.aw-nav a.hover-purple:hover {
+    nav.aw-nav a.hover-purple:hover, div.aw-contact a.hover-purple:hover {
       color: purple; }
-    nav.aw-nav a.hover-teal:hover {
+    nav.aw-nav a.hover-teal:hover, div.aw-contact a.hover-teal:hover {
       color: #014c8c; }
+    nav.aw-nav a.hover-white:hover, div.aw-contact a.hover-white:hover {
+      color: white; }
 
 body {
   background-image: url("../images/bgi-dark.jpg");
