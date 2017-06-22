@@ -23,7 +23,7 @@
 					<div class="col-2">
 						<img src="assets/images/egg.jpeg" alt="menu icon" class="menu-icon" title="Menu" ng-click="navDisplayToggle = !navDisplayToggle">
 					</div>
-					<div class="col-8 aw-title" ui-sref-active="active"><a ui-sref="home" title="Home Page">Charles' Alien World</a></div>
+					<div class="col-8 aw-title" ui-sref-active="active"><div class="title-pic"></div><a ui-sref="home" title="Home Page">Charles' Alien World</a></div>
 					<div class="col-2">
 						<img src="assets/images/head.jpg" alt="contact me" class="contact-icon" title="Contact Me">
 					</div>
@@ -42,12 +42,11 @@
 					<li class="col-2"></li>
 				</ul>
 			</nav>
-			<main>
-				<div class="aw-main">
-					<div>nothing</div>
-					<div data-ui-view></div>
+			<div class="aw-main">
+				<div data-ui-view>
+					<p>this is the original page.</p>
 				</div>
-			</main>
+			</div>
 
 		</div>
 
