@@ -1,32 +1,19 @@
 'use strict';
 
-var mainModule = angular.module('alienworld',['ui.router', 'movies', 'games', 'community', 'about']);
+var mainModule = angular.module('alienworld',['ui.router', 'ngAnimate', 'movies', 'games', 'community', 'about']);
 
 mainModule.controller('MainController', ['$scope','$log', function($scope,$log){
 		$log.debug('mainModule.controller');
 		function init(){
-			// put some initialization code here
+			// put initialization code here
 		}
-
 		init();
 	}
 ]);
 
 mainModule.config(['$stateProvider', function($stateProvider) {
 		$stateProvider
-		// .state('manage',{
-		// 	url:'/manage',
-		// 	controller:function($state){
-		// 	 	//Render child view
-		// 		if($state.current.name==='manage'){
-		// 			$state.go("manage.home");
-		// 		}
-		// 	},
-		// 	templateUrl:'app/modules/manage/views/manage-side-nav.view.html',
-		// 	data: {
-		// 		authRequired: true
-  //           }
-		// })
+
 		.state('home',{
 			url:'/home',
 			// controller:'homeController',
