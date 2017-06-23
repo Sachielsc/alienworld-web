@@ -124,32 +124,6 @@ nav.aw-nav, div.aw-contact {
 			left: 50%;
 			transform: translateX(-50%) translateY(-50%);
 		}
-		&.hover-red {
-			&:hover {
-				color: red;
-			}
-		}
-		&.hover-yellow {
-			&:hover {
-				color: yellow;
-			}
-		}
-		&.hover-purple {
-			&:hover {
-				color: purple;
-			}
-		}
-		&.hover-teal {
-			&:hover {
-				color: #014c8c;
-			}
-		}
-		&.hover-white {
-			&:hover {
-				color: white;
-			}
-		}
-
 	}
 }
 
@@ -236,5 +210,31 @@ h1, h2, h3, h4, h5, h6, p {
 		background-color: #ea8e8e;
 		color: #f2dede;
 		border: 2px solid #f2dede;
+	}
+}
+
+.hover-red {
+	&:hover {
+		color: red;
+	}
+}
+.hover-yellow {
+	&:hover {
+		color: yellow;
+	}
+}
+.hover-purple {
+	&:hover {
+		color: purple;
+	}
+}
+.hover-teal {
+	&:hover {
+		color: #014c8c;
+	}
+}
+.hover-white {
+	&:hover {
+		color: white;
 	}
 }
