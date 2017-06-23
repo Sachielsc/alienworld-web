@@ -130,14 +130,33 @@ nav.aw-nav, div.aw-contact {
 // 3. The body
 
 body {
-	background-image: url("../images/bgi-dark.jpg");
-	background-color: #F0F0F0;
+	background-color: #2b333b;
 	z-index: 1000;
 }
 
 .aw-main {
 	position: relative;
 	top: $aw-header-height + 30px;
+}
+
+.card-box {
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.07);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    background-clip: padding-box;
+    margin-bottom: 20px;
+    background-color: #323b44;
+	outline: none;
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: Inconsolata;
+    letter-spacing: 1px;
+	text-transform: uppercase;
 }
 
 .meeting, .assignment {
