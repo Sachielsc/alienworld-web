@@ -101,16 +101,6 @@ nav.aw-nav, div.aw-contact {
       top: 50%;
       left: 50%;
       transform: translateX(-50%) translateY(-50%); }
-    nav.aw-nav a.hover-red:hover, div.aw-contact a.hover-red:hover {
-      color: red; }
-    nav.aw-nav a.hover-yellow:hover, div.aw-contact a.hover-yellow:hover {
-      color: yellow; }
-    nav.aw-nav a.hover-purple:hover, div.aw-contact a.hover-purple:hover {
-      color: purple; }
-    nav.aw-nav a.hover-teal:hover, div.aw-contact a.hover-teal:hover {
-      color: #014c8c; }
-    nav.aw-nav a.hover-white:hover, div.aw-contact a.hover-white:hover {
-      color: white; }
 
 body {
   background-image: url("../images/bgi-dark.jpg");
@@ -160,3 +150,18 @@ body {
     background-color: #ea8e8e;
     color: #f2dede;
     border: 2px solid #f2dede; }
+
+.hover-red:hover {
+  color: red; }
+
+.hover-yellow:hover {
+  color: yellow; }
+
+.hover-purple:hover {
+  color: purple; }
+
+.hover-teal:hover {
+  color: #014c8c; }
+
+.hover-white:hover {
+  color: white; }
