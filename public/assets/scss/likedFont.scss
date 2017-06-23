@@ -15,7 +15,7 @@ $aw-header-height: 160px;
 	-o-transition: all 1s ease;
 	transition: all 1s ease;
 	width: 100%;
-	z-index: 1002;
+	z-index: 1003;
 	position: fixed;
 
 	.aw-header-content {
@@ -154,11 +154,25 @@ body {
 }
 
 .intro {
+	p {
+		margin-top: 1rem;
+    	margin-bottom: 1rem;
+	}
+
+	a {
+		color: #97ff77;
+	}
 	h1, h2, h3, h4, h5, h6, p {
     color: rgba(255, 255, 255, 0.6);
     font-family: Inconsolata;
     letter-spacing: 1px;
 	text-transform: uppercase;
+	}
+}
+
+.card-box {
+	p {
+		color: rgba(255, 255, 255, 0.6);
 	}
 }
 
@@ -269,8 +283,8 @@ body {
 	&.button-panel-about {
 		button {
 			color: rgba(255, 255, 255, 0.6);
+			margin-top: 12px;
 			margin-bottom: 12px;
-    		margin-left: 8px;
 		    -moz-border-radius: 2px;
 		    -moz-transition: all 400ms ease-in-out;
 		    -o-transition: all 400ms ease-in-out;
@@ -286,10 +300,83 @@ body {
 		    background-clip: inherit;
 		    background-color: #97ff77;
 		    width: 100px;
+		    position: relative;
+		    left: 50%;
+		    transform: translateX(-50%);
 
 		    &.active {
 		    	color: #97ff77;
 		    }
 		}
 	}
+}
+
+.img-frame-outer {
+	width: 400px;
+	position: relative;
+	&::before, {
+		content: '';
+	    display: block;
+	    margin: -18px -14px;
+	    width: 114px;
+	    height: 116px;
+	    background: url("../images/frame-corner-top-left.png");
+	    position: absolute;
+	    top: 0;
+	    z-index: 1002;
+		}
+	&::after {
+		content: '';
+	    display: block;
+	    margin: -18px -14px;
+	    width: 114px;
+	    height: 116px;
+	    background: url("../images/frame-corner-top-left.png");
+	    position: absolute;
+	    bottom: 0;
+	    z-index: 1002;
+		right: 0;
+	    -webkit-transform: scale(-1, -1);
+	    -ms-transform: scale(-1, -1);
+	    transform: scale(-1, -1);
+	}
+}
+
+.img-frame-inner {
+	width: 400px;
+	position: relative;
+	&::before, {
+		content: '';
+	    display: block;
+	    margin: -18px -14px;
+	    width: 114px;
+	    height: 116px;
+	    background: url("../images/frame-corner-top-left.png");
+	    position: absolute;
+	    right: 0;
+	    z-index: 1002;
+	    -webkit-transform: scale(-1, 1);
+	    -ms-transform: scale(-1, 1);
+	    transform: scale(-1, 1);
+		}
+	&::after {
+		content: '';
+	    display: block;
+	    margin: -18px -14px;
+	    width: 114px;
+	    height: 116px;
+	    background: url("../images/frame-corner-top-left.png");
+	    position: absolute;
+	    bottom: 0;
+	    z-index: 1002;
+	    -webkit-transform: scale(1, -1);
+	    -ms-transform: scale(1, -1);
+	    transform: scale(1, -1);
+	}
+}
+
+.img-frame-inner img {
+	width: 400px;
+	border-radius: 15px;
+	border: 1px solid rgba(255, 255, 255, 0.4);
 }

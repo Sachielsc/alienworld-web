@@ -17,6 +17,7 @@
 
 		<!-- fonts -->
 		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Inconsolata"/>
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron"/>
 
 	</head>
 
@@ -56,8 +57,16 @@
 			<div class="aw-main">
 				<div data-ui-view>
 						<div class="intro intro-greetings">
-							<p>Dear colonist,</p>
-							<p>this is the original page.</p>
+							<p>Dear colonist,<br>
+							<br>Welcome to the planet LV 426.<br>
+							Here you can find classified information about <a ui-sref="movies">Alien Movies</a> and <a ui-sref="games">Alien Games</a>.<br>
+							To explore more about this planet, click the egg on the title bar.<br>
+							To contact the author, click <a ui-sref="about">here</a> or find more secrets on the title bar.</p>
+							<div class="img-frame-outer">
+								<div class="img-frame-inner">
+									<img src="assets/images/egg.jpeg" alt="menu icon">
+								</div>
+							</div>
 						</div>						
 				</div>
 			</div>
