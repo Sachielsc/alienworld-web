@@ -140,7 +140,7 @@ body {
 	top: $aw-header-height + 30px;
 }
 
-.card-box {
+.intro, .aw-game, .aw-movie, .meeting, .assignment, .card-box {
     padding: 20px;
     border: 1px solid rgba(255, 255, 255, 0.07);
     -webkit-border-radius: 5px;
@@ -153,24 +153,49 @@ body {
 	box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+.intro {
+	h1, h2, h3, h4, h5, h6, p {
     color: rgba(255, 255, 255, 0.6);
     font-family: Inconsolata;
     letter-spacing: 1px;
 	text-transform: uppercase;
+	}
 }
 
+.aw-movie, .aw-game {
+	h1, h2, h3, h4, h5, h6, p, li, dt, dd {
+		color: #98a6ad;
+	}
+
+	a {
+		color: #97ff77;
+	}
+}
+
+
 .meeting, .assignment {
+	h1, h2, h3, h4, h5, h6, p, li {
+		color: #98a6ad;
+	}
+
+	code {
+		color: #5d9cec;
+		background-color: rgba(244, 248, 251, 0.1);
+		border-radius: 4px;
+		padding: 2px 4px;
+    	font-size: 90%;
+	}
+
 	pre code {
 		display: block;
 	    padding: 9.5px;
-	    margin: 0 0 10px;
+	    margin: 10px 0px 10px 0px;
 	    font-size: 13px;
 	    line-height: 1.42857143;
-	    color: #333;
+	    color: #97ff77;
 	    word-break: break-all;
 	    word-wrap: break-word;
-	    background-color: #f5f5f5;
+	    background-color: black;
 	    border: 1px solid #ccc;
 	    border-radius: 4px;
 	}
@@ -237,5 +262,34 @@ h1, h2, h3, h4, h5, h6, p {
 .hover-white {
 	&:hover {
 		color: white;
+	}
+}
+
+.button-panel {
+	&.button-panel-about {
+		button {
+			color: rgba(255, 255, 255, 0.6);
+			margin-bottom: 12px;
+    		margin-left: 8px;
+		    -moz-border-radius: 2px;
+		    -moz-transition: all 400ms ease-in-out;
+		    -o-transition: all 400ms ease-in-out;
+		    -webkit-border-radius: 2px;
+		    -webkit-transition: all 400ms ease-in-out;
+		    background: transparent !important;
+		    -webkit-border-radius: 5px;
+		    border-radius: 5px;
+		    -moz-border-radius: 5px;
+		    background-clip: padding-box;
+		    border-width: 2px !important;
+		    transition: all 400ms ease-in-out;
+		    background-clip: inherit;
+		    background-color: #97ff77;
+		    width: 100px;
+
+		    &.active {
+		    	color: #97ff77;
+		    }
+		}
 	}
 }
