@@ -11,9 +11,9 @@ mainModule.controller('MainController', ['$scope','$log', function($scope,$log){
 	}
 ]);
 
-mainModule.config(['$stateProvider', function($stateProvider) {
+mainModule.config(['$stateProvider', function($stateProvider, ) {
+		
 		$stateProvider
-
 		.state('home',{
 			url:'/home',
 			// controller:'homeController',
@@ -38,7 +38,16 @@ mainModule.config(['$stateProvider', function($stateProvider) {
 			url:'/about',
 			// controller:'aboutController',
 			templateUrl:'app/modules/about/views/alienworld-about.view.html',
-		});
+		})
+
+		.state('about.worklog',{
+			url:'/worklog',
+			// controller:'aboutController',
+			templateUrl:'app/modules/report/views/alienworld-report-m14.view.html',
+		})
+
+
+		;
 
 		console.log('mainModule.config');
 	}

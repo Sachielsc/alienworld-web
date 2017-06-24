@@ -118,7 +118,7 @@ body {
   border-radius: 5px;
   -moz-border-radius: 5px;
   background-clip: padding-box;
-  margin: 20px 20px 20px 20px;
+  margin: 20px 10px 20px 10px;
   background-color: #323b44;
   outline: none;
   box-sizing: border-box; }
@@ -135,6 +135,9 @@ body {
   font-family: Inconsolata;
   letter-spacing: 1px;
   text-transform: uppercase; }
+
+.intro.intro-greetings {
+  margin: 40px 65px 40px 65px; }
 
 .card-box p {
   color: rgba(255, 255, 255, 0.6); }
