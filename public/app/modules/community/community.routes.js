@@ -1,14 +1,13 @@
 'use strict';
-angular.module('community').config(['$stateProvider',
-	function($stateProvider) {
-		$stateProvider
-		// .state('login',{
-		// 	url:'/login',
-		// 	templateUrl:'app/modules/auth/views/login.view.html',
-		// 	controller:'LoginController',
-		// 	data: {
-		// 		authRequired: false
-  //           }
-		// })
+
+angular.module('community').config(['$stateProvider', function($stateProvider) {
+	console.log('community routers loading complete...');
+
+	$stateProvider
+	.state('community', {
+		url:'/community',
+		// controller:'communityController',
+		templateUrl:'app/modules/community/views/alienworld-community.view.html',
+	});
 	}
-])
+]);

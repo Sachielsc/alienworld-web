@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Me</title>
+    </head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="card-box button-panel button-panel-about">
+                    <a ui-sref="about"><button type="button">State Panel</button></a><br>
+                    <a ui-sref="skillpanel"><button type="button">Skill Panel</button></a><br>
+                    <a ui-sref="worklog"><button type="button">Work Log</button></a><br>
+                    <a ui-sref="cv"><button type="button" class="active">CV Page</button></a>
+                </div>
+            </div>
+            <div class="col-9">
+                <div ui-view>
+                    <div class="intro">
+                        <p>put intro text here.</p>
+                    </div>
+                    <div class="card-box">
+                        <p>put contect here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

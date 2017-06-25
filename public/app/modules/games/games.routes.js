@@ -1,14 +1,13 @@
 'use strict';
-angular.module('games').config(['$stateProvider',
-	function($stateProvider) {
-		$stateProvider
-		// .state('login',{
-		// 	url:'/login',
-		// 	templateUrl:'app/modules/auth/views/login.view.html',
-		// 	controller:'LoginController',
-		// 	data: {
-		// 		authRequired: false
-  //           }
-		// })
+
+angular.module('games').config(['$stateProvider', function($stateProvider) {
+	console.log('game routers loading complete...');
+
+	$stateProvider
+	.state('games', {
+		url:'/games',
+		// controller:'type controller name here',
+		templateUrl:'app/modules/games/views/alienworld-games.view.html',
+	});
 	}
-])
+]);
