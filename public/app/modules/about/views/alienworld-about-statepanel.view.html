@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>About Me</title>
-    </head>
+	<head>
+		<title>About Me</title>
+	</head>
 
 <body>
-    <div class="container">
-    	<div class="row">
-    		<div class="col-3">
-    			<div class="card-box button-panel button-panel-about">
-    				<a ui-sref="about"><button type="button" class="active">State Panel</button></a><br>
-    				<a ui-sref="skillpanel"><button type="button">Skill Panel</button></a><br>
-    				<a ui-sref="worklog"><button type="button">Work Log</button></a><br>
-    				<a ui-sref="cv"><button type="button">CV Page</button></a>
-    			</div>
-    		</div>
-    		<div class="col-9">
-                <div ui-view>
-    				<div class="intro">
-    					<p>put intro text here.</p>
-    				</div>
-    				<div class="card-box">
-    					<p>put contect here.</p>
-    				</div>
-                </div>
-    		</div>
-    	</div>
-    </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-3">
+				<div class="card-box button-panel button-panel-about">
+					<a ui-sref="about"><button type="button" class="active">State Panel</button></a><br>
+					<a ui-sref="skillpanel"><button type="button">Skill Panel</button></a><br>
+					<a ui-sref="worklog"><button type="button">Work Log</button></a><br>
+					<a ui-sref="cv"><button type="button">CV Page</button></a>
+				</div>
+			</div>
+			<div class="col-9">
+				<div ui-view>
+					<div class="intro">
+						<p>Dear colonist officer,<br>
+						Welcome to Charles SHU's archives. Here you can find everything about the designer of this web. Feel free to find more by clicking the buttons on the left.</p>
+					</div>
+					<div class="card-box">
+						<figure>
+							<img src="../../../../assets/images/head_far.png" alt="portrait">
+							<figcaption>
+								<h1>Charles SHU</h1>
+								<h2><b>Junior Developer</b></h2>
+							</figcaption>
+						</figure>
+						<p>I'm Charles, a newbie developer with passion, dedication and love in the coding field. I also have experience in software testing and UI design.</p>
+
+						<p>Currently I am living in Auckland and looking for an opportunity to prove myself. When I was back in China, I worked in financial field and had a decent life. But I was always having a dream to achieve something extraordinary, to do something I am crazy about and to make my life more challenging and colourful. That is why I come to New Zealand and am trying my best to develop my skills.</p>
+						
+						<p>I like the feeling of concentration and seriousness. When I'm growing as a developer, I think I have found the field in which I am willing to put all my efforts in, as a lifetime career. The achievement of creating something with outstanding functionality and quality really thrills me, thus I made this website using the knowledge from what I have learnt in a very short period of time. It maybe trivial in the sight of senior developers or designers, but I will grow as fast as I can to make it great.</p>
+
+						<p>You can also find my <a ui-sref="worklog">Work Reports</a> from the internship I took part in. And I also put my <a ui-sref="cv">CV</a> on this website.</p>
+
+						<p>If you are interested in what I have done and, more importantly, what I will contribute, please click <a ui-sref="contactme">HERE</a> to contact me. Or you can find some more direct ways to reach me by clicking on the secret icon of the title bar.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
