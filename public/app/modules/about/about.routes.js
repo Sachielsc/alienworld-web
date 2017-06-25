@@ -28,6 +28,12 @@ angular.module('about').config(['$stateProvider', function($stateProvider) {
 			templateUrl:'app/modules/about/views/alienworld-about-cv.view.html',
 		})
 
+		.state('contactme',{
+			url:'/about/contactme',
+			// controller:'aboutController',
+			templateUrl:'app/modules/about/views/alienworld-about-contactme.view.html',
+		})
+
 		// router my reports in worklog state
 		.state('worklog.report1',{
 		url:'/report1',
