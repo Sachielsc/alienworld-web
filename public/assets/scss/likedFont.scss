@@ -219,7 +219,7 @@ body {
 	pre code {
 		display: block;
 	    padding: 9.5px;
-	    margin: 10px 0px 10px 0px;
+	    margin: 3px 0px 3px 0px;
 	    font-size: 13px;
 	    line-height: 1.42857143;
 	    color: #97ff77;
@@ -231,7 +231,15 @@ body {
 	}
 }
 
-// 4. Misc
+// 4. The CV Page
+.cv {
+	h1, h2, h3, h4, h5, h6, p, li {
+		color: #98a6ad;
+	}
+
+}
+
+// 5. Misc
 
 .ratebox {
 	display: inline-block;

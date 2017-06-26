@@ -168,7 +168,7 @@ body {
 .meeting pre code, .assignment pre code {
   display: block;
   padding: 9.5px;
-  margin: 10px 0px 10px 0px;
+  margin: 3px 0px 3px 0px;
   font-size: 13px;
   line-height: 1.42857143;
   color: #97ff77;
@@ -177,6 +177,9 @@ body {
   background-color: black;
   border: 1px solid #ccc;
   border-radius: 4px; }
+
+.cv h1, .cv h2, .cv h3, .cv h4, .cv h5, .cv h6, .cv p, .cv li {
+  color: #98a6ad; }
 
 .ratebox {
   display: inline-block;
