@@ -16,22 +16,28 @@ angular.module('about').config(['$stateProvider', function($stateProvider) {
 			templateUrl:'app/modules/about/views/alienworld-about-skillpanel.view.html',
 		})
 
-		.state('worklog',{
-			url:'/about/worklog',
-			// controller:'workLogController',
-			templateUrl:'app/modules/about/views/alienworld-about-worklog.view.html',
-		})
-
 		.state('cv',{
 			url:'/about/cv',
 			// controller:'aboutController',
 			templateUrl:'app/modules/about/views/alienworld-about-cv.view.html',
 		})
 
+		.state('cvfull',{
+			url:'/about/cv-fullpage',
+			// controller:'aboutController',
+			templateUrl:'app/modules/about/views/alienworld-about-cvbody.view.html',
+		})
+
 		.state('contactme',{
 			url:'/about/contactme',
 			// controller:'aboutController',
 			templateUrl:'app/modules/about/views/alienworld-about-contactme.view.html',
+		})
+
+		.state('worklog',{
+			url:'/about/worklog',
+			// controller:'workLogController',
+			templateUrl:'app/modules/about/views/alienworld-about-worklog.view.html',
 		})
 
 		// router my reports in worklog state
