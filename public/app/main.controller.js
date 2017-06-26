@@ -12,15 +12,13 @@ mainModule.controller('MainController', ['$scope','$log', function($scope,$log){
 ]);
 
 mainModule.config(['$stateProvider', function($stateProvider) {
-		
+
 		$stateProvider
 		.state('home',{
-			url:'/home',
+			url:'',
 			// controller:'homeController',
 			templateUrl:'app/modules/home/views/alienworld-home.view.html',
 		});
-
-		console.log('"mainModule.config" complete ...');
 	}
 ]);
 
