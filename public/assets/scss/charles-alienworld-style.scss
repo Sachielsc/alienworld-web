@@ -233,8 +233,24 @@ body {
 
 // 4. The CV Page
 .cv {
+	a {
+		color: inherit;
+	}
+
 	h1, h2, h3, h4, h5, h6, p, li {
 		color: #98a6ad;
+	}
+
+	.list-unstyled {
+		i {
+			margin-right: 4px;
+		}
+	}
+
+	.cv-column {
+		h3 {
+			font-variant: small-caps;
+		}
 	}
 
 }
