@@ -178,8 +178,17 @@ body {
   border: 1px solid #ccc;
   border-radius: 4px; }
 
+.cv a {
+  color: inherit; }
+
 .cv h1, .cv h2, .cv h3, .cv h4, .cv h5, .cv h6, .cv p, .cv li {
   color: #98a6ad; }
+
+.cv .list-unstyled i {
+  margin-right: 4px; }
+
+.cv .cv-column h3 {
+  font-variant: small-caps; }
 
 .ratebox {
   display: inline-block;
