@@ -6,7 +6,7 @@ angular.module('movies').config(['$stateProvider', function($stateProvider) {
 	$stateProvider
 	.state('movies', {
 		url:'/movies',
-		// controller:'type controller name here',
+		controller:'movieController',
 		templateUrl:'app/modules/movies/views/alienworld-movies.view.html',
 	});
 	}
