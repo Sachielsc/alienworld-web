@@ -5,11 +5,6 @@
   -moz-box-shadow: 0px 4px 9px 1px rgba(0, 0, 0, 0.85);
   box-shadow: 0px 4px 9px 1px rgba(0, 0, 0, 0.85);
   height: 160px;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
   width: 100%;
   z-index: 1003;
   position: fixed; }
@@ -105,7 +100,7 @@ nav.aw-nav, div.aw-contact {
 
 body {
   background-color: #2b333b;
-  z-index: 1000; }
+  z-index: 900; }
 
 .aw-main {
   position: relative;
@@ -177,6 +172,25 @@ body {
   background-color: black;
   border: 1px solid #ccc;
   border-radius: 4px; }
+
+.cv.cv-fullpage {
+  margin: 0px 20px 20px 20px; }
+
+.cv .cv-wrapper {
+  background: url("../images/box-background-small.jpg");
+  background-size: 100% 100%;
+  padding: 15px 15px 15px 15px;
+  filter: grayscale(100%);
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: all 4s ease;
+  -moz-transition: all 4s ease;
+  -ms-transition: all 4s ease;
+  -o-transition: all 4s ease;
+  transition: all 4s ease; }
+  .cv .cv-wrapper:hover {
+    filter: grayscale(0%); }
 
 .cv a {
   color: inherit; }
