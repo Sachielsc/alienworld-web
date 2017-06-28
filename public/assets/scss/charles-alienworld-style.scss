@@ -165,7 +165,23 @@ body {
 	}
 
 	&.intro-greetings {
-		margin: 40px 65px 40px 65px;
+		position: relative;
+		-webkit-transition: all 0.7s ease;
+		   -moz-transition: all 0.7s ease;
+		    -ms-transition: all 0.7s ease;
+			 -o-transition: all 0.7s ease;
+				transition: all 0.7s ease;
+		background: url("../images/box-background-small-2.jpg");
+		background-size: 100% 100%;
+		padding: 15px 15px 15px 15px;
+		filter: grayscale(100%);
+	    -webkit-font-smoothing: antialiased;
+	    text-shadow: 1px 1px 1px rgba(0,0,0,.004);
+	    -webkit-tap-highlight-color: transparent;
+		&:hover {
+			filter: grayscale(0%);
+		}
+
 	}
 }
 
@@ -274,6 +290,13 @@ body {
 }
 
 // 5. Misc
+.separator {
+	margin: 30px 0;
+	width: 100%;
+	border: 1px solid rgba(0, 204, 0, 0.6);
+	opacity: 0.4;
+    box-shadow: 0 0 20px rgba(0, 204, 0, 0.5), inset 0 0 0 1px #000, inset 0 0 0 2px rgba(0, 204, 0, 0.5);
+}
 
 .ratebox {
 	display: inline-block;
@@ -400,12 +423,6 @@ body {
 	}
 }
 
-.green-frame {
-	border-radius: 6px;
-	border: 1px solid rgba(0, 204, 0, 0.6);
-    box-shadow: 0 0 20px rgba(0, 204, 0, 0.5), inset 0 0 0 1px #000, inset 0 0 0 2px rgba(0, 204, 0, 0.5);
-}
-
 .sc-frame-inner {
 	width: 400px;
 	position: relative;
@@ -443,4 +460,10 @@ body {
 	width: 400px;
 	border-radius: 15px;
 	border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.green-frame {
+	border-radius: 6px;
+	border: 1px solid rgba(0, 204, 0, 0.6);
+    box-shadow: 0 0 20px rgba(0, 204, 0, 0.5), inset 0 0 0 1px #000, inset 0 0 0 2px rgba(0, 204, 0, 0.5);
 }
