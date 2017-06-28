@@ -2,13 +2,10 @@
 angular.module('home').config(['$stateProvider',
 	function($stateProvider) {
 		$stateProvider
-		// .state('login',{
-		// 	url:'/login',
-		// 	templateUrl:'app/modules/auth/views/login.view.html',
-		// 	controller:'LoginController',
-		// 	data: {
-		// 		authRequired: false
-  //           }
-		// })
+		.state('home',{
+			url:'home',
+			// controller:'homeController',
+			templateUrl:'app/modules/home/views/alienworld-home.view.html',
+		});
 	}
 ])

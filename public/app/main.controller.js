@@ -1,6 +1,6 @@
 'use strict';
 
-var mainModule = angular.module('alienworld',['ui.router', 'ngAnimate', 'movies', 'games', 'community', 'about']);
+var mainModule = angular.module('alienworld',['ui.router', 'ngAnimate', 'home', 'movies', 'games', 'community', 'about']);
 
 mainModule.controller('MainController', ['$scope','$log', function($scope,$log){
 		function init(){
@@ -13,12 +13,7 @@ mainModule.controller('MainController', ['$scope','$log', function($scope,$log){
 
 mainModule.config(['$stateProvider', function($stateProvider) {
 
-		$stateProvider
-		.state('home',{
-			url:'',
-			// controller:'homeController',
-			templateUrl:'app/modules/home/views/alienworld-home.view.html',
-		});
+
 	}
 ]);
 
