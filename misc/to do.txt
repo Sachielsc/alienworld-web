@@ -31,9 +31,10 @@ color: #eeffcc;
 
 
 
-加入我的照片到state
 完成contactme页面
 加入技能树
+加入其它页面的描述
+加入吧背景图片
 
 
 Alien web font: font-family: Inconsolata;
