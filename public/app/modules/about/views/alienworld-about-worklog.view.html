@@ -7,21 +7,25 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-3">
-                <div class="card-box button-panel button-panel-about">
+            <div class="col-4">
+                <div class="sc-mechanical-frame-outer">
+                    <div class="sc-mechanical-frame-inner">
+                        <div class="button-panel">
                     <a ui-sref="about"><button type="button">State Panel</button></a><br>
                     <a ui-sref="skillpanel"><button type="button">Skill Panel</button></a><br>
                     <a ui-sref="worklog"><button type="button" class="active">Work Log</button></a><br>
                     <a ui-sref="cv"><button type="button">CV Page</button></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-9">
+            <div class="col-8">
                 <div ui-view>
-                    <div class="intro">
+                    <div class="card-box white-frame shadow-expand">
                         <p>Dear colonist officer,<br>
                         Select a work report from the list below</p>
                     </div>
-                    <div class="card-box report-list">
+                    <div class="card-box white-frame shadow-expand report-list">
                         <ul>
                             <li><a ui-sref=".report1">Report 1</a></li>
                             <li><a ui-sref=".report2">Report 2</a></li>

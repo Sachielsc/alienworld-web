@@ -3,6 +3,10 @@
 $aw-header-height: 160px;
 $aw-vedio-width: 640px;
 $aw-vedio-height: 360px;
+$aw-buttonpanel-height: 230px;
+$aw-buttonpanel-width: 220px;
+
+
 
 .aw-header {
 	top: 0;
@@ -207,20 +211,21 @@ body {
 	background: url("../images/box-background-normal-2.jpg");
 	background-size: 100% 100%;
 	}
+	
 }
 
 .card-box {
+	a {
+		color: #97ff77;
+	}
+
 	p {
 		color: rgba(255, 255, 255, 0.6);
 	}
 
 	&.report-list {
 		color: #98a6ad;
-
-		a {
-		    color: #97ff77;
-		}
-
+		
 		li {
 		list-style-type: disc;			
 		}
@@ -270,11 +275,11 @@ body {
 .cv {
 	&.cv-fullpage {
 		margin: 0px 20px 20px 20px;
+		background: url("../images/box-background-small.jpg");
+		background-size: 100% 100%;
 	}
 
 	.cv-wrapper {
-		background: url("../images/box-background-small.jpg");
-		background-size: 100% 100%;
 		padding: 15px 15px 15px 15px;
 		filter: grayscale(100%);
 	    -webkit-font-smoothing: antialiased;
@@ -311,9 +316,171 @@ body {
 		}
 	}
 
+	.cv-name {
+		span {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+		}
+	}
 }
 
-// 5. Misc
+
+
+
+
+// 5. Frames
+
+.sc-frame-outer {
+	height: $aw-vedio-height;
+	width: $aw-vedio-width;
+    margin: 30px auto;
+}
+
+
+.sc-frame-middle {
+	height: $aw-vedio-height;
+	width: $aw-vedio-width;
+	position: relative;
+	&::before, {
+		content: '';
+	    display: block;
+	    margin: -18px -14px;
+	    width: 114px;
+	    height: 116px;
+	    background: url("../images/frame-corner-top-left.png");
+	    position: absolute;
+	    top: 0;
+	    z-index: 1000;
+		}
+	&::after {
+		content: '';
+	    display: block;
+	    margin: -18px -14px;
+	    width: 114px;
+	    height: 116px;
+	    background: url("../images/frame-corner-top-left.png");
+	    position: absolute;
+	    bottom: 0;
+	    z-index: 1000;
+		right: 0;
+	    -webkit-transform: scale(-1, -1);
+	    -ms-transform: scale(-1, -1);
+	    transform: scale(-1, -1);
+	}
+}
+
+.sc-frame-inner {
+	height: $aw-vedio-height;
+	width: $aw-vedio-width;
+	position: relative;
+	&::before, {
+		content: '';
+	    display: block;
+	    margin: -18px -14px;
+	    width: 114px;
+	    height: 116px;
+	    background: url("../images/frame-corner-top-left.png");
+	    position: absolute;
+	    right: 0;
+	    z-index: 1000;
+	    -webkit-transform: scale(-1, 1);
+	    -ms-transform: scale(-1, 1);
+	    transform: scale(-1, 1);
+		}
+	&::after {
+		content: '';
+	    display: block;
+	    margin: -18px -14px;
+	    width: 114px;
+	    height: 116px;
+	    background: url("../images/frame-corner-top-left.png");
+	    position: absolute;
+	    bottom: 0;
+	    z-index: 1000;
+	    -webkit-transform: scale(1, -1);
+	    -ms-transform: scale(1, -1);
+	    transform: scale(1, -1);
+	}
+}
+
+.sc-frame-inner img {
+	height: $aw-vedio-height;
+	width: $aw-vedio-width;
+	border-radius: 15px;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.sc-frame-inner iframe {
+	position: absolute;
+	z-index: 1006;
+	height: $aw-vedio-height;
+	width: $aw-vedio-width;
+	border-radius: 15px;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.sc-mechanical-frame-outer {
+	width: $aw-buttonpanel-width + 2px;
+    height: $aw-buttonpanel-height + 2px;
+    margin: 30px auto;
+    border-radius: 4px;
+	border: 1px solid red;
+
+	.sc-mechanical-frame-inner {
+		position: absolute;
+		width: $aw-buttonpanel-width;
+	    height: $aw-buttonpanel-height;
+			&::before, &::after {
+				content: '';
+				position: absolute;
+			    width: 120px;
+			    height: 272px;
+				background: url("../images/sc-mechanical-frame-left.png");
+				background-size: 100% 100%;
+				z-index: 1000;
+			}
+
+			&::before {
+				left: -13px; 
+			    top: -21px; 
+			}
+
+			&::after {
+				right: -13px; 
+			    bottom: -21px; 
+				transform: scale(-1, 1);
+			}
+	}
+}
+
+.green-frame {
+	border-radius: 6px;
+	border: 1px solid rgba(0, 204, 0, 0.6);
+    box-shadow: 0 0 20px rgba(0, 204, 0, 0.5), inset 0 0 0 1px #000, inset 0 0 0 2px rgba(0, 204, 0, 0.5);
+}
+
+.white-frame {
+	border-radius: 6px;
+	border: 1px solid white;
+    // box-shadow: 0 0 20px white, inset 0 0 0 1px #000, inset 0 0 0 2px white;
+}
+
+.shadow-expand {
+	-webkit-transition: all 1s ease;
+	   -moz-transition: all 1s ease;
+	    -ms-transition: all 1s ease;
+		 -o-transition: all 1s ease;
+			transition: all 1s ease;
+
+	&:hover {
+		box-shadow: 0 0 20px white, inset 0 0 0 1px #000, inset 0 0 0 2px white;
+	}
+}
+
+
+// 6. Misc
 .separator {
 	margin: 30px 0;
 	width: 100%;
@@ -358,6 +525,10 @@ body {
 	}
 }
 
+.cv-pic {
+	opacity: 0.7;
+}
+
 .hover-red {
 	&:hover {
 		color: red;
@@ -385,11 +556,16 @@ body {
 }
 
 .button-panel {
-	&.button-panel-about {
+	position: absolute;
+	height: $aw-buttonpanel-height;
+	width: $aw-buttonpanel-width;
+	background-color: #323b44;
+	margin: 0;
+
 		button {
 			color: rgba(255, 255, 255, 0.6);
-			margin-top: 12px;
-			margin-bottom: 12px;
+			margin-top: 22px;
+			margin-bottom: 0px;
 		    -moz-border-radius: 2px;
 		    -moz-transition: all 400ms ease-in-out;
 		    -o-transition: all 400ms ease-in-out;
@@ -408,138 +584,14 @@ body {
 		    position: relative;
 		    left: 50%;
 		    transform: translateX(-50%);
+		    z-index: 1002;
 
 		    &.active {
 		    	color: #97ff77;
 		    }
 		}
-	}
 }
 
-
-.sc-frame-outer {
-	height: $aw-vedio-height;
-	width: $aw-vedio-width;
-    margin: 30px auto;
-}
-
-
-.sc-frame-middle {
-	height: $aw-vedio-height;
-	width: $aw-vedio-width;
-	position: relative;
-	&::before, {
-		content: '';
-	    display: block;
-	    margin: -18px -14px;
-	    width: 114px;
-	    height: 116px;
-	    background: url("../images/frame-corner-top-left.png");
-	    position: absolute;
-	    top: 0;
-	    z-index: 1002;
-		}
-	&::after {
-		content: '';
-	    display: block;
-	    margin: -18px -14px;
-	    width: 114px;
-	    height: 116px;
-	    background: url("../images/frame-corner-top-left.png");
-	    position: absolute;
-	    bottom: 0;
-	    z-index: 1002;
-		right: 0;
-	    -webkit-transform: scale(-1, -1);
-	    -ms-transform: scale(-1, -1);
-	    transform: scale(-1, -1);
-	}
-}
-
-.sc-frame-inner {
-	height: $aw-vedio-height;
-	width: $aw-vedio-width;
-	position: relative;
-	&::before, {
-		content: '';
-	    display: block;
-	    margin: -18px -14px;
-	    width: 114px;
-	    height: 116px;
-	    background: url("../images/frame-corner-top-left.png");
-	    position: absolute;
-	    right: 0;
-	    z-index: 1002;
-	    -webkit-transform: scale(-1, 1);
-	    -ms-transform: scale(-1, 1);
-	    transform: scale(-1, 1);
-		}
-	&::after {
-		content: '';
-	    display: block;
-	    margin: -18px -14px;
-	    width: 114px;
-	    height: 116px;
-	    background: url("../images/frame-corner-top-left.png");
-	    position: absolute;
-	    bottom: 0;
-	    z-index: 1002;
-	    -webkit-transform: scale(1, -1);
-	    -ms-transform: scale(1, -1);
-	    transform: scale(1, -1);
-	}
-}
-
-.sc-frame-inner img {
-	height: $aw-vedio-height;
-	width: $aw-vedio-width;
-	border-radius: 15px;
-	border: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-.sc-frame-inner iframe {
-	position: absolute;
-	z-index: 1006;
-	height: $aw-vedio-height;
-	width: $aw-vedio-width;
-	border-radius: 15px;
-	border: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-.sc-mechanical-frame-outer {
-	width: $aw-vedio-width + 2px;
-    height: $aw-vedio-height + 2px;
-    margin: 30px auto;
-    border-radius: 4px;
-	border: 1px solid red;
-
-	.sc-mechanical-frame-inner {
-		position: absolute;
-		width: $aw-vedio-width;
-	    height: $aw-vedio-height;
-			&::before, &::after {
-				content: '';
-				left: -22px; //need manual adjust
-			    top: -32px; //need manual adjust
-				position: absolute;
-			    width: $aw-vedio-width * 0.5;
-			    height: $aw-vedio-height;
-				background: url("../images/sc-mechanical-frame-left.png");
-				background-size: 100% 100%;
-			}
-
-			&::after {
-				transform: scale(-1, 1);
-			}
-	}
-}
-
-.green-frame {
-	border-radius: 6px;
-	border: 1px solid rgba(0, 204, 0, 0.6);
-    box-shadow: 0 0 20px rgba(0, 204, 0, 0.5), inset 0 0 0 1px #000, inset 0 0 0 2px rgba(0, 204, 0, 0.5);
-}
-
-.cv-pic {
-	opacity: 0.7;
+.theme-color {
+	color: #97ff77;
 }
