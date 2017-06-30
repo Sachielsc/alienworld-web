@@ -4,9 +4,13 @@ var mainModule = angular.module('alienworld',['ui.router', 'ngAnimate', 'home', 
 
 mainModule.controller('MainController', ['$scope','$log', function($scope,$log){
 		function init(){
-			$log.debug('initialization complete...');
-			// put initialization code here
-		}
+			$scope.currentdate =  new Date();
+			$scope.currentdate.year = $scope.currentdate.getFullYear();
+			$scope.currentdate.month = $scope.currentdate.getMonth() + 1;
+			$scope.currentdate.day = $scope.currentdate.getDate();
+			$scope.currentdate.date = $scope.currentdate.day + "/" + $scope.currentdate.month + "/" + $scope.currentdate.year;
+			$log.debug('date initialization complete...');
+				}
 		init();
 	}
 ]);
