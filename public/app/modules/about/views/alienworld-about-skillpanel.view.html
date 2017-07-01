@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Me</title>
+    </head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="sc-mechanical-frame-outer">
+                    <div class="sc-mechanical-frame-inner">
+                        <div class="button-panel">
+                    <a ui-sref="about"><button type="button">State Panel</button></a><br>
+                    <a ui-sref="skillpanel"><button type="button" class="active">Skill Panel</button></a><br>
+                    <a ui-sref="worklog"><button type="button">Work Log</button></a><br>
+                    <a ui-sref="cv"><button type="button">CV Page</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <div ui-view>
+                    <div class="card-box white-frame shadow-expand">
+                        <p>Dear colonist officer,<br>
+                        Welcome to Charles SHU's research lab. You can check all the abilities I gain so far.<br>You can also click on some items to see more details.</p>
+                    </div>
+                    <div class="card-box white-frame shadow-expand">
+                        <p>put contect here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+重置新浪邮箱和新浪微博的密码
+把笔记等内容传到linkedin，做两个linkedin！
+杀各硬盘的毒
+整理寝室
+
+
+下载fan game
+
+
+琐事备忘
+叔二楼的那个插线板是我的，我房间连接笔记本的插线板是叔的
+
+
+网站相关：
+z-index记录
+aw-header 整个标题栏 1003
+aw-header-content 标题栏中的所有内容 1005
+菜单 1007
+body 900
+所有的边框 1000
+按钮1002
+
+
+
+//import images:
+background-image: url("../images/bgi-dark.jpg");
+//theme color:
+color: #97ff77;
+//the light yellow from Blizzard
+color: #eeffcc;
+
+
+
+
+加入其它页面的描述
+加入吧背景图片
+
+周日：加入技能树
+
+Alien web font: font-family: Inconsolata;
+rectangular font: font-family: 'Orbitron', sans-serif;

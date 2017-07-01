@@ -12,21 +12,21 @@ var runSequence = require('run-sequence');
 
 //Process sass to css
 gulp.task('sass', function () {
-    return gulp.src('webapp/assets/scss/**/*.scss')
+    return gulp.src('public/assets/scss/**/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('webapp/assets/css'))        
+        .pipe(gulp.dest('public/assets/css'))        
 });
 
 
 //Move all html views files to dist folder
 gulp.task('views', function() {
-	return gulp.src(['webapp/app/**/*.html'])
+	return gulp.src(['public/app/**/*.html'])
 		.pipe(gulp.dest('dist/app'))
 })
 
 // Css and JS optmization
 gulp.task('useref', function() {
-	return gulp.src(['webapp/index.html'])
+	return gulp.src(['public/index.html'])
 	    .pipe(useref())
 	    .pipe(gulpIf('*.js', uglify()))
 	    .pipe(gulpIf('*.css', cssnano()))
@@ -37,7 +37,7 @@ gulp.task('useref', function() {
 
 // Image optmization
 gulp.task('images', function() {
-	return gulp.src('webapp/assets/images/**/*')
+	return gulp.src('public/assets/images/**/*')
 	    .pipe(imagemin({
 	    	interlaced: true
 	    }))
@@ -46,16 +46,16 @@ gulp.task('images', function() {
 
 //Fonts
 gulp.task('fonts', function() {
-	return gulp.src(['webapp/assets/lib/fonts/**'])
+	return gulp.src(['public/assets/lib/fonts/**'])
 		.pipe(gulp.dest('dist/assets/fonts'))
 })
 
 
 //Watch css changes
 gulp.task('watch', ['sass'], function (){
-	gulp.watch('webapp/assets/scss/**/*.scss', ['sass']); 	
-	//gulp.watch(['webapp/app/**/*.html','webapp/app/**/*.js'], ['html']); 
-	//gulp.watch(['webapp/index.html'], ['index']); 
+	gulp.watch('public/assets/scss/**/*.scss', ['sass']); 	
+	//gulp.watch(['public/app/**/*.html','public/app/**/*.js'], ['html']); 
+	//gulp.watch(['public/index.html'], ['index']); 
 });
 
 

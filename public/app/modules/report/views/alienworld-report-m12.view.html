@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Charles' report for what he has done in work and projects</title>
+
+    </head>
+
+<body>
+    <div class="container">
+        <div class="meeting">
+            <h3>Meeting 12: Jun 10th</h3>
+            <h4>About our project: Kedar and Jessica are joining our team and making the progress faster.</h4>
+            <h4>A deeper understanding and use of Git:</h4>
+            <ul>
+                <li>About git add: <code>git add -A</code> is equivalent to <code>git add .</code>. These two commands add all modified and new (untracked) files in the current directory and all subdirectories to the staging area (a.k.a. the index), thus preparing them to be included in the next git commit</li>
+                <li>Set an alias for complicated git commands: <code>git config --global alias.st status</code></li>
+                <li>The difference between <code>git pull</code> and <code>git rebase</code>: when you pull your code from dev branch to master branch, it will only generate one commit on the master branch declaring all the modifications on the dev branch; while when you rebase your code from dev branch to master branch, it will bring all those commits on the dev branch to this master branch. <b>In a nutshell, use <code>git rebase</code>.</b></li>
+                <li>Three ways to make a change on a previous commit:
+                    <ol>
+                        <li><code>Git revert</code>: Reverting undoes a commit by creating a new commit. This is a safe way to undo changes, as it has no chance of re-writing the commit history.</li>
+                        <li><code>Git reset</code>: move the head to the location where when the last change of this commit is done, also the next modifications in the following commits <b>will EXIST as unstaged changes.</b></li>
+                        <li><code>Git checkout</code>: This <code>git checkout &lt;commit&gt;</code> command can let you enter a 'detached HEAD' state to the commit position, where when the last change of this commit is done. You can look around, make experimental changes and commit them, and you can discard any commits you make in this state without impacting any branches by performing another checkout. Remember: Use this command <b>only</b> when you need to check previous code.</li>
+                    </ol>
+                </li>
+                <li>Three distinct uses of <code>git checkout</code>:
+                    <ol>
+                        <li><code>git checkout &lt;branch&gt;</code>: To prepare for working on &lt;branch&gt;, switch to it by updating the index and the files in the working tree, and by pointing HEAD at the branch.</li>
+                        <li><code>git checkout &lt;filename&gt;</code>: For those changed file that is TRACKED, i.e. changes that is not staged for commit yet, using this command will ERASE all the changes in working directory. For those files that are already staged, <code>git checkout &lt;filename&gt;</code> is useless. We can only use <code>git reset HEAD &lt;file&gt;</code> to unstage this file. And this command <code>git reset HEAD &lt;file&gt;</code> will not change this file, only unstage it and put it back to "Tracked files: changes not staged for commit" or "untracked files"</li>
+                        <li>git checkout &lt;commit&gt;: Enter a 'detached HEAD' state to the commit position, where when the last change of this commit is done. You can look around, make experimental changes and commit them, and you can discard any commits you make in this state without impacting any branches by performing another checkout.</li>
+                    </ol>
+                </li>
+                <li>Abort the merge: <code>git merge --abort</code></li>
+                <li>About <code>git fetch</code>: In the simplest terms, git pull does a git fetch followed by a git merge. You can do a git fetch at any time to update your remote-tracking branches under refs/remotes/&lt;remote&gt;/. This operation never changes any of your own local branches under refs/heads, and is safe to do without changing your working copy.</li>
+            </ul>
+
+            <h4>Dong Liang's advice:</h4>
+            <ul>
+                <li>Use <code>git push –force</code> when updates were rejected because the tip of your current branch is behind its remote counterpart. Note: do not use this in a team!</li>
+                <li><code>Git reset --hard &lt;commit&gt;</code>: reset to a specified commit and ignore all the changes after this commit. equivalent to <code>git reset &lt;commit&gt;</code> + <code>git checkout .</code></li>
+            </ul>
+
+            <h4>About <code>console.log</code></h4>
+            <p>[important] console.log is always a little "late" and you can't count on it when it comes to objects. Only primitives (strings etc.) will work directly. Of the former there is only one instance in memory, so when the console is fetching the data it may have changed already. <br>Solution: always remember to use <code>$log.debug</code> instead.</p>
+
+            <h4>Some concepts about Git:</h4>
+            <ul>
+                <li>Head: the default position you are working with</li>
+                <li>Origin: representation of the coding</li>
+                <li>Master: the main branch of the product</li>
+            </ul>
+
+            <h4>Aaron's advice:</h4>
+            <p>Always use standard and formal sentences in the commit, starting with a verb. Never use a sentence like "hope it will work".</p>
+    </div>
+
+    <div class="assignment">
+        <h3>Jun 14th</h3>
+        <h4>About Heroku</h4>
+            <p>There are two ways to create an app on Heroku:</p>
+            <ol>
+                <li>
+                    Add config files based on the tutorial with this URL: <i>https://www.youtube.com/watch?v=P86N9FqNqso&amp;index=2&amp;list=LLL_3tdfMBxvgcKjMzUfyy7w</i>; then navigate to the "add app" GUI page; finally link my website from github or gitlab to Heroku
+                </li>
+                <li>
+                    Add config files based on the tutorial with this URL: <i>https://www.youtube.com/watch?v=P86N9FqNqso&amp;index=2&amp;list=LLL_3tdfMBxvgcKjMzUfyy7w</i>; then use the Heroku command line to start the app: <i>https://devcenter.heroku.com/start?c=https://devcenter.heroku.com/start&amp;utm_campaign=Onboarding-Nurture-Email-1&amp;utm_medium=email&amp;utm_source=nurture&amp;utm_content=devcenter&amp;utm_term=start-all</i>
+                </li>
+            </ol>
+        <h3>Jun 16th</h3>
+        <h4>About Heroku</h4>
+            <p>There are two ways to edit/test Heroku apps:</p>
+            <ol>
+                <li>
+                    Use the Heroku command line tools:
+                    <ol>
+                    	<li>Input <code>heroku log in</code></li>
+                    	<li>type in the credentials</li>
+                    	<li>Input <code>heroku local web</code></li>
+                    	<li>Enter the address <i>localhost:5000</i></li>
+                    </ol>and input this 
+                    Note: this is for convinent local edit and test only
+                </li>
+                <li>
+                	Put the code and see the page on Internet:
+                	<ol>
+                		<li>Use the procedures above, in the Assignment on Jun 14th</li>
+                		<li>Push the code after modification</li>
+                	</ol>
+                </li>
+            </ol>
+    </div>
+</body>
+
+</html>

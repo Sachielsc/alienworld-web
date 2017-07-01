@@ -1,0 +1,8 @@
+技能树：
+CSS -webkit
+Bootstrap
+angular-animate
+ui.router
+拷贝头像照片
+全英文化
+把手机加上歌曲

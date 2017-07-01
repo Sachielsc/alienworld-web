@@ -1,0 +1,32 @@
+<body>
+    <div class="container">
+		<div class="intro bg-contactme green-frame">
+			<p>Dear colonist,<br>
+			<br>You are welcome to get in touch with me.<br>
+			Just click on the <span>circles below</span> or click <span>The Secret Icon</span> on the title bar from any page.
+			</p>
+			<div class="blank-bar"></div>
+			<nav class="social-links-wrapper">
+				<ul class="social-links">
+					<li>
+						<a href="https://www.linkedin.com/in/charles-shu/" class="fa fa-linkedin-square fa-fw"></a>
+					</li>
+					<li>
+						<a href="https://github.com/Sachielsc" class="fa fa-github fa-fw"></a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/chang.shu.184" class="fa fa-facebook fa-fw"></a>
+					</li>
+					<li>
+						<a ng-click="emailDisplayToggle = !emailDisplayToggle" class="fa fa-envelope fa-fw"></a>
+					</li>
+				</ul>				
+			</nav>
+			<p>More available contact ways will be reveal soon!</p>
+			<div ng-init="emailDisplayToggle = false" ng-show="emailDisplayToggle">
+				<div class="separator"></div>			
+				<p>Email me at: sachielsc@gmail.com</p>
+			</div>
+		</div>
+    </div>
+</body>
