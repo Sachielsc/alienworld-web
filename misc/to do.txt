@@ -2,7 +2,14 @@
 把笔记等内容传到linkedin，做两个linkedin！
 杀各硬盘的毒
 整理寝室
+技能树：
+CSS -webkit
+Bootstrap
+angular-animate
+ui.router
 
+全英文化
+把手机加上歌曲
 
 下载fan game
 
@@ -21,14 +28,13 @@ body 900
 按钮1002
 
 
-
-//import images:
-background-image: url("../images/bgi-dark.jpg");
-//theme color:
-color: #97ff77;
-//the light yellow from Blizzard
-color: #eeffcc;
-
+写已经做的工作在纸上
+写报告:
+http://pinkyjie.com/2014/08/10/git-notes-part-3/
+https://github.com/geeeeeeeeek/git-recipes/wiki/5.1-%E4%BB%A3%E7%A0%81%E5%90%88%E5%B9%B6%EF%BC%9AMerge%E3%80%81Rebase%E7%9A%84%E9%80%89%E6%8B%A9
+http://backlogtool.com/git-guide/cn/stepup/stepup1_4.html
+https://www.atlassian.com/git/tutorials/merging-vs-rebasing
+https://stackoverflow.com/questions/9622131/git-rebase-merge-squash-my-feature-branch-onto-another-branch
 
 
 
@@ -37,5 +43,16 @@ color: #eeffcc;
 
 周日：加入技能树
 
+
+
+网站编辑相关：
+//import images:
+background-image: url("../images/bgi-dark.jpg");
+//theme color:
+color: #97ff77;
+//the light yellow from Blizzard
+color: #eeffcc;
+
+没用的字体：
 Alien web font: font-family: Inconsolata;
 rectangular font: font-family: 'Orbitron', sans-serif;
