@@ -25,17 +25,8 @@ body 900
 
 
 
-写已经做的工作在纸上
-加入其它页面的描述
-加入吧背景图片
-周日：加入技能树：https://codepen.io/benarson/pen/gMpOyX
-CSS -webkit
-Bootstrap
-angular-animate
-ui.router
+https://codepen.io/benarson/pen/gMpOyX
 
-https://www.w3schools.com/bootstrap/bootstrap_collapse.asp
-https://www.w3schools.com/bootstrap/bootstrap_tooltip.asp
 
 
 网站编辑相关：

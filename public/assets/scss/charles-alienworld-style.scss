@@ -198,36 +198,51 @@ body {
 	}
 
 	&.bg-lab {
-		background: url("../images/box-background-small-2.jpg");
-		background-size: 100% 100%;
-	}
-
-	&.bg-planet-1 {
-		background: url("../images/box-background-planet-1.jpg");
-		background-size: 100% 100%;
-	}
-
-	&.bg-normal-1 {
-		background: url("../images/box-background-normal-1.jpg");
-		background-size: 100% 100%;
-	}
-
-	&.bg-normal-2 {
-		background: url("../images/box-background-normal-2.jpg");
-		background-size: 100% 100%;
-	}
-
-	&.bg-contactme {
-		background: url("../images/box-background-normal-3.jpg");
-		background-size: 100%;
-	}
-
-	&.bg-lab {
 		span { 
-			color: red;
+			color: #0275d8;
 		}
 	}
 	
+}
+
+.bg-lab {
+	background: url("../images/box-background-small-2.jpg");
+	background-size: 100% 100%;
+}
+
+.bg-planet-1 {
+	background: url("../images/box-background-planet-1.jpg");
+	background-size: 100% 100%;
+}
+
+.bg-planet-2 {
+	background: url("../images/box-background-planet-2.jpg");
+	background-size: 100% 100%;
+}
+
+.bg-planet-3 {
+	background: url("../images/box-background-planet-3.jpg");
+	background-size: 100% 100%;
+}
+
+.bg-planet-4 {
+	background: url("../images/box-background-planet-4.jpg");
+	background-size: 100% 100%;
+}
+
+.bg-normal-1 {
+	background: url("../images/box-background-normal-1.jpg");
+	background-size: 100% 100%;
+}
+
+.bg-normal-2 {
+	background: url("../images/box-background-normal-2.jpg");
+	background-size: 100% 100%;
+}
+
+.bg-contactme {
+	background: url("../images/box-background-normal-3.jpg");
+	background-size: 100%;
 }
 
 .card-box {
@@ -264,6 +279,10 @@ body {
 }
 
 .meeting, .assignment {
+	a {
+		color: #97ff77;
+	}
+	
 	code {
 		color: #5d9cec;
 		background-color: rgba(244, 248, 251, 0.1);
@@ -408,11 +427,10 @@ body {
 			top: 50%;
 			left: 50%;
 			transform: translateX(-50%) translateY(-50%);
+			color: #98a6ad;
 		}
 	}
 }
-
-
 
 
 

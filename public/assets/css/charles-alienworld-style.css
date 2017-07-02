@@ -148,23 +148,40 @@ body {
     font-family: Inconsolata;
     letter-spacing: 1px;
     text-transform: uppercase; }
-  .intro.bg-lab {
-    background: url("../images/box-background-small-2.jpg");
-    background-size: 100% 100%; }
-  .intro.bg-planet-1 {
-    background: url("../images/box-background-planet-1.jpg");
-    background-size: 100% 100%; }
-  .intro.bg-normal-1 {
-    background: url("../images/box-background-normal-1.jpg");
-    background-size: 100% 100%; }
-  .intro.bg-normal-2 {
-    background: url("../images/box-background-normal-2.jpg");
-    background-size: 100% 100%; }
-  .intro.bg-contactme {
-    background: url("../images/box-background-normal-3.jpg");
-    background-size: 100%; }
   .intro.bg-lab span {
-    color: red; }
+    color: #0275d8; }
+
+.bg-lab {
+  background: url("../images/box-background-small-2.jpg");
+  background-size: 100% 100%; }
+
+.bg-planet-1 {
+  background: url("../images/box-background-planet-1.jpg");
+  background-size: 100% 100%; }
+
+.bg-planet-2 {
+  background: url("../images/box-background-planet-2.jpg");
+  background-size: 100% 100%; }
+
+.bg-planet-3 {
+  background: url("../images/box-background-planet-3.jpg");
+  background-size: 100% 100%; }
+
+.bg-planet-4 {
+  background: url("../images/box-background-planet-4.jpg");
+  background-size: 100% 100%; }
+
+.bg-normal-1 {
+  background: url("../images/box-background-normal-1.jpg");
+  background-size: 100% 100%; }
+
+.bg-normal-2 {
+  background: url("../images/box-background-normal-2.jpg");
+  background-size: 100% 100%; }
+
+.bg-contactme {
+  background: url("../images/box-background-normal-3.jpg");
+  background-size: 100%; }
 
 .card-box a {
   color: #97ff77; }
@@ -186,6 +203,9 @@ body {
 .aw-movie footer, .aw-game footer, .aw-community footer {
   text-align: right;
   color: rgba(255, 255, 255, 0.6); }
+
+.meeting a, .assignment a {
+  color: #97ff77; }
 
 .meeting code, .assignment code {
   color: #5d9cec;
@@ -297,7 +317,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%); }
+  transform: translateX(-50%) translateY(-50%);
+  color: #98a6ad; }
 
 .sc-frame-outer {
   height: 360px;
