@@ -4,7 +4,10 @@
 整理寝室
 
 
-下载fan game
+
+全英文化
+把手机加上歌曲
+
 
 
 琐事备忘
@@ -22,6 +25,20 @@ body 900
 
 
 
+写已经做的工作在纸上
+加入其它页面的描述
+加入吧背景图片
+周日：加入技能树：
+CSS -webkit
+Bootstrap
+angular-animate
+ui.router
+
+https://www.w3schools.com/bootstrap/bootstrap_collapse.asp
+https://www.w3schools.com/bootstrap/bootstrap_tooltip.asp
+
+
+网站编辑相关：
 //import images:
 background-image: url("../images/bgi-dark.jpg");
 //theme color:
@@ -31,11 +48,6 @@ color: #eeffcc;
 
 
 
-
-加入其它页面的描述
-加入吧背景图片
-
-周日：加入技能树
-
+没用的字体：
 Alien web font: font-family: Inconsolata;
 rectangular font: font-family: 'Orbitron', sans-serif;

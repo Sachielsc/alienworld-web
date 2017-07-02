@@ -1,1 +1,33 @@
-to be done
+<body>
+    <div class="container">
+        <div class="meeting">
+            <h3>Meeting 15: Jul 1st</h3>
+            <h4>Important usage of <code>cherry-pick</code>,<code>merge</code> and <code>rebase</code></h4>
+            <ul>
+            	<li>
+            		<code>cherry-pick</code>: copy the selected [commit] to the current branch. find more details from <a href="http://pinkyjie.com/2014/08/10/git-notes-part-3/">here</a>.<br>
+            		<i>Note: you need to manually delete the original commits if moving is your purpose.</i>
+            	</li>
+            	<li>
+            		<code>git merge</code>:<b>[important! This may be the one I need most]</b> use <code>git merge branchname</code> to merge this "branchname" into current branch. <b>Remember: use <code>git add</code> and <code>git commit</code> to solve conflicts.</b><br>
+            		find more details from <a href="http://pinkyjie.com/2014/08/10/git-notes-part-3/">here</a>.
+            	</li>
+            	<li>
+            		<code>git rebase</code>: use <code>git rebase branchname</code> to move all the commits from "branchname" to top of the current branch.<br>
+            		<b>
+            			Note 1: after this process, the original branch "branchname" still exists!
+            		</b><br>
+            		<b>
+            			Note 2: We usually use <code>git merge</code> to merge feature branch to master branch; while use <code>git rebase</code> <b>on a feature branch</b> to linearize the relation between master branch and feature branch and then we use <code>git merge</code> to move everything back to master branch.<br>
+            			find more details from <a href="http://pinkyjie.com/2014/08/10/git-notes-part-3/">here</a>.
+            		</b>
+            	</li>
+            </ul>
+            <h4>The <b>Golden Rule</b> of <code>git rebase</code></h4>
+            	<p>Never use <code>git rebase</code> from the master branch! Try to use <code>git rebase</code> <b>on a feature branch</b> to linearize the relation between master branch and feature branch and then we use <code>git merge</code> to move everything back to master branch.<br>
+            	find more details from <a href="https://github.com/geeeeeeeeek/git-recipes/wiki/5.1-%E4%BB%A3%E7%A0%81%E5%90%88%E5%B9%B6%EF%BC%9AMerge%E3%80%81Rebase%E7%9A%84%E9%80%89%E6%8B%A9">here</a>.</p>
+
+            <h4><b>Note: those material above is in Chinese, if you want to view an English version (and it is the best version), click <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing">HERE</a>.</b></h4>
+        </div>
+    </div>
+</body>
