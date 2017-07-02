@@ -348,6 +348,7 @@ body {
 }
 
 
+
 // 4. The CV Page
 .cv {
 	&.cv-fullpage {
@@ -730,34 +731,88 @@ body {
 	background-color: #323b44;
 	margin: 0;
 
-		button {
-			color: rgba(255, 255, 255, 0.6);
-			margin-top: 22px;
-			margin-bottom: 0px;
-		    -moz-border-radius: 2px;
-		    -moz-transition: all 400ms ease-in-out;
-		    -o-transition: all 400ms ease-in-out;
-		    -webkit-border-radius: 2px;
-		    -webkit-transition: all 400ms ease-in-out;
-		    background: transparent !important;
-		    -webkit-border-radius: 5px;
-		    border-radius: 5px;
-		    -moz-border-radius: 5px;
-		    background-clip: padding-box;
-		    border-width: 2px !important;
-		    transition: all 400ms ease-in-out;
-		    background-clip: inherit;
-		    background-color: #97ff77;
-		    width: 100px;
-		    position: relative;
-		    left: 50%;
-		    transform: translateX(-50%);
-		    z-index: 1002;
+	button {
+		color: rgba(255, 255, 255, 0.6);
+		margin-top: 22px;
+		margin-bottom: 0px;
+	    -moz-border-radius: 2px;
+	    -moz-transition: all 400ms ease-in-out;
+	    -o-transition: all 400ms ease-in-out;
+	    -webkit-border-radius: 2px;
+	    -webkit-transition: all 400ms ease-in-out;
+	    background: transparent !important;
+	    -webkit-border-radius: 5px;
+	    border-radius: 5px;
+	    -moz-border-radius: 5px;
+	    background-clip: padding-box;
+	    border-width: 2px !important;
+	    transition: all 400ms ease-in-out;
+	    background-clip: inherit;
+	    background-color: #97ff77;
+	    width: 100px;
+	    position: relative;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    z-index: 1002;
 
-		    &.active {
-		    	color: #97ff77;
-		    }
-		}
+	    &.active {
+	    	color: #97ff77;
+	    }
+	}
+}
+
+.skill-bar-list {
+	.skill-bar {
+
+		margin-bottom: 18px;
+
+		.aw-progress-barbackground {
+			border-radius: 5px;
+			height: 10px;
+    		background-color: #98a6ad;
+		    -webkit-background-size: 40px 40px;
+		    text-align: center;
+        	transition: width .6s ease;
+
+			.aw-progress-bar {
+				border-radius: inherit;
+				height: inherit;
+			    -webkit-animation: progress-bar-stripes 2s linear infinite;
+			    -o-animation: progress-bar-stripes 2s linear infinite;
+			    animation: progress-bar-stripes 2s linear infinite;
+			    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+			    background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+			    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+			    -webkit-background-size: 40px 40px;
+	        	transition: width .6s ease;
+
+				&.aw-progress-bar-egg {
+					width: 15%;
+					background-color: #97ff77;
+				}
+
+				&.aw-progress-bar-facehugger {
+					width: 30%;
+					background-color: #fb6d9d;
+				}
+
+				&.aw-progress-bar-chestburster {
+					width: 50%;
+					background-color: #34d3eb;
+				}
+
+				&.aw-progress-bar-xenomorph {
+					width: 70%;
+					background-color: #5d9cec;
+				}
+
+				&.aw-progress-bar-queen {
+					width: 90%;
+					background-color: #7266ba;
+				}
+	        }
+      	}		
+	}
 }
 
 .theme-color {
