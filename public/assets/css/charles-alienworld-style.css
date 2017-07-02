@@ -118,6 +118,8 @@ body {
   background-color: #323b44;
   outline: none;
   box-sizing: border-box; }
+  .intro span, .aw-game span, .aw-movie span, .meeting span, .aw-community span, .assignment span, .card-box span {
+    color: #0275d8; }
 
 .intro {
   position: relative;
@@ -161,8 +163,8 @@ body {
   .intro.bg-contactme {
     background: url("../images/box-background-normal-3.jpg");
     background-size: 100%; }
-  .intro span {
-    color: #0275d8; }
+  .intro.bg-lab span {
+    color: red; }
 
 .card-box a {
   color: #97ff77; }
@@ -199,11 +201,10 @@ body {
   font-size: 13px;
   line-height: 1.42857143;
   color: #97ff77;
-  word-break: break-all;
-  word-wrap: break-word;
   background-color: black;
   border: 1px solid #ccc;
-  border-radius: 4px; }
+  border-radius: 4px;
+  white-space: pre-wrap; }
 
 .social-links-wrapper {
   margin: 30px 0;

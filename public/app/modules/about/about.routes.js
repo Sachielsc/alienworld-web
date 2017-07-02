@@ -110,6 +110,11 @@ angular.module('about').config(['$stateProvider', function($stateProvider) {
 		url:'/report14',
 		templateUrl:'app/modules/report/views/alienworld-report-m14.view.html',
 		})
+
+		.state('worklog.report15',{
+		url:'/report15',
+		templateUrl:'app/modules/report/views/alienworld-report-m15.view.html',
+		})
 		;
 	}
 ]);

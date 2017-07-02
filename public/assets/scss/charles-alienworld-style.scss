@@ -153,6 +153,10 @@ body {
     background-color: #323b44;
 	outline: none;
 	box-sizing: border-box;
+
+	span {
+    	color: #0275d8;
+	}
 }
 
 .intro {
@@ -218,9 +222,12 @@ body {
 		background-size: 100%;
 	}
 
-	span {
-		color: #0275d8;
-	}	
+	&.bg-lab {
+		span { 
+			color: red;
+		}
+	}
+	
 }
 
 .card-box {
@@ -272,11 +279,10 @@ body {
 	    font-size: 13px;
 	    line-height: 1.42857143;
 	    color: #97ff77;
-	    word-break: break-all;
-	    word-wrap: break-word;
 	    background-color: black;
 	    border: 1px solid #ccc;
 	    border-radius: 4px;
+	    white-space: pre-wrap;
 	}
 }
 
