@@ -1,12 +1,16 @@
+全英文化
+skill panel 格式颜色内容
+
+
+
 重置新浪邮箱和新浪微博的密码
-把笔记等内容传到linkedin，做两个linkedin！
+做第二个linkedin
 杀各硬盘的毒
 整理寝室
 
 
-
-全英文化
-把手机加上歌曲
+添加ft截图到linkedin
+整理歌曲，把手机加上歌曲
 
 
 
@@ -22,10 +26,6 @@ aw-header-content 标题栏中的所有内容 1005
 body 900
 所有的边框 1000
 按钮1002
-
-
-
-https://codepen.io/benarson/pen/gMpOyX
 
 
 
