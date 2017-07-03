@@ -1,21 +1,12 @@
-全英文化
 skill panel 格式颜色内容
-
-
-
+加入证书，语言技能
+添加ft截图到linkedin
 重置新浪邮箱和新浪微博的密码
 做第二个linkedin
 杀各硬盘的毒
 整理寝室
-
-
-添加ft截图到linkedin
 整理歌曲，把手机加上歌曲
 
-
-
-琐事备忘
-叔二楼的那个插线板是我的，我房间连接笔记本的插线板是叔的
 
 
 网站相关：
@@ -27,8 +18,6 @@ body 900
 所有的边框 1000
 按钮1002
 
-
-
 网站编辑相关：
 //import images:
 background-image: url("../images/bgi-dark.jpg");
@@ -37,8 +26,11 @@ color: #97ff77;
 //the light yellow from Blizzard
 color: #eeffcc;
 
-
-
 没用的字体：
 Alien web font: font-family: Inconsolata;
 rectangular font: font-family: 'Orbitron', sans-serif;
+
+
+
+琐事备忘
+叔二楼的那个插线板是我的，我房间连接笔记本的插线板是叔的
