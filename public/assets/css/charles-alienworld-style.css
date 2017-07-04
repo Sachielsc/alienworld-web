@@ -214,6 +214,9 @@ body {
   padding: 2px 4px;
   font-size: 90%; }
 
+.meeting pre, .assignment pre {
+  color: #eeffcc; }
+
 .meeting pre code, .assignment pre code {
   display: block;
   padding: 9.5px;
