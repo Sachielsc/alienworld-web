@@ -1,10 +1,8 @@
 解决载入时的问题
-skill panel 加上语言技能 和hobby
 
 重置新浪邮箱和新浪微博的密码
 做第二个linkedin
 杀各硬盘的毒
-整理寝室
 整理歌曲，把手机加上歌曲
 
 琐事备忘
@@ -31,3 +29,6 @@ body 900
 没用的字体：
 Alien web font: font-family: Inconsolata;
 rectangular font: font-family: 'Orbitron', sans-serif;
+
+问题
+能否angular和jquery混用？
