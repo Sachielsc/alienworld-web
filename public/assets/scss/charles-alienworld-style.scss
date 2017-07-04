@@ -423,6 +423,10 @@ body {
 		h3 {
 			font-variant: small-caps;
 		}
+
+		p {
+			display: inline;
+		}
 	}
 
 	.cv-name {
@@ -793,6 +797,31 @@ body {
 	.skill-bar {
 
 		margin-bottom: 18px;
+
+		a {
+			color: #0275d8;
+			-webkit-transition: all 1s ease;
+			   -moz-transition: all 1s ease;
+			    -ms-transition: all 1s ease;
+				 -o-transition: all 1s ease;
+					transition: all 1s ease;
+
+			&:hover {
+				color: #97ff77;
+			}
+		}
+
+		p {
+			-webkit-transition: all 1s ease;
+			   -moz-transition: all 1s ease;
+			    -ms-transition: all 1s ease;
+				 -o-transition: all 1s ease;
+					transition: all 1s ease;
+
+			&:hover {
+				color: #97ff77;
+			}
+		}
 
 		.aw-progress-barbackground {
 			border-radius: 5px;
