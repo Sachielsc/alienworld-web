@@ -1,0 +1,2 @@
+用了git checkout查看历史commit以后，不知怎么返回
+能否angular和jquery混用？

@@ -626,16 +626,22 @@ body {
     -moz-transition: all 1s ease;
     -ms-transition: all 1s ease;
     -o-transition: all 1s ease;
-    transition: all 1s ease; }
+    transition: all 1s ease;
+    margin-bottom: 0; }
     .skill-bar-list .skill-bar p:hover {
       color: #97ff77; }
+  .skill-bar-list .skill-bar .collapse {
+    width: 95%;
+    left: 5%;
+    position: relative; }
   .skill-bar-list .skill-bar .aw-progress-barbackground {
     border-radius: 5px;
     height: 10px;
     background-color: #98a6ad;
     -webkit-background-size: 40px 40px;
     text-align: center;
-    transition: width .6s ease; }
+    transition: width .6s ease;
+    margin-bottom: 8px; }
     .skill-bar-list .skill-bar .aw-progress-barbackground .aw-progress-bar {
       border-radius: inherit;
       height: inherit;

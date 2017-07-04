@@ -1,5 +1,5 @@
 解决载入时的问题
-skill panel 格式颜色内容
+skill panel 加上语言技能 和hobby
 
 重置新浪邮箱和新浪微博的密码
 做第二个linkedin

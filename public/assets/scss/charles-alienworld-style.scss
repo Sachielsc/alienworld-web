@@ -817,10 +817,17 @@ body {
 			    -ms-transition: all 1s ease;
 				 -o-transition: all 1s ease;
 					transition: all 1s ease;
+			margin-bottom: 0;
 
 			&:hover {
 				color: #97ff77;
 			}
+		}
+
+		.collapse {
+			width: 95%;
+			left: 5%;
+			position: relative;
 		}
 
 		.aw-progress-barbackground {
@@ -830,6 +837,7 @@ body {
 		    -webkit-background-size: 40px 40px;
 		    text-align: center;
         	transition: width .6s ease;
+			margin-bottom: 8px;
 
 			.aw-progress-bar {
 				border-radius: inherit;
