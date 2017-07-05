@@ -1,5 +1,3 @@
-解决载入时的问题
-
 重置新浪邮箱和新浪微博的密码
 做第二个linkedin
 杀各硬盘的毒
@@ -32,3 +30,4 @@ rectangular font: font-family: 'Orbitron', sans-serif;
 
 问题
 能否angular和jquery混用？
+解决载入时的问题
