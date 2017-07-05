@@ -191,6 +191,16 @@ body {
 
 .card-box.report-list {
   color: #98a6ad; }
+  .card-box.report-list a {
+    color: #0275d8;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease; }
+    .card-box.report-list a:hover {
+      color: #97ff77;
+      cursor: pointer; }
   .card-box.report-list li {
     list-style-type: disc; }
 
@@ -620,7 +630,8 @@ body {
     -o-transition: all 1s ease;
     transition: all 1s ease; }
     .skill-bar-list .skill-bar a:hover {
-      color: #97ff77; }
+      color: #97ff77;
+      cursor: pointer; }
   .skill-bar-list .skill-bar p {
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;

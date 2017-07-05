@@ -18,12 +18,12 @@
 						<a href="https://www.facebook.com/chang.shu.184" class="fa fa-facebook fa-fw"></a>
 					</li>
 					<li>
-						<a ng-click="emailDisplayToggle = !emailDisplayToggle" class="fa fa-envelope fa-fw"></a>
+						<a class="fa fa-envelope fa-fw" data-toggle="collapse" data-target="#emailme"></a>
 					</li>
 				</ul>				
 			</nav>
-			<p>More available contact ways will be reveal soon!</p>
-			<div ng-init="emailDisplayToggle = false" ng-show="emailDisplayToggle">
+			<p>More available contact methods will be revealed soon!</p>
+			<div class="collapse" id="emailme">
 				<div class="separator"></div>			
 				<p>Email me at: <span>sachielsc@gmail.com</span></p>
 			</div>

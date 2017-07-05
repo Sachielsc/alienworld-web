@@ -256,7 +256,21 @@ body {
 
 	&.report-list {
 		color: #98a6ad;
-		
+
+		a {
+			color: #0275d8;
+			-webkit-transition: all 1s ease;
+			   -moz-transition: all 1s ease;
+			    -ms-transition: all 1s ease;
+				 -o-transition: all 1s ease;
+					transition: all 1s ease;
+
+			&:hover {
+				color: #97ff77;
+				cursor:pointer;
+			}
+		}
+
 		li {
 		list-style-type: disc;			
 		}
@@ -808,6 +822,7 @@ body {
 
 			&:hover {
 				color: #97ff77;
+				cursor:pointer;
 			}
 		}
 
