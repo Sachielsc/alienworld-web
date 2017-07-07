@@ -1,6 +1,6 @@
 'use strict';
 
-var mainModule = angular.module('alienworld',['ui.router', 'ngAnimate', 'home', 'movies', 'games', 'community', 'about']);
+var mainModule = angular.module('alienworld',['ui.router', 'ngAnimate', 'home', 'movies', 'games', 'community', 'about', 'report']);
 
 mainModule.controller('MainController', ['$scope','$log', function($scope,$log){
 		function init(){
