@@ -1,11 +1,10 @@
-重置新浪邮箱和新浪微博的密码
 做第二个linkedin
 杀各硬盘的毒
-整理歌曲，把手机加上歌曲
-
-琐事备忘
-叔二楼的那个插线板是我的，我房间连接笔记本的插线板是叔的
-
+整理歌曲
+整理出最好的模板简历和cv信
+想办法做一个pdf的简历？
+研究明白stateprovider
+思念是一种病
 
 
 网站编辑相关：
@@ -29,5 +28,8 @@ Alien web font: font-family: Inconsolata;
 rectangular font: font-family: 'Orbitron', sans-serif;
 
 问题
-能否angular和jquery混用？
-解决载入时的问题
+能否angular和jquery混用？最好不要用jq
+如何解决载入时的问题
+
+琐事备忘
+叔二楼的那个插线板是我的，我房间连接笔记本的插线板是叔的
