@@ -254,7 +254,12 @@ body {
 		color: rgba(255, 255, 255, 0.6);
 	}
 
-	&.report-list {
+	&.forum-list {
+		background: url(../images/box-background-small-2.jpg);
+	    background-size: 100%;
+	}
+
+	&.report-list, &.forum-list {
 		color: #98a6ad;
 
 		a {
