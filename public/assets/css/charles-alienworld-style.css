@@ -205,6 +205,8 @@ body {
     .card-box.report-list a:hover, .card-box.forum-list a:hover {
       color: #97ff77;
       cursor: pointer; }
+    .card-box.report-list a::before, .card-box.forum-list a::before {
+      margin-right: 7px; }
   .card-box.report-list li, .card-box.forum-list li {
     list-style-type: disc; }
 

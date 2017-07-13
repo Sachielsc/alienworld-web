@@ -89,6 +89,12 @@ angular.module('report').config(['$stateProvider', function($stateProvider) {
 		url:'/noteNodeJS',
 		templateUrl:'app/modules/report/views/alienworld-note-noteNodeJS.view.html',
 		})
+
+		.state('worklog.angularjsArticle',{
+		url:'/angularjsArticle',
+		templateUrl:'app/modules/report/views/alienworld-note-angularjsArticle.view.html',
+		})
+
 		;
 	}
 ]);

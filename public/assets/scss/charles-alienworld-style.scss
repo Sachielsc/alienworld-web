@@ -274,6 +274,10 @@ body {
 				color: #97ff77;
 				cursor:pointer;
 			}
+
+			&::before {
+				margin-right: 7px;
+			}
 		}
 
 		li {
