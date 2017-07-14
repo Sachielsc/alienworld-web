@@ -100,6 +100,11 @@ angular.module('report').config(['$stateProvider', function($stateProvider) {
 		templateUrl:'app/modules/report/views/alienworld-note-angularjsArticle.view.html',
 		})
 
+		.state('worklog.html',{
+		url:'/html',
+		templateUrl:'app/modules/report/views/alienworld-note-html.view.html',
+		})
+
 		;
 	}
 ]);
