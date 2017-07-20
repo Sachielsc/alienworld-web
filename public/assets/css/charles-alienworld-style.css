@@ -119,7 +119,7 @@ body {
   outline: none;
   box-sizing: border-box; }
   .intro span, .aw-game span, .aw-movie span, .meeting span, .aw-community span, .assignment span, .card-box span {
-    color: #0275d8; }
+    color: #5bc0de; }
 
 .intro {
   position: relative;
@@ -149,7 +149,7 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase; }
   .intro.bg-lab span {
-    color: #0275d8; }
+    color: #5bc0de; }
 
 .bg-lab {
   background: url("../images/box-background-small-2.jpg");
@@ -205,6 +205,8 @@ body {
     .card-box.report-list a:hover, .card-box.forum-list a:hover {
       color: #97ff77;
       cursor: pointer; }
+    .card-box.report-list a::before, .card-box.forum-list a::before {
+      margin-right: 7px; }
   .card-box.report-list li, .card-box.forum-list li {
     list-style-type: disc; }
 
@@ -296,7 +298,7 @@ body {
         .social-links-wrapper .social-links li a:hover {
           color: white;
           line-height: 72px;
-          background: #0275d8; }
+          background: #5bc0de; }
 
 .cv.cv-fullpage {
   margin: 0px 20px 20px 20px; }
@@ -627,7 +629,7 @@ body {
 .skill-bar-list .skill-bar {
   margin-bottom: 18px; }
   .skill-bar-list .skill-bar a {
-    color: #0275d8;
+    color: #5bc0de;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -ms-transition: all 1s ease;

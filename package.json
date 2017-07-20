@@ -1,7 +1,10 @@
 {
   "name": "alienworld-web",
   "version": "1.0.0",
-  "description": "Charles' personal website on Heroku. All the contect is written by Charles using front-end skills",
+  "description": "Charles' personal website on Heroku. All the contect is written by Charles using front-end skills",  
+  "engines": {
+    "node": "6.11.1"
+  },
   "main": "application.js",
   "dependencies": {
     "angular-ui-router": "0.3.2",

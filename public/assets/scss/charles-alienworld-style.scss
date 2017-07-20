@@ -155,7 +155,7 @@ body {
 	box-sizing: border-box;
 
 	span {
-    	color: #0275d8;
+    	color: #5bc0de;
 	}
 }
 
@@ -199,7 +199,7 @@ body {
 
 	&.bg-lab {
 		span { 
-			color: #0275d8;
+			color: #5bc0de;
 		}
 	}
 	
@@ -273,6 +273,10 @@ body {
 			&:hover {
 				color: #97ff77;
 				cursor:pointer;
+			}
+
+			&::before {
+				margin-right: 7px;
 			}
 		}
 
@@ -385,7 +389,7 @@ body {
 			    &:hover {
 			    	color: white;
 			    	line-height: 72px;
-			    	background: #0275d8;
+			    	background: #5bc0de;
 
 			    }
 	    	}
@@ -818,7 +822,7 @@ body {
 		margin-bottom: 18px;
 
 		a {
-			color: #0275d8;
+			color: #5bc0de;
 			-webkit-transition: all 1s ease;
 			   -moz-transition: all 1s ease;
 			    -ms-transition: all 1s ease;

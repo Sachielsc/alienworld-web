@@ -20,41 +20,51 @@
                 </div>
             </div>
             <div class="col-8">
-                <div ui-view>
-                    <div class="card-box white-frame shadow-expand">
-                        <p>Dear colonist officer,<br>
-                        Select a work report from the list below</p>
+                <div class="card-box white-frame shadow-expand">
+                    <p>Dear colonist officer,<br>
+                    Select a work report from the list below</p>
+                </div>
+                <div class="card-box white-frame shadow-expand report-list">
+                    <a data-toggle="collapse" data-target="#ft-report" class="fa fa-folder-open">Work Reports in Avartar International Lt -- Project Funtown</a>
+                    <div class="collapse" id="ft-report">
+                        <li><a ui-sref=".report1">Report 1</a></li>
+                        <li><a ui-sref=".report2">Report 2</a></li>
+                        <li><a ui-sref=".report3">Report 3</a></li>
+                        <li><a ui-sref=".report4">Report 4</a></li>
+                        <li><a ui-sref=".report5">Report 5</a></li>
+                        <li><a ui-sref=".report6">Report 6</a></li>
+                        <li><a ui-sref=".report7">Report 7</a></li>
+                        <li><a ui-sref=".report8">Report 8</a></li>
+                        <li><a ui-sref=".report9">Report 9</a></li>
+                        <li><a ui-sref=".report10">Report 10</a></li>
+                        <li><a ui-sref=".report11">Report 11</a></li>
+                        <li><a ui-sref=".report12">Report 12</a></li>
+                    </div><br>
+                    <a data-toggle="collapse" data-target="#my-report" class="fa fa-folder-open">My own reports in website building and code learning</a>                        
+                    <div class="collapse" id="my-report">
+                        <li><a ui-sref=".report13">Report 1</a></li>
+                        <li><a ui-sref=".report14">Report 2</a></li>
+                        <li><a ui-sref=".report15">Report 3</a></li>
+                        <li><a ui-sref=".report16">Report 4</a></li>
+                        <li><a ui-sref=".report17">Report 5</a></li>
+                    </div><br>
+                    <a data-toggle="collapse" data-target="#my-studynote" class="fa fa-folder-open">My Study Note (Chinese &amp; English mixed)</a>                        
+                    <div class="collapse" id="my-studynote">
+                        <li><a ui-sref=".noteNodeJS">Node.js</a></li>
+                        <li><a ui-sref=".angularjsArticle">AngularJS</a></li>
+                        <li><a ui-sref=".generalCoding">General-coding</a></li>
+                        <li><a ui-sref=".generalIT">General-IT</a></li>
+                        <li><a ui-sref=".vocabulary">Vocabulary</a></li>
+                        <li><a ui-sref=".html">HTML</a></li>
+                        <li><a ui-sref=".bootstrap">Bootstrap</a></li>
+                        <li><a ui-sref=".java">Java</a></li>
+                        <li><a ui-sref=".jira">JIRA</a></li>
+                        <li><a ui-sref=".reactjs">ReactJS</a></li>
                     </div>
-                    <div class="card-box white-frame shadow-expand report-list">
-                        <a data-toggle="collapse" data-target="#ft-report" class="fa fa-folder-open">Work Reports in Avartar International Lt -- Project Funtown</a>
-                        <div class="collapse" id="ft-report">
-                            <li><a ui-sref=".report1">Report 1</a></li>
-                            <li><a ui-sref=".report2">Report 2</a></li>
-                            <li><a ui-sref=".report3">Report 3</a></li>
-                            <li><a ui-sref=".report4">Report 4</a></li>
-                            <li><a ui-sref=".report5">Report 5</a></li>
-                            <li><a ui-sref=".report6">Report 6</a></li>
-                            <li><a ui-sref=".report7">Report 7</a></li>
-                            <li><a ui-sref=".report8">Report 8</a></li>
-                            <li><a ui-sref=".report9">Report 9</a></li>
-                            <li><a ui-sref=".report10">Report 10</a></li>
-                            <li><a ui-sref=".report11">Report 11</a></li>
-                            <li><a ui-sref=".report12">Report 12</a></li>
-                        </div><br>
-                        <a data-toggle="collapse" data-target="#my-report" class="fa fa-folder-open">My own reports in website building and code learning</a>                        
-                        <div class="collapse" id="my-report">
-                            <li><a ui-sref=".report13">Report 1</a></li>
-                            <li><a ui-sref=".report14">Report 2</a></li>
-                            <li><a ui-sref=".report15">Report 3</a></li>
-                            <li><a ui-sref=".report16">Report 4</a></li>
-                        </div>
-                        <a data-toggle="collapse" data-target="#it-knowledge" class="fa fa-folder-open">My knowledge of coding</a>
-                        <div class="collapse" id="it-knowledge">
-                            <li><a ui-sref=".angularjsArticle">About AngularJS (Chinese)</a></li>
-                            <li><a ui-sref=".report14">Article 2</a></li>
-                            <li><a ui-sref=".report15">Article 3</a></li>
-                            <li><a ui-sref=".report16">Article 4</a></li>
-                        </div>
+                </div>
+                <div class="aw-community green-frame shadow-expand">
+                    <div ui-view>
+                        <p>Select a report from above~</p>
                     </div>
                 </div>
             </div>
