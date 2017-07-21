@@ -28,6 +28,11 @@ angular.module('about').config(['$stateProvider', function($stateProvider) {
 			templateUrl:'app/modules/about/views/alienworld-about-cvbody.view.html',
 		})
 
+		.state('cv.cvpage',{
+		url:'/about/cv/expanded',
+		templateUrl:'app/modules/about/views/alienworld-about-cvbody.view.html',
+		})
+
 		.state('contactme',{
 			url:'/about/contactme',
 			// controller:'aboutController',

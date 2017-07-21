@@ -1,25 +1,18 @@
-看面试题
+ipad做iclue的面试题
 linkedin和facebook用起来
 杀各硬盘的毒
-研究明白stateprovider
+研究明白stateprovider （node.js）
 领英加入certificate
 领英和简历，改成我做了什么
-准备驾照考题，开车问题：我的车真的需要启动松油么。开我的车去，启动无力
-21号上课
 带上车险的东西
-早上报名考证
+下周二早上报名考证
 研究网站latipay
+路税到九月
+wof到年底
+叔二楼的那个插线板是我的，我房间连接笔记本的插线板是叔的
 
 闲的晚上：
 skill panel展开，加入w3school的分知识点
-
-
-
-医疗报销文本 待删
-I felt sting feeling on my left eye on Jul 8th, 2017. 3 days later (Jul 11th) it's getting worse.
-At 9:00 a.m. Jul 11th, 2017, I went to health new lynn.
-Dr Sanjay and his nurse checked my sight and my left eye at about 9:30 am
-The diagnose is lib hordeolum
 
 
 
@@ -45,7 +38,4 @@ rectangular font: font-family: 'Orbitron', sans-serif;
 
 问题
 能否angular和jquery混用？最好不要用jq
-如何解决载入时的问题
-
-琐事备忘
-叔二楼的那个插线板是我的，我房间连接笔记本的插线板是叔的
+如何解决载入时的闪烁问题

@@ -300,9 +300,23 @@ body {
           line-height: 72px;
           background: #5bc0de; }
 
-.cv.cv-fullpage {
+.cv-page .cv-fullpage {
+  margin: 0 9px 0 9px; }
+  .cv-page .cv-fullpage .cv-wrapper {
+    background: none;
+    filter: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease; }
+    .cv-page .cv-fullpage .cv-wrapper:hover {
+      filter: none; }
+
+.cv-fullpage {
   margin: 0px 20px 20px 20px; }
-  .cv.cv-fullpage .cv-wrapper {
+  .cv-fullpage .cv-wrapper {
     background: url("../images/box-background-small.jpg");
     background-size: 100% 100%;
     filter: grayscale(100%);
@@ -312,35 +326,28 @@ body {
     -ms-transition: all 4s ease;
     -o-transition: all 4s ease;
     transition: all 4s ease; }
-    .cv.cv-fullpage .cv-wrapper:hover {
+    .cv-fullpage .cv-wrapper:hover {
       filter: grayscale(55%); }
-
-.cv .cv-wrapper {
-  padding: 15px 15px 15px 15px;
-  -webkit-font-smoothing: antialiased;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); }
-
-.cv a {
-  color: inherit; }
-
-.cv h1, .cv h2, .cv h3, .cv h4, .cv h5, .cv h6, .cv p, .cv li {
-  color: #98a6ad; }
-
-.cv .list-unstyled i {
-  margin-right: 4px; }
-
-.cv .cv-column h3 {
-  font-variant: small-caps; }
-
-.cv .cv-column p {
-  display: inline; }
-
-.cv .cv-name span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  color: #98a6ad; }
+  .cv-fullpage .cv-wrapper {
+    padding: 15px 15px 15px 15px;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); }
+  .cv-fullpage a {
+    color: inherit; }
+  .cv-fullpage h1, .cv-fullpage h2, .cv-fullpage h3, .cv-fullpage h4, .cv-fullpage h5, .cv-fullpage h6, .cv-fullpage p, .cv-fullpage li {
+    color: #98a6ad; }
+  .cv-fullpage .list-unstyled i {
+    margin-right: 4px; }
+  .cv-fullpage .cv-column h3 {
+    font-variant: small-caps; }
+  .cv-fullpage .cv-column p {
+    display: inline; }
+  .cv-fullpage .cv-name span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #98a6ad; }
 
 .sc-frame-outer {
   height: 360px;

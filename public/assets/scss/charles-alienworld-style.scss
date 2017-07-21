@@ -402,23 +402,41 @@ body {
 
 
 // 4. The CV Page
-.cv {
-	&.cv-fullpage {
-		margin: 0px 20px 20px 20px;
-
+.cv-page {
+	.cv-fullpage {
+		margin: 0 9px 0 9px;
 		.cv-wrapper {
-			background: url("../images/box-background-small.jpg");
-			background-size: 100% 100%;
-			filter: grayscale(100%);
+			background: none;
+			filter: none;
 		    -webkit-tap-highlight-color: transparent;
-				-webkit-transition: all 4s ease;
-				   -moz-transition: all 4s ease;
-				    -ms-transition: all 4s ease;
-					 -o-transition: all 4s ease;
-						transition: all 4s ease;
+				-webkit-transition: all 1s ease;
+				   -moz-transition: all 1s ease;
+				    -ms-transition: all 1s ease;
+					 -o-transition: all 1s ease;
+						transition: all 1s ease;
 		&:hover {
-			filter: grayscale(55%);
+			filter: none;
 			}
+		}
+    }
+}
+
+
+.cv-fullpage {
+	margin: 0px 20px 20px 20px;
+
+	.cv-wrapper {
+		background: url("../images/box-background-small.jpg");
+		background-size: 100% 100%;
+		filter: grayscale(100%);
+	    -webkit-tap-highlight-color: transparent;
+			-webkit-transition: all 4s ease;
+			   -moz-transition: all 4s ease;
+			    -ms-transition: all 4s ease;
+				 -o-transition: all 4s ease;
+					transition: all 4s ease;
+	&:hover {
+		filter: grayscale(55%);
 		}
 	}
 
@@ -462,7 +480,6 @@ body {
 		}
 	}
 }
-
 
 
 // 5. Frames
