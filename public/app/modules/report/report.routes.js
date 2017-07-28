@@ -90,6 +90,11 @@ angular.module('report').config(['$stateProvider', function($stateProvider) {
 		templateUrl:'app/modules/report/views/own-report/alienworld-report-m17.view.html',
 		})
 
+		.state('worklog.report18',{
+		url:'/report18',
+		templateUrl:'app/modules/report/views/own-report/alienworld-report-m18.view.html',
+		})
+
 		.state('worklog.noteNodeJS',{
 		url:'/noteNodeJS',
 		templateUrl:'app/modules/report/views/own-note/alienworld-note-noteNodeJS.view.html',
@@ -140,6 +145,10 @@ angular.module('report').config(['$stateProvider', function($stateProvider) {
 		templateUrl:'app/modules/report/views/own-note/alienworld-note-reactJS.view.html',
 		})
 
+		.state('worklog.linux',{
+		url:'/linux',
+		templateUrl:'app/modules/report/views/own-note/alienworld-note-Linux.view.html',
+		})
 		;
 	}
 ]);

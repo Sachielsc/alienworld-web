@@ -11,6 +11,10 @@ app.get("/", function(req, res) {
 	res.render("index");
 })
 
+app.use(function(req, res) {
+    res.sendfile(__dirname + '/Public/index.html');
+});
+
 app.listen(port, function() {
 	console.log("app running");
 })

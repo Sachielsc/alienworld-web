@@ -6,7 +6,7 @@ angular.module('home').config(['$stateProvider',
 
 		$stateProvider
 		.state('home',{
-			url:'',
+			url:'/',
 			controller:'homeController',
 			templateUrl:'app/modules/home/views/alienworld-home.view.html',
 		});
