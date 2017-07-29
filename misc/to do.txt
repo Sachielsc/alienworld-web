@@ -1,11 +1,43 @@
 item identifier
 ED421624634NZ - china
 www.nzpost.co.nz/track
-compliment
+
+加入笔记：
 查清楚#!
 试用jQuery
 完善html5模式
+
+代办：
 创建文件夹快捷方式
+
+
+我的linux经验：
+
+Tips:
+
+Linux命令行下查询当前所使用的shell种类
+echo $0
+shell所在目录
+echo $SHELL
+Linux命令行下查询当前所使用的shell版本
+bash --version
+
+
+This problem is found by my failure to run (code)sudo apt-get update
+Every time I attempt to perform a software update I get this error from the 
+
+The repository 'http://ppa.launchpad.net/ubuntu-vn/ppa/ubuntu xenial Release' does not have a Release file.
+
+问题所在：
+https://askubuntu.com/questions/768569/ubuntu-16-04-update-manager-error
+
+You obviously did a system upgrade without having removed the external repositories before. The easiest way to solve the problem would be to remove all external repositories and delete all related public keys. After having done this, update the repositories (sudo apt-get update) and check whether everything is fixed now ... and when no error occurs anymore, you can add new external repositories, but carefully check whether these repositories are "matching Xenial" ... 
+
+解决方式：
+https://askubuntu.com/questions/307/how-can-ppas-be-removed
+
+ast but not least, you can also disable or remove PPAs from the "Software Sources" section in Ubuntu Settings with a few clicks of your mouse (no terminal needed).
+
 
 买一个名片盒，买盛饭的大盒子，考完以后去new world附近买一个Blind Spot Rear View Mirror，周二九点半才开门不要去
 linkedin和facebook用起来
