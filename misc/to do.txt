@@ -3,6 +3,20 @@ ED421624634NZ - china
 www.nzpost.co.nz/track
 
 我的linux经验：
+
+Tips:
+
+Linux命令行下查询当前所使用的shell种类
+echo $0
+shell所在目录
+echo $SHELL
+Linux命令行下查询当前所使用的shell版本
+bash --version
+
+
+This problem is found by my failure to run (code)sudo apt-get update
+Every time I attempt to perform a software update I get this error from the 
+
 The repository 'http://ppa.launchpad.net/ubuntu-vn/ppa/ubuntu xenial Release' does not have a Release file.
 
 问题所在：
