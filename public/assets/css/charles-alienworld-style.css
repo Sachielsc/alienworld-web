@@ -698,3 +698,6 @@ body {
 
 .blank-bar {
   height: 150px; }
+
+.hidethis {
+  display: none; }
