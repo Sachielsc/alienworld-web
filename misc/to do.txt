@@ -1,3 +1,54 @@
+更新seek的profile
+
+简历改变为加入我的网站内容，self-motivated projects，细节写入网站
+
+做一个拉风的cover letter ,网页版截图
+(
+
+Website & Digital Designer
+Zyber is a full service Digital Web Company. We provide a range of digital services and if you join the team you will be doing much more than just designing websites! We use modern and popular CMS platforms such as Squarespace and Shopify, which provides enormous flexibility to design and front end develop what we want to assist our clients grow with their online business.  We design and build Themes, apps and SAAS products! All of which you will be given the opportunity to work on. 
+
+If you are looking for a chance to kick start your design career or have been in the industry for a few years and you're looking for the next step then this is the role for you. 
+
+What we expect from you:
+
+Strong Photoshop and Illustrator skills
+A good understanding and be able to code CSS, HTML & JQuery, 
+Bonus if you have knowledge in Shopify and Liquid coding for Shopify.
+Excellent communication skills (fluent and well spoken English is a must)
+Strong visual design skills
+Above all else - creativity!!!
+What you can expect from us:
+
+Great team culture!
+Variety in your design and workday
+Career progression opportunities
+Training and support
+A kick-ass time at Zyber
+Check out some of our work!
+
+https://www.zyber.co.nz/work/portfolio/
+
+And our Facebook page to see what the team gets up to!
+
+https://www.facebook.com/zyberwebdesign
+
+ 
+
+We don't mind if you're straight out of uni or design school, but if you are please send through your examples of your best work to prove to us how awesome your designs are. You must of at least had some experience with web-design. 
+
+If you're going to become our next awesome designer do not forget to include your portfolio and/or examples of your work along with your CV. A big part of the design is reading instructions so please take note - Any CV's without a portfolio will be ignored. 
+
+ 
+
+This role is a full time position. Applicants for this position should have NZ residency or a valid NZ work permit. 
+
+We look forward to meeting you!
+
+)
+
+
+
 item identifier
 ED421624634NZ - china
 www.nzpost.co.nz/track
@@ -42,3 +93,17 @@ body 900
 没用的字体：
 Alien web font: font-family: Inconsolata;
 rectangular font: font-family: 'Orbitron', sans-serif;
+
+
+下载：
+game:
+下载 2017下半年大作：《古惑狼三部曲》重制版（目前是ps4独占）
+
+pc游戏：
+星球大战前线2
+
+xbox one独占：
+光环士官长合集 光环5 战争机器：终极版
+
+ps4游戏：
+最后的守护者
