@@ -98,27 +98,7 @@
 		<script src="app/modules/movies/controllers/movies.controllers.js"></script>
 
 		<!-- jQuery -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script>
-		$(document).ready(function(){
-		    $("span").click(function(){
-		        $(this).hide();
-		    });
-
-		    var navHeight = 200;
-
-		    $(window).on('scroll',function(){
-
-			    scrollposition = Math.round($(window).scrollTop());
-			    if (scrollposition > navHeight) {
-			        $('.aw-header').addClass('hidethis');
-			        $('nav').addClass('hidethis');
-			    } else {
-			        $('.aw-header').removeClass('hidethis');
-			        $('nav').removeClass('hidethis');
-			   }
-			});
-		});
-		</script>
+		<script src="assets/lib/jquery/3.2.1/jquery.min.js"></script>
+		<script src="assets/javascript/index.js"></script>
 	</body>
 </html>
