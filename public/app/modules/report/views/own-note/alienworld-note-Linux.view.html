@@ -15,11 +15,23 @@
             <pre><code>The repository 'http://ppa.launchpad.net/ubuntu-vn/ppa/ubuntu xenial Release' does not have a Release file.</code></pre>
             </p>
             <p></p>问题所在：<br>
-            <a href="https://askubuntu.com/questions/768569/ubuntu-16-04-update-manager-error">https://askubuntu.com/questions/768569/ubuntu-16-04-update-manager-error</a><br>
+            <a href="https://askubuntu.com/questions/768569/ubuntu-16-04-update-manager-error" target="_blank">https://askubuntu.com/questions/768569/ubuntu-16-04-update-manager-error</a><br>
             <pre><code>You obviously did a system upgrade without having removed the external repositories before. The easiest way to solve the problem would be to remove all external repositories and delete all related public keys. After having done this, update the repositories (sudo apt-get update) and check whether everything is fixed now ... and when no error occurs anymore, you can add new external repositories, but carefully check whether these repositories are "matching Xenial" ... </code></pre><br>
             <p>解决方式：<br>
-            <a href="https://askubuntu.com/questions/307/how-can-ppas-be-removed">https://askubuntu.com/questions/307/how-can-ppas-be-removed</a>
+            <a href="https://askubuntu.com/questions/307/how-can-ppas-be-removed" target="_blank">https://askubuntu.com/questions/307/how-can-ppas-be-removed</a>
             <pre><code>Last but not least, you can also disable or remove PPAs from the "Software Sources" section in Ubuntu Settings with a few clicks of your mouse (no terminal needed).</code></pre></p>
+
+            <h3>Charles work report on 31th Jul, 2017</h3>
+            <h4>Create a short cut of a folder in ubuntu: (probably not a very good way to do)</h4>
+            <pre><code>sudo ln -sT /path/to/source/directory /path/to/destination/directory</code></pre>
+            <p>[my example]</p>
+            <pre><code>sudo ln -sT ~/testproject/alienworld-web/ ~/Desktop/alienworld-web</code></pre>
+            <h4>Create soft link / symbolic link:</h4>
+            <pre><code>sudo ln -s /path/to/source/file /path/to/destination/link-name</code></pre>
+            <p>Reference: <a href="https://www.cyberciti.biz/faq/creating-soft-link-or-symbolic-link/" target="_blank">https://www.cyberciti.biz/faq/creating-soft-link-or-symbolic-link/</a></p>
+            <h4>Libre Office Spell check not at all detecting any wrong spelling:</h4>
+            <p>Tools> ...Language> ... For all text> .... and then selecting the appropriate dictionary, (in my case English uk). And Bingo - wavy red lines all over the place.<br><br>
+            Reference: <a href="https://ask.libreoffice.org/en/question/46842/4412-spell-check-not-at-all-detecting-any-wrong-spelling/" target="_blank">https://ask.libreoffice.org/en/question/46842/4412-spell-check-not-at-all-detecting-any-wrong-spelling/</a></p>
         </div>
     </div>
 </body>

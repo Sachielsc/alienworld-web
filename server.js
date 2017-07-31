@@ -12,7 +12,7 @@ app.get("/", function(req, res) {
 })
 
 app.use(function(req, res) {
-    res.sendfile(__dirname + '/Public/index.html');
+    res.sendfile(__dirname + '/public/index.html');
 });
 
 app.listen(port, function() {

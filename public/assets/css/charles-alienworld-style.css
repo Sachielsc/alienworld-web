@@ -625,7 +625,7 @@ body {
     transition: all 400ms ease-in-out;
     background-clip: inherit;
     background-color: #97ff77;
-    width: 100px;
+    width: 115px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
