@@ -6,7 +6,8 @@ git checkout -- .
 
 https://stackoverflow.com/questions/28048514/getting-error-from-heroku-in-regards-to-https
 
-赶紧把厚衣服洗了
+
 重写简历
 重做app
 加入latipay
+下载屌丝男士
