@@ -149,6 +149,12 @@ angular.module('report').config(['$stateProvider', function($stateProvider) {
 		url:'/linux',
 		templateUrl:'app/modules/report/views/own-note/alienworld-note-Linux.view.html',
 		})
+
+		.state('worklog.gulp',{
+		url:'/gulp',
+		templateUrl:'app/modules/report/views/own-note/alienworld-note-Gulp.view.html',
+		})
+
 		;
 	}
 ]);

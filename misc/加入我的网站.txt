@@ -8,6 +8,5 @@ https://stackoverflow.com/questions/28048514/getting-error-from-heroku-in-regard
 
 
 重写简历
-重做app
-加入latipay
+加入latipay的内容
 下载屌丝男士
