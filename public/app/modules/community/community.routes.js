@@ -25,5 +25,10 @@ angular.module('community').config(['$stateProvider', function($stateProvider) {
 	templateUrl:'app/modules/community/articles/carticle3.view.html',
 	})
 
+	.state('community.carticle4',{
+	url:'/carticle4',
+	templateUrl:'app/modules/community/articles/carticle4.view.html',
+	})
+
 	;}
 ]);
