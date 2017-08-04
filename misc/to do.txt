@@ -1,3 +1,7 @@
+重写简历
+加入latipay的内容
+下载屌丝男士
+
 https://stackoverflow.com/questions/28048514/getting-error-from-heroku-in-regards-to-https
 https://www.liquidlight.co.uk/blog/article/how-do-i-update-to-gulp-4/
 https://travismaynard.com/writing/getting-started-with-gulp

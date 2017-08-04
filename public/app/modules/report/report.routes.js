@@ -155,6 +155,20 @@ angular.module('report').config(['$stateProvider', function($stateProvider) {
 		templateUrl:'app/modules/report/views/own-note/alienworld-note-Gulp.view.html',
 		})
 
+		.state('worklog.sublime',{
+		url:'/sublime',
+		templateUrl:'app/modules/report/views/own-note/alienworld-note-sublime.view.html',
+		})
+
+		.state('worklog.git',{
+		url:'/git',
+		templateUrl:'app/modules/report/views/own-note/alienworld-note-git.view.html',
+		})
+
+		.state('worklog.heroku',{
+		url:'/heroku',
+		templateUrl:'app/modules/report/views/own-note/alienworld-note-heroku.view.html',
+		})
 		;
 	}
 ]);
