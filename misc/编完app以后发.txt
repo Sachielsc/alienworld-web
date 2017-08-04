@@ -1,9 +1,0 @@
-三角形问题
-loading问题
-bower
-angular cli
-
-
-Since haven't heard from you yet, I used some extra time to make my code a little better and update this app to version 2.0.0
-
-Cheers.

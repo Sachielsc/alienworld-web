@@ -2,9 +2,17 @@ https://stackoverflow.com/questions/28048514/getting-error-from-heroku-in-regard
 https://www.liquidlight.co.uk/blog/article/how-do-i-update-to-gulp-4/
 https://travismaynard.com/writing/getting-started-with-gulp
 
+研究：
+bower
+angular cli
+
+删掉heroku的支线
+
 加入：
+写preloader的教程
 永远不要单方面等待一个人的消息。等待的同时，你就停止了进步
 永远都要让自己在变强的路上，这样就会有更多的人和机会出现。有了更多的选择以后，让对方去等待
+整理其他教程
 
 继续更新seek的profile
 
@@ -91,6 +99,7 @@ aw-header-content 标题栏中的所有内容 1005
 body 900
 所有的边框 1000
 按钮1002
+preloader 2000
 
 没用的字体：
 Alien web font: font-family: Inconsolata;
