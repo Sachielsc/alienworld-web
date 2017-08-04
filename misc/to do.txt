@@ -6,11 +6,12 @@ https://travismaynard.com/writing/getting-started-with-gulp
 永远不要单方面等待一个人的消息。等待的同时，你就停止了进步
 永远都要让自己在变强的路上，这样就会有更多的人和机会出现。有了更多的选择以后，让对方去等待
 
-更新seek的profile
+继续更新seek的profile
 
-简历改变为加入我的网站内容，self-motivated projects，细节写入网站
+我的latipay和contact list的细节写入网站
 
-做一个拉风的cover letter ,网页版截图
+有空的话做一个拉风的cover letter，使用网页版截图
+要求：
 (
 
 Website & Digital Designer
@@ -57,13 +58,7 @@ We look forward to meeting you!
 
 
 
-item identifier
-ED421624634NZ - china
-www.nzpost.co.nz/track
-
-代办：
-今天的feature加入预告片集合
-以前的feature改为second newest
+待办：
 
 买一个名片盒，买盛饭的大盒子，考完以后去new world附近买一个Blind Spot Rear View Mirror，周二九点半才开门不要去
 linkedin和facebook用起来
@@ -71,7 +66,6 @@ linkedin和facebook用起来
 研究明白stateprovider （node.js）！
 领英加入certificate
 领英和简历，改成我做了什么
-周一发邮件ian同事，说offer help
 
 路税到九月
 wof到年底
