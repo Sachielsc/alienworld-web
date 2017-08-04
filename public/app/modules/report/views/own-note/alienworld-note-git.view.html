@@ -2,8 +2,25 @@
     <div class="container">
         <div class="assignment">
             <h3>Some notes about Git</h3>
-            <h4>Cancel all the changes of unstaged files:</h4>
-            <pre><code>git checkout -- .</code></pre>
+
+            <h4>Some useful Git commants:</h4>
+            <ul>
+                <li>git command for config checking: <code>git config --list</code></li>
+                <li>display the changes that have been made: <code>git diff</code></li>
+                <li>[important] add all files to staging area: <code>git add -A</code></li>
+                <li>[important] make a commit: <code>git commit -m "initial commit"</code></li>
+                <li>[important] push my master branch to the origin project: <code>git push origin master</code></li>
+                <li>check my commit log: <code>git log</code></li>
+                <li>display all the branch info of this repository: <code>git branch</code></li>
+                <li>display all the branch info of this repository, including the remote ones: <code>git branch -a</code></li>
+                <li>[important] working on branches - create a branch: <code>git branch charles-branch</code></li>
+                <li>[important] working on branches - move to a branch: <code>git checkout charles-branch</code></li>
+                <li>[important] working on branches - after adding and commiting, push my branch to remote: <code>git push -u origin charles-branch</code></li>
+                <li>working on branches - delete a local branch: <code>git branch -d charles-branch</code></li>
+                <li>working on branches - delete a remote branch: <code>git push origin --delete charles-branch</code></li>
+                <li>bash command for listing every file: <code>ls -la</code></li>
+                <li>Cancel all the changes of unstaged files: <code>git checkout -- .</code></li>
+            </ul>
         </div>
     </div>
 </body>
