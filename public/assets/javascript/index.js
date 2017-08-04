@@ -1,7 +1,6 @@
 $(document).ready(function(){
-    $("span").click(function(){
-        $(this).hide();
-    });
+
+	$('#preloader').fadeOut(2000, function(){$(this).remove();});
 
     var navHeight = 200;
 

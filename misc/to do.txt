@@ -1,4 +1,15 @@
 继续更新seek的profile，研究asknicely
+重写简历
+加入latipay的内容
+下载屌丝男士
+
+研究：
+bower
+angular cli
+
+加入：
+写preloader的教程
+整理其他教程
 
 我的latipay和contact list的细节写入网站
 
@@ -83,6 +94,7 @@ aw-header-content 标题栏中的所有内容 1005
 body 900
 所有的边框 1000
 按钮1002
+preloader 2000
 
 没用的字体：
 Alien web font: font-family: Inconsolata;
