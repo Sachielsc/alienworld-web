@@ -39,10 +39,10 @@ angular.module('about').config(['$stateProvider', function($stateProvider) {
 			templateUrl:'app/modules/about/views/alienworld-about-contactme.view.html',
 		})
 
-		.state('worklog',{
-			url:'/about/worklog',
-			// controller:'workLogController',
-			templateUrl:'app/modules/about/views/alienworld-about-worklog.view.html',
+		.state('workreport',{
+			url:'/about/workreport',
+			// controller:'workreportController',
+			templateUrl:'app/modules/about/views/alienworld-about-workreport.view.html',
 		});
 	}
 ]);
