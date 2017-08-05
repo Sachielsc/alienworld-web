@@ -484,16 +484,26 @@ body {
 
 // 5. Frames
 
-.sc-frame-outer {
+.standard {
 	height: $aw-vedio-height;
 	width: $aw-vedio-width;
-    margin: 30px auto;
 }
 
+.portrait {
+	height: 400px;
+	width: 300px;
+}
+
+.project-pic {
+	height: 200px;
+	width: 300px;
+}
+
+.sc-frame-outer {
+    margin: 0px auto;
+}
 
 .sc-frame-middle {
-	height: $aw-vedio-height;
-	width: $aw-vedio-width;
 	position: relative;
 	&::before, {
 		content: '';
@@ -524,8 +534,6 @@ body {
 }
 
 .sc-frame-inner {
-	height: $aw-vedio-height;
-	width: $aw-vedio-width;
 	position: relative;
 	&::before, {
 		content: '';
@@ -555,102 +563,18 @@ body {
 	    -ms-transform: scale(1, -1);
 	    transform: scale(1, -1);
 	}
-}
 
-.sc-frame-inner img {
-	height: $aw-vedio-height;
-	width: $aw-vedio-width;
-	border-radius: 15px;
-	border: 1px solid rgba(255, 255, 255, 0.4);
-}
+	img {
+		border-radius: 15px;
+		border: 1px solid rgba(255, 255, 255, 0.4);
+	}
 
-.sc-frame-inner iframe {
+	iframe {
 	position: absolute;
 	z-index: 1006;
-	height: $aw-vedio-height;
-	width: $aw-vedio-width;
 	border-radius: 15px;
 	border: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-.sc-portrait-outer {
-	height: 400px;
-	width: 300px;
-    margin: 30px auto;
-}
-
-
-.sc-portrait-middle {
-	height: 400px;
-	width: 300px;
-	position: relative;
-	&::before, {
-		content: '';
-	    display: block;
-	    margin: -18px -14px;
-	    width: 114px;
-	    height: 116px;
-	    background: url("../images/frame-corner-top-left.png");
-	    position: absolute;
-	    top: 0;
-	    z-index: 1000;
-		}
-	&::after {
-		content: '';
-	    display: block;
-	    margin: -18px -14px;
-	    width: 114px;
-	    height: 116px;
-	    background: url("../images/frame-corner-top-left.png");
-	    position: absolute;
-	    bottom: 0;
-	    z-index: 1000;
-		right: 0;
-	    -webkit-transform: scale(-1, -1);
-	    -ms-transform: scale(-1, -1);
-	    transform: scale(-1, -1);
 	}
-}
-
-.sc-portrait-inner {
-	height: 400px;
-	width: 300px;
-	position: relative;
-	&::before, {
-		content: '';
-	    display: block;
-	    margin: -18px -14px;
-	    width: 114px;
-	    height: 116px;
-	    background: url("../images/frame-corner-top-left.png");
-	    position: absolute;
-	    right: 0;
-	    z-index: 1000;
-	    -webkit-transform: scale(-1, 1);
-	    -ms-transform: scale(-1, 1);
-	    transform: scale(-1, 1);
-		}
-	&::after {
-		content: '';
-	    display: block;
-	    margin: -18px -14px;
-	    width: 114px;
-	    height: 116px;
-	    background: url("../images/frame-corner-top-left.png");
-	    position: absolute;
-	    bottom: 0;
-	    z-index: 1000;
-	    -webkit-transform: scale(1, -1);
-	    -ms-transform: scale(1, -1);
-	    transform: scale(1, -1);
-	}
-}
-
-.sc-portrait-inner img {
-	height: 400px;
-	width: 300px;
-	border-radius: 15px;
-	border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .sc-mechanical-frame-outer {

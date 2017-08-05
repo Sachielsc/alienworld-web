@@ -39,6 +39,24 @@ angular.module('about').config(['$stateProvider', function($stateProvider) {
 			templateUrl:'app/modules/about/views/alienworld-about-contactme.view.html',
 		})
 
+		.state('worklog',{
+			url:'/about/worklog',
+			// controller:'worklogController',
+			templateUrl:'app/modules/about/views/alienworld-about-worklog.view.html',
+		})
+
+		.state('otherprojects',{
+			url:'/about/otherprojects',
+			// controller:'otherprojectsController',
+			templateUrl:'app/modules/about/views/alienworld-about-otherprojects.view.html',
+		})
+
+		.state('coverletter',{
+			url:'/about/coverletter',
+			// controller:'coverletterController',
+			templateUrl:'app/modules/about/views/alienworld-about-coverletter.view.html',
+		})
+
 		.state('workreport',{
 			url:'/about/workreport',
 			// controller:'workreportController',

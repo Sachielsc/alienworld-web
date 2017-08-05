@@ -56,9 +56,9 @@
                 <div class="aw-contact" ng-init="contactDisplayToggle = false" ng-show="contactDisplayToggle">
                     <ul class="row nav">
                         <li class="col-2"></li>
-                        <li class="col-2"><a href="https://www.linkedin.com/in/charles-shu/" class="hover-purple">Work Logs</a></li>
-                        <li class="col-2"><a href="https://github.com/Sachielsc" class="hover-purple">Other Projects</a></li>
-                        <li class="col-2"><a href="https://www.facebook.com/chang.shu.184" class="hover-purple">Cover Letter</a></li>
+                        <li class="col-2" ui-sref-active="active"><a ui-sref="worklog" class="hover-purple">Work Log</a></li>
+                        <li class="col-2" ui-sref-active="active"><a ui-sref="otherprojects" class="hover-purple">Other Projects</a></li>
+                        <li class="col-2" ui-sref-active="active"><a ui-sref="coverletter" class="hover-purple">Cover Letter</a></li>
                         <li class="col-2" ui-sref-active="active"><a ui-sref="contactme" class="hover-purple">Contact Me</a></li>
                         <li class="col-2"></li>
                     </ul>
@@ -78,7 +78,7 @@
 
         <!-- jQuery -->
         <script src="assets/lib/jquery/3.2.1/jquery.min.js"></script>
-        <script src="assets/javascript/index.js"></script>
+        <script src="assets/js/index.js"></script>
 
         <!-- javascript -->
         <script src="assets/lib/jquery/3.2.1/jquery-3.2.1.min.js"></script>
