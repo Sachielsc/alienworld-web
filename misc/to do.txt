@@ -3,7 +3,7 @@ jr20173
 
 重写简历后发给sean
 加入latipay的内容
-下载屌丝男士
+我的latipay和contact list的细节写入网站
 
 研究：
 bower
@@ -14,11 +14,10 @@ angular cli
 https://stackoverflow.com/questions/11936816/call-a-function-after-complete-page-load
 https://codepen.io/mimoYmima/pen/fisgL
 
-整理其他教程并进行分类
 
 继续更新seek的profile
 
-我的latipay和contact list的细节写入网站
+
 
 有空的话做一个拉风的cover letter，使用网页版截图
 要求：
@@ -91,6 +90,8 @@ skill panel展开，加入w3school的分知识点
 background-image: url("../images/bgi-dark.jpg");
 //theme color:
 color: #97ff77;
+//preloader background color:
+color: #2B333B;
 //the light yellow from Blizzard
 color: #eeffcc;
 

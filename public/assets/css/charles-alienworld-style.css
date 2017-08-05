@@ -555,6 +555,7 @@ body {
   width: 100%;
   height: 100%;
   background: #2b333b url("../images/CharlesAppinitializing.gif") no-repeat center center;
+  background-size: 40%;
   z-index: 2000; }
 
 .separator {
@@ -613,7 +614,6 @@ body {
   position: absolute;
   height: 230px;
   width: 220px;
-  background-color: #323b44;
   margin: 0; }
   .button-panel button {
     color: rgba(255, 255, 255, 0.6);

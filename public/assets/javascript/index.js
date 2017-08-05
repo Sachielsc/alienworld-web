@@ -8,11 +8,9 @@ $(document).ready(function(){
 
 	    scrollposition = Math.round($(window).scrollTop());
 	    if (scrollposition > navHeight) {
-	        $('.aw-header').addClass('hidethis');
-	        $('nav').addClass('hidethis');
+	        $('.aw-header').fadeOut(500, function(){$(this).hide();});
 	    } else {
-	        $('.aw-header').removeClass('hidethis');
-	        $('nav').removeClass('hidethis');
+	        $('.aw-header').fadeIn(500, function(){$(this).show();});
 	   }
 	});
 });
