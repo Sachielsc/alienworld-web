@@ -1,4 +1,7 @@
-重写简历
+投这个http://www.fisglobal.com/About-Us/careers/jobs
+jr20173
+
+重写简历后发给sean
 加入latipay的内容
 下载屌丝男士
 
@@ -8,7 +11,10 @@ angular cli
 
 加入：
 写preloader的教程
-整理其他教程
+https://stackoverflow.com/questions/11936816/call-a-function-after-complete-page-load
+https://codepen.io/mimoYmima/pen/fisgL
+
+整理其他教程并进行分类
 
 继续更新seek的profile
 
