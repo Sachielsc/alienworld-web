@@ -349,6 +349,9 @@ body {
     transform: translateX(-50%) translateY(-50%);
     color: #98a6ad; }
 
+.cv-pic {
+  opacity: 0.7; }
+
 .standard {
   height: 360px;
   width: 640px; }
@@ -360,6 +363,10 @@ body {
 .project-pic {
   height: 200px;
   width: 300px; }
+  .project-pic.sc-frame-outer {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
 
 .sc-frame-outer {
   margin: 0px auto; }
@@ -520,9 +527,6 @@ body {
     background-color: #ea8e8e;
     color: #f2dede;
     border: 2px solid #f2dede; }
-
-.cv-pic {
-  opacity: 0.7; }
 
 .hover-red:hover {
   color: red; }

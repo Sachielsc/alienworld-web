@@ -481,6 +481,11 @@ body {
 	}
 }
 
+.cv-pic {
+	opacity: 0.7;
+}
+
+
 
 // 5. Frames
 
@@ -495,6 +500,11 @@ body {
 }
 
 .project-pic {
+	&.sc-frame-outer {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
 	height: 200px;
 	width: 300px;
 }
@@ -698,10 +708,6 @@ body {
 		color: #f2dede;
 		border: 2px solid #f2dede;
 	}
-}
-
-.cv-pic {
-	opacity: 0.7;
 }
 
 .hover-red {
