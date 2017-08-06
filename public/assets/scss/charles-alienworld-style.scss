@@ -509,6 +509,16 @@ body {
 	width: 300px;
 }
 
+.coverletter-pic {
+	&.sc-frame-outer {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	height: 170px;
+	width: 270px;
+}
+
 .sc-frame-outer {
     margin: 0px auto;
 }

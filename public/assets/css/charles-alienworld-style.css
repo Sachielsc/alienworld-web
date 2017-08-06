@@ -368,6 +368,14 @@ body {
     top: 50%;
     transform: translateY(-50%); }
 
+.coverletter-pic {
+  height: 170px;
+  width: 270px; }
+  .coverletter-pic.sc-frame-outer {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+
 .sc-frame-outer {
   margin: 0px auto; }
 
