@@ -1,11 +1,23 @@
 <div class="container">
     <div class="cv-fullpage card-box white-frame shadow-expand">
-    	<p>Intro text, password</p>
+    	<p>Intro text here, need to add a password function</p>
     </div>
 
     <div class="cv-fullpage card-box green-frame shadow-expand">
     	<div>
-    	put inputs here,
+			<div class="form-group">
+				<label>Company Name:</label>
+				<input type="text" class="form-control" ng-model="companyname">
+			</div>
+			<div class="form-group">
+				<label>Position Name:</label>
+				<input type="text" class="form-control" ng-model="posistionname" ng-init="posistionname='Front-end Developer'">
+			</div>
+	    	<div class="separator"></div>
+			<div class="form-group">
+				<label>Prologue:</label>
+				<textarea class="form-control" rows="5" ng-model="prologue" ng-init="prologue='I fall in love with coding for more than one year. One year is not a time long enough to make me a Guru or master, but it is surely long enough to make me get crazy about it.'"></textarea>
+			</div>
 		</div>
     </div>
 
@@ -34,10 +46,10 @@
 
 				<div class="coverletter-content">
 	            	<div class="coverletter-header">
-		            	<p>Dear HR Officer of Zyber,<br>Re: Website Desinger &amp; Front End Developer</p>
+		            	<p>Dear HR Officer of {{companyname}},<br>Re: {{posistionname}}</p>
 					</div>
 					<div class="coverletter-paragraph">
-						<p>I fall in love with coding for more than one year. One year is not a time long enough to make me a Guru or master, but it is surely long enough to make me get crazy about it.</p>
+						<p>{{prologue}}</p>
 					</div>
 
 					<div class="coverletter-paragraph row">

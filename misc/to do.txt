@@ -1,18 +1,21 @@
 投这个http://www.fisglobal.com/About-Us/careers/jobs
 jr20173
 
-投asknicely
+投asknicely以及以前投过的公司以及上市公司
 
-找梁大哥先前的推荐
+程序加入功能
+http://fdietz.github.io/recipes-with-angular-js/common-user-interface-patterns/filtering-and-sorting-a-list.html
 
-
-重写简历后发给sean
 加入latipay的内容
-我的latipay和contact list的细节写入网站
+我的latipay的细节写入网站
+
+继续完善我的app
+我的app字体变红
 
 研究：
 bower
 angular cli
+angular strap
 
 加入：
 写preloader的教程
@@ -21,7 +24,7 @@ https://codepen.io/mimoYmima/pen/fisgL
 
 
 继续更新seek的profile
-我的app字体变红
+
 
 
 待办：
