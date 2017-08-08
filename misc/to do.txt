@@ -1,21 +1,16 @@
 投这个http://www.fisglobal.com/About-Us/careers/jobs
 jr20173
 
-投asknicely以及以前投过的公司以及上市公司
-
-程序加入功能
-http://fdietz.github.io/recipes-with-angular-js/common-user-interface-patterns/filtering-and-sorting-a-list.html
+angle price, halo是比较好的recruitment agency
 
 加入latipay的内容
 我的latipay的细节写入网站
-
-继续完善我的app
-我的app字体变红
+我的app内容更新至我的网站
 
 研究：
 bower
 angular cli
-angular strap
+试一下angular strap
 
 加入：
 写preloader的教程
