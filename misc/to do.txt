@@ -2,41 +2,30 @@
 jr20173
 
 angle price, halo是比较好的recruitment agency
-
-加入latipay的内容
-我的latipay的细节写入网站
-我的app内容更新至我的网站
+给我的网站加入responsive特性
+我的网站加入密码功能
+给aaron发我做的网站
+所有功能加入领英和seek！
+领英加入certificate
 
 研究：
 bower
 angular cli
 试一下angular strap
 
-加入：
-写preloader的教程
-https://stackoverflow.com/questions/11936816/call-a-function-after-complete-page-load
-https://codepen.io/mimoYmima/pen/fisgL
-
-
-继续更新seek的profile
-
 
 
 待办：
-
+查妈妈快递单编号
 买一个名片盒，买盛饭的大盒子，考完以后去new world附近买一个Blind Spot Rear View Mirror，周二九点半才开门不要去
 linkedin和facebook用起来
 杀各硬盘的毒
-研究明白stateprovider （node.js）！
-领英加入certificate
-领英和简历，改成我做了什么
 
+
+其他备忘：
 路税到九月
 wof到年底
 叔二楼的那个插线板是我的，我房间连接笔记本的插线板是叔的
-
-闲的晚上：
-skill panel展开，加入w3school的分知识点
 
 
 
@@ -63,9 +52,14 @@ preloader 2000
 Alien web font: font-family: Inconsolata;
 rectangular font: font-family: 'Orbitron', sans-serif;
 
+html文件注意
+"&amp;" : "&"
+"&lt;" : "<"
+"&gt;" : ">"
 
-下载：
-game:
+
+
+下载game:
 下载 2017下半年大作：《古惑狼三部曲》重制版（目前是ps4独占）
 
 pc游戏：

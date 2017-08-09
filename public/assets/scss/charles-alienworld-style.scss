@@ -5,7 +5,8 @@ $aw-vedio-width: 640px;
 $aw-vedio-height: 360px;
 $aw-buttonpanel-height: 230px;
 $aw-buttonpanel-width: 220px;
-
+$mobile-device: 480px;
+$medium-device: 960px;
 
 
 .aw-header {
@@ -68,7 +69,6 @@ $aw-buttonpanel-width: 220px;
 			a {
 				text-decoration: none;
 				color: #97ff77;
-				font-size: 300%;
 				font-variant: small-caps;
 				white-space: nowrap;
 				position: absolute;
@@ -76,14 +76,29 @@ $aw-buttonpanel-width: 220px;
 				left: 50%;
 				transform: translateX(-50%) translateY(-50%);
 				z-index: 1010;
-					-webkit-transition: all 1.5s ease;
-					   -moz-transition: all 1.5s ease;
-					   	-ms-transition: all 1.5s ease;
-						 -o-transition: all 1.5s ease;
-							transition: all 1.5s ease;	
 				&:hover {
 					color: white;
 				}
+
+	            @media screen and (min-width: $mobile-device) {
+	                font-size: 140%;
+	                -webkit-transition: all 1.5s ease;
+	                   -moz-transition: all 1.5s ease;
+	                    -ms-transition: all 1.5s ease;
+	                     -o-transition: all 1.5s ease;
+	                        transition: all 1.5s ease;  
+	            }
+
+	            @media screen and (min-width: $medium-device) {
+	                font-size: 300%;
+	                -webkit-transition: all 1.5s ease;
+	                   -moz-transition: all 1.5s ease;
+	                    -ms-transition: all 1.5s ease;
+	                     -o-transition: all 1.5s ease;
+	                        transition: all 1.5s ease;  
+	            }
+
+
 			}
 		}
 	}
@@ -301,7 +316,7 @@ body {
 	}
 }
 
-.meeting, .assignment {
+.meeting, .assignment, .card-box {
 	a {
 		color: #97ff77;
 	}

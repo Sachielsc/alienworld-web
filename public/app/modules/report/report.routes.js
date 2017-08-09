@@ -95,6 +95,11 @@ angular.module('report').config(['$stateProvider', function($stateProvider) {
 		templateUrl:'app/modules/report/views/own-report/alienworld-report-m18.view.html',
 		})
 
+		.state('workreport.report19',{
+		url:'/report19',
+		templateUrl:'app/modules/report/views/own-report/alienworld-report-m19.view.html',
+		})
+
 		.state('workreport.noteNodeJS',{
 		url:'/noteNodeJS',
 		templateUrl:'app/modules/report/views/own-note/alienworld-note-noteNodeJS.view.html',

@@ -1,27 +1,86 @@
 <div class="container">
     <div class="card-box white-frame shadow-expand">
-    <p>Intro text</p>
+        <p>Due to copyright issue, the content cannot be displayed without a password:</p>
+    </div>
+    <div class="card-box white-frame shadow-expand">
+        <p>Here is the work I am doing in my "Improvement Plan of Official Websites":</p>
     </div>
     <div class="card-box green-frame shadow-expand">
-		<div class="row">
-			<div class="col-4">
-				<div class="sc-frame-outer project-pic">
-					<div class="sc-frame-middle project-pic">
-						<div class="sc-frame-inner project-pic">
-							<img src="../../../../assets/images/portrait.jpg" alt="portrait" class="project-pic">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-8">
-				<h4>Project A</h4>
-				<ul>
-					<li>D1</li>
-					<li>D2</li>
-					<li>D3</li>
-				</ul>
-			</div>
-		</div>
-    </div>
+        <dt>Project ID:</dt>
+        <dd>01</dd>
+        <dt>Company Name:</dt>
+        <dd>Latipay</dd>
+        <dt>Official Website:</dt>
+        <dd><a href="https://www.latipay.net/#home" target="_blank">https://www.latipay.net/#home</a></dd>
+        <dt>Finish date of my modification</dt>
+        <dd>30/07/2017</dd>
+        <div class="separator"></div>
+        <dt>Where is the problem:</dt>
+        <dd>
+            <ul>
+                <li>The nav bar / title bar is designed to be perfectly merged into the background when user firstly enter the site;</li>
+                <li>After the user scroll down a bit, the title bar will become partially transparent and get a grey background to distinguish it from the main body;</li>
+                <li>However, the white font – grey background is still easily mixing up with the text when user try to read the content of the body or try to watch embedded videos. The partially transparent title bar still jeopardizes the integrity of main body;</li>
+                <li>Users might click on the title bar by mistake when they intend to click on the main body.</li>
+            </ul>
+        </dd>
+        <dt>My suggestion:</dt>
+        <dd>
+            <ol>
+                <li>Hide the nav bar in areas where users are trying to read the main body text;</li>
+                <li>Display the nav bar when users are at the top of EACH big picture of different chapters instead of merely at the top of the first chapter. This will make the nav bar merge into each chapter perfectly and consistently;</li>
+                <li>Do not display the nav bar with a gray background because it defeats the purpose of using a auto-merged design.</li>
+            </ol>
+        </dd>
+        <div class="separator"></div>
+        <dt>My solution:</dt>
+        <dd>
+            <p>CSS:</p>
+            <pre><code>.hidethis {
+    display:none;
+    -webkit-transition: all 1s ease;
+       -moz-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+         -o-transition: all 1s ease;
+            transition: all 1s ease;
+}
+</code></pre>
+            <p>jQuery (Add to index.html)</p>
+            <pre><code>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+    
+    var mainbottom = $('#yui_3_17_2_1_1501347938135_114').offset().top + 0.5 * $('#yui_3_17_2_1_1501347938135_114').height();
+    var exporttop = $('#yui_3_17_2_1_1501347938135_311').offset().top;
+    var exportbottom = $('#yui_3_17_2_1_1501347938135_311').offset().top + 0.5 * $('#yui_3_17_2_1_1501347938135_311').height();
+    var tourismtop = $('#yui_3_17_2_1_1501347938135_352').offset().top;
+    var tourismbottom = $('#yui_3_17_2_1_1501347938135_352').offset().top + 0.5 * $('#yui_3_17_2_1_1501347938135_352').height();
+    var educationtop = $('#yui_3_17_2_1_1501347938135_431').offset().top;
+    var educationbottom = $('#yui_3_17_2_1_1501347938135_431').offset().top + 0.5 * $('#yui_3_17_2_1_1501347938135_431').height();
 
+    $(window).on('scroll',function(){
+        scrollposition = Math.round($(window).scrollTop());
+        if (scrollposition &lt; mainbottom) {
+            $('.sqs-announcement-bar-dropzone').addClass('hidethis');
+        } else {
+            if (scrollposition &gt; exporttop &amp;&amp; scrollposition &lt; exportbottom) {
+                $('.sqs-announcement-bar-dropzone').addClass('hidethis');
+            } else {
+                if (scrollposition &gt; tourismtop &amp;&amp; scrollposition &lt; tourismbottom) {
+                    $('.sqs-announcement-bar-dropzone').addClass('hidethis');
+                } else {
+                    if (scrollposition &gt; educationtop &amp;&amp; scrollposition &lt; educationbottom) {
+                        $('.sqs-announcement-bar-dropzone').addClass('hidethis');
+                    } else {
+                        $('.sqs-announcement-bar-dropzone').removeClass('hidethis');
+                    }
+                }
+            }
+        }
+    });
+});
+&lt;/script&gt;
+</code></pre>
+        </dd>
+    </div>
 </div>

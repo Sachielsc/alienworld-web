@@ -49,21 +49,31 @@
     .aw-header .aw-header-content .aw-title a {
       text-decoration: none;
       color: #97ff77;
-      font-size: 300%;
       font-variant: small-caps;
       white-space: nowrap;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translateX(-50%) translateY(-50%);
-      z-index: 1010;
-      -webkit-transition: all 1.5s ease;
-      -moz-transition: all 1.5s ease;
-      -ms-transition: all 1.5s ease;
-      -o-transition: all 1.5s ease;
-      transition: all 1.5s ease; }
+      z-index: 1010; }
       .aw-header .aw-header-content .aw-title a:hover {
         color: white; }
+      @media screen and (min-width: 480px) {
+        .aw-header .aw-header-content .aw-title a {
+          font-size: 140%;
+          -webkit-transition: all 1.5s ease;
+          -moz-transition: all 1.5s ease;
+          -ms-transition: all 1.5s ease;
+          -o-transition: all 1.5s ease;
+          transition: all 1.5s ease; } }
+      @media screen and (min-width: 960px) {
+        .aw-header .aw-header-content .aw-title a {
+          font-size: 300%;
+          -webkit-transition: all 1.5s ease;
+          -moz-transition: all 1.5s ease;
+          -ms-transition: all 1.5s ease;
+          -o-transition: all 1.5s ease;
+          transition: all 1.5s ease; } }
 
 nav.aw-nav, div.aw-contact {
   position: fixed;
@@ -220,20 +230,20 @@ body {
   text-align: right;
   color: rgba(255, 255, 255, 0.6); }
 
-.meeting a, .assignment a {
+.meeting a, .assignment a, .card-box a {
   color: #97ff77; }
 
-.meeting code, .assignment code {
+.meeting code, .assignment code, .card-box code {
   color: #5d9cec;
   background-color: rgba(244, 248, 251, 0.1);
   border-radius: 4px;
   padding: 2px 4px;
   font-size: 90%; }
 
-.meeting pre, .assignment pre {
+.meeting pre, .assignment pre, .card-box pre {
   color: #eeffcc; }
 
-.meeting pre code, .assignment pre code {
+.meeting pre code, .assignment pre code, .card-box pre code {
   display: block;
   padding: 9.5px;
   margin: 3px 0px 3px 0px;

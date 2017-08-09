@@ -33,7 +33,7 @@
                     <div class="col-2">
                         <img src="assets/images/egg.jpeg" alt="menu icon" class="menu-icon" title="Menu" ng-click="navDisplayToggle = !navDisplayToggle; contactDisplayToggle=false">
                     </div>
-                    <div class="col-8 aw-title" ui-sref-active="active">
+                    <div class="col-8 aw-title">
                         <div class="title-pic" ng-init="picDisplayToggle = false" ng-show="picDisplayToggle"></div>
                         <a ui-sref="home" title="Home Page" ng-mouseover="picDisplayToggle = true" ng-mouseleave="picDisplayToggle = false" class="title-text">Charles' Alien World</a>
                     </div>
@@ -45,10 +45,10 @@
                 <nav class="aw-nav" ng-init="navDisplayToggle = true" ng-show="navDisplayToggle">
                     <ul class="row nav aw-nav-bar">
                         <li class="col-2"></li>
-                        <li class="col-2" ui-sref-active="active"><a ui-sref="about" class="hover-white">Workshop</a></li>
-                        <li class="col-2" ui-sref-active="active"><a ui-sref="community" class="hover-white">Community Hub</a></li>
-                        <li class="col-2" ui-sref-active="active"><a ui-sref="movies" class="hover-white">Alien Movies</a></li>
-                        <li class="col-2" ui-sref-active="active"><a ui-sref="games" class="hover-white">Alien Games</a></li>
+                        <li class="col-2"><a ui-sref="about" class="hover-white">Workshop</a></li>
+                        <li class="col-2"><a ui-sref="community" class="hover-white">Community Hub</a></li>
+                        <li class="col-2"><a ui-sref="movies" class="hover-white">Alien Movies</a></li>
+                        <li class="col-2"><a ui-sref="games" class="hover-white">Alien Games</a></li>
                         <li class="col-2"></li>
                     </ul>
                 </nav>
@@ -56,10 +56,10 @@
                 <div class="aw-contact" ng-init="contactDisplayToggle = false" ng-show="contactDisplayToggle">
                     <ul class="row nav">
                         <li class="col-2"></li>
-                        <li class="col-2" ui-sref-active="active"><a ui-sref="worklog" class="hover-purple">Work Log</a></li>
-                        <li class="col-2" ui-sref-active="active"><a ui-sref="otherprojects" class="hover-purple">Other Projects</a></li>
-                        <li class="col-2" ui-sref-active="active"><a ui-sref="coverletter" class="hover-purple">Cover Letter</a></li>
-                        <li class="col-2" ui-sref-active="active"><a ui-sref="contactme" class="hover-purple">Contact Me</a></li>
+                        <li class="col-2"><a ui-sref="worklog" class="hover-purple">Work Log</a></li>
+                        <li class="col-2"><a ui-sref="otherprojects" class="hover-purple">Other Projects</a></li>
+                        <li class="col-2"><a ui-sref="coverletter" class="hover-purple">Cover Letter</a></li>
+                        <li class="col-2"><a ui-sref="contactme" class="hover-purple">Contact Me</a></li>
                         <li class="col-2"></li>
                     </ul>
                 </div>
