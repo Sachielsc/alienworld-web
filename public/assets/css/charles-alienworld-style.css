@@ -55,7 +55,8 @@
       top: 50%;
       left: 50%;
       transform: translateX(-50%) translateY(-50%);
-      z-index: 1010; }
+      z-index: 1010;
+      font-size: 130%; }
       .aw-header .aw-header-content .aw-title a:hover {
         color: white; }
       @media screen and (min-width: 480px) {
