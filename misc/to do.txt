@@ -16,7 +16,6 @@ angular cli
 
 
 待办：
-查妈妈快递单编号
 买一个名片盒，买盛饭的大盒子，考完以后去new world附近买一个Blind Spot Rear View Mirror，周二九点半才开门不要去
 linkedin和facebook用起来
 杀各硬盘的毒
@@ -49,8 +48,8 @@ body 900
 preloader 2000
 
 没用的字体：
-Alien web font: font-family: Inconsolata;
-rectangular font: font-family: 'Orbitron', sans-serif;
+Alien web font (主要用在大写的字体，好看): font-family: Inconsolata;
+rectangular font (没啥用，长方形，难看): font-family: 'Orbitron', sans-serif;
 
 html文件注意
 "&amp;" : "&"
