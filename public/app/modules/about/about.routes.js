@@ -53,7 +53,7 @@ angular.module('about').config(['$stateProvider', function($stateProvider) {
 
 		.state('coverletter',{
 			url:'/about/coverletter',
-			// controller:'coverletterController',
+			controller:'coverletterController',
 			templateUrl:'app/modules/about/views/alienworld-about-coverletter.view.html',
 		})
 

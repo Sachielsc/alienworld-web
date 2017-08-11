@@ -53,10 +53,10 @@
                 <div class="aw-contact" ng-init="contactDisplayToggle = false" ng-show="contactDisplayToggle">
                     <ul class="row nav">
                         <li class="col-2"></li>
+                        <li class="col-2"><a ui-sref="contactme" class="hover-purple">Contact Me</a></li>
                         <li class="col-2"><a ui-sref="worklog" class="hover-purple">Work Log</a></li>
                         <li class="col-2"><a ui-sref="otherprojects" class="hover-purple">Other Projects</a></li>
                         <li class="col-2"><a ui-sref="coverletter" class="hover-purple">Cover Letter</a></li>
-                        <li class="col-2"><a ui-sref="contactme" class="hover-purple">Contact Me</a></li>
                         <li class="col-2"></li>
                     </ul>
                 </div>
@@ -103,6 +103,7 @@
 
         <!-- other controller -->
         <script src="app/modules/home/controllers/home.controllers.js"></script>
+        <script src="app/modules/about/controllers/coverletter.controllers.js"></script>
         <script src="app/modules/movies/controllers/movies.controllers.js"></script>
     </body>
 </html>

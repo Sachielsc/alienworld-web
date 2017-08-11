@@ -379,6 +379,10 @@ body {
 .coverletter-content {
   line-height: 43px; }
 
+.aw-form .form-control {
+  background-color: #98a6ad;
+  color: #2b333b; }
+
 .standard {
   height: 360px;
   width: 640px; }
