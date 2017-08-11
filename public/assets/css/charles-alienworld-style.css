@@ -59,7 +59,7 @@
       font-size: 170%; }
       .aw-header .aw-header-content .aw-title a:hover {
         color: white; }
-      @media screen and (min-width: 480px) {
+      @media screen and (min-width: 576px) {
         .aw-header .aw-header-content .aw-title a {
           font-size: 200%;
           -webkit-transition: all 1.5s ease;
@@ -67,9 +67,17 @@
           -ms-transition: all 1.5s ease;
           -o-transition: all 1.5s ease;
           transition: all 1.5s ease; } }
-      @media screen and (min-width: 960px) {
+      @media screen and (min-width: 768px) {
         .aw-header .aw-header-content .aw-title a {
           font-size: 300%;
+          -webkit-transition: all 1.5s ease;
+          -moz-transition: all 1.5s ease;
+          -ms-transition: all 1.5s ease;
+          -o-transition: all 1.5s ease;
+          transition: all 1.5s ease; } }
+      @media screen and (min-width: 992px) {
+        .aw-header .aw-header-content .aw-title a {
+          font-size: 350%;
           -webkit-transition: all 1.5s ease;
           -moz-transition: all 1.5s ease;
           -ms-transition: all 1.5s ease;
@@ -374,7 +382,7 @@ body {
 .standard {
   height: 360px;
   width: 640px; }
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 768px) {
     .standard {
       height: 252px;
       width: 448px; } }
@@ -382,10 +390,20 @@ body {
     .standard {
       height: 180px;
       width: 320px; } }
+  @media screen and (max-width: 420px) {
+    .standard {
+      display: none; } }
 
 .portrait {
   height: 400px;
   width: 300px; }
+  @media screen and (max-width: 768px) {
+    .portrait {
+      height: 240px;
+      width: 180px; } }
+  @media screen and (max-width: 415px) {
+    .portrait {
+      display: none; } }
 
 .project-pic {
   height: 200px;
@@ -393,13 +411,14 @@ body {
   .project-pic.sc-frame-outer {
     position: relative;
     top: 50%;
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    margin-bottom: 15px; }
 
 .coverletter-pic {
   height: 192px;
   width: 308px; }
   .coverletter-pic.sc-frame-outer {
-    margin: 0px 0px 38px 0px;
+    margin: -7px 0px 38px 0px;
     position: relative;
     top: 50%;
     transform: translateY(-50%); }
@@ -477,7 +496,7 @@ body {
   margin: 30px auto;
   border-radius: 4px;
   border: 1px solid red; }
-  @media screen and (max-width: 780px) {
+  @media screen and (max-width: 768px) {
     .sc-mechanical-frame-outer {
       width: 132px;
       height: 232px; } }
@@ -485,7 +504,7 @@ body {
     position: absolute;
     width: 220px;
     height: 230px; }
-    @media screen and (max-width: 780px) {
+    @media screen and (max-width: 768px) {
       .sc-mechanical-frame-outer .sc-mechanical-frame-inner {
         width: 130px;
         height: 232px; } }
@@ -597,7 +616,7 @@ body {
   height: 230px;
   width: 220px;
   margin: 0; }
-  @media screen and (max-width: 780px) {
+  @media screen and (max-width: 768px) {
     .button-panel {
       width: 130px; } }
   .button-panel button {
@@ -685,6 +704,29 @@ body {
       .skill-bar-list .skill-bar .aw-progress-barbackground .aw-progress-bar.aw-progress-bar-queen {
         width: 90%;
         background-color: #7266ba; }
+
+@media screen and (max-width: 1200px) {
+  .auto-hide {
+    display: none; } }
+
+.auto-font h1 {
+  margin-top: 10px;
+  font-size: 3rem; }
+
+.auto-font h2 {
+  font-size: 2.5rem; }
+
+@media screen and (max-width: 992px) {
+  .auto-font h1 {
+    font-size: 2.5rem; }
+  .auto-font h2 {
+    font-size: 2rem; } }
+
+@media screen and (max-width: 768px) {
+  .auto-font h1 {
+    font-size: 1.5rem; }
+  .auto-font h2 {
+    font-size: 1rem; } }
 
 .theme-color {
   color: #97ff77; }

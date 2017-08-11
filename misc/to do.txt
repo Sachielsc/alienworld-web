@@ -2,10 +2,10 @@
 jr20173
 
 angle price, halo是比较好的recruitment agency
-给我的网站加入responsive特性
+
 我的网站加入密码功能
 给aaron发我做的网站
-所有功能加入领英和seek！
+所有功能加入领英和seek！ (perfect responsive design)
 领英加入certificate
 
 研究：
@@ -29,6 +29,12 @@ wof到年底
 
 
 网站编辑相关：
+
+container的几个临界值
+@media (min-width: 992px)
+@media (min-width: 768px)
+@media (min-width: 576px)
+
 //import images:
 background-image: url("../images/bgi-dark.jpg");
 //theme color:

@@ -5,8 +5,10 @@ $aw-vedio-width: 640px;
 $aw-vedio-height: 360px;
 $aw-buttonpanel-height: 230px;
 $aw-buttonpanel-width: 220px;
-$mobile-device: 480px;
-$medium-device: 960px;
+$exlarge-container: 1200px;
+$large-container: 992px;
+$medium-container: 768px;
+$small-container: 576px;
 
 .aw-header {
 	top: 0;
@@ -80,7 +82,7 @@ $medium-device: 960px;
 					color: white;
 				}
 
-	            @media screen and (min-width: $mobile-device) {
+	            @media screen and (min-width: $small-container) {
 	                font-size: 200%;
 	                -webkit-transition: all 1.5s ease;
 	                   -moz-transition: all 1.5s ease;
@@ -89,7 +91,7 @@ $medium-device: 960px;
 	                        transition: all 1.5s ease;  
 	            }
 
-	            @media screen and (min-width: $medium-device) {
+	            @media screen and (min-width: $medium-container) {
 	                font-size: 300%;
 	                -webkit-transition: all 1.5s ease;
 	                   -moz-transition: all 1.5s ease;
@@ -98,7 +100,14 @@ $medium-device: 960px;
 	                        transition: all 1.5s ease;  
 	            }
 
-
+	            @media screen and (min-width: $large-container) {
+	                font-size: 350%;
+	                -webkit-transition: all 1.5s ease;
+	                   -moz-transition: all 1.5s ease;
+	                    -ms-transition: all 1.5s ease;
+	                     -o-transition: all 1.5s ease;
+	                        transition: all 1.5s ease;  
+	            }
 			}
 		}
 	}
@@ -519,7 +528,7 @@ body {
 	height: $aw-vedio-height;
 	width: $aw-vedio-width;
 
-	@media screen and (max-width: $medium-device) {
+	@media screen and (max-width: $medium-container) {
 		height: $aw-vedio-height * 0.7;
 		width: $aw-vedio-width * 0.7;
 	}
@@ -528,11 +537,24 @@ body {
 		height: $aw-vedio-height * 0.5;
 		width: $aw-vedio-width * 0.5;
 	}
+
+	@media screen and (max-width: 420px) {
+		display: none;
+	}
 }
 
 .portrait {
 	height: 400px;
 	width: 300px;
+
+	@media screen and (max-width: $medium-container) {
+		height: 240px;
+		width: 180px;
+	}
+
+	@media screen and (max-width: 415px) {
+		display: none;
+	}
 }
 
 .project-pic {
@@ -540,6 +562,7 @@ body {
 		position: relative;
 		top: 50%;
 		transform: translateY(-50%);
+		margin-bottom: 15px;
 	}
 	height: 200px;
 	width: 300px;
@@ -547,7 +570,7 @@ body {
 
 .coverletter-pic {
 	&.sc-frame-outer {
-		margin: 0px 0px 38px 0px;
+		margin: -7px 0px 38px 0px;
 		position: relative;
 		top: 50%;
 		transform: translateY(-50%);
@@ -641,7 +664,7 @@ body {
     border-radius: 4px;
 	border: 1px solid red;
 
-	@media screen and (max-width: 780px) {
+	@media screen and (max-width: $medium-container) {
 		width: $aw-buttonpanel-width - 88px;
 	    height: $aw-buttonpanel-height + 2px;
 	}
@@ -651,7 +674,7 @@ body {
 		width: $aw-buttonpanel-width;
 	    height: $aw-buttonpanel-height;
 
-		@media screen and (max-width: 780px) {
+		@media screen and (max-width: $medium-container) {
 			width: $aw-buttonpanel-width - 90px;
 		    height: $aw-buttonpanel-height + 2px;
 		}
@@ -804,7 +827,7 @@ body {
 	height: $aw-buttonpanel-height;
 	width: $aw-buttonpanel-width;
 
-	@media screen and (max-width: 780px) {
+	@media screen and (max-width: $medium-container) {
 		width: $aw-buttonpanel-width - 90px;
 	}
 
@@ -925,6 +948,43 @@ body {
 				}
 	        }
       	}		
+	}
+}
+
+.auto-hide {
+	@media screen and (max-width: $exlarge-container) {
+		display: none;
+	}
+}
+
+.auto-font {
+	h1 {
+		margin-top: 10px;
+		font-size: 3rem;
+	}
+
+	h2 {
+		font-size: 2.5rem;
+	}
+
+	@media screen and (max-width: $large-container) {
+		h1 {
+			font-size: 2.5rem;
+		}
+
+		h2 {
+			font-size: 2rem;
+		}
+	}
+
+	@media screen and (max-width: $medium-container) {
+		h1 {
+			font-size: 1.5rem;
+		}
+
+		h2 {
+			font-size: 1rem;
+		}
 	}
 }
 
