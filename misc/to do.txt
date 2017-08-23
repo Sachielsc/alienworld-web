@@ -1,6 +1,6 @@
 angle price, halo是比较好的recruitment agency
 
-领英加入certificate
+领英加入certificate，按照gaoxing的来改
 
 研究：
 bower
@@ -8,7 +8,7 @@ bower
 待办：
 买一个名片盒，买盛饭的大盒子，考完以后去new world附近买一个Blind Spot Rear View Mirror
 linkedin和facebook用起来
-杀各硬盘的毒
+杀各硬盘的毒（注意windows破解文件）
 
 其他备忘：
 路税到九月
@@ -50,16 +50,6 @@ html文件注意
 "&amp;" : "&"
 "&lt;" : "<"
 "&gt;" : ">"
-
-
-
-等到linkedin好看一点以后再发
-
-Hi, Brooke! This is Charles. It is so nice to know about your company from Amrita and I truly understand that you are looking for a person with skills far more superior than my level.
-
-What I have to say is, I will not give up. Maybe several weeks, maybe several months, I WILL prove that my zeal in coding is beyond words. I have faith in my gift in this area, the only enemy is time.
-
-And if you need a volunteer or an assist someday, please just let me know. I cherish every opportunity working with a passionate team rather than earning money.
 
 
 

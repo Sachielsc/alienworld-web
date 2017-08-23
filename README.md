@@ -24,7 +24,7 @@ Charles recommends these websites to learn about the syntax of markdown document
 * Cover Letter
 
 ## to do
-* Community Hub
+* Community Hub with authentication function.
 
 ## test
 This is the section I use for testing purposes.

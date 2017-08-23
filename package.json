@@ -1,7 +1,7 @@
 {
   "name": "alienworld-web",
   "version": "1.0.0",
-  "description": "Charles' personal website on Heroku. All the contect is written by Charles using front-end skills",
+  "description": "Charles' personal website deployed on Heroku. All rights reserved.",
   "engines": {
     "node": "6.11.1"
   },
