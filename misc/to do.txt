@@ -1,3 +1,6 @@
+加入批量版简历cl生成器和精致版
+研究其他项目在heroku的deploy
+彻底更新我的简历和cv
 angle price, halo是比较好的recruitment agency
 
 领英加入certificate
@@ -9,7 +12,9 @@ bower
 
 
 待办：
-买一个名片盒，买盛饭的大盒子，考完以后去new world附近买一个Blind Spot Rear View Mirror，周二九点半才开门不要去
+加王博的领英，加clive的领英
+周日：搞定style
+买一个名片盒，考完以后去new world附近买一个Blind Spot Rear View Mirror
 linkedin和facebook用起来
 杀各硬盘的毒
 
