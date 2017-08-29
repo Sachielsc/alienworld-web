@@ -2,14 +2,14 @@ var express = require('express');
 var app = express();
 
 // set port
-var port = process.env.PORT || 8080
+var port = process.env.PORT || 8080;
 
 app.use(express.static(__dirname + '/public'));
 
 // routes
 app.get("/", function(req, res) {
 	res.render("index");
-})
+});
 
 app.use(function(req, res) {
     res.sendfile(__dirname + '/public/index.html');
@@ -17,4 +17,4 @@ app.use(function(req, res) {
 
 app.listen(port, function() {
 	console.log("app running");
-})
+});
