@@ -1,6 +1,6 @@
 {
   "name": "alienworld-web",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Charles' personal website deployed on Heroku. All rights reserved.",
   "engines": {
     "node": "6.11.1"
@@ -9,7 +9,7 @@
   "main": "application.js",
   "dependencies": {
     "angular-ui-router": "^0.3.2",
-    "express": "^4.13.3"
+    "express": "^4.15.4"
   },
   "devDependencies": {
     "browser-sync": "2.18.2",
