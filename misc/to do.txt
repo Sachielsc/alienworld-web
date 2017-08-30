@@ -1,18 +1,19 @@
-加入批量版简历cl生成器和精致版
 研究其他项目在heroku的deploy
+增加技能nodejs
 彻底更新我的简历和cv
 angle price, halo是比较好的recruitment agency
-
-领英加入certificate，按照gaoxing的来改
+查一下我的9月份路考时间
+领英加入certificate，找到istqb的原件并扫描，按照gaoxing的来改
+看有哪些需要扫描的
+手写
+邮递申请
+手写x-ray
 
 研究：
 bower
 
 待办：
-
-周日：搞定style
 买一个名片盒，买盛饭的大盒子，考完以后去new world附近买一个Blind Spot Rear View Mirror
-linkedin和facebook用起来
 杀各硬盘的毒（注意windows破解文件）
 
 其他备忘：
