@@ -22,6 +22,8 @@
             <a href="https://askubuntu.com/questions/307/how-can-ppas-be-removed" target="_blank">https://askubuntu.com/questions/307/how-can-ppas-be-removed</a>
             <pre><code>Last but not least, you can also disable or remove PPAs from the "Software Sources" section in Ubuntu Settings with a few clicks of your mouse (no terminal needed).</code></pre></p>
 
+        </div>
+        <div class="assignment">
             <h3>Charles work report on 31th Jul, 2017</h3>
             <h4>Create a short cut of a folder in ubuntu: (probably not a very good way to do)</h4>
             <pre><code>sudo ln -sT /path/to/source/directory /path/to/destination/directory</code></pre>
@@ -33,6 +35,24 @@
             <h4>Libre Office Spell check not at all detecting any wrong spelling:</h4>
             <p>Tools> ...Language> ... For all text> .... and then selecting the appropriate dictionary, (in my case English uk). And Bingo - wavy red lines all over the place.<br><br>
             Reference: <a href="https://ask.libreoffice.org/en/question/46842/4412-spell-check-not-at-all-detecting-any-wrong-spelling/" target="_blank">https://ask.libreoffice.org/en/question/46842/4412-spell-check-not-at-all-detecting-any-wrong-spelling/</a></p>
+        </div>
+        <div class="assignment">
+            <h3>Charles work report on 31th Aug, 2017</h3>
+            <h4>Important tips: Use aptitude instead of apt-get.</h4>
+            <p>It is more intelligent.<br>
+                It not only will handle downgrading conflicting packages for you, but will make a series of recommendations asking you which of many possible suggested working scenarios you would.<br>
+                <pre><code>sudo aptitude install [myNewPackage]</code></pre><br>
+                If you don't have aptitude on your machine yet, get it with:
+                <pre><code>sudo apt-get install aptitude</code></pre>
+            </p>
+
+            <h4>Important tips: Change the permission of a file in Ubuntu</h4>
+            <p>If it's owned by root you can do this:
+            <pre><code>sudo chown &lt;your username&gt;:&lt;your usergroup&gt; -R &lt;path to&gt;/.blabla</code></pre>
+            Since <code>./blabla</code> owned by root you need to gain root privileges to change that. That's what sudo will do. The -R option for the chown command says: this directory and everything in it recursively.
+            my code:
+            <pre><code>sudo chown $USER -R blabla</code></pre>
+            Then manually change the usergroup to <code>charles</code></p>
         </div>
     </div>
 </body>
