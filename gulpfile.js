@@ -22,7 +22,7 @@ gulp.task('sass', function () {
 gulp.task('views', function() {
 	return gulp.src(['public/app/**/*.html'])
 		.pipe(gulp.dest('dist/app'))
-})
+});
 
 // Css and JS optmization
 gulp.task('useref', function() {
@@ -31,7 +31,7 @@ gulp.task('useref', function() {
 	    .pipe(gulpIf('*.js', uglify()))
 	    .pipe(gulpIf('*.css', cssnano()))
 		.pipe(gulp.dest('dist'))
-})
+});
 
 
 
@@ -48,8 +48,7 @@ gulp.task('images', function() {
 gulp.task('fonts', function() {
 	return gulp.src(['public/assets/lib/fonts/**'])
 		.pipe(gulp.dest('dist/assets/fonts'))
-})
-
+});
 
 //Watch css changes
 gulp.task('watch', ['sass'], function (){
@@ -58,20 +57,18 @@ gulp.task('watch', ['sass'], function (){
 	//gulp.watch(['public/index.html'], ['index']); 
 });
 
-
-
 gulp.task('clean:dist', function() {
   return del.sync('dist');
-})
+});
 
 gulp.task('build', function (callback){
   runSequence(['clean:dist','sass', 'useref', 'views','images','fonts'],
     callback
   )
-})
+});
 
 gulp.task('default', function (callback) {
   runSequence(['sass', 'watch'],
     callback
   )
-})
+});

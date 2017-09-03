@@ -14,16 +14,17 @@ Charles recommends these websites to learn about the syntax of markdown document
 
 ## structure
 
-* 个人介绍（做简介、双领域的简历）
-* projects(我参加的项目)
-* game world
-* alien world
-* movie world
-* Community Hub(难！里面包含news, forum/discussion)
-* 联系我
+* Workshop
+* Contact Me
+* Game World
+* Movie World
+* Work Log
+* Other Projects
+* Community Hub( needs to include forum/discussion )
+* Cover Letter
 
 ## to do
-* 分级格式以及现在做的部分元素可以加入我的电影收藏
+* Community Hub with authentication function.
 
 ## test
 This is the section I use for testing purposes.
