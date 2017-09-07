@@ -276,6 +276,9 @@ body {
 
 	p {
 		color: rgba(255, 255, 255, 0.6);
+		.theme-color {
+			color: #97ff77;
+		}
 	}
 
 	&.forum-list {
@@ -969,7 +972,7 @@ body {
 	}
 
 	h2 {
-		font-size: 2.5rem;
+		font-size: 1.6rem;
 	}
 
 	@media screen and (max-width: $large-container) {
@@ -978,7 +981,7 @@ body {
 		}
 
 		h2 {
-			font-size: 2rem;
+			font-size: 1.4rem;
 		}
 	}
 

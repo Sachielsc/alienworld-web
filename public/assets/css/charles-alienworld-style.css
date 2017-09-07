@@ -207,6 +207,8 @@ body {
 
 .card-box p {
   color: rgba(255, 255, 255, 0.6); }
+  .card-box p .theme-color {
+    color: #97ff77; }
 
 .card-box.forum-list {
   background: url(../images/box-background-small-2.jpg);
@@ -718,13 +720,13 @@ body {
   font-size: 3rem; }
 
 .auto-font h2 {
-  font-size: 2.5rem; }
+  font-size: 1.6rem; }
 
 @media screen and (max-width: 992px) {
   .auto-font h1 {
     font-size: 2.5rem; }
   .auto-font h2 {
-    font-size: 2rem; } }
+    font-size: 1.4rem; } }
 
 @media screen and (max-width: 768px) {
   .auto-font h1 {
