@@ -1,193 +1,205 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>About Me</title>
-    </head>
+<head>
+  <title>About Me</title>
+</head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-4">
-                <div class="sc-mechanical-frame-outer">
-                    <div class="sc-mechanical-frame-inner">
-                        <div class="button-panel">
-                    <a ui-sref="about"><button type="button">State Panel</button></a><br>
-                    <a ui-sref="skillpanel"><button type="button" class="active">Skill Panel</button></a><br>
-                    <a ui-sref="workreport"><button type="button">Reports</button></a><br>
-                    <a ui-sref="cv"><button type="button">CV Page</button></a>
-                        </div>
-                    </div>
-                </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="sc-mechanical-frame-outer">
+          <div class="sc-mechanical-frame-inner">
+            <div class="button-panel">
+              <a ui-sref="about"><button type="button">State Panel</button></a><br>
+              <a ui-sref="skillpanel"><button type="button" class="active">Skill Tree</button></a><br>
+              <a ui-sref="workreport"><button type="button">Reports</button></a><br>
+              <a ui-sref="cv"><button type="button">CV Page</button></a>
             </div>
-            <div class="col-8">
-                <div ui-view>
-                    <div class="card-box white-frame shadow-expand">
-                        <p>Dear colonist officer,<br>
-                        Welcome to <span class="theme-color">Charles SHU's research lab</span>. You can check all the abilities I gain so far.<br>
-                        <span>You can also click on some items to see more details</span>.</p>
-                    </div>
-                    <div class="card-box green-frame shadow-expand">
-                        <h4>Programming Skills:</h4>
-                        <div class="skill-bar-list">
-                            <div class="skill-bar">
-                                <a data-toggle="collapse" data-target="#AngularJS">AngularJS -- threat Level: Queen --</a>
-                                <div class="aw-progress-barbackground">
-                                    <div class="aw-progress-bar aw-progress-bar-queen"></div>
-                                </div>
-                                <div class="collapse" id="AngularJS">
-                                    <p>ui.router -- threat Level: Queen --</p>
-                                    <div class="aw-progress-barbackground">
-                                        <div class="aw-progress-bar aw-progress-bar-queen"></div>
-                                    </div>
-                                    <p>angular-animate -- threat Level: Queen --</p>
-                                    <div class="aw-progress-barbackground">
-                                        <div class="aw-progress-bar aw-progress-bar-queen"></div>
-                                    </div>
-                                    <p>promise -- threat Level: Xenomorph --</p>
-                                    <div class="aw-progress-barbackground">
-                                        <div class="aw-progress-bar aw-progress-bar-xenomorph"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="skill-bar">
-                                <a data-toggle="collapse" data-target="#js">JavaScript -- threat Level: Queen --</a>
-                                <div class="aw-progress-barbackground">
-                                    <div class="aw-progress-bar aw-progress-bar-queen"></div>
-                                </div>
-                                <div class="collapse" id="js">
-                                    <p>jQuery -- threat Level: Xenomorph --</p>
-                                    <div class="aw-progress-barbackground">
-                                        <div class="aw-progress-bar aw-progress-bar-xenomorph"></div>
-                                    </div>
-                                </div>                                
-                            </div>
-
-                            <div class="skill-bar">
-                                <a data-toggle="collapse" data-target="#css">CSS -- threat Level: Queen --</a>
-                                <div class="aw-progress-barbackground">
-                                    <div class="aw-progress-bar aw-progress-bar-queen"></div>
-                                </div>
-                                <div class="collapse" id="css">
-                                    <p>Bootstrap -- threat Level: Queen --</p>
-                                    <div class="aw-progress-barbackground">
-                                        <div class="aw-progress-bar aw-progress-bar-queen"></div>
-                                    </div>
-                                    <p>CSS: webkit -- threat Level: Xenomorph --</p>
-                                    <div class="aw-progress-barbackground">
-                                        <div class="aw-progress-bar aw-progress-bar-xenomorph"></div>
-                                    </div>                                    
-                                </div>
-                            </div>
-                            <div class="skill-bar">
-                                <p>Java -- threat Level: Facehugger --</p>
-                                <div class="aw-progress-barbackground">
-                                    <div class="aw-progress-bar aw-progress-bar-facehugger"></div>
-                                </div>
-                            </div>
-
-                            <div class="skill-bar">
-                                <p>PHP -- threat Level: Facehugger --</p>
-                                <div class="aw-progress-barbackground">
-                                    <div class="aw-progress-bar aw-progress-bar-facehugger"></div>
-                                </div>
-                            </div>
-
-                            <div class="skill-bar">
-                                <p>MySQL -- threat Level: Facehugger --</p>
-                                <div class="aw-progress-barbackground">
-                                    <div class="aw-progress-bar aw-progress-bar-facehugger"></div>
-                                </div>
-                            </div>
-
-                            <div class="skill-bar">
-                                <p>Python -- threat Level: Egg --</p>
-                                <div class="aw-progress-barbackground">
-                                    <div class="aw-progress-bar aw-progress-bar-egg"></div>
-                                </div>
-                            </div>
-
-                            <div class="skill-bar">
-                                <p>ReactJS -- threat Level: Facehugger --</p>
-                                <div class="aw-progress-barbackground">
-                                    <div class="aw-progress-bar aw-progress-bar-facehugger"></div>
-                                </div>
-                            </div>
-
-                            <div class="skill-bar">
-                                <p>Selenium -- threat Level: Egg --</p>
-                                <div class="aw-progress-barbackground">
-                                    <div class="aw-progress-bar aw-progress-bar-egg"></div>
-                                </div>
-                            </div>
-
-                            <div class="skill-bar">
-                                <p>Gulp -- threat Level: Facehugger --</p>
-                                <div class="aw-progress-barbackground">
-                                    <div class="aw-progress-bar aw-progress-bar-facehugger"></div>
-                                </div>
-                            </div>
-
-                            <div class="skill-bar">
-                                <p>Node.js -- threat Level: Chestburster --</p>
-                                <div class="aw-progress-barbackground">
-                                    <div class="aw-progress-bar aw-progress-bar-chestburster"></div>
-                                </div>
-                            </div>
-
-                            <div class="skill-bar">
-                                <a data-toggle="collapse" data-target="#git">Git -- threat Level: Queen --</a>
-                                <div class="aw-progress-barbackground">
-                                    <div class="aw-progress-bar aw-progress-bar-queen"></div>
-                                </div>
-                                <div class="collapse" id="git">
-                                    <p>Git CLI -- threat Level: Queen --</p>
-                                    <div class="aw-progress-barbackground">
-                                        <div class="aw-progress-bar aw-progress-bar-queen"></div>
-                                    </div>
-                                    <p>Git GUI -- threat Level: Xenomorph --</p>
-                                    <div class="aw-progress-barbackground">
-                                        <div class="aw-progress-bar aw-progress-bar-xenomorph"></div>
-                                    </div>                                    
-                                </div>
-                            </div>
-
-                            <div class="skill-bar">
-                                <p>JIRA -- threat Level: Chestburster --</p>
-                                <div class="aw-progress-barbackground">
-                                    <div class="aw-progress-bar aw-progress-bar-chestburster"></div>
-                                </div>
-                            </div>
-                            
-                            <div class="skill-bar">
-                                <p>Linux -- threat Level: Xenomorph --</p>
-                                <div class="aw-progress-barbackground">
-                                    <div class="aw-progress-bar aw-progress-bar-xenomorph"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="separator"></div>
-                        <h4>Language Proficiency:</h4>
-                        <div class="skill-bar-list">
-                            <div class="skill-bar">
-                                <p>English -- fluent</p>
-                                <div class="aw-progress-barbackground">
-                                    <div class="aw-progress-bar aw-progress-bar-xenomorph"></div>
-                                </div>
-
-                            </div>
-                            <div class="skill-bar">
-                                <p>Chinese -- native</p>
-                                <div class="aw-progress-barbackground">
-                                    <div class="aw-progress-bar aw-progress-bar-queen"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </div>
-</body>
+      </div>
+      <div class="col-8">
+        <div ui-view>
+          <div class="card-box white-frame shadow-expand">
+            <p>Dear colonist officer,<br>
+            Welcome to <span class="theme-color">Charles SHU's research lab</span>. You can check all the abilities I gain so far.<br>
+            <span>You can also click on some items to see more details</span>.</p>
+          </div>
+          <div class="card-box green-frame shadow-expand">
+            <h4>Programming Skills:</h4>
+            <div class="skill-bar-list">
 
-</html>
+              <div class="skill-bar">
+                <a data-toggle="collapse" data-target="#AngularJS">AngularJS -- threat Level: Queen --</a>
+                <div class="aw-progress-barbackground">
+                  <div class="aw-progress-bar aw-progress-bar-queen"></div>
+                </div>
+
+                <div class="collapse" id="AngularJS">
+
+                  <p>ui.router -- threat Level: Queen --</p>
+                  <div class="aw-progress-barbackground">
+                    <div class="aw-progress-bar aw-progress-bar-queen"></div>
+                  </div>
+
+                  <p>angular-animate -- threat Level: Queen --</p>
+                  <div class="aw-progress-barbackground">
+                    <div class="aw-progress-bar aw-progress-bar-queen"></div>
+                  </div>
+
+                  <p>promise -- threat Level: Xenomorph --</p>
+                  <div class="aw-progress-barbackground">
+                    <div class="aw-progress-bar aw-progress-bar-xenomorph"></div>
+                  </div>
+
+                  <a data-toggle="collapse" data-target="#Angular4">Angular4 -- threat Level: Xenomorph --</a>
+                  <div class="aw-progress-barbackground">
+                    <div class="aw-progress-bar aw-progress-bar-xenomorph"></div>
+                  </div>
+
+                    <div class="collapse" id="Angular4">
+                      <p>Angular4 sub1 -- threat Level: Xenomorph --</p>
+                      <div class="aw-progress-barbackground">
+                        <div class="aw-progress-bar aw-progress-bar-xenomorph"></div>
+                      </div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <a data-toggle="collapse" data-target="#js">JavaScript -- threat Level: Queen --</a>
+                <div class="aw-progress-barbackground">
+                  <div class="aw-progress-bar aw-progress-bar-queen"></div>
+                </div>
+                <div class="collapse" id="js">
+                  <p>jQuery -- threat Level: Xenomorph --</p>
+                  <div class="aw-progress-barbackground">
+                    <div class="aw-progress-bar aw-progress-bar-xenomorph"></div>
+                  </div>
+                </div>                
+              </div>
+
+              <div class="skill-bar">
+                <a data-toggle="collapse" data-target="#css">CSS -- threat Level: Queen --</a>
+                <div class="aw-progress-barbackground">
+                  <div class="aw-progress-bar aw-progress-bar-queen"></div>
+                </div>
+                <div class="collapse" id="css">
+                  <p>Bootstrap -- threat Level: Queen --</p>
+                  <div class="aw-progress-barbackground">
+                    <div class="aw-progress-bar aw-progress-bar-queen"></div>
+                  </div>
+                  <p>CSS: webkit -- threat Level: Xenomorph --</p>
+                  <div class="aw-progress-barbackground">
+                    <div class="aw-progress-bar aw-progress-bar-xenomorph"></div>
+                  </div>                  
+                </div>
+              </div>
+              <div class="skill-bar">
+                <p>Java -- threat Level: Facehugger --</p>
+                <div class="aw-progress-barbackground">
+                  <div class="aw-progress-bar aw-progress-bar-facehugger"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <p>PHP -- threat Level: Facehugger --</p>
+                <div class="aw-progress-barbackground">
+                  <div class="aw-progress-bar aw-progress-bar-facehugger"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <p>MySQL -- threat Level: Facehugger --</p>
+                <div class="aw-progress-barbackground">
+                  <div class="aw-progress-bar aw-progress-bar-facehugger"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <p>Python -- threat Level: Egg --</p>
+                <div class="aw-progress-barbackground">
+                  <div class="aw-progress-bar aw-progress-bar-egg"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <p>ReactJS -- threat Level: Facehugger --</p>
+                <div class="aw-progress-barbackground">
+                  <div class="aw-progress-bar aw-progress-bar-facehugger"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <p>Selenium -- threat Level: Egg --</p>
+                <div class="aw-progress-barbackground">
+                  <div class="aw-progress-bar aw-progress-bar-egg"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <p>Gulp -- threat Level: Facehugger --</p>
+                <div class="aw-progress-barbackground">
+                  <div class="aw-progress-bar aw-progress-bar-facehugger"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <p>Node.js -- threat Level: Chestburster --</p>
+                <div class="aw-progress-barbackground">
+                  <div class="aw-progress-bar aw-progress-bar-chestburster"></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <a data-toggle="collapse" data-target="#git">Git -- threat Level: Queen --</a>
+                <div class="aw-progress-barbackground">
+                  <div class="aw-progress-bar aw-progress-bar-queen"></div>
+                </div>
+                <div class="collapse" id="git">
+                  <p>Git CLI -- threat Level: Queen --</p>
+                  <div class="aw-progress-barbackground">
+                    <div class="aw-progress-bar aw-progress-bar-queen"></div>
+                  </div>
+                  <p>Git GUI -- threat Level: Xenomorph --</p>
+                  <div class="aw-progress-barbackground">
+                    <div class="aw-progress-bar aw-progress-bar-xenomorph"></div>
+                  </div>                  
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <p>JIRA -- threat Level: Chestburster --</p>
+                <div class="aw-progress-barbackground">
+                  <div class="aw-progress-bar aw-progress-bar-chestburster"></div>
+                </div>
+              </div>
+              
+              <div class="skill-bar">
+                <p>Linux -- threat Level: Xenomorph --</p>
+                <div class="aw-progress-barbackground">
+                  <div class="aw-progress-bar aw-progress-bar-xenomorph"></div>
+                </div>
+              </div>
+            </div>
+            <div class="separator"></div>
+            <h4>Language Proficiency:</h4>
+            <div class="skill-bar-list">
+              <div class="skill-bar">
+                <p>English -- fluent</p>
+                <div class="aw-progress-barbackground">
+                  <div class="aw-progress-bar aw-progress-bar-xenomorph"></div>
+                </div>
+
+              </div>
+              <div class="skill-bar">
+                <p>Chinese -- native</p>
+                <div class="aw-progress-barbackground">
+                  <div class="aw-progress-bar aw-progress-bar-queen"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
