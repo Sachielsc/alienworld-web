@@ -1,15 +1,17 @@
 'use strict';
 angular.module('about').controller('coverletterController', ['$log', '$scope', function($log, $scope){
 	$log.debug('"coverletterController" complete ...');
+
+    var myPassWord = "scsgdtcy3";
     
     $scope.hideCoverLetter = true;
 
-    $scope.clearvalue = function () {
+    $scope.clearValueCoverLetter = function () {
         $scope.coverletterpassword = "";
     }
 
-    $scope.passvalue = function () {
-        if ($scope.coverletterpassword=="scsgdtcy3") {
+    $scope.passValueCoverLetter = function () {
+        if ($scope.coverletterpassword == myPassWord) {
         	$scope.hideCoverLetter = false;
         } else {
         	$scope.hideCoverLetter = true;

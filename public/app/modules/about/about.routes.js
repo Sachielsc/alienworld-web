@@ -41,7 +41,7 @@ angular.module('about').config(['$stateProvider', function($stateProvider) {
 
 		.state('worklog',{
 			url:'/about/worklog',
-			// controller:'worklogController',
+			controller:'worklogController',
 			templateUrl:'app/modules/about/views/alienworld-about-worklog.view.html',
 		})
 

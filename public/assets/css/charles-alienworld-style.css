@@ -139,6 +139,15 @@ body {
   box-sizing: border-box; }
   .intro span, .aw-game span, .aw-movie span, .meeting span, .aw-community span, .assignment span, .card-box span {
     color: #5bc0de; }
+    .intro span.intro-span, .aw-game span.intro-span, .aw-movie span.intro-span, .meeting span.intro-span, .aw-community span.intro-span, .assignment span.intro-span, .card-box span.intro-span {
+      color: #5bc0de;
+      -webkit-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      transition: all 1s ease; }
+      .intro span.intro-span:hover, .aw-game span.intro-span:hover, .aw-movie span.intro-span:hover, .meeting span.intro-span:hover, .aw-community span.intro-span:hover, .assignment span.intro-span:hover, .card-box span.intro-span:hover {
+        color: #97ff77; }
 
 .intro {
   position: relative;
@@ -207,6 +216,8 @@ body {
 
 .card-box p {
   color: rgba(255, 255, 255, 0.6); }
+  .card-box p .theme-color {
+    color: #97ff77; }
 
 .card-box.forum-list {
   background: url(../images/box-background-small-2.jpg);
@@ -409,6 +420,14 @@ body {
     .portrait {
       display: none; } }
 
+.I_love_my_job {
+  margin-left: 15px;
+  height: 70px;
+  width: 70px; }
+  @media screen and (max-width: 768px) {
+    .I_love_my_job {
+      display: none; } }
+
 .project-pic {
   height: 200px;
   width: 300px; }
@@ -600,20 +619,59 @@ body {
     color: #f2dede;
     border: 2px solid #f2dede; }
 
-.hover-red:hover {
-  color: red; }
+.hover-red {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease; }
+  .hover-red:hover {
+    color: red; }
 
-.hover-yellow:hover {
-  color: yellow; }
+.hover-yellow {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease; }
+  .hover-yellow:hover {
+    color: yellow; }
 
-.hover-purple:hover {
-  color: purple; }
+.hover-purple {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease; }
+  .hover-purple:hover {
+    color: purple; }
 
-.hover-teal:hover {
-  color: #014c8c; }
+.hover-teal {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease; }
+  .hover-teal:hover {
+    color: #014c8c; }
 
-.hover-white:hover {
-  color: white; }
+.hover-white {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease; }
+  .hover-white:hover {
+    color: white; }
+
+.hover-spancolor {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease; }
+  .hover-spancolor:hover {
+    color: #5bc0de; }
 
 .button-panel {
   position: absolute;
@@ -718,13 +776,13 @@ body {
   font-size: 3rem; }
 
 .auto-font h2 {
-  font-size: 2.5rem; }
+  font-size: 1.6rem; }
 
 @media screen and (max-width: 992px) {
   .auto-font h1 {
     font-size: 2.5rem; }
   .auto-font h2 {
-    font-size: 2rem; } }
+    font-size: 1.4rem; } }
 
 @media screen and (max-width: 768px) {
   .auto-font h1 {
