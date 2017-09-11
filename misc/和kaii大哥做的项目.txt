@@ -1,0 +1,23 @@
+https://s3.amazonaws.com/planyo-extras/website/index.html
+https://bradbell.com.au/
+mvc
+
+agile
+.net
+c#
+cqserver
+
+css
+
+²Ëµ¥
+css
+angular4
+
+
+
+google maps:
+1. https://github.com/SebastianM/angular-google-maps
+   code: http://plnkr.co/edit/YX7W20?p=preview
+2. code: https://plnkr.co/edit/LdKdSj?p=preview
+
+view more: https://www.angularjs4u.com/angularjs2/angular-2-google-maps-examples/ 
