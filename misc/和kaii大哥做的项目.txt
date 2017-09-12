@@ -1,21 +1,26 @@
+改进一下aw的js
+写report
+
 https://s3.amazonaws.com/planyo-extras/website/index.html
 https://bradbell.com.au/
-mvc
 
-agile
-.net
+agile development
+.NET
 c#
-cqserver
-
-css
-
-菜单
-css
-angular4
+Microsoft SQL Server
 
 
 
-google maps:
+CSS & Javascript templates:
+https://wrapbootstrap.com/tag/real-estate
+
+
+angular 2 datepicker component:
+1. (推荐) https://material.angular.io/components/datepicker/overview
+
+2. https://www.npmjs.com/package/ng2-datepicker
+
+angular 2 google maps component:
 1. https://github.com/SebastianM/angular-google-maps
    code: http://plnkr.co/edit/YX7W20?p=preview
 2. code: https://plnkr.co/edit/LdKdSj?p=preview
