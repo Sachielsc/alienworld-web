@@ -1,9 +1,9 @@
+# node modules
 node_modules
-package-lock.json
-.idea/codeStyleSettings.xml
-.idea/inspectionProfiles/
-.idea/misc.xml
-.idea/modules.xml
-.idea/vcs.xml
-.idea/workspace.xml
-alienworld-web.iml
+
+# IntelliJ project files
+.idea
+*.iml
+
+# TODO: Comment the next line
+# package-lock.json

@@ -1,31 +1,33 @@
 <body>
-    <div class="container">
-		<div class="aw-community white-frame shadow-expand">
-			<p>Dear colonist,<br>
-			<br>This Page is still under construction!<br>
-			Charles plans to build this as a forum, with functionality like <span>posting</span>, <span>commenting</span> and <span>logging</span>. But for now it is only for <span>article display</span>.
-			</p>
-			<footer>----{{currentdate.date}}</footer>
-		</div>
+<div class="container">
+    <div class="aw-community white-frame shadow-expand">
+        <p>Dear colonist,<br>
+            <br>This Page is still under construction!<br>
+            Charles plans to build this as a forum, with functionality like <span>posting</span>,
+            <span>commenting</span> and <span>logging</span>. But for now it is only for <span>article display</span>.
+        </p>
+        <footer>----{{currentdate.date}}</footer>
+    </div>
 
-        <div class="aw-community card-box white-frame shadow-expand forum-list">
-            <a data-toggle="collapse" data-target="#forum-english" class="fa fa-book">English Forum</a>
-            <div class="collapse show" id="forum-english">
-                <li><a ui-sref=".earticle1">Empty</a></li>
-            </div><br>
-            <a data-toggle="collapse" data-target="#forum-chinese" class="fa fa-book">Chinese Forum</a>
-            <div class="collapse show" id="forum-chinese">
-                <li><a ui-sref=".carticle1">Chicken Soup for the Soul -- The people who torture you</a></li>
-                <li><a ui-sref=".carticle2">Philosophy of Life -- Emotion and Career</a></li>
-                <li><a ui-sref=".carticle3">Philosophy of Life -- How to avoid distraction</a></li>
-                <li><a ui-sref=".carticle4">Philosophy of Life -- How to wait someone</a></li>
-            </div>
+    <div class="aw-community card-box white-frame shadow-expand forum-list">
+        <a data-toggle="collapse" data-target="#forum-english" class="fa fa-book">English Forum</a>
+        <div class="collapse show" id="forum-english">
+            <li><a ui-sref=".earticle1">Empty</a></li>
         </div>
+        <br>
+        <a data-toggle="collapse" data-target="#forum-chinese" class="fa fa-book">Chinese Forum</a>
+        <div class="collapse show" id="forum-chinese">
+            <li><a ui-sref=".carticle1">Chicken Soup for the Soul -- The people who torture you</a></li>
+            <li><a ui-sref=".carticle2">Philosophy of Life -- Emotion and Career</a></li>
+            <li><a ui-sref=".carticle3">Philosophy of Life -- How to avoid distraction</a></li>
+            <li><a ui-sref=".carticle4">Philosophy of Life -- How to wait someone</a></li>
+        </div>
+    </div>
 
-    	<div class="aw-community green-frame shadow-expand">
-    		<div ui-view>
-    			<p>Select an article from above~</p>
-    		</div>
-		</div>
-	</div>
+    <div class="aw-community green-frame shadow-expand">
+        <div ui-view>
+            <p>Select an article from above~</p>
+        </div>
+    </div>
+</div>
 </body>
