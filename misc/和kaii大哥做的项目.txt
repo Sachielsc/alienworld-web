@@ -1,9 +1,0 @@
-12/09/2017 - 电话会议记录：
-
-https://s3.amazonaws.com/planyo-extras/website/index.html
-https://bradbell.com.au/
-
-agile development
-.NET
-c#
-Microsoft SQL Server

@@ -1,0 +1,48 @@
+<body>
+<div class="container">
+    <div class="assignment">
+        <h4>C# coding conventions</h4>
+        <dl>
+            <dt>class names, method names</dt>
+            <dd>pascal casing</dd>
+            <dt>method arguments and local/private variable names</dt>
+            <dd>camel casing, but aviod under lines (only exception: private variables)<br>
+                aviod screaming caps
+            </dd>
+            <br>
+            <dt>constructors</dt>
+            <dd>constructors are always public, and named the same as the class name
+            </dd>
+            <br>
+            <dt>static class</dt>
+            <dd>a class needs no instantiations
+            </dd>
+        </dl>
+        <br>
+        <h4>ActionLink in ASP.NET MVC3</h4>
+        <pre><code>Html.ActionLink(article.Title,
+    "Item",   // <-- ActionMethod
+    "Login",  // <-- Controller Name.
+    new { article.ArticleID }, // <-- Route arguments.
+    null  // <-- htmlArguments .. which are none. You need this value
+          //     otherwise you call the WRONG method ...
+          //     (refer to comments, below).
+)</code></pre>
+        <br>
+        <h4>About controllers and actions in MVC</h4>
+        <h5>Points to Remember</h5>
+        <p>
+        All the public methods in the Controller class are called Action methods.
+        Action method has following restrictions.<br>
+        <ul>
+            <li>Action method must be public. It cannot be private or protected.</li>
+            <li>Action method cannot be overloaded.</li>
+            <li>Action method cannot be a static method.</li>
+        </ul>
+        ActionResult is a base class of all the result type which returns from Action method.<br>
+        Base Controller class contains methods that returns appropriate result type e.g. View(), Content(), File(), JavaScript() etc.<br>
+        Action method can include Nullable type parameters.
+        </p>
+    </div>
+</div>
+</body>

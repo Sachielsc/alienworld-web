@@ -179,6 +179,11 @@ angular.module('report').config(['$stateProvider', function($stateProvider) {
         url:'/heroku',
         templateUrl:'app/modules/report/views/own-note/alienworld-note-heroku.view.html',
         })
+
+        .state('workreport.aspnet',{
+            url:'/aspnet',
+            templateUrl:'app/modules/report/views/own-note/alienworld-note-aspnet.view.html',
+        })
         ;
     }
 ]);
