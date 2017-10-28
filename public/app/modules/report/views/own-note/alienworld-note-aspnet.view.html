@@ -9,14 +9,17 @@
             <dd>camel casing, but aviod under lines (only exception: private variables)<br>
                 aviod screaming caps
             </dd>
-            <br>
+            <div class="separator"></div>
             <dt>constructors</dt>
             <dd>constructors are always public, and named the same as the class name
             </dd>
-            <br>
+            <div class="separator"></div>
             <dt>static class</dt>
             <dd>a class needs no instantiations
             </dd>
+            <div class="separator"></div>
+            <dt>Entity Framework</dt>
+            <dd>A persistence framework connecting the database and your application</dd>
         </dl>
         <br>
         <h4>ActionLink in ASP.NET MVC3</h4>
@@ -29,20 +32,34 @@
           //     (refer to comments, below).
 )</code></pre>
         <br>
-        <h4>About controllers and actions in MVC</h4>
-        <h5>Points to Remember</h5>
-        <p>
-        All the public methods in the Controller class are called Action methods.
-        Action method has following restrictions.<br>
-        <ul>
-            <li>Action method must be public. It cannot be private or protected.</li>
-            <li>Action method cannot be overloaded.</li>
-            <li>Action method cannot be a static method.</li>
-        </ul>
-        ActionResult is a base class of all the result type which returns from Action method.<br>
-        Base Controller class contains methods that returns appropriate result type e.g. View(), Content(), File(), JavaScript() etc.<br>
-        Action method can include Nullable type parameters.
-        </p>
+        <div>
+            <h4>About controllers and actions in MVC</h4>
+            <h5>Points to Remember</h5>
+            <p>
+                All the public methods in the Controller class are called Action methods.
+                Action method has following restrictions.<br>
+            <ul>
+                <li>Action method must be public. It cannot be private or protected.</li>
+                <li>Action method cannot be overloaded.</li>
+                <li>Action method cannot be a static method.</li>
+            </ul>
+            ActionResult is a base class of all the result type which returns from Action method.<br>
+            Base Controller class contains methods that returns appropriate result type e.g. View(), Content(), File(), JavaScript() etc.<br>
+            Action method can include Nullable type parameters.
+            </p>
+        </div>
+        <div>
+            <h4>Concerning Entity Framework</h4>
+            <ul>
+                <li>
+                    Navigation properties are typically defined as "virtual" so that they can take advantage of certain Entity Framework functionality such as lazy loading.
+                </li>
+                <li>
+                    The procedure to start code first migration from an existing model:<br>
+                    model folder -> add-> new item -> ado.net entity data model-> code first from data base ->next -> yes -> 6.x -> tables -> PM> enable-migrations -> PM> add-migration InitalModel -IgnoreChanges -Force -> PM> Update-Database
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 </body>
