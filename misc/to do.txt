@@ -1,12 +1,12 @@
 研究其他项目在heroku的deploy
-领英加入certificate，找到istqb的原件并扫描，按照gaoxing的来改
-改进一下我的主页的页码重复度
+领英加入certificate，按照gaoxing的来改
+改进一下我的主页的页码重复度，改成angular4的或者react的
 
 研究：
 bower, wordpress
 
 待办：
-整理寝室，买墨镜，考完以后去new world附近买一个Blind Spot Rear View Mirror
+整理寝室，买墨镜
 linkedin和facebook用起来
 杀各硬盘的毒（注意windows破解文件）
 
