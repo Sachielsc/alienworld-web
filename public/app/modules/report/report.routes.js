@@ -4,17 +4,32 @@ angular.module('report').config(['$stateProvider', function($stateProvider) {
     console.log('report routers loading complete...');
 
     // add my own study notes
-    var studyNoteName = ["noteNodeJS", "angularJS", "html", "bootstrap", "generalCoding", "generalIT", "vocabulary", "java", "vim", "jira", "reactJS", "linux", "gulp", "sublime", "git", "heroku", "aspnet"];
+    var studyNoteList = ["noteNodeJS", "angularJS", "html", "bootstrap", "generalCoding", "generalIT", "vocabulary", "java", "vim", "jira", "reactJS", "linux", "gulp", "sublime", "git", "heroku", "aspnet"];
 
-    for (var j = 0; j < studyNoteName.length; j++) {
-        var studyNoteStateName = "workreport." + studyNoteName[j];
-        var studyNoteUrlName = "/" + studyNoteName[j];
-        var studyNoteTemplateUrlName = "app/modules/report/views/own-note/alienworld-note-" + studyNoteName[j] + ".view.html";
+    for (var j = 0; j < studyNoteList.length; j++) {
+        var studyNoteStateName = "workreport." + studyNoteList[j];
+        var studyNoteUrlName = "/" + studyNoteList[j];
+        var studyNoteTemplateUrlName = "app/modules/report/views/own-note/alienworld-note-" + studyNoteList[j] + ".view.html";
 
         $stateProvider.state(
             studyNoteStateName ,{
                 url: studyNoteUrlName,
                 templateUrl: studyNoteTemplateUrlName
+            });
+    }
+
+    // add my code snippets
+    var codeSnippetList = ["arraySum"];
+
+    for (var k = 0; k < codeSnippetList.length; k++) {
+        var codeSnippetStateName = "workreport." + codeSnippetList[k];
+        var codeSnippetUrlName = "/" + codeSnippetList[k];
+        var codeSnippetTemplateUrlName = "app/modules/report/views/code-snippet/code-snippet-" + codeSnippetList[k] + ".view.html";
+
+        $stateProvider.state(
+            codeSnippetStateName ,{
+                url: codeSnippetUrlName,
+                templateUrl: codeSnippetTemplateUrlName
             });
     }
 
