@@ -1,37 +1,39 @@
 <body>
 <div class="container">
     <div class="assignment">
-        <h4>C# coding conventions</h4>
-        <dl>
-            <dt>class names, method names</dt>
-            <dd>pascal casing</dd>
-            <dt>method arguments and local/private variable names</dt>
-            <dd>camel casing, but aviod under lines (only exception: private variables)<br>
-                aviod screaming caps
-            </dd>
-            <div class="separator"></div>
-            <dt>constructors</dt>
-            <dd>constructors are always public, and named the same as the class name
-            </dd>
-            <div class="separator"></div>
-            <dt>static class</dt>
-            <dd>a class needs no instantiations
-            </dd>
-            <div class="separator"></div>
-            <dt>Entity Framework</dt>
-            <dd>A persistence framework connecting the database and your application</dd>
-        </dl>
-        <br>
-        <h4>ActionLink in ASP.NET MVC3</h4>
-        <pre><code>Html.ActionLink(article.Title,
-    "Item",   // <-- ActionMethod
-    "Login",  // <-- Controller Name.
-    new { article.ArticleID }, // <-- Route arguments.
-    null  // <-- htmlArguments .. which are none. You need this value
-          //     otherwise you call the WRONG method ...
-          //     (refer to comments, below).
+        <div>
+            <h4>C# coding conventions</h4>
+            <dl>
+                <dt>class names, method names</dt>
+                <dd>pascal casing</dd>
+                <dt>method arguments and local/private variable names</dt>
+                <dd>camel casing, but aviod under lines (only exception: private variables)<br>
+                    aviod screaming caps
+                </dd>
+                <div class="separator"></div>
+                <dt>constructors</dt>
+                <dd>constructors are always public, and named the same as the class name
+                </dd>
+                <div class="separator"></div>
+                <dt>static class</dt>
+                <dd>a class needs no instantiations
+                </dd>
+                <div class="separator"></div>
+                <dt>Entity Framework</dt>
+                <dd>A persistence framework connecting the database and your application</dd>
+            </dl>
+        </div>
+        <div>
+            <h4>ActionLink in ASP.NET MVC3</h4>
+            <pre><code>Html.ActionLink(article.Title,
+"Item",   // <-- ActionMethod
+"Login",  // <-- Controller Name.
+new { article.ArticleID }, // <-- Route arguments.
+null  // <-- htmlArguments .. which are none. You need this value
+//     otherwise you call the WRONG method ...
+//     (refer to comments, below).
 )</code></pre>
-        <br>
+        </div>
         <div>
             <h4>About controllers and actions in MVC</h4>
             <h5>Points to Remember</h5>
@@ -57,6 +59,30 @@
                 <li>
                     The procedure to start code first migration from an existing model:<br>
                     model folder -> add-> new item -> ado.net entity data model-> code first from data base ->next -> yes -> 6.x -> tables -> PM> enable-migrations -> PM> add-migration InitalModel -IgnoreChanges -Force -> PM> Update-Database
+                </li>
+                <li>
+                    Connectionstring for sql server:<br>
+                    <code>Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;</code>
+                </li>
+                <li>
+                    Concerning plural names:<br>
+                    <p>
+                        Tables and Dbsets have plural names. But singular names for entities.<br>
+                        However, I use singular table names for the following reasons:<br>
+                        The modelBuilder.Conventions.Remove statement in the OnModelCreating method prevents table names from being pluralized. If you didn't do this, the generated tables in the database would be named Students, Courses, and Enrollments. Instead, the table names will be Student, Course, and Enrollment. Developers disagree about whether table names should be pluralized or not. This tutorial uses the singular form, but the important point is that you can select whichever form you prefer by including or omitting this line of code.<br>
+                    </p>
+                    Reference: <a href="https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application" target="_blank">https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h4>Downloads:</h4>
+            <ul>
+                <li>Download SQL Server 2017 for Windows:<br>
+                    <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads" target="_blank">https://www.microsoft.com/en-us/sql-server/sql-server-downloads</a>
+                </li>
+                <li>Download SQL Server Management Studio 17.3:<br>
+                    <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms" target="_blank">https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms</a>
                 </li>
             </ul>
         </div>
