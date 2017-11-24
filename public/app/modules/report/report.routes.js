@@ -4,7 +4,7 @@ angular.module('report').config(['$stateProvider', function($stateProvider) {
     console.log('report routers loading complete...');
 
     // add my own study notes
-    var studyNoteList = ["nodeJS", "angularJS", "html", "bootstrap", "generalCoding", "generalIT", "vocabulary", "java", "vim", "jira", "reactJS", "linux", "gulp", "sublime", "git", "heroku", "aspnet", "IntelliJIDEA"];
+    var studyNoteList = ["nodeJS", "angularJS", "html", "bootstrap", "generalCoding", "generalIT", "vocabulary", "java", "vim", "jira", "reactJS", "linux", "gulp", "sublime", "git", "heroku", "aspnet", "IntelliJIDEA", "javascript"];
 
     for (var j = 0; j < studyNoteList.length; j++) {
         var studyNoteStateName = "workreport." + studyNoteList[j];
