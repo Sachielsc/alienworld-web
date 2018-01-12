@@ -346,6 +346,10 @@ body {
     color: #97ff77;
   }
 
+  h4 {
+    margin-top: 14px;
+  }
+
   code {
     color: #5d9cec;
     background-color: rgba(244, 248, 251, 0.1);
@@ -354,6 +358,11 @@ body {
     font-size: 90%;
   }
 
+  p {
+      margin-top: 0;
+      margin-bottom: 0;
+  }
+  
   pre {
     color: #eeffcc;
   }

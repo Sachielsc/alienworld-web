@@ -1,10 +1,10 @@
 'use strict';
 
-angular.module('report').config(['$stateProvider', function($stateProvider) {
+angular.module('report').config(['$stateProvider', function ($stateProvider) {
     console.log('report routers loading complete...');
 
     // add my own study notes
-    var studyNoteList = ["nodeJS", "angularJS", "html", "bootstrap", "generalCoding", "generalIT", "vocabulary", "java", "vim", "jira", "reactJS", "linux", "gulp", "sublime", "git", "heroku", "aspnet", "IntelliJIDEA", "javascript", "ISTQB-foundation"];
+    var studyNoteList = ["nodeJS", "angularJS", "html", "bootstrap", "generalCoding", "generalIT", "vocabulary", "java", "vim", "jira", "reactJS", "linux", "gulp", "sublime", "git", "heroku", "aspnet", "IntelliJIDEA", "javascript", "ISTQB-foundation", "selenium"];
 
     for (var j = 0; j < studyNoteList.length; j++) {
         var studyNoteStateName = "workreport." + studyNoteList[j];
@@ -12,7 +12,7 @@ angular.module('report').config(['$stateProvider', function($stateProvider) {
         var studyNoteTemplateUrlName = "app/modules/report/views/own-note/alienworld-note-" + studyNoteList[j] + ".view.html";
 
         $stateProvider.state(
-            studyNoteStateName ,{
+            studyNoteStateName, {
                 url: studyNoteUrlName,
                 templateUrl: studyNoteTemplateUrlName
             });
@@ -27,7 +27,7 @@ angular.module('report').config(['$stateProvider', function($stateProvider) {
         var codeSnippetTemplateUrlName = "app/modules/report/views/code-snippet/code-snippet-" + codeSnippetList[k] + ".view.html";
 
         $stateProvider.state(
-            codeSnippetStateName ,{
+            codeSnippetStateName, {
                 url: codeSnippetUrlName,
                 templateUrl: codeSnippetTemplateUrlName
             });
@@ -41,10 +41,10 @@ angular.module('report').config(['$stateProvider', function($stateProvider) {
         var templateUrlName = "app/modules/report/views/work-report/alienworld-report-m" + i + ".view.html";
 
         $stateProvider.state(
-            stateName ,{
+            stateName, {
                 url: urlName,
                 templateUrl: templateUrlName
             });
-        }
     }
+}
 ]);

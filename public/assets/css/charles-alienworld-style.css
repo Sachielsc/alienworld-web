@@ -253,12 +253,19 @@ body {
 .meeting a, .assignment a, .card-box a {
   color: #97ff77; }
 
+.meeting h4, .assignment h4, .card-box h4 {
+  margin-top: 14px; }
+
 .meeting code, .assignment code, .card-box code {
   color: #5d9cec;
   background-color: rgba(244, 248, 251, 0.1);
   border-radius: 4px;
   padding: 2px 4px;
   font-size: 90%; }
+
+.meeting p, .assignment p, .card-box p {
+  margin-top: 0;
+  margin-bottom: 0; }
 
 .meeting pre, .assignment pre, .card-box pre {
   color: #eeffcc; }
