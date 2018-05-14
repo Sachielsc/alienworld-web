@@ -4,6 +4,3 @@ node_modules
 # IntelliJ project files
 .idea
 *.iml
-
-# TODO: Comment the next line
-# package-lock.json
