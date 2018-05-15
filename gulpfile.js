@@ -1,5 +1,6 @@
-var gulp = require('gulp'); 
-var sass = require('gulp-sass');
+var gulp = require('gulp');
+// (sass feature removed in version 3.0)
+// var sass = require('gulp-sass');
 var useref = require('gulp-useref');
 var gulpIf = require('gulp-if');
 var uglify = require('gulp-uglify');
@@ -10,13 +11,12 @@ var runSequence = require('run-sequence');
 
 
 
-//Process sass to css
-gulp.task('sass', function () {
-    return gulp.src('public/assets/scss/**/*.scss')
-        .pipe(sass())
-        .pipe(gulp.dest('public/assets/css'))        
-});
-
+//Process sass to css (feature removed in version 3.0)
+// gulp.task('sass', function () {
+//     return gulp.src('public/assets/scss/**/*.scss')
+//         .pipe(sass())
+//         .pipe(gulp.dest('public/assets/css'))
+// });
 
 //Move all html views files to dist folder
 gulp.task('views', function() {
@@ -33,8 +33,6 @@ gulp.task('useref', function() {
 		.pipe(gulp.dest('dist'))
 });
 
-
-
 // Image optmization
 gulp.task('images', function() {
 	return gulp.src('public/assets/images/**/*')
@@ -50,25 +48,19 @@ gulp.task('fonts', function() {
 		.pipe(gulp.dest('dist/assets/fonts'))
 });
 
-//Watch css changes
-gulp.task('watch', ['sass'], function (){
-	gulp.watch('public/assets/scss/**/*.scss', ['sass']); 	
-	//gulp.watch(['public/app/**/*.html','public/app/**/*.js'], ['html']); 
-	//gulp.watch(['public/index.html'], ['index']); 
-});
-
 gulp.task('clean:dist', function() {
   return del.sync('dist');
 });
 
-gulp.task('build', function (callback){
-  runSequence(['clean:dist','sass', 'useref', 'views','images','fonts'],
-    callback
-  )
-});
+// (feature removed in version 3.0)
+// gulp.task('build', function (callback){
+//   runSequence(['clean:dist','sass', 'useref', 'views','images','fonts'],
+//     callback
+//   )
+// });
 
-gulp.task('default', function (callback) {
-  runSequence(['sass', 'watch'],
-    callback
-  )
+gulp.task('build', function (callback){
+    runSequence(['clean:dist', 'useref', 'views','images','fonts'],
+        callback
+    )
 });

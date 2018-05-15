@@ -1,6 +1,6 @@
 {
   "name": "alienworld-web",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Charles' personal website deployed on Heroku. All rights reserved.",
   "engines": {
     "node": "8.11.1"
