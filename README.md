@@ -1,7 +1,8 @@
 # Charles' Alien World Project
 
 ## Description
-This project is made by a **SUPER** fun of computer development. Its author will improve his skills **FAST**~
+This project is made by Charles, a **SUPER** fun of software development and automation testing.
+Charles improves his skills real **FAST**~
 
 ## Tutorial
 1. Open terminal (command prompt) and navigate to the location where you want to download and setup the project
@@ -12,7 +13,7 @@ Charles recommends these websites to learn about the syntax of markdown document
 1. Markdown syntax guide in [atlassian](https://confluence.atlassian.com/bitbucketserver/markdown-syntax-guide-776639995.html)
 2. Markdown syntax guide in [github](https://guides.github.com/features/mastering-markdown/#examples) (recommended)
 
-## structure
+## Modules
 
 * Workshop
 * Contact Me
@@ -23,8 +24,5 @@ Charles recommends these websites to learn about the syntax of markdown document
 * Community Hub( needs to include forum/discussion )
 * Cover Letter
 
-## to do
+## TODO
 * Community Hub with authentication function.
-
-## test
-This is the section I use for testing purposes.
