@@ -26,3 +26,5 @@ Charles recommends these websites to learn about the syntax of markdown document
 
 ## TODO
 * Community Hub with authentication function.
+* Delete Chinese misc folder, put it here
+* Add new code snippet to the page

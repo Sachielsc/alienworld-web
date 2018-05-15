@@ -19,7 +19,7 @@ angular.module('report').config(['$stateProvider', function ($stateProvider) {
     }
 
     // add my code snippets
-    var codeSnippetList = ["arraySum"];
+    var codeSnippetList = ["arraySum", "CSharpGitIgnoreExample"];
 
     for (var k = 0; k < codeSnippetList.length; k++) {
         var codeSnippetStateName = "workreport." + codeSnippetList[k];
