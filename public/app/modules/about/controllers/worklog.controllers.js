@@ -1,20 +1,20 @@
 'use strict';
-angular.module('about').controller('worklogController', ['$log', '$scope', function($log, $scope){
+angular.module('about').controller('worklogController', ['$log', '$scope', function ($log, $scope) {
 
-    var myPassWord = "scsgdtcy3";
-    
-    $scope.hideWorkLog = true;
+        var myPassWord = "scsgdtcy3";
 
-    $scope.clearValueWorkLog = function () {
-        $scope.coverletterpassword = "";
-    };
+        $scope.hideWorkLog = true;
 
-    $scope.passValueWorkLog = function () {
-        if ($scope.worklogpassword == myPassWord) {
-        	$scope.hideWorkLog = false;
-        } else {
-        	$scope.hideWorkLog = true;
-        }
-    };
-}]
+        $scope.clearValueWorkLog = function () {
+            $scope.coverletterpassword = "";
+        };
+
+        $scope.passValueWorkLog = function () {
+            if ($scope.worklogpassword == myPassWord) {
+                $scope.hideWorkLog = false;
+            } else {
+                $scope.hideWorkLog = true;
+            }
+        };
+    }]
 )

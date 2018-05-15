@@ -1,2 +1,2 @@
 'use strict';
-angular.module('movies',[]);
+angular.module('movies', []);

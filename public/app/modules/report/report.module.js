@@ -1,2 +1,2 @@
 'use strict';
-angular.module('report',[]);
+angular.module('report', []);

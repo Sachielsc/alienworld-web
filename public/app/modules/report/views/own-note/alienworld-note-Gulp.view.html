@@ -1,48 +1,48 @@
 <body>
 <div class="container">
-    <div class="assignment">
-        <h3>Gulp study note (Also concerning <code>package.json</code>)</h3>
-        <h4>Two very good tutorials:</h4>
-        <ul>
-            <li><a href="https://travismaynard.com/writing/getting-started-with-gulp" target="_blank">https://travismaynard.com/writing/getting-started-with-gulp</a>
-            </li>
-            <li><a href="https://www.liquidlight.co.uk/blog/article/how-do-i-update-to-gulp-4/" target="_blank">https://www.liquidlight.co.uk/blog/article/how-do-i-update-to-gulp-4/</a>
-            </li>
-        </ul>
-        <h4>How do you prevent install of “devDependencies” NPM modules for Node.js (<code>package.json</code>)?</h4>
-        <p>Use <code>npm install --only=production</code> to install <b>only</b> the dependencies, and not
-            devDependencies, regardless of the value of the <code>NODE_ENV</code> environment variable.<br>
-            Reference: <a
-                    href="https://stackoverflow.com/questions/9268259/how-do-you-prevent-install-of-devdependencies-npm-modules-for-node-js-package"
-                    target="_blank">https://stackoverflow.com/questions/9268259/how-do-you-prevent-install-of-devdependencies-npm-modules-for-node-js-package</a>
-        </p>
+  <div class="assignment">
+    <h3>Gulp study note (Also concerning <code>package.json</code>)</h3>
+    <h4>Two very good tutorials:</h4>
+    <ul>
+      <li><a href="https://travismaynard.com/writing/getting-started-with-gulp" target="_blank">https://travismaynard.com/writing/getting-started-with-gulp</a>
+      </li>
+      <li><a href="https://www.liquidlight.co.uk/blog/article/how-do-i-update-to-gulp-4/" target="_blank">https://www.liquidlight.co.uk/blog/article/how-do-i-update-to-gulp-4/</a>
+      </li>
+    </ul>
+    <h4>How do you prevent install of “devDependencies” NPM modules for Node.js (<code>package.json</code>)?</h4>
+    <p>Use <code>npm install --only=production</code> to install <b>only</b> the dependencies, and not
+      devDependencies, regardless of the value of the <code>NODE_ENV</code> environment variable.<br>
+      Reference: <a
+          href="https://stackoverflow.com/questions/9268259/how-do-you-prevent-install-of-devdependencies-npm-modules-for-node-js-package"
+          target="_blank">https://stackoverflow.com/questions/9268259/how-do-you-prevent-install-of-devdependencies-npm-modules-for-node-js-package</a>
+    </p>
 
-        <h3>Some knowledge about the <code>dependencies</code> and the <code>devDependencies</code></h3>
-        <h4>About <code>browser-sync</code></h4>
-        <p>This is a Time-saving synchronised browser testing.<br>
-            Installed by npm:
-        <pre><code>npm install -g browser-sync</code></pre>
-        Installed by package.json:
-        <pre><code>"devDependencies": {
+    <h3>Some knowledge about the <code>dependencies</code> and the <code>devDependencies</code></h3>
+    <h4>About <code>browser-sync</code></h4>
+    <p>This is a Time-saving synchronised browser testing.<br>
+      Installed by npm:
+    <pre><code>npm install -g browser-sync</code></pre>
+    Installed by package.json:
+    <pre><code>"devDependencies": {
     "browser-sync": "2.18.2",
 }</code></pre>
-        <ul>
-            <li>Built on Node.JS_ENTRY to support Windows, MacOS and Linux. Setup in less than 5 minutes.</li>
-            <li>Test your website against a slower connection. Even when devices are connected to wifi.</li>
-            <li>Browsersync is an open source project available to use under the Apache 2.0 License.</li>
-            <li>Integrates with your current build tools like <code>Gulp</code> and <code>Grunt</code></li>
-            <li>Reference: <a href="https://www.browsersync.io/" target="_blank">https://www.browsersync.io/</a></li>
-        </ul>
-        </p>
+    <ul>
+      <li>Built on Node.JS_ENTRY to support Windows, MacOS and Linux. Setup in less than 5 minutes.</li>
+      <li>Test your website against a slower connection. Even when devices are connected to wifi.</li>
+      <li>Browsersync is an open source project available to use under the Apache 2.0 License.</li>
+      <li>Integrates with your current build tools like <code>Gulp</code> and <code>Grunt</code></li>
+      <li>Reference: <a href="https://www.browsersync.io/" target="_blank">https://www.browsersync.io/</a></li>
+    </ul>
+    </p>
 
-        <h4>About <code>gulp-cssnano</code></h4>
-        <ul>
-            <li>Minify your CSS code with <code>cssnano</code></li>
-            <li>Reference: https://github.com/ben-eb/cssnano</li>
-        </ul>
+    <h4>About <code>gulp-cssnano</code></h4>
+    <ul>
+      <li>Minify your CSS code with <code>cssnano</code></li>
+      <li>Reference: https://github.com/ben-eb/cssnano</li>
+    </ul>
 
-        <h4>About gulp-uglify</h4>
-        <p>Minify your JavaScript code with UglifyJS2.</p>
-    </div>
+    <h4>About gulp-uglify</h4>
+    <p>Minify your JavaScript code with UglifyJS2.</p>
+  </div>
 </div>
 </body>
