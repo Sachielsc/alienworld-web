@@ -28,3 +28,11 @@ Charles recommends these websites to learn about the syntax of markdown document
 * Community Hub with authentication function.
 * Delete Chinese misc folder, put it here
 * Add new code snippet to the page
+* To add an entry to your package.json's dependencies:
+
+  `npm install <package_name> --save`
+* To add an entry to your package.json's devDependencies:
+
+  `npm install <package_name> --save-dev`
+
+
