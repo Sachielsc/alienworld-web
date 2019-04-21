@@ -1,8 +1,7 @@
 # Charles' Alien World Project
 
 ## Description
-This project is made by Charles, a **SUPER** fun of software development and automation testing.
-Charles improves his skills real **FAST**~
+This project is developed solely by **Charles**, a junior automation software tester.
 
 ## Tutorial
 1. Open terminal (command prompt) and navigate to the location where you want to download and setup the project
@@ -24,10 +23,9 @@ Charles recommends these websites to learn about the syntax of markdown document
 * Community Hub( needs to include forum/discussion )
 * Cover Letter
 
-## TODO
+## What's next
 * Community Hub with authentication function.
-* Delete Chinese misc folder, put it here
-* Add new code snippet to the page
+* Add new code snippet to the page:
 * To add an entry to your package.json's dependencies:
 
   `npm install <package_name> --save`
@@ -35,4 +33,6 @@ Charles recommends these websites to learn about the syntax of markdown document
 
   `npm install <package_name> --save-dev`
 
-
+## TBD
+* Learn how to deploy other projects on Heroku
+* Learn bower, WordPress
