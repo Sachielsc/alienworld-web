@@ -4,11 +4,12 @@
 This project is developed solely by **Charles**, a junior automation software tester.
 
 ## Prerequest
+Note: the links are basic on a Windows OS. Try different installation links for Mac OS.
 * Install [Git](https://git-scm.com/downloads)
 * Install [Node.js](https://nodejs.org/en/)
 * Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
 
-## Tutorial
+## Set up
 1. Run these commands in the terminal to check whether prerequests are correctly installed:
 
    `git --version`
