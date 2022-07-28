@@ -10,7 +10,7 @@ mainModule.controller('MainController', ['$scope', '$log', function ($scope, $lo
         $scope.currentdate.day = $scope.currentdate.getDate();
         $scope.currentdate.date = $scope.currentdate.day + "/" + $scope.currentdate.month + "/" + $scope.currentdate.year;
     }
-
+    
     init();
 }
 ]);

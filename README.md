@@ -45,7 +45,7 @@ Charles recommends these websites to learn about the syntax of markdown document
 * Movie World
 * Work Log
 * Other Projects
-* Community Hub( needs to include forum/discussion )
+* Community Hub (needs to include forum/discussion)
 * Cover Letter
 
 ## What's next
