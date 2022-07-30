@@ -58,6 +58,5 @@ Charles recommends these websites to learn about the syntax of markdown document
 
   `npm install <package_name> --save-dev`
 
-## TBD
-* Learn how to deploy other projects on Heroku
-* Learn bower, WordPress
+## About upgrading heroku-16 to heroku-22 (New: 7/30/2020)
+* Use the manual way as per the [official site](https://devcenter.heroku.com/articles/upgrading-to-the-latest-stack#manually-created-test-app)
