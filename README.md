@@ -1,7 +1,7 @@
 # Charles' Alien World Project
 
 ## Description
-This project is developed solely by **Charles**, a junior automation software tester.
+This project is developed solely by **Charles**, an intermediate automation software tester.
 
 ## Prerequest
 Note: the links are basic on a Windows OS. Try different installation links for Mac OS.
@@ -58,5 +58,37 @@ Charles recommends these websites to learn about the syntax of markdown document
 
   `npm install <package_name> --save-dev`
 
-## About upgrading heroku-16 to heroku-22 (New: 7/30/2020)
-* Use the manual way as per the [official site](https://devcenter.heroku.com/articles/upgrading-to-the-latest-stack#manually-created-test-app)
+## About upgrading heroku-16 to heroku-22 (Update on: 2020-7-30)
+Use the manual way as per the [official site](https://devcenter.heroku.com/articles/upgrading-to-the-latest-stack#manually-created-test-app)
+
+## Change the default branch from master to main (Update on: 2023-8-25)
+[Heroku: How do I switch branches from master to main?](https://help.heroku.com/O0EXQZTA/how-do-i-switch-branches-from-master-to-main)
+
+## Heroku deployment is no longer free (Update on: 2023-8-25)
+After checking the heroku log, we can find this error message: "No web processes running" with an H14 error code,. This typically occurs on Heroku when your application's dynos (containers that run your app) are not responding to incoming requests.
+
+Here are the steps you can take to diagnose and resolve this issue:
+
+1. **Check Procfile:**
+   Make sure your application's root directory contains a file named `Procfile` (no file extension) that specifies the command to run your web application. The content of the Procfile should be something like:
+
+   ```
+   web: <command to start your web app>
+   ```
+
+   For example, if you're using Node.js, it might look like:
+
+   ```
+   web: node server.js
+   ```
+
+2. **Check Dyno Formation:**
+   Verify that you have at least one web dyno running for your application. You can scale your dynos using the Heroku CLI:
+
+   ```bash
+   heroku ps:scale web=1
+   ```
+
+From the second step, we will know that web dyno is no longer free now and I need to subscribe their Eco Dynos Plan to keep my Heroku services.
+
+Remember to cancel this service when I don't need it.
