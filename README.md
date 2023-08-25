@@ -1,5 +1,8 @@
 # Charles' Alien World Project
 
+## Home page URL
+[https://alienworld-web.herokuapp.com/](https://alienworld-web.herokuapp.com/)
+
 ## Description
 This project is developed solely by **Charles**, an intermediate automation software tester.
 
