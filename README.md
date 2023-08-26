@@ -95,3 +95,4 @@ Here are the steps you can take to diagnose and resolve this issue:
 From the second step, we will know that web dyno is no longer free now and I need to subscribe their Eco Dynos Plan to keep my Heroku services.
 
 Remember to cancel this service when I don't need it.
+Current status: cancelled. [To resubscribe](https://dashboard.heroku.com/account/billing)
