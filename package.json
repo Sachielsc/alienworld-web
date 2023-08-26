@@ -1,9 +1,9 @@
 {
   "name": "alienworld-web",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Charles' personal website deployed on Heroku. All rights reserved.",
   "engines": {
-    "node": "18.x" 
+    "node": "18.x"
   },
   "repository": "https://github.com/Sachielsc/alienworld-web.git",
   "main": "application.js",
