@@ -1,7 +1,11 @@
 # Charles' Alien World Project
 
-## Home page URL
-[https://alienworld-web.herokuapp.com/](https://alienworld-web.herokuapp.com/)
+## Home page URLs (Update on: 2023-8-27)
+- Deployed via Heroku: [https://alienworld-web.herokuapp.com/](https://alienworld-web.herokuapp.com/)</br>
+Note: Web dyno is no longer free now and I need to subscribe their Eco Dynos Plan to keep my Heroku services.</br>
+Remember to cancel this service when I don't need it.</br>
+Current status: cancelled. [To resubscribe](https://dashboard.heroku.com/account/billing)
+- Deployed via Netlify: TODO
 
 ## Description
 This project is developed solely by **Charles**, an intermediate automation software tester.
