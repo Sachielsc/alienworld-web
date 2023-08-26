@@ -1,2 +1,9 @@
+# node modules
 node_modules
-package-lock.json
+
+# IntelliJ project files
+.idea
+*.iml
+
+# etc
+**/package-lock.json

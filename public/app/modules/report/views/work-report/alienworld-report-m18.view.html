@@ -1,0 +1,26 @@
+<body>
+<div class="container">
+  <div class="meeting">
+    <h3>Charles' work report on Jul 29th</h3>
+    <h4>My procedure to set up for a HTML5mod (remove the “#” in the URL): </h4>
+    <ol>
+      <li>Add the following code in <code>index.html</code>:<br>
+        <pre><code>&lt;base href="/"&gt;</code></pre>
+      </li>&lt;div&gt;
+      <li>Add the following code in <code>main.controller.js</code>:<br>
+        <pre><code>$locationProvider.html5Mode(true);</code></pre>
+      </li>
+      <li>[important] Add the following code <b>after the router</b> in <code>server.js</code> to
+        solve the
+        rewrite problems on server side:<br>
+        <pre><code>app.use(function(req, res) {
+    res.sendfile(__dirname + '/public/index.html');
+});</code></pre>
+        Reference: <a
+            href="https://stackoverflow.com/questions/16569841/reloading-the-page-gives-wrong-get-request-with-angularjs-html5-mode/16570533#16570533"
+            target="_blank">https://stackoverflow.com/questions/16569841/reloading-the-page-gives-wrong-get-request-with-angularjs-html5-mode/16570533#16570533</a>
+      </li>
+    </ol>
+  </div>
+</div>
+</body>

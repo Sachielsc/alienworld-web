@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Charles' report for what he has done in work and projects</title>
+
+</head>
+
+<body>
+<div class="container">
+  <div class="meeting">
+    <h3>Meeting 13: Jun 17th</h3>
+    <h4>My note about CSS:</h4>
+    <ol>
+      <li>
+        <p>
+          The position property specifies the type of positioning method used for an element. <br>
+          There are four different position values:
+        <ul>
+          <li>static</li>
+          <li>relative</li>
+          <li>fixed</li>
+          <li>absolute</li>
+        </ul>
+        Click <a href="https://www.w3schools.com/css/css_positioning.asp" target="_blank">here</a> to learn
+        more.
+        </p>
+      </li>
+      <li>
+        <p>Use <code>top: 50% / left: 50%</code> in combination with <code>translateX(-50%)
+          translateY(-50%)</code> to dynamically vertically/horizontally center the element.<br>
+        <pre><code>position: absolute;
+top: 50%;
+left: 50%;
+transform: translateX(-50%) translateY(-50%);</code></pre>
+        </p>
+      </li>
+      <li>Draw the "menu icon" with CSS:<br>
+        <pre><code>span {
+    height: 3px;
+    background: #97ff77;
+    font-size: 0;
+    margin-top: -2px;
+    transition: all 1s ease;
+    user-select: none;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    
+    &amp;::before {
+        background: #97ff77;                
+        position: absolute;
+        transform: translateY(-250%);
+        height: 100%;
+        width: 100%;
+        content: '';
+    }
+    
+    &amp;::after {
+        background: #97ff77;                
+        position: absolute;
+        transform: translateY(250%);
+        height: 100%;
+        width: 100%;
+        content: '';
+    }
+}</code></pre>
+      </li>
+      <li>What is the difference between <code>visibility:hidden</code> and <code>display:none</code>?<br>
+        <code>display:none</code> will not be available in the page and does not occupy any space.<br>
+        <code>visibility:hidden</code> hides an element, but it will still take up the same space as before. The
+        element will be hidden, but still affect the layout. visibility:hidden preserve the space, whereas
+        display:none doesn't preserve the space.
+      </li>
+    </ol>
+  </div>
+</body>
+</html>

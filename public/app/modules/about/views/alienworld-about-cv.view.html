@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Charles' CV</title>
-    </head>
+<head>
+  <title>Charles' CV</title>
+</head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-4">
-                <div class="sc-mechanical-frame-outer">
-                    <div class="sc-mechanical-frame-inner">
-                        <div class="button-panel">
-                    <a ui-sref="about"><button type="button">State Panel</button></a><br>
-                    <a ui-sref="skillpanel"><button type="button">Skill Panel</button></a><br>
-                    <a ui-sref="worklog"><button type="button">Work Log</button></a><br>
-                    <a ui-sref="cv"><button type="button" class="active">CV Page</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-8">
-                <div class="card-box white-frame shadow-expand">
-                    <p>Dear colonist officer,<br>Click <a ui-sref=".cvpage">HERE</a> to expand Charles' digital CV below.<br>Or you can click <a ui-sref="cvfull">HERE</a> to watch it in full-scale.</p>
-                </div>
-                <div ui-view class="cv-page"></div>
-            </div>
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <div class="sc-mechanical-frame-outer">
+        <div class="sc-mechanical-frame-inner">
+          <div class="button-panel">
+            <a ui-sref="about">
+              <button type="button">State Panel</button>
+            </a><br>
+            <a ui-sref="skillpanel">
+              <button type="button">Skill Tree</button>
+            </a><br>
+            <a ui-sref="workreport">
+              <button type="button">Reports</button>
+            </a><br>
+            <a ui-sref="cv">
+              <button type="button" class="active">CV Page</button>
+            </a>
+          </div>
         </div>
+      </div>
     </div>
+    <div class="col-8">
+      <div class="card-box white-frame shadow-expand">
+        <p>Dear colonist officer,<br>Click <a ui-sref=".cvpage">HERE</a> to expand Charles' digital CV
+          below.<br>Or you can click <a ui-sref="cvfull">HERE</a> to watch it in full-scale.</p>
+      </div>
+      <div ui-view class="cv-page"></div>
+    </div>
+  </div>
+</div>
 </body>
 
 </html>

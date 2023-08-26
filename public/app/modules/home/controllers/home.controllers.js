@@ -1,5 +1,5 @@
 'use strict';
-angular.module('home').controller('homeController', ['$log', '$scope', function($log, $scope){
+angular.module('home').controller('homeController', ['$log', '$scope', function ($log, $scope) {
 
-}]
+    }]
 )

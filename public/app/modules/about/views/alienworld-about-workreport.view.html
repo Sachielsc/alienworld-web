@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Me</title>
+</head>
+
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <div class="sc-mechanical-frame-outer">
+        <div class="sc-mechanical-frame-inner">
+          <div class="button-panel">
+            <a ui-sref="about">
+              <button type="button">State Panel</button>
+            </a><br>
+            <a ui-sref="skillpanel">
+              <button type="button">Skill Tree</button>
+            </a><br>
+            <a ui-sref="workreport">
+              <button type="button" class="active">Reports</button>
+            </a><br>
+            <a ui-sref="cv">
+              <button type="button">CV Page</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="card-box white-frame shadow-expand">
+        <p>Dear colonist officer,<br>
+          Select a work report from the list below</p>
+      </div>
+      <div class="card-box white-frame shadow-expand report-list">
+        <div>
+          <a data-toggle="collapse" data-target="#ft-report" class="fa fa-folder-open">My work reports in practical
+            projects and internships</a>
+          <div class="collapse" id="ft-report">
+            <li><a ui-sref=".report1">Report 1</a></li>
+            <li><a ui-sref=".report2">Report 2</a></li>
+            <li><a ui-sref=".report3">Report 3 (About the installation of Ubuntu)</a></li>
+            <li><a ui-sref=".report4">Report 4</a></li>
+            <li><a ui-sref=".report5">Report 5</a></li>
+            <li><a ui-sref=".report6">Report 6</a></li>
+            <li><a ui-sref=".report7">Report 7</a></li>
+            <li><a ui-sref=".report8">Report 8</a></li>
+            <li><a ui-sref=".report9">Report 9</a></li>
+            <li><a ui-sref=".report10">Report 10</a></li>
+            <li><a ui-sref=".report11">Report 11 (Some useful Git commands)</a></li>
+            <li><a ui-sref=".report12">Report 12 (Important report: more use of Git, deploying a project by Heroku)</a>
+            </li>
+            <li><a ui-sref=".report13">Report 13 (My own important notes about CSS)</a></li>
+            <li><a ui-sref=".report14">Report 14</a></li>
+            <li><a ui-sref=".report15">Report 15</a></li>
+            <li><a ui-sref=".report16">Report 16</a></li>
+            <li><a ui-sref=".report17">Report 17</a></li>
+            <li><a ui-sref=".report18">Report 18</a></li>
+            <li><a ui-sref=".report19">Report 19 (My procedure to create a preloader page)</a></li>
+          </div>
+        </div>
+        <div>
+          <a data-toggle="collapse" data-target="#my-studynote" class="fa fa-folder-open">My Study Note (Chinese
+            &amp; English mixed)</a>
+          <div class="collapse" id="my-studynote">
+            <li><a ui-sref=".angularJS">AngularJS</a></li>
+            <li><a ui-sref=".aspnet">ASP.NET</a></li>
+            <li><a ui-sref=".bootstrap">Bootstrap</a></li>
+            <li><a ui-sref=".generalCoding">General-coding</a></li>
+            <li><a ui-sref=".generalIT">General-IT</a></li>
+            <li><a ui-sref=".gulp">Gulp</a></li>
+            <li><a ui-sref=".git">Git</a></li>
+            <li><a ui-sref=".html">HTML</a></li>
+            <li><a ui-sref=".heroku">Heroku</a></li>
+            <li><a ui-sref=".IntelliJIDEA">IntelliJ IDEA</a></li>
+            <li><a ui-sref=".ISTQB-foundation">ISTQB (foundation)</a></li>
+            <li><a ui-sref=".java">Java</a></li>
+            <li><a ui-sref=".jira">JIRA</a></li>
+            <li><a ui-sref=".javascript">JavaScript</a></li>
+            <li><a ui-sref=".linux">Linux</a></li>
+            <li><a ui-sref=".nodeJS">Node.js</a></li>
+            <li><a ui-sref=".reactJS">ReactJS</a></li>
+            <li><a ui-sref=".selenium">Selenium</a></li>
+            <li><a ui-sref=".sublime">Sublime</a></li>
+            <li><a ui-sref=".vim">Vim</a></li>
+            <li><a ui-sref=".vocabulary">Vocabulary</a></li>
+          </div>
+        </div>
+        <div>
+          <a data-toggle="collapse" data-target="#my-codeSnippet" class="fa fa-folder-open">My Code Snippets</a>
+          <div class="collapse" id="my-codeSnippet">
+            <li><a ui-sref=".arraySum">My javascript Array Sum Prototype</a></li>
+            <li><a ui-sref=".CSharpGitIgnoreExample">My .gitignore templates</a></li>
+          </div>
+        </div>
+      </div>
+      <div class="aw-community green-frame shadow-expand">
+        <div ui-view>
+          <p>Select a report from above~</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

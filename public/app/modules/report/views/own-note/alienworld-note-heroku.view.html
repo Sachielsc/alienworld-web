@@ -1,20 +1,24 @@
 <body>
-    <div class="container">
-        <div class="assignment">
-            <h3>Some notes about Heroku</h3>
-            <h4>Getting error from heroku in regards to <code>https</code></h4>
-            <p>When you are doing something like:
-            <pre><code>$http.jsonp('http://api.tumblr.com/v2/blog/asayorku.tumblr.com/posts?api_key=[MY SECRET API Key]&amp;callback=JSON_CALLBACK')
+<div class="container">
+  <div class="assignment">
+    <h3>Some notes about Heroku</h3>
+    <h4>Getting error from heroku in regards to <code>https</code></h4>
+    <p>When you are doing something like:
+    <pre><code>$http.jsonp('http://api.tumblr.com/v2/blog/asayorku.tumblr.com/posts?api_key=[MY SECRET API Key]&amp;callback=JSON_CALLBACK')
     .success(function (data) {
 });</code></pre>
-            You will get an error.
-            </p>
-            <p>Thus, try changing your API request to this (make the protocol relative):
-            <pre><code>$http.jsonp('//api.tumblr.com/v2/blog/asayorku.tumblr.com/posts?api_key=[MY SECRET API Key]&amp;callback=JSON_CALLBACK')
+    You will get an error.
+    </p>
+    <p>Thus, try changing your API request to this (make the protocol relative):
+    <pre><code>$http.jsonp('//api.tumblr.com/v2/blog/asayorku.tumblr.com/posts?api_key=[MY SECRET API Key]&amp;callback=JSON_CALLBACK')
     .success(function (data) {
 });
-            </code></pre></p>
-            <p>Reference: <a href="https://stackoverflow.com/questions/28048514/getting-error-from-heroku-in-regards-to-https" target="_blank">https://stackoverflow.com/questions/28048514/getting-error-from-heroku-in-regards-to-https</a></p>
-        </div>
-    </div>
+            </code></pre>
+    </p>
+    <p>Reference: <a
+        href="https://stackoverflow.com/questions/28048514/getting-error-from-heroku-in-regards-to-https"
+        target="_blank">https://stackoverflow.com/questions/28048514/getting-error-from-heroku-in-regards-to-https</a>
+    </p>
+  </div>
+</div>
 </body>

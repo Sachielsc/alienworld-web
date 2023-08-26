@@ -1,0 +1,209 @@
+<div class="container">
+  <div class="cv-fullpage card-box white-frame shadow-expand">
+    <p>Welcome to Charles' mini app: <span>The cover letter generator</span>!</p>
+    <p>Due to copyright issue, the following content cannot be displayed without a password:</p>
+    <div class="aw-form">
+      <div class="form-group">
+        <input type="password" class="form-control" ng-model="coverletterpassword">
+        <button ng-click="passValueCoverLetter()">Confirm</button>
+        <button ng-click="clearValueCoverLetter()">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <div ng-hide="hideCoverLetter">
+    <div class="cv-fullpage card-box green-frame shadow-expand">
+      <div class="aw-form">
+        <p>This is a cover letter generator created by Charles. Just type in the details and make a photocopy of
+          the cover letter below.</p>
+
+        <div class="form-group">
+          <label>Company Name:</label>
+          <input type="text" class="form-control" ng-model="companyname">
+        </div>
+        <div class="form-group">
+          <label>Position Name:</label>
+          <input type="text" class="form-control" ng-model="posistionname"
+                 ng-init="posistionname='Front-end Developer'">
+        </div>
+        <div class="form-group">
+          <label>Where did I learn about this job:</label>
+          <input type="text" class="form-control" ng-model="medium" ng-init="medium='Seek'">
+        </div>
+
+        <div class="separator"></div>
+
+        <fieldset class="form-group">
+          <p>Initiate you Cover Letter type here:</p>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" ng-model="coverlettertype" value="intern"
+                     ng-click="radiofunction()">
+              Internship
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" ng-model="coverlettertype" value="junior"
+                     ng-click="radiofunction()">
+              Junior Front-end Developer
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" ng-model="coverlettertype" value="recruitment"
+                     ng-click="radiofunction()">
+              Recruiment agency
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="separator"></div>
+
+        <div class="form-group">
+          <label>Prologue:</label>
+          <textarea class="form-control" rows="7" ng-model="prologue"
+                    ng-init="prologue='Please select a cover letter type'"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="cv-fullpage">
+      <div class="wrapper coverletter-wrapper green-frame">
+        <div class="cv-content">
+          <div class="row">
+            <div class="col-6">
+              <div class="cv-name">
+                <h3><span>Charles SHU</span></h3>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="cv-contact">
+                <ul class="list-unstyled">
+                  <li><i class="fa fa-linkedin-square fa-fw"></i><a
+                      href="https://www.linkedin.com/in/charles-shu/" target="_blank">linkedin.com/in/charles-shu/</a>
+                  </li>
+                  <li><i class="fa fa-github fa-fw"></i><a href="https://github.com/Sachielsc"
+                                                           target="_blank">github.com/Sachielsc</a>
+                  </li>
+                  <li><i class="fa fa-mobile fa-fw"></i>0210701018</li>
+                  <li><i class="fa fa-envelope-o fa-fw"></i>sachielsc@gmail.com</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="separator"></div>
+
+          <div class="coverletter-content">
+            <div class="coverletter-header">
+              <p>Dear HR Officer of {{companyname}},<br>Re: {{posistionname}}</p>
+            </div>
+            <div class="coverletter-paragraph">
+              <p>{{prologue}}</p>
+            </div>
+
+            <div class="coverletter-paragraph row">
+              <div class="col-xl-8">
+                <p>Funtown is the first project I took part in, it is a customized e-commerical platform
+                  developed by Avartar International Lt, in which I did my job as an intern. Thanks to
+                  my boss James and my supervisor Aaron, I learnt so much more than what I can put in
+                  my CV. And, most importantly, I gained my inexhaustible passion from my work.</p>
+              </div>
+              <div class="col-0 col-xl-4 auto-hide">
+                <div class="sc-frame-outer coverletter-pic">
+                  <div class="sc-frame-middle coverletter-pic">
+                    <div class="sc-frame-inner coverletter-pic">
+                      <img src="../../../../assets/images/coverletter-pic-1.png" alt="portrait"
+                           class="coverletter-pic">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="coverletter-paragraph row">
+              <div class="col-0 col-xl-4 auto-hide">
+                <div class="sc-frame-outer coverletter-pic">
+                  <div class="sc-frame-middle coverletter-pic">
+                    <div class="sc-frame-inner coverletter-pic">
+                      <img src="../../../../assets/images/My Personal Website.png" alt="portrait"
+                           class="coverletter-pic">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-8">
+                <p>To share my enthusiasm, I started making my own website. Originally, I was going to
+                  make it a fan website as well as sharing some coding experience. But I put so much
+                  my work reports, articles and my app scripts on it that I eventually made it my
+                  coding archive: In less than two months, I submitted about 200 commits, manually
+                  written over 3200 lines of code and report.</p>
+              </div>
+            </div>
+
+            <div class="coverletter-paragraph row">
+              <div class="col-xl-8">
+                <p>I am also interested in back-end skills and testing skills. Thus I embedded
+                  functional scripts into my website as much as I can. To further strengthen my
+                  scripting skills, I made mini apps with multiple functions, like the “Charles’
+                  Business Card Manager”.</p>
+              </div>
+              <div class="col-0 col-xl-4 auto-hide">
+                <div class="sc-frame-outer coverletter-pic">
+                  <div class="sc-frame-middle coverletter-pic">
+                    <div class="sc-frame-inner coverletter-pic">
+                      <img src="../../../../assets/images/coverletter-pic-3.png" alt="portrait"
+                           class="coverletter-pic">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="coverletter-paragraph row">
+              <div class="col-0 col-xl-4 auto-hide">
+                <div class="sc-frame-outer coverletter-pic">
+                  <div class="sc-frame-middle coverletter-pic">
+                    <div class="sc-frame-inner coverletter-pic">
+                      <img src="../../../../assets/images/coverletter-pic-4.png" alt="portrait"
+                           class="coverletter-pic">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-8">
+                <p>I started another self-motivated project which is named by me as the “The Improvement
+                  Plan of Official Websites”. I viewed a lot of official websites from companies,
+                  forums and individuals. I studied their code and learnt so much from it. Therefore
+                  when I saw something I can do to make it better, I wrote down why it needs
+                  improvement, how it can become friendlier for users and eventually I wrote my code
+                  of solution.</p>
+              </div>
+            </div>
+
+            <div class="coverletter-paragraph">
+              <p>Dear HR Officer, I know I am not senior in this area. But can you feel the thrill when a
+                man finally finds out what he loves most? I expand my skills in front-end, back-end and
+                testing areas every day, literally. I started several self-motivated projects because
+                participating in only one intern can no longer satisfy my hunger for knowledge. I kept
+                practicing everyday, wishing eventually I can become a coder, as my life career.</p>
+            </div>
+
+            <div class="coverletter-paragraph">
+              <p>That is all I would like to share beyond the CV, a dream with strong will to fulfill it.
+                I might confront more difficulties in the future, but I won’t be defeated by them; I
+                might be junior for now, but won’t be long. If you are interested in my work and believe
+                I am the one or will become the one you are looking for, please contact me.</p>
+            </div>
+
+            <footer>
+              <p>Yours sincerely,<br>Charles</p>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

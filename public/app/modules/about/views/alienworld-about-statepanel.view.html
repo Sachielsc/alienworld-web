@@ -1,58 +1,99 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>About Me</title>
-	</head>
+<head>
+  <title>About Me</title>
+</head>
 
 <body>
-	<div class="container">
-		<div class="row">
-			<div class="col-4">
-				<div class="sc-mechanical-frame-outer">
-					<div class="sc-mechanical-frame-inner">
-						<div class="button-panel">
-							<a ui-sref="about"><button type="button" class="active">State Panel</button></a><br>
-							<a ui-sref="skillpanel"><button type="button">Skill Panel</button></a><br>
-							<a ui-sref="worklog"><button type="button">Work Log</button></a><br>
-							<a ui-sref="cv"><button type="button">CV Page</button></a>
-						</div>
-					</div>
-				</div>
-			</div>
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <div class="sc-mechanical-frame-outer">
+        <div class="sc-mechanical-frame-inner">
+          <div class="button-panel">
+            <a ui-sref="about">
+              <button type="button" class="active">State Panel</button>
+            </a><br>
+            <a ui-sref="skillpanel">
+              <button type="button">Skill Tree</button>
+            </a><br>
+            <a ui-sref="workreport">
+              <button type="button">Reports</button>
+            </a><br>
+            <a ui-sref="cv">
+              <button type="button">CV Page</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-			<div class="col-8">
-				<div ui-view>
-					<div class="card-box white-frame shadow-expand">
-					<p>Dear colonist officer,<br>
-					Welcome to Charles SHU's archives. Here you can find everything about the designer of this web.<br>Clicking the buttons on the left panel to discover more contect.<br>To contact the author, click <a ui-sref="contactme">HERE</a>, or on the <span>secret icon</span> of the title bar.</p>
-					</div>
+    <div class="col-8">
+      <div ui-view>
 
-					<div class="card-box white-frame shadow-expand">
-						<div class="sc-portrait-outer">
-							<div class="sc-portrait-middle">
-								<div class="sc-portrait-inner">
-									<img src="../../../../assets/images/portrait.jpg" alt="portrait">
-								</div>
-							</div>
-						</div>
+        <div class="card-box white-frame shadow-expand">
+          <div class="sc-frame-outer portrait">
+            <div class="sc-frame-middle portrait">
+              <div class="sc-frame-inner portrait">
+                <img src="../../../../assets/images/portrait.jpg" alt="portrait" class="portrait">
+              </div>
+            </div>
+          </div>
 
-						<h1 class="theme-color text-center">Charles SHU</h1>
-						<h2 class="theme-color text-center"><b>Junior Developer</b></h2>
+          <div class="auto-font">
+            <h1 class="theme-color text-center hover-spancolor">Charles SHU</h1>
+            <h2 class="theme-color text-center hover-spancolor">An automation tester with <span>unprecedented</span>
+              love &amp; passion in coding!</h2>
+          </div>
 
-						<p>I'm Charles, a newbie developer with passion, dedication and love in the coding field. I also have experience in software testing and UI design.</p>
+          <p>I'm Charles, a tester with passion, dedication and love in the coding field. Here is my
+            story:</p>
 
-						<p>Currently I am living in Auckland and looking for an opportunity to prove myself. When I was back in China, I worked in financial field and had a decent life. But I was always having a dream to achieve something extraordinary, to do something I am crazy about and to make my life more challenging and colourful. That is why I come to New Zealand and am trying my best to develop my skills.</p>
-						
-						<p>I like the feeling of concentration and seriousness. When I'm growing as a developer, I think I have found the field in which I am willing to put all my efforts in, as a lifetime career. The achievement of creating something with outstanding functionality and quality really thrills me, thus I made this website using the knowledge from what I have learnt in a very short period of time. It maybe trivial in the sight of senior developers or designers, but I will grow as fast as I can to make it great.</p>
+          <span class="intro-span">Stay Hungry, Stay Foolish.<img
+              src="../../../../assets/images/I_love_my_job.gif" class="I_love_my_job"></span>
+          <p>Comfort is never the ultimate goal of life. I used to worked in the financial field with good
+            education background and a decent income, but I wanted more. I like technology, I like
+            creativity, and most of all, I fear no challenging. Therefore I asked to myself: Hey, why not go
+            out and do something you really like?</p>
+          <p>Coding is like Pandora's box, it is bottomless, mystery and appealing. Many have attempted to
+            extract the treasure inside but most of them eventually failed. I, as a young and hungry
+            warrior, spent one year, literally all day and night, in picking up all relevant knowledge and
+            skills which would normally take for years. After that, I devoted myself into a series of
+            practical projects, and realized that all we have learnt in school is everything and, from
+            another point of view, nothing.
+          </p>
 
-						<p>You can also find my <a ui-sref="worklog">Work Reports</a> from the internship I took part in. And I also put my <a ui-sref="cv">CV</a> on this website.</p>
+          <span class="intro-span">My passion about coding.<img
+              src="../../../../assets/images/I_love_my_job.gif" class="I_love_my_job"></span>
+          <p>Since practice is the only way leading to success, I took part in as many projects as possible. I
+            might not graduate from top university in New Zealand, but I believe I do much more coding than
+            any of them.</p>
+          <p>You can check my work on <a href="https://github.com/Sachielsc" target="_blank">my github</a>,
+            which contains part of my repositories. Basically I created 5 commits per day in average,
+            without resting on weekends.</p>
+          <p>You can also see some other of my projects which are not included in my github. I put the list <a
+              ui-sref="otherprojects">HERE</a> in my personal website.</p>
+          <p>I like to keep everything in order and on record, probably a compulsive obsession to make
+            perfection. Thus I made this website: <span class="theme-color">Charles' Alien World</span>. It
+            is not only a platform served as a personal blog, but also a palace I create to test and record
+            all my coding skills. It is now a huge archive filled with my personal <a ui-sref="workreport">study
+              notes</a>, <a ui-sref="workreport">work reports</a> and <a ui-sref="community">articles</a>.
+          </p>
 
-						<p>If you are interested in what I have done and, more importantly, what I will contribute, please click <a ui-sref="contactme">HERE</a> to contact me. Or you can find some more ways to reach me by clicking on the <span>secret icon</span> of the title bar.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+          <span class="intro-span">Feel free to contact me.<img
+              src="../../../../assets/images/I_love_my_job.gif" class="I_love_my_job"></span>
+          <p>Currently I am living in Auckland and actively looking for an opportunity in the coding field.
+            You can find my digital <a ui-sref="cv">CV</a> on this website. Also, see a complete list of my
+            skills <a ui-sref="skillpanel">HERE</a> or on my <a
+                href="https://www.linkedin.com/in/charles-shu/" target="_blank">LinkedIn</a>.</p>
+          <p>If you are interested in what I have done and, more importantly, what I will contribute, please
+            click <a ui-sref="contactme">HERE</a> to contact me. Or you can find some more ways to reach me
+            by clicking on the <span class="theme-color">secret icon</span> of the title bar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 
 </html>

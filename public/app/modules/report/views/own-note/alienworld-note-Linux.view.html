@@ -1,38 +1,78 @@
 <body>
-    <div class="container">
-        <div class="assignment">
-            <h3>Charles work report on 29th Jul, 2017</h3>
-            <h4>Tips:</h4>
-            <ul>
-            	<li>Linux命令行下查询当前所使用的shell种类:<br><code>echo $0</code></li>
-            	<li>shell所在目录:<br><code>echo $SHELL</code></li>
-            	<li>Linux命令行下查询当前所使用的shell版本:<br><code>bash --version</code></li>
-                <li>Linux命令行下untar一个文件:<br><code>tar xvzf file.tar.gz</code></li>
-            </ul>
+<div class="container">
+  <div class="assignment">
+    <h3>Charles work report on 29th Jul, 2017</h3>
+    <h4>Tips:</h4>
+    <ul>
+      <li>Linux命令行下查询当前所使用的shell种类:<br><code>echo $0</code></li>
+      <li>shell所在目录:<br><code>echo $SHELL</code></li>
+      <li>Linux命令行下查询当前所使用的shell版本:<br><code>bash --version</code></li>
+      <li>Linux命令行下untar一个文件:<br><code>tar xvzf file.tar.gz</code></li>
+    </ul>
 
-            <h4>A problem about <code>sudo apt-get update</code>:</h4>
-            <p>This problem is found by my failure to run <code>sudo apt-get update</code></p>
-            <p>Every time I attempt to perform a software update I get this error from bash:
-            <pre><code>The repository 'http://ppa.launchpad.net/ubuntu-vn/ppa/ubuntu xenial Release' does not have a Release file.</code></pre>
-            </p>
-            <p></p>问题所在：<br>
-            <a href="https://askubuntu.com/questions/768569/ubuntu-16-04-update-manager-error" target="_blank">https://askubuntu.com/questions/768569/ubuntu-16-04-update-manager-error</a><br>
-            <pre><code>You obviously did a system upgrade without having removed the external repositories before. The easiest way to solve the problem would be to remove all external repositories and delete all related public keys. After having done this, update the repositories (sudo apt-get update) and check whether everything is fixed now ... and when no error occurs anymore, you can add new external repositories, but carefully check whether these repositories are "matching Xenial" ... </code></pre><br>
-            <p>解决方式：<br>
-            <a href="https://askubuntu.com/questions/307/how-can-ppas-be-removed" target="_blank">https://askubuntu.com/questions/307/how-can-ppas-be-removed</a>
-            <pre><code>Last but not least, you can also disable or remove PPAs from the "Software Sources" section in Ubuntu Settings with a few clicks of your mouse (no terminal needed).</code></pre></p>
+    <h4>A problem about <code>sudo apt-get update</code>:</h4>
+    <p>This problem is found by my failure to run <code>sudo apt-get update</code></p>
+    <p>Every time I attempt to perform a software update I get this error from bash:
+    <pre><code>The repository 'http://ppa.launchpad.net/ubuntu-vn/ppa/ubuntu xenial Release' does not have a Release file.</code></pre>
+    </p>
+    <p></p>问题所在：<br>
+    <a href="https://askubuntu.com/questions/768569/ubuntu-16-04-update-manager-error" target="_blank">https://askubuntu.com/questions/768569/ubuntu-16-04-update-manager-error</a><br>
+    <pre><code>You obviously did a system upgrade without having removed the external repositories before. The easiest way to solve the problem would be to remove all external repositories and delete all related public keys. After having done this, update the repositories (sudo apt-get update) and check whether everything is fixed now ... and when no error occurs anymore, you can add new external repositories, but carefully check whether these repositories are "matching Xenial" ... </code></pre>
+    <br>
+    <p>解决方式：<br>
+      <a href="https://askubuntu.com/questions/307/how-can-ppas-be-removed" target="_blank">https://askubuntu.com/questions/307/how-can-ppas-be-removed</a>
+    <pre><code>Last but not least, you can also disable or remove PPAs from the "Software Sources" section in Ubuntu Settings with a few clicks of your mouse (no terminal needed).</code></pre>
+    </p>
 
-            <h3>Charles work report on 31th Jul, 2017</h3>
-            <h4>Create a short cut of a folder in ubuntu: (probably not a very good way to do)</h4>
-            <pre><code>sudo ln -sT /path/to/source/directory /path/to/destination/directory</code></pre>
-            <p>[my example]</p>
-            <pre><code>sudo ln -sT ~/testproject/alienworld-web/ ~/Desktop/alienworld-web</code></pre>
-            <h4>Create soft link / symbolic link:</h4>
-            <pre><code>sudo ln -s /path/to/source/file /path/to/destination/link-name</code></pre>
-            <p>Reference: <a href="https://www.cyberciti.biz/faq/creating-soft-link-or-symbolic-link/" target="_blank">https://www.cyberciti.biz/faq/creating-soft-link-or-symbolic-link/</a></p>
-            <h4>Libre Office Spell check not at all detecting any wrong spelling:</h4>
-            <p>Tools> ...Language> ... For all text> .... and then selecting the appropriate dictionary, (in my case English uk). And Bingo - wavy red lines all over the place.<br><br>
-            Reference: <a href="https://ask.libreoffice.org/en/question/46842/4412-spell-check-not-at-all-detecting-any-wrong-spelling/" target="_blank">https://ask.libreoffice.org/en/question/46842/4412-spell-check-not-at-all-detecting-any-wrong-spelling/</a></p>
-        </div>
-    </div>
+  </div>
+  <div class="assignment">
+    <h3>Charles work report on 31th Jul, 2017</h3>
+    <h4>Create a short cut of a folder in ubuntu: (probably not a very good way to do)</h4>
+    <pre><code>sudo ln -sT /path/to/source/directory /path/to/destination/directory</code></pre>
+    <p>[my example]</p>
+    <pre><code>sudo ln -sT ~/testproject/alienworld-web/ ~/Desktop/alienworld-web</code></pre>
+    <h4>Create soft link / symbolic link:</h4>
+    <pre><code>sudo ln -s /path/to/source/file /path/to/destination/link-name</code></pre>
+    <p>Reference: <a href="https://www.cyberciti.biz/faq/creating-soft-link-or-symbolic-link/" target="_blank">https://www.cyberciti.biz/faq/creating-soft-link-or-symbolic-link/</a>
+    </p>
+    <h4>Libre Office Spell check not at all detecting any wrong spelling:</h4>
+    <p>Tools> ...Language> ... For all text> .... and then selecting the appropriate dictionary, (in my case English
+      uk). And Bingo - wavy red lines all over the place.<br><br>
+      Reference: <a
+          href="https://ask.libreoffice.org/en/question/46842/4412-spell-check-not-at-all-detecting-any-wrong-spelling/"
+          target="_blank">https://ask.libreoffice.org/en/question/46842/4412-spell-check-not-at-all-detecting-any-wrong-spelling/</a>
+    </p>
+  </div>
+  <div class="assignment">
+    <h3>Charles work report on 31th Aug, 2017</h3>
+    <h4>Important tips: Use aptitude instead of apt-get.</h4>
+    <p>It is more intelligent.<br>
+      It not only will handle downgrading conflicting packages for you, but will make a series of recommendations
+      asking you which of many possible suggested working scenarios you would.<br>
+    <pre><code>sudo aptitude install [myNewPackage]</code></pre>
+    <br>
+    If you don't have aptitude on your machine yet, get it with:
+    <pre><code>sudo apt-get install aptitude</code></pre>
+    </p>
+
+    <h4>Important tips: Change the permission of a file in Ubuntu</h4>
+    <p>If it's owned by root you can do this:
+    <pre><code>sudo chown &lt;your username&gt;:&lt;your usergroup&gt; -R &lt;path to&gt;/.blabla</code></pre>
+    Since <code>./blabla</code> owned by root you need to gain root privileges to change that. That's what sudo will
+    do. The -R option for the chown command says: this directory and everything in it recursively.
+    my code:
+    <pre><code>sudo chown $USER -R blabla</code></pre>
+    Then manually change the usergroup to <code>charles</code></p>
+  </div>
+
+  <div class="assignment">
+    <h4>how to install a deb file:</h4>
+    <p>reference: <a
+        href="https://unix.stackexchange.com/questions/159094/how-to-install-a-deb-file-by-dpkg-i-or-by-apt"
+        target="_blank">https://unix.stackexchange.com/questions/159094/how-to-install-a-deb-file-by-dpkg-i-or-by-apt</a><br>
+      Install your <code>foo.deb</code> file with <code>dpkg -i foo.deb</code>. If there are some errors with
+      unresolved dependencies, run <code>apt-get install -f</code>afterwards.
+    </p>
+  </div>
+</div>
 </body>

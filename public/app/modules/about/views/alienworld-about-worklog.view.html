@@ -1,81 +1,111 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>About Me</title>
-    </head>
+<div class="container">
 
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-4">
-                <div class="sc-mechanical-frame-outer">
-                    <div class="sc-mechanical-frame-inner">
-                        <div class="button-panel">
-                    <a ui-sref="about"><button type="button">State Panel</button></a><br>
-                    <a ui-sref="skillpanel"><button type="button">Skill Panel</button></a><br>
-                    <a ui-sref="worklog"><button type="button" class="active">Work Log</button></a><br>
-                    <a ui-sref="cv"><button type="button">CV Page</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-8">
-                <div class="card-box white-frame shadow-expand">
-                    <p>Dear colonist officer,<br>
-                    Select a work report from the list below</p>
-                </div>
-                <div class="card-box white-frame shadow-expand report-list">
-                    <a data-toggle="collapse" data-target="#ft-report" class="fa fa-folder-open">Work Reports in Avartar International Lt -- Project Funtown</a>
-                    <div class="collapse" id="ft-report">
-                        <li><a ui-sref=".report1">Report 1</a></li>
-                        <li><a ui-sref=".report2">Report 2</a></li>
-                        <li><a ui-sref=".report3">Report 3</a></li>
-                        <li><a ui-sref=".report4">Report 4</a></li>
-                        <li><a ui-sref=".report5">Report 5</a></li>
-                        <li><a ui-sref=".report6">Report 6</a></li>
-                        <li><a ui-sref=".report7">Report 7</a></li>
-                        <li><a ui-sref=".report8">Report 8</a></li>
-                        <li><a ui-sref=".report9">Report 9</a></li>
-                        <li><a ui-sref=".report10">Report 10</a></li>
-                        <li><a ui-sref=".report11">Report 11</a></li>
-                        <li><a ui-sref=".report12">Report 12</a></li>
-                    </div><br>
-                    <a data-toggle="collapse" data-target="#my-report" class="fa fa-folder-open">My own reports in website building and code learning</a>                        
-                    <div class="collapse" id="my-report">
-                        <li><a ui-sref=".report13">Report 1</a></li>
-                        <li><a ui-sref=".report14">Report 2</a></li>
-                        <li><a ui-sref=".report15">Report 3</a></li>
-                        <li><a ui-sref=".report16">Report 4</a></li>
-                        <li><a ui-sref=".report17">Report 5</a></li>
-                        <li><a ui-sref=".report18">Report 6</a></li>
-                    </div><br>
-                    <a data-toggle="collapse" data-target="#my-studynote" class="fa fa-folder-open">My Study Note (Chinese &amp; English mixed)</a>                        
-                    <div class="collapse" id="my-studynote">
-                        <li><a ui-sref=".noteNodeJS">Node.js</a></li>
-                        <li><a ui-sref=".angularjsArticle">AngularJS</a></li>
-                        <li><a ui-sref=".generalCoding">General-coding</a></li>
-                        <li><a ui-sref=".generalIT">General-IT</a></li>
-                        <li><a ui-sref=".vocabulary">Vocabulary</a></li>
-                        <li><a ui-sref=".html">HTML</a></li>
-                        <li><a ui-sref=".bootstrap">Bootstrap</a></li>
-                        <li><a ui-sref=".java">Java</a></li>
-                        <li><a ui-sref=".jira">JIRA</a></li>
-                        <li><a ui-sref=".reactjs">ReactJS</a></li>
-                        <li><a ui-sref=".linux">Linux</a></li>
-                        <li><a ui-sref=".gulp">Gulp</a></li>
-                        <li><a ui-sref=".sublime">Sublime</a></li>
-                        <li><a ui-sref=".git">Git</a></li>
-                        <li><a ui-sref=".heroku">Heroku</a></li>
-                    </div>
-                </div>
-                <div class="aw-community green-frame shadow-expand">
-                    <div ui-view>
-                        <p>Select a report from above~</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="cv-fullpage card-box white-frame shadow-expand">
+    <p>Welcome to Charles' <span>Improvement Plan of Official Websites!</span></p>
+    <p>Due to copyright issue, the following content cannot be displayed without a password:</p>
+    <div class="aw-form">
+      <div class="form-group">
+        <input type="password" class="form-control" ng-model="worklogpassword">
+        <button ng-click="passValueWorkLog()">Confirm</button>
+        <button ng-click="clearValueWorkLog()">Clear</button>
+      </div>
     </div>
-</body>
+  </div>
 
-</html>
+  <div ng-hide="hideWorkLog">
+    <div class="cv-fullpage card-box white-frame shadow-expand">
+      <p>Here is the work I am doing in my "Improvement Plan of Official Websites":</p>
+    </div>
+
+    <div class="cv-fullpage card-box green-frame shadow-expand">
+      <dt>Project ID:</dt>
+      <dd>01</dd>
+      <dt>Company Name:</dt>
+      <dd>Latipay</dd>
+      <dt>Official Website:</dt>
+      <dd><a href="https://www.latipay.net/#home" target="_blank">https://www.latipay.net/#home</a></dd>
+      <dt>Finish date of my modification</dt>
+      <dd>30/07/2017</dd>
+      <div class="separator"></div>
+      <dt>Where is the problem:</dt>
+      <dd>
+        <ul>
+          <li>The nav bar / title bar is designed to be perfectly merged into the background when user firstly
+            enter the site;
+          </li>
+          <li>After the user scroll down a bit, the title bar will become partially transparent and get a grey
+            background to distinguish it from the main body;
+          </li>
+          <li>However, the white font – grey background is still easily mixing up with the text when user try
+            to read the content of the body or try to watch embedded videos. The partially transparent title
+            bar still jeopardizes the integrity of main body;
+          </li>
+          <li>Users might click on the title bar by mistake when they intend to click on the main body.</li>
+        </ul>
+      </dd>
+      <dt>My suggestion:</dt>
+      <dd>
+        <ol>
+          <li>Hide the nav bar in areas where users are trying to read the main body text;</li>
+          <li>Display the nav bar when users are at the top of EACH big picture of different chapters instead
+            of merely at the top of the first chapter. This will make the nav bar merge into each chapter
+            perfectly and consistently;
+          </li>
+          <li>Do not display the nav bar with a gray background because it defeats the purpose of using a
+            auto-merged design.
+          </li>
+        </ol>
+      </dd>
+      <div class="separator"></div>
+      <dt>My solution:</dt>
+      <dd>
+        <p>CSS:</p>
+        <pre><code>.hidethis {
+        display:none;
+        -webkit-transition: all 1s ease;
+           -moz-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+             -o-transition: all 1s ease;
+                transition: all 1s ease;
+    }
+    </code></pre>
+        <p>jQuery (Add to index.html)</p>
+        <pre><code>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+    $(document).ready(function(){
+        
+        var mainbottom = $('#yui_3_17_2_1_1501347938135_114').offset().top + 0.5 * $('#yui_3_17_2_1_1501347938135_114').height();
+        var exporttop = $('#yui_3_17_2_1_1501347938135_311').offset().top;
+        var exportbottom = $('#yui_3_17_2_1_1501347938135_311').offset().top + 0.5 * $('#yui_3_17_2_1_1501347938135_311').height();
+        var tourismtop = $('#yui_3_17_2_1_1501347938135_352').offset().top;
+        var tourismbottom = $('#yui_3_17_2_1_1501347938135_352').offset().top + 0.5 * $('#yui_3_17_2_1_1501347938135_352').height();
+        var educationtop = $('#yui_3_17_2_1_1501347938135_431').offset().top;
+        var educationbottom = $('#yui_3_17_2_1_1501347938135_431').offset().top + 0.5 * $('#yui_3_17_2_1_1501347938135_431').height();
+
+        $(window).on('scroll',function(){
+            scrollposition = Math.round($(window).scrollTop());
+            if (scrollposition &lt; mainbottom) {
+                $('.sqs-announcement-bar-dropzone').addClass('hidethis');
+            } else {
+                if (scrollposition &gt; exporttop &amp;&amp; scrollposition &lt; exportbottom) {
+                    $('.sqs-announcement-bar-dropzone').addClass('hidethis');
+                } else {
+                    if (scrollposition &gt; tourismtop &amp;&amp; scrollposition &lt; tourismbottom) {
+                        $('.sqs-announcement-bar-dropzone').addClass('hidethis');
+                    } else {
+                        if (scrollposition &gt; educationtop &amp;&amp; scrollposition &lt; educationbottom) {
+                            $('.sqs-announcement-bar-dropzone').addClass('hidethis');
+                        } else {
+                            $('.sqs-announcement-bar-dropzone').removeClass('hidethis');
+                        }
+                    }
+                }
+            }
+        });
+    });
+    &lt;/script&gt;
+    </code></pre>
+      </dd>
+    </div>
+  </div>
+</div>

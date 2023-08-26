@@ -1,174 +1,50 @@
 'use strict';
 
-angular.module('report').config(['$stateProvider', function($stateProvider) {
-	console.log('report routers loading complete...');
+angular.module('report').config(['$stateProvider', function ($stateProvider) {
+    console.log('report routers loading complete...');
 
-	$stateProvider
-		// router my reports in worklog state
-		.state('worklog.report1',{
-		url:'/report1',
-		templateUrl:'app/modules/report/views/funtown-report/alienworld-report-m1.view.html',
-		})
+    // add my own study notes
+    var studyNoteList = ["nodeJS", "angularJS", "html", "bootstrap", "generalCoding", "generalIT", "vocabulary", "java", "vim", "jira", "reactJS", "linux", "gulp", "sublime", "git", "heroku", "aspnet", "IntelliJIDEA", "javascript", "ISTQB-foundation", "selenium"];
 
-		.state('worklog.report2',{
-		url:'/report2',
-		templateUrl:'app/modules/report/views/funtown-report/alienworld-report-m2.view.html',
-		})
+    for (var j = 0; j < studyNoteList.length; j++) {
+        var studyNoteStateName = "workreport." + studyNoteList[j];
+        var studyNoteUrlName = "/" + studyNoteList[j];
+        var studyNoteTemplateUrlName = "app/modules/report/views/own-note/alienworld-note-" + studyNoteList[j] + ".view.html";
 
-		.state('worklog.report3',{
-		url:'/report3',
-		templateUrl:'app/modules/report/views/funtown-report/alienworld-report-m3.view.html',
-		})
+        $stateProvider.state(
+            studyNoteStateName, {
+                url: studyNoteUrlName,
+                templateUrl: studyNoteTemplateUrlName
+            });
+    }
 
-		.state('worklog.report4',{
-		url:'/report4',
-		templateUrl:'app/modules/report/views/funtown-report/alienworld-report-m4.view.html',
-		})
+    // add my code snippets
+    var codeSnippetList = ["arraySum", "CSharpGitIgnoreExample"];
 
-		.state('worklog.report5',{
-		url:'/report5',
-		templateUrl:'app/modules/report/views/funtown-report/alienworld-report-m5.view.html',
-		})
+    for (var k = 0; k < codeSnippetList.length; k++) {
+        var codeSnippetStateName = "workreport." + codeSnippetList[k];
+        var codeSnippetUrlName = "/" + codeSnippetList[k];
+        var codeSnippetTemplateUrlName = "app/modules/report/views/code-snippet/code-snippet-" + codeSnippetList[k] + ".view.html";
 
-		.state('worklog.report6',{
-		url:'/report6',
-		templateUrl:'app/modules/report/views/funtown-report/alienworld-report-m6.view.html',
-		})
+        $stateProvider.state(
+            codeSnippetStateName, {
+                url: codeSnippetUrlName,
+                templateUrl: codeSnippetTemplateUrlName
+            });
+    }
 
-		.state('worklog.report7',{
-		url:'/report7',
-		templateUrl:'app/modules/report/views/funtown-report/alienworld-report-m7.view.html',
-		})
+    // add work report routers
+    var reportNum = 19;
+    for (var i = 1; i <= reportNum; i++) {
+        var stateName = "workreport.report" + i;
+        var urlName = "/report" + i;
+        var templateUrlName = "app/modules/report/views/work-report/alienworld-report-m" + i + ".view.html";
 
-		.state('worklog.report8',{
-		url:'/report8',
-		templateUrl:'app/modules/report/views/funtown-report/alienworld-report-m8.view.html',
-		})
-
-		.state('worklog.report9',{
-		url:'/report9',
-		templateUrl:'app/modules/report/views/funtown-report/alienworld-report-m9.view.html',
-		})
-
-		.state('worklog.report10',{
-		url:'/report10',
-		templateUrl:'app/modules/report/views/funtown-report/alienworld-report-m10.view.html',
-		})
-
-		.state('worklog.report11',{
-		url:'/report11',
-		templateUrl:'app/modules/report/views/funtown-report/alienworld-report-m11.view.html',
-		})
-
-		.state('worklog.report12',{
-		url:'/report12',
-		templateUrl:'app/modules/report/views/funtown-report/alienworld-report-m12.view.html',
-		})
-
-		.state('worklog.report13',{
-		url:'/report13',
-		templateUrl:'app/modules/report/views/own-report/alienworld-report-m13.view.html',
-		})
-
-		.state('worklog.report14',{
-		url:'/report14',
-		templateUrl:'app/modules/report/views/own-report/alienworld-report-m14.view.html',
-		})
-
-		.state('worklog.report15',{
-		url:'/report15',
-		templateUrl:'app/modules/report/views/own-report/alienworld-report-m15.view.html',
-		})
-
-		.state('worklog.report16',{
-		url:'/report16',
-		templateUrl:'app/modules/report/views/own-report/alienworld-report-m16.view.html',
-		})
-
-		.state('worklog.report17',{
-		url:'/report17',
-		templateUrl:'app/modules/report/views/own-report/alienworld-report-m17.view.html',
-		})
-
-		.state('worklog.report18',{
-		url:'/report18',
-		templateUrl:'app/modules/report/views/own-report/alienworld-report-m18.view.html',
-		})
-
-		.state('worklog.noteNodeJS',{
-		url:'/noteNodeJS',
-		templateUrl:'app/modules/report/views/own-note/alienworld-note-noteNodeJS.view.html',
-		})
-
-		.state('worklog.angularjsArticle',{
-		url:'/angularjsArticle',
-		templateUrl:'app/modules/report/views/own-note/alienworld-note-angularjsArticle.view.html',
-		})
-
-		.state('worklog.html',{
-		url:'/html',
-		templateUrl:'app/modules/report/views/own-note/alienworld-note-html.view.html',
-		})
-
-		.state('worklog.bootstrap',{
-		url:'/bootstrap',
-		templateUrl:'app/modules/report/views/own-note/alienworld-note-bootstrap.view.html',
-		})
-
-		.state('worklog.generalCoding',{
-		url:'/generalCoding',
-		templateUrl:'app/modules/report/views/own-note/alienworld-note-general-coding.html',
-		})
-
-		.state('worklog.generalIT',{
-		url:'/generalIT',
-		templateUrl:'app/modules/report/views/own-note/alienworld-note-general-IT.html',
-		})
-
-		.state('worklog.vocabulary',{
-		url:'/vocabulary',
-		templateUrl:'app/modules/report/views/own-note/alienworld-note-vocabulary.view.html',
-		})
-
-		.state('worklog.java',{
-		url:'/java',
-		templateUrl:'app/modules/report/views/own-note/alienworld-note-java.view.html',
-		})
-
-		.state('worklog.jira',{
-		url:'/jira',
-		templateUrl:'app/modules/report/views/own-note/alienworld-note-jira.view.html',
-		})
-
-		.state('worklog.reactjs',{
-		url:'/reactjs',
-		templateUrl:'app/modules/report/views/own-note/alienworld-note-reactJS.view.html',
-		})
-
-		.state('worklog.linux',{
-		url:'/linux',
-		templateUrl:'app/modules/report/views/own-note/alienworld-note-Linux.view.html',
-		})
-
-		.state('worklog.gulp',{
-		url:'/gulp',
-		templateUrl:'app/modules/report/views/own-note/alienworld-note-Gulp.view.html',
-		})
-
-		.state('worklog.sublime',{
-		url:'/sublime',
-		templateUrl:'app/modules/report/views/own-note/alienworld-note-sublime.view.html',
-		})
-
-		.state('worklog.git',{
-		url:'/git',
-		templateUrl:'app/modules/report/views/own-note/alienworld-note-git.view.html',
-		})
-
-		.state('worklog.heroku',{
-		url:'/heroku',
-		templateUrl:'app/modules/report/views/own-note/alienworld-note-heroku.view.html',
-		})
-		;
-	}
+        $stateProvider.state(
+            stateName, {
+                url: urlName,
+                templateUrl: templateUrlName
+            });
+    }
+}
 ]);
