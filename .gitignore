@@ -7,3 +7,5 @@ node_modules
 
 # etc
 **/package-lock.json
+# Local Netlify folder
+.netlify
