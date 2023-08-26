@@ -25,7 +25,8 @@
     "run-sequence": "^1.2.2"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "gulp build"
   },
   "author": "Charles SHU",
   "license": "MIT"
