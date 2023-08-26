@@ -12,7 +12,7 @@
     "@uirouter/visualizer": "latest",
     "del": "^7.0.0",
     "express": "^4.16.3",
-    "npm": "^6.1.0"
+    "npm": "^9.8.1"
   },
   "devDependencies": {
     "browser-sync": "^2.18.2",
