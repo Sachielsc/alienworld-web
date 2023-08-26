@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var path = require('path');
 
 // set port
 var port = process.env.PORT || 5000;
@@ -12,7 +13,7 @@ app.get("/", function(request, response) {
 });
 
 app.use(function(request, response) {
-    response.sendfile(__dirname + '/public/index.html');
+    response.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.listen(port, function() {
