@@ -10,23 +10,14 @@
   "dependencies": {
     "@uirouter/angularjs": "latest",
     "@uirouter/visualizer": "latest",
-    "del": "^7.0.0",
     "express": "^4.16.3",
     "npm": "^9.8.1"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.2",
-    "gulp": "^3.9.1",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^3.1.1",
-    "gulp-uglify": "^2.0.0",
-    "gulp-useref": "^3.1.2",
-    "run-sequence": "^1.2.2"
+    "browser-sync": "^2.18.2"
   },
   "scripts": {
-    "start": "node server.js",
-    "build": "gulp build"
+    "start": "node server.js"
   },
   "author": "Charles SHU",
   "license": "MIT"
