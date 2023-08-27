@@ -5,7 +5,7 @@
 Note: Web dyno is no longer free now and I need to subscribe their Eco Dynos Plan to keep my Heroku services.</br>
 Remember to cancel this service when I don't need it.</br>
 Current status: cancelled. [To resubscribe](https://dashboard.heroku.com/account/billing)
-- Deployed via Netlify: TODO
+- Deployed via Netlify: [TODO](https://docs.netlify.com/integrations/frameworks/express/)
 
 ## Description
 This project is developed solely by **Charles**, an intermediate automation software tester.
