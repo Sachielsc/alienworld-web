@@ -1,23 +1,23 @@
 {
   "name": "alienworld-web",
-  "version": "3.0.0",
-  "description": "Charles' personal website deployed on Heroku. All rights reserved.",
+  "version": "4.0.0",
+  "description": "Charles' personal website. Vue 3 client + Express server, deployed on Tencent Cloud CVM.",
+  "private": true,
   "engines": {
-    "node": "18.x" 
+    "node": ">=22"
   },
   "repository": "https://github.com/Sachielsc/alienworld-web.git",
-  "main": "application.js",
-  "dependencies": {
-    "@uirouter/angularjs": "latest",
-    "@uirouter/visualizer": "latest",
-    "express": "^4.16.3",
-    "npm": "^6.1.0"
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,green \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w client",
+    "start": "node server/index.js"
   },
   "devDependencies": {
-    "browser-sync": "^2.18.2"
-  },
-  "scripts": {
-    "start": "node server.js"
+    "concurrently": "^9.1.2"
   },
   "author": "Charles SHU",
   "license": "MIT"

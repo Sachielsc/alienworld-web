@@ -1,0 +1,43 @@
+services:
+  app:
+    build: .
+    image: alienworld-web:latest
+    container_name: alienworld-app
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      NODE_ENV: production
+      PORT: "3010"
+    # bound to localhost only; nginx (container or host) is the public entrance
+    ports:
+      - "127.0.0.1:3010:3010"
+    volumes:
+      - app-data:/app/server/data
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: alienworld-nginx
+    restart: unless-stopped
+    depends_on:
+      - app
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - certbot-webroot:/var/www/certbot
+      - certbot-certs:/etc/letsencrypt
+
+  # run on demand for certificate issue/renewal:
+  #   docker compose run --rm certbot certonly --webroot -w /var/www/certbot -d YOUR_DOMAIN
+  certbot:
+    image: certbot/certbot
+    profiles: ["certbot"]
+    volumes:
+      - certbot-webroot:/var/www/certbot
+      - certbot-certs:/etc/letsencrypt
+
+volumes:
+  app-data:
+  certbot-webroot:
+  certbot-certs:
