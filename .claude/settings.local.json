@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem *)",
+      "WebSearch",
+      "WebFetch",
+      "mcp__playwright__*",
+      "Bash(mkdir *)",
+      "Bash(docker compose *)",
+      "Bash(start cmd *)",
+      "Bash(npm run *)",
+      "Bash(curl *)",
+      "Bash(python3 -c ' *)",
+      "Bash(node -e ' *)"
+    ]
+  },
+  "enableAllProjectMcpServers": true
+}
