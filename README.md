@@ -27,7 +27,8 @@ npm run dev            # Express on :3010 + Vite dev server on :5173
 Open http://localhost:5173. The admin account is seeded from `ADMIN_USERNAME`/`ADMIN_PASSWORD`
 in `.env`.
 
-Production build check: `npm run build && npm start` then open http://localhost:3010.
+Production build check: run `npm run build`, then `npm start`, then open http://localhost:3010.
+(In Windows PowerShell 5.1 run them as two commands — `&&` isn't supported there.)
 
 ## Deployment
 

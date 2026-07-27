@@ -82,9 +82,10 @@ Quick recipes:
 
 ## 6. Production build check (no Docker)
 
-Before committing bigger changes, verify the real build:
+Before committing bigger changes, verify the real build (two commands — note that `&&` doesn't
+work in Windows PowerShell 5.1):
 
-```bash
+```powershell
 npm run build      # builds the client into client/dist
 npm start          # Express serves client/dist + API on :3010
 ```
