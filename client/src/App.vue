@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { useAuth } from './lib/useAuth';
+import AppFooter from './components/AppFooter.vue';
 
 const preloaderDone = ref(false);
 const preloaderGone = ref(false);
@@ -83,4 +84,6 @@ function toggleContact() {
   <div class="aw-main">
     <router-view />
   </div>
+
+  <AppFooter />
 </template>

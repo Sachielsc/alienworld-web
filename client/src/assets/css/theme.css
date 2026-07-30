@@ -1144,6 +1144,32 @@ nav.aw-nav.menu-hidden, div.aw-contact.menu-hidden, .title-pic.menu-hidden {
     color: #ea8e8e;
 }
 
+/* footer, shifted with the same offset as .aw-main so it lands below the content */
+.aw-footer {
+    position: relative;
+    top: 190px;
+    margin-top: 40px;
+    padding: 20px 10px 30px 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    text-align: center;
+    font-size: 13px;
+    color: #7d8a91;
+}
+
+.aw-footer p {
+    margin: 0;
+}
+
+/* version sits at the top-right of the copyright line, like a superscript tag */
+.aw-footer .aw-footer-version {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    font-family: 'Inconsolata', monospace;
+    font-size: 11px;
+    color: #97ff77;
+}
+
 /* BS5 columns are not position:relative (BS4 ones were); nav links anchor to their li */
 nav.aw-nav li, div.aw-contact li {
     position: relative;
