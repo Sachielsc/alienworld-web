@@ -553,9 +553,21 @@ body {
     }
 }
 
+/* Below 420px these used to be hidden outright, which left three of the four home-page
+   cards showing a heading and a date and nothing else. The fixed 320px box genuinely
+   does not fit inside a ~300px card, so go fluid rather than hide: percentage width
+   with a locked 16:9 ratio keeps the frame decorations aligned at any size. */
 @media screen and (max-width: 420px) {
     .standard {
-        display: none;
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    /* Photos are not 16:9; crop rather than stretch them. */
+    img.standard {
+        object-fit: cover;
     }
 }
 
@@ -1160,7 +1172,7 @@ nav.aw-nav.menu-hidden, div.aw-contact.menu-hidden, .title-pic.menu-hidden {
 /* footer, shifted with the same offset as .aw-main so it lands below the content */
 .aw-footer {
     position: relative;
-    top: 190px;
+    top: var(--aw-main-offset);
     margin-top: 40px;
     padding: 20px 10px 30px 10px;
     border-top: 1px solid rgba(255, 255, 255, 0.07);
@@ -1188,6 +1200,23 @@ nav.aw-nav li, div.aw-contact li {
     position: relative;
 }
 
+/* Same BS4 -> BS5 problem in the title bar: the egg and head icons are absolutely
+   positioned, so without a positioned column they anchored to .aw-header-content and
+   piled up in the centre on top of the title - 204px of overlap at 1440px, which is why
+   they read as missing. Anchor each icon to its own column, then keep it inside that
+   column's box so it can never spill over the title again. */
+.aw-header .aw-header-content > [class*="col-"] {
+    position: relative;
+}
+
+.aw-header .aw-header-content .menu-icon,
+.aw-header .aw-header-content .contact-icon {
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
 /* ---- phones -----------------------------------------------------------
    Below 576px a .col-2 slot is only ~69px, but the menu labels render up to
    116px wide with white-space:nowrap - so they overflowed their slots and
@@ -1197,10 +1226,10 @@ nav.aw-nav li, div.aw-contact li {
    touching the markup order or the link list. */
 @media screen and (max-width: 575px) {
     :root {
-        --aw-title-height: 118px;
-        --aw-nav-top: 104px;
-        --aw-header-height: 172px;
-        --aw-main-offset: 196px;
+        --aw-title-height: 110px;
+        --aw-nav-top: 100px;
+        --aw-header-height: 192px;
+        --aw-main-offset: 216px;
     }
 
     /* Card breathing room is scoped to the home page: .intro is shared with
@@ -1218,6 +1247,16 @@ nav.aw-nav li, div.aw-contact li {
     nav.aw-nav .nav > li, div.aw-contact .nav > li {
         flex: 0 0 50%;
         max-width: 50%;
-        min-height: 30px;
+        /* 44px, not the link's natural 24px: these are the only tap targets on the
+           page and 24px is well under the usual 44px guidance. */
+        min-height: 44px;
     }
+
+    /* The contact menu holds five links, so at two per row it runs one row past the
+       black header. Give both menus their own backdrop so that overflow reads as part
+       of the menu rather than loose green text floating on the page. */
+    nav.aw-nav, div.aw-contact {
+        background: black;
+    }
+
 }
