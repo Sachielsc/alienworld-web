@@ -100,8 +100,21 @@ unavailable (self-perform) · `4` seat disabled in the brief or config (self-per
 
    - **designer.json** — `prompt` holds the brief's goals, the page route, and the rendered markup;
      `images` lists the three `after-*.png` paths.
-   - **reviewer.json** — `prompt` holds the `git diff`, the full text of each changed file, and any
+   - **reviewer.json** — `prompt` holds the diff, the full text of each changed file, and any
      relevant `server/routes/*.js`. No images; this seat has no vision.
+
+   **Resolving the diff.** Charles commits his own work, often between phases, so a plain
+   `git diff` may be empty by the time the council convenes — which would send the reviewer an
+   empty payload while the report still claimed an independent review. Resolve it in this order,
+   scoped to the Phase A file list:
+
+   ```bash
+   git diff -- client/                  # uncommitted work, the usual case
+   git diff HEAD~1 HEAD -- client/      # if the above is empty: Charles committed Phase B
+   ```
+
+   **Never send an empty diff.** If both come back empty, stop and ask Charles which commit holds
+   the work rather than delegating nothing.
 
    Never place a raw API key in a payload, a command, or the report.
 
