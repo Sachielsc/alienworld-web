@@ -12,10 +12,10 @@ revisionRounds: 1            # 0 = critique only, apply nothing
 
 seats:                       # OVERRIDES ONLY - any line you omit keeps its default from
                              # tools/ai-council/config.json, where both seats are defined
-                             # (designer = Gemini, reviewer = DeepSeek R1). Listing one
-                             # seat here does not disable the other.
+                             # (designer = Gemini, reviewer = Poolside Laguna). Listing
+                             # one seat here does not disable the other.
   designer:
-    model: gemini-2.5-flash  # gemini-2.5-pro for a slower, sharper critique
+    model: gemini-3.5-flash  # see config.json for alternatives; model ids go stale fast
   reviewer:
     enabled: true            # false skips this seat entirely and saves free-tier quota
 ---
