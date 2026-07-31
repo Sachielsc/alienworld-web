@@ -65,8 +65,13 @@ unavailable (self-perform) · `4` seat disabled in the brief or config (self-per
    running, start it and say so — never screenshot a connection error.
 4. **Baseline capture**, before any edit: `mcp__playwright__browser_navigate` to the target, then
    `browser_resize` + `browser_take_screenshot` at **390**, **768**, and **1440** px wide.
-   Save to your scratchpad as `baseline-{390,768,1440}.png`. This is a regression reference only —
+   Save as `.playwright-mcp/baseline-{390,768,1440}.png`. This is a regression reference only —
    **never send baselines to any seat.**
+
+   The Playwright MCP server is sandboxed to the repo root and **cannot write to the scratchpad** —
+   an absolute path outside the repo fails with "outside allowed roots", and a bare filename lands
+   in the repo root. Always pass a path prefixed `.playwright-mcp/`; that directory is gitignored,
+   so the captures never reach a commit.
 5. Implement the beautification per the brief. Prefer minimal, targeted changes; keep the existing
    dark alien identity and the `theme.css` custom properties unless the brief says otherwise.
 6. Re-navigate and confirm the page renders and `browser_console_messages` is clean.
@@ -83,8 +88,8 @@ unavailable (self-perform) · `4` seat disabled in the brief or config (self-per
    Record each result. A seat disabled in the brief's frontmatter is skipped without a preflight.
 
 8. **Only if at least one seat is UP**, capture the after-state: screenshots at the same three
-   widths (`after-{390,768,1440}.png`), the a11y tree via `browser_snapshot`, console messages,
-   and `git diff`.
+   widths (`.playwright-mcp/after-{390,768,1440}.png`), the a11y tree via `browser_snapshot`,
+   console messages, and `git diff`.
 
 9. Write one payload JSON per live seat in your scratchpad, then call both **in parallel**:
 

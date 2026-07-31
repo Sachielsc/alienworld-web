@@ -4,7 +4,7 @@ const currentDate = `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()}
 </script>
 
 <template>
-  <div class="container">
+  <div class="container home-view">
     <div class="intro bg-lab green-frame">
       <p>Dear colonist,<br>
         <br>Welcome to the planet LV 426.<br>Here you can find classified information about

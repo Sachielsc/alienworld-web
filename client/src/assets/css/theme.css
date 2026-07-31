@@ -1,17 +1,29 @@
+/* Vertical rhythm, in one place. The mobile block near the end of this file
+   re-points these values instead of patching each rule individually. */
+:root {
+    --aw-title-height: 160px;   /* title bar: egg, title, secret icon */
+    --aw-nav-top: 140px;        /* where the nav / contact menus start */
+    --aw-header-height: 160px;  /* black bar behind title + nav */
+    --aw-main-offset: 190px;    /* where page content begins */
+    --aw-card-padding: 15px;
+    --aw-card-gap: 20px;
+    --aw-para-gap: 1rem;
+}
+
 .aw-header {
     top: 0;
     background: black;
     -webkit-box-shadow: 0px 4px 9px 1px rgba(0, 0, 0, 0.85);
     -moz-box-shadow: 0px 4px 9px 1px rgba(0, 0, 0, 0.85);
     box-shadow: 0px 4px 9px 1px rgba(0, 0, 0, 0.85);
-    height: 160px;
+    height: var(--aw-header-height);
     width: 100%;
     z-index: 1003;
     position: fixed;
 }
 
 .aw-header .aw-header-content {
-    height: 160px;
+    height: var(--aw-title-height);
     width: 100%;
     position: fixed;
     z-index: 1005;
@@ -110,7 +122,7 @@
 
 nav.aw-nav, div.aw-contact {
     position: fixed;
-    top: 140px;
+    top: var(--aw-nav-top);
     width: 100%;
     z-index: 1007;
     -webkit-transition: all 1.3s ease;
@@ -156,7 +168,7 @@ body {
 
 .aw-main {
     position: relative;
-    top: 190px;
+    top: var(--aw-main-offset);
 }
 
 .intro, .aw-game, .aw-movie, .meeting, .aw-community, .assignment, .card-box {
@@ -197,7 +209,8 @@ body {
     -o-transition: all 0.7s ease;
     transition: all 0.7s ease;
     background-size: 100% 100%;
-    padding: 15px 15px 15px 15px;
+    padding: var(--aw-card-padding);
+    margin: var(--aw-card-gap) 10px;
     filter: grayscale(100%);
     -webkit-font-smoothing: antialiased;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
@@ -209,8 +222,8 @@ body {
 }
 
 .intro p {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: var(--aw-para-gap);
+    margin-bottom: var(--aw-para-gap);
 }
 
 .intro a {
@@ -1173,4 +1186,38 @@ nav.aw-nav.menu-hidden, div.aw-contact.menu-hidden, .title-pic.menu-hidden {
 /* BS5 columns are not position:relative (BS4 ones were); nav links anchor to their li */
 nav.aw-nav li, div.aw-contact li {
     position: relative;
+}
+
+/* ---- phones -----------------------------------------------------------
+   Below 576px a .col-2 slot is only ~69px, but the menu labels render up to
+   116px wide with white-space:nowrap - so they overflowed their slots and
+   overlapped each other ("Community Hub" spilled 47px into its neighbour).
+   The two empty spacer <li>s also burned a third of the width. Dropping the
+   spacers and giving each link half a row fixes the collision without
+   touching the markup order or the link list. */
+@media screen and (max-width: 575px) {
+    :root {
+        --aw-title-height: 118px;
+        --aw-nav-top: 104px;
+        --aw-header-height: 172px;
+        --aw-main-offset: 196px;
+    }
+
+    /* Card breathing room is scoped to the home page: .intro is shared with
+       /about/* pages, which this brief puts out of scope. */
+    .home-view {
+        --aw-card-padding: 22px;
+        --aw-card-gap: 26px;
+        --aw-para-gap: 1.35rem;
+    }
+
+    nav.aw-nav .nav > li:empty, div.aw-contact .nav > li:empty {
+        display: none;
+    }
+
+    nav.aw-nav .nav > li, div.aw-contact .nav > li {
+        flex: 0 0 50%;
+        max-width: 50%;
+        min-height: 30px;
+    }
 }
