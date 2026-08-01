@@ -40,6 +40,11 @@ See [doc/deployment_guide.md](doc/deployment_guide.md) for the full CVM procedur
 - The **admin** account (env-seeded) is the only role that can view the protected pages
   (Cover Letter, Work Log); their content is served by the API, not as static files.
 
+## AI orchestration (dev tooling)
+Frontend work can be run through `/frontend-beautify`, where Claude Code implements the change and
+two external models (a UI/UX designer and a code reviewer) critique the result. See
+`doc/ai-orchestration/USAGE.md`.
+
 ## Modules
 - Workshop (state panel, skill tree, work reports, study notes, CV)
 - Community Hub (articles; forum planned)

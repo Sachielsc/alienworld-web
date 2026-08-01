@@ -31,6 +31,19 @@ revisionRounds: 1
 
 Everything below the frontmatter is free-form: goals, constraints, out-of-scope.
 
+### Optional flag: `--human-decision`
+
+```
+/frontend-beautify "C:\...\doc\briefs\beautify-home.md" --human-decision
+```
+
+Also settable per brief as `humanDecision: true` in the frontmatter; the invocation flag wins.
+
+**Default (flag absent) is the standard flow described throughout this file — unchanged.** The
+orchestrator judges the findings itself and applies what it accepts. Only when the flag is present
+does Phase D switch to the human-decision variant below. Everything else — Phases A, B, C, the
+delegation policy, the data boundaries, the report — is identical either way.
+
 ## Delegation policy
 
 **Always delegate when the seat answers.** There is no task-based routing and no judgment call
@@ -125,6 +138,9 @@ Delegating publishes content to a third party — treat these as off-limits rega
 
 ## Phase D - Judge and revise
 
+**Default flow — used unless `--human-decision` was passed.** With the flag, skip to
+"Phase D (human-decision)" below instead.
+
 10. Give every suggestion a verdict — `ACCEPT`, `REJECT`, or `DEFER` — plus a one-line reason.
     Never assign confidence percentages; they are fabricated precision. Reject anything that
     contradicts the brief's constraints, proposes a redesign or new dependency, or that you judge
@@ -147,14 +163,67 @@ Default **1**. The brief may override it:
 **Stop early** as soon as a round produces no `ACCEPT`ed items — a further round would only burn
 free-tier quota. Never exceed **3**; if a brief asks for more, cap it and say so in the report.
 
+## Phase D (human-decision) - only with `--human-decision`
+
+Replaces Phase D above. Charles decides what gets applied; you are his analyst, not the judge.
+
+10. **Verify every claim before showing it to him — do not relay raw findings.** Measure in the
+    browser exactly as you would when judging autonomously. This is the whole value of the gate:
+    in the first live run 6 of 14 findings did not survive verification, two of them resting on
+    measurably false premises. Handing those over unchecked would make him re-derive your work.
+
+11. **Present one table, apply nothing yet.** For every finding, in one place:
+
+    | # | Seat | Finding | What you measured | Your recommendation |
+    |---|---|---|---|---|
+
+    Recommend with the same rigour as the default flow, and say plainly when a seat is wrong.
+    The recommendation is advice — never imply the decision is made.
+
+12. **Ask what he wants done.** Use `AskUserQuestion`, and make clear he is not limited to the
+    listed findings. His answer may be:
+    - a subset ("apply 2, 5 and 7")
+    - all of them, or none
+    - **something else entirely** — a fix the seats never raised, a different page, a change of
+      direction. Treat any such instruction as the new task and carry it out.
+    - stop
+
+13. **Do exactly what he said** — no more. Do not slip in an item he passed over because you
+    still think it is right; record it as declined and move on. If an instruction is ambiguous or
+    you believe it is a mistake, say so in one or two sentences, then follow it.
+
+14. Re-capture the same three widths, verify the change landed, the console is clean, and nothing
+    regressed against the Phase B baselines. Report what actually happened, including anything
+    that did not work.
+
+15. **Ask again**, and keep looping — more findings to act on, a fresh instruction, or stop.
+    **`revisionRounds` is ignored in this mode, and there is no cap.** Charles decides when the
+    page is finished; never stop early on your own judgement, and never continue without an
+    instruction. If a round is likely to burn the last of a free tier, say so and let him choose.
+
+Re-consulting the seats is his call too: after a revision he may want a fresh critique of the
+updated page, or to keep going on what is already on the table. Ask rather than assume — each
+re-consultation costs free-tier quota.
+
 ## Phase E - Report
 
-13. Write `doc/ai-orchestration/runs/<page>-<YYYY-MM-DD>.md` containing:
-    - the brief path and resolved file list
-    - seat status per seat: `INDEPENDENT` or `SELF (reason)`
-    - every suggestion with its verdict and reason
-    - what actually changed, and the before/after check result
-14. Show the diff. Leave `git add` / `commit` / `push` to Charles — always.
+Runs after whichever Phase D applied.
+
+- Write `doc/ai-orchestration/runs/<page>-<YYYY-MM-DD>.md` containing:
+  - the brief path and resolved file list
+  - seat status per seat: `INDEPENDENT` or `SELF (reason)`
+  - every suggestion with its verdict and reason
+  - what actually changed, and the before/after check result
+- Show the diff. Leave `git add` / `commit` / `push` to Charles — always.
+
+**With `--human-decision`, record both columns:** your recommendation *and* Charles' decision,
+side by side, plus any instruction he gave that did not come from a seat.
+
+| # | Seat | Finding | Recommended | Charles' decision |
+|---|---|---|---|---|
+
+Never collapse the two into one verdict. Whether the orchestrator and the human agree — and where
+they diverge — is the point of running this mode, and a merged column destroys that record.
 
 ## Notes
 
