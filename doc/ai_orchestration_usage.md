@@ -105,7 +105,8 @@ Below that, free-form: **Goal**, **Constraints**, **Out of scope**. Be specific 
 
 ## After a run
 
-- A report lands in `doc/ai-orchestration/runs/<page>-<date>.md`: seat status, every finding with
+- A report lands in `doc/ai-orchestration/runs/<brief-basename>-<date>.md` — named after the brief,
+  so `doc/briefs/fix-header.md` produces `runs/fix-header-2026-08-03.md`: seat status, every finding with
   its verdict, what changed, and the before/after checks. In `--human-decision` mode it keeps
   **two columns** — Claude's recommendation and your decision, never merged, so the divergence is
   on record.
