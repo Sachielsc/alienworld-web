@@ -20,12 +20,23 @@
     width: 100%;
     z-index: 1003;
     position: fixed;
+    /* .aw-header also carries Bootstrap's .container, whose max-width caps the black
+       bar at 1320px - but its contents were position:fixed at 100% of the viewport.
+       Past 1320px the two disagreed and the right-hand icon walked off the bar. */
+    max-width: none;
+    /* The bar is deliberately full-bleed, so the container's gutter is vestigial. It
+       also costs the row 24px, which on a 390px phone is the difference between the
+       title clearing the icons and overlapping them by 10px a side. */
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .aw-header .aw-header-content {
     height: var(--aw-title-height);
     width: 100%;
-    position: fixed;
+    /* Was position:fixed, which measured 100% against the viewport instead of the
+       header and overflowed it by the container's gutter. */
+    position: relative;
     z-index: 1005;
     margin: 0;
 }
@@ -1215,6 +1226,40 @@ nav.aw-nav li, div.aw-contact li {
     width: auto;
     max-height: 100%;
     max-width: 100%;
+}
+
+/* From 576px up, stop using fixed 2/8/2 grid fractions: let each icon column hug
+   its icon and give the title column the slack. The three then stay flush against
+   one another at any window width instead of drifting apart as it grows.
+   Left below 576px, where the fixed fractions are what keeps the icons small
+   enough to stay clear of the title. */
+@media screen and (min-width: 576px) {
+    .aw-header .aw-header-content > [class*="col-"] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .aw-header .aw-header-content > .col-2 {
+        flex: 0 0 auto;
+        width: auto;
+    }
+
+    .aw-header .aw-header-content > .col-8 {
+        flex: 1 1 auto;
+        width: auto;
+        max-width: none;
+    }
+
+    /* In-flow now, so the column can size itself to the icon. Cap against the token
+       rather than 100%: once the icon is a flex item, a percentage height has no
+       definite parent height to resolve against and silently becomes 'none'. */
+    .aw-header .aw-header-content .menu-icon,
+    .aw-header .aw-header-content .contact-icon {
+        position: static;
+        transform: none;
+        max-height: var(--aw-title-height);
+    }
 }
 
 /* ---- phones -----------------------------------------------------------

@@ -209,7 +209,12 @@ re-consultation costs free-tier quota.
 
 Runs after whichever Phase D applied.
 
-- Write `doc/ai-orchestration/runs/<page>-<YYYY-MM-DD>.md` containing:
+- Write `doc/ai-orchestration/runs/<brief-basename>-<YYYY-MM-DD>.md` containing:
+
+  The name comes from the **brief file**, not the page: `doc/briefs/fix-header.md` produces
+  `runs/fix-header-2026-08-03.md`. That keeps each report next to the request that caused it, and
+  makes repeat runs of the same brief sort together.
+
   - the brief path and resolved file list
   - seat status per seat: `INDEPENDENT` or `SELF (reason)`
   - every suggestion with its verdict and reason
