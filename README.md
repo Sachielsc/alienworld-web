@@ -43,7 +43,7 @@ See [doc/deployment_guide.md](doc/deployment_guide.md) for the full CVM procedur
 ## AI orchestration (dev tooling)
 Frontend work can be run through `/frontend-beautify`, where Claude Code implements the change and
 two external models (a UI/UX designer and a code reviewer) critique the result. See
-`doc/ai-orchestration/USAGE.md`.
+`doc/ai_orchestration_usage.md`.
 
 ## Modules
 - Workshop (state panel, skill tree, work reports, study notes, CV)

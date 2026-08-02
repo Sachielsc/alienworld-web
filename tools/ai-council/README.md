@@ -4,7 +4,7 @@ One OpenAI-compatible client that carries a question to an advisory model and br
 back as text. Used by the `/frontend-beautify` skill, but runnable on its own for debugging.
 
 This file documents **the script and its config only**. How to run the workflow is in
-`doc/ai-orchestration/USAGE.md`; the workflow itself lives in
+`doc/ai_orchestration_usage.md`; the workflow itself lives in
 `.claude/skills/frontend-beautify/SKILL.md`; the design rationale lives in
 `doc/prompts_and_plans/3.0_AI_orchestration_system.md`. Deliberately not repeated here.
 
