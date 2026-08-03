@@ -1,13 +1,20 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { useAuth } from './lib/useAuth';
 import AppFooter from './components/AppFooter.vue';
 
 const preloaderDone = ref(false);
 const preloaderGone = ref(false);
 const picDisplayToggle = ref(false);
-const navDisplayToggle = ref(true);
-const contactDisplayToggle = ref(false);
+
+// Which menu is selected, and whether it is showing, are two separate things. Holding
+// them as one flag each made the buttons interfere: the egg would silently change the
+// selection, and the secret icon could leave both menus hidden.
+const activeMenu = ref('nav');   // 'nav' | 'contact'
+const menuVisible = ref(true);
+
+const navDisplayToggle = computed(() => menuVisible.value && activeMenu.value === 'nav');
+const contactDisplayToggle = computed(() => menuVisible.value && activeMenu.value === 'contact');
 const headerVisible = ref(true);
 
 const { fetchMe } = useAuth();
@@ -25,14 +32,17 @@ onMounted(() => {
 
 onUnmounted(() => window.removeEventListener('scroll', onScroll));
 
-function toggleNav() {
-  navDisplayToggle.value = !navDisplayToggle.value;
-  contactDisplayToggle.value = false;
+// The egg only shows and hides. Whichever menu is selected stays selected, so hiding
+// and showing again brings back the same one.
+function toggleMenu() {
+  menuVisible.value = !menuVisible.value;
 }
 
-function toggleContact() {
-  contactDisplayToggle.value = !contactDisplayToggle.value;
-  navDisplayToggle.value = false;
+// The secret icon only switches. It reveals the menu it switches to, so a click always
+// has a visible effect even when the egg has hidden everything.
+function switchMenu() {
+  activeMenu.value = activeMenu.value === 'nav' ? 'contact' : 'nav';
+  menuVisible.value = true;
 }
 </script>
 
@@ -47,14 +57,14 @@ function toggleContact() {
   >
     <div class="row aw-header-content">
       <div class="col-2">
-        <img src="/images/egg.jpeg" alt="menu icon" class="menu-icon" title="Menu" @click="toggleNav">
+        <img src="/images/egg.jpeg" alt="menu icon" class="menu-icon" title="Display/Hide the menu" @click="toggleMenu">
       </div>
       <div class="col-8 aw-title">
         <div class="title-pic" :class="{ 'menu-hidden': !picDisplayToggle }"></div>
         <router-link to="/" title="Home Page" class="title-text">Charles' Alien World</router-link>
       </div>
       <div class="col-2">
-        <img src="/images/head.jpg" alt="Contact Me" class="contact-icon" title="the Secret Icon" @click="toggleContact">
+        <img src="/images/head.jpg" alt="Contact Me" class="contact-icon" title="Know about the author" @click="switchMenu">
       </div>
     </div>
 

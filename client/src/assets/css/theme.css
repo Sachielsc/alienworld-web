@@ -8,6 +8,12 @@
     --aw-card-padding: 15px;
     --aw-card-gap: 20px;
     --aw-para-gap: 1rem;
+    /* Width of each icon column from 576px up. Fixed rather than content-sized so the
+       title column's span is knowable in CSS - the contact menu insets by exactly this
+       to line up with it. Keeping both columns equal also centres the title properly;
+       sized to content they differ (228 vs 184) because the two images have different
+       aspect ratios. */
+    --aw-icon-col: 228px;
 }
 
 .aw-header {
@@ -1242,7 +1248,7 @@ nav.aw-nav li, div.aw-contact li {
 
     .aw-header .aw-header-content > .col-2 {
         flex: 0 0 auto;
-        width: auto;
+        width: var(--aw-icon-col);
     }
 
     .aw-header .aw-header-content > .col-8 {
@@ -1259,6 +1265,45 @@ nav.aw-nav li, div.aw-contact li {
         position: static;
         transform: none;
         max-height: var(--aw-title-height);
+    }
+
+    /* The contact menu (revealed by the secret icon) is a sibling of the header row,
+       so at width:100% its first link sat 157px left of the title column - on top of
+       the egg. Inset it by one icon column each side so it spans exactly the title
+       column, and lay the five links out edge to edge across that span. */
+    div.aw-contact {
+        padding-left: var(--aw-icon-col);
+        padding-right: var(--aw-icon-col);
+    }
+
+    div.aw-contact .nav {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    div.aw-contact .nav > li {
+        flex: 0 0 auto;
+        width: auto;
+        padding: 0;
+    }
+
+    div.aw-contact .nav > li:empty {
+        display: none;
+    }
+
+    div.aw-contact a {
+        position: static;
+        transform: none;
+    }
+
+    /* The shared hover rule re-absolutises the link and doubles its font size. In an
+       in-flow row that would make it jump to the centre and shove its neighbours
+       sideways, so scale instead - same affordance, no reflow. */
+    div.aw-contact a:hover {
+        position: static;
+        font-size: inherit;
+        transform: scale(1.35);
     }
 }
 

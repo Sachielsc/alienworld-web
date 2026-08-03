@@ -13,7 +13,7 @@ const currentDate = `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()}
         <router-link to="/about/workreport">work reports</router-link>.<br>
         <br>Click <span>"The Egg"</span> on the title bar to <span>display / hide</span> the navigation menu.<br>
         To contact the author, click <router-link to="/about/contactme">HERE</router-link> or click
-        <span>"The Secret Icon"</span> on the title bar.
+        <span>"Know about the author"</span> on the title bar.
       </p>
       <div class="separator"></div>
       <p>Today's New Feature:</p>
