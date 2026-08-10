@@ -2,7 +2,7 @@
 
 ## General Rules
 - Always prioritize minimal changes
-- Avoid reading archived folders unless explicitly asked, archived folders' path: `doc\Archived`
+- Avoid reading archived folders unless explicitly asked, archived folders' path: `docs\Archived`
 - If asked to perform/build a large feature, i.e. roughly >=50 lines of code change, discuss with me about the overall plan before you write any code
 
 ## Testing Rules

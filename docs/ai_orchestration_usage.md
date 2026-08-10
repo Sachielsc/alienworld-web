@@ -11,8 +11,8 @@ Related docs, each with one job:
 | **this file** | how to run it, and what you'll be asked |
 | `tools/ai-council/README.md` | the `ask.mjs` script: flags, exit codes, model config, troubleshooting |
 | `.claude/skills/frontend-beautify/SKILL.md` | the authoritative workflow the orchestrator follows |
-| `doc/prompts_and_plans/3.0_AI_orchestration_system.md` | why it is built this way |
-| `doc/ai-orchestration/runs/` | the record of every run |
+| `docs/prompts_and_plans/3.0_AI_orchestration_system.md` | why it is built this way |
+| `docs/ai-orchestration/runs/` | the record of every run |
 
 ## Before a run
 
@@ -35,7 +35,7 @@ Related docs, each with one job:
 /frontend-beautify "<absolute path to a brief>" --human-decision
 ```
 
-Quote the path. Briefs live in `doc/briefs/`; copy `doc/briefs/beautify-home.md`, which is an
+Quote the path. Briefs live in `docs/briefs/`; copy `docs/briefs/beautify-home.md`, which is an
 annotated template with every option documented inline.
 
 ## The two modes
@@ -86,7 +86,7 @@ when you intend to steer mid-run.
 
 ## Writing a brief
 
-Copy `doc/briefs/beautify-home.md`. The frontmatter is all optional overrides — anything omitted
+Copy `docs/briefs/beautify-home.md`. The frontmatter is all optional overrides — anything omitted
 falls back to `tools/ai-council/config.json`:
 
 ```yaml
@@ -105,8 +105,8 @@ Below that, free-form: **Goal**, **Constraints**, **Out of scope**. Be specific 
 
 ## After a run
 
-- A report lands in `doc/ai-orchestration/runs/<brief-basename>-<date>.md` — named after the brief,
-  so `doc/briefs/fix-header.md` produces `runs/fix-header-2026-08-03.md`: seat status, every finding with
+- A report lands in `docs/ai-orchestration/runs/<brief-basename>-<date>.md` — named after the brief,
+  so `docs/briefs/fix-header.md` produces `runs/fix-header-2026-08-03.md`: seat status, every finding with
   its verdict, what changed, and the before/after checks. In `--human-decision` mode it keeps
   **two columns** — Claude's recommendation and your decision, never merged, so the divergence is
   on record.

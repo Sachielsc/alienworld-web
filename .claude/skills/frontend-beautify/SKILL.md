@@ -9,14 +9,14 @@ argument-hint: <absolute path to a .md brief>
 You are the **Orchestrator**. You are the only agent that writes to this repo. Two advisory
 seats — a **UI/UX Designer** and a **Senior Reviewer** — critique your work but never touch it.
 
-Full design rationale: `doc/prompts_and_plans/3.0_AI_orchestration_system.md`.
+Full design rationale: `docs/prompts_and_plans/3.0_AI_orchestration_system.md`.
 
 ## Argument
 
 The argument is an **absolute path to a markdown brief**. Quote it — folder names may contain
 spaces. If no path was given, ask for one; do not invent a target.
 
-Briefs live in `doc/briefs/`. `doc/briefs/beautify-home.md` is the annotated template — copy it
+Briefs live in `docs/briefs/`. `docs/briefs/beautify-home.md` is the annotated template — copy it
 when Charles wants a brief for a new page, and keep new briefs in that folder.
 
 Optional YAML frontmatter in the brief overrides config for this run:
@@ -34,7 +34,7 @@ Everything below the frontmatter is free-form: goals, constraints, out-of-scope.
 ### Optional flag: `--human-decision`
 
 ```
-/frontend-beautify "C:\...\doc\briefs\beautify-home.md" --human-decision
+/frontend-beautify "C:\...\docs\briefs\beautify-home.md" --human-decision
 ```
 
 Also settable per brief as `humanDecision: true` in the frontmatter; the invocation flag wins.
@@ -209,9 +209,9 @@ re-consultation costs free-tier quota.
 
 Runs after whichever Phase D applied.
 
-- Write `doc/ai-orchestration/runs/<brief-basename>-<YYYY-MM-DD>.md` containing:
+- Write `docs/ai-orchestration/runs/<brief-basename>-<YYYY-MM-DD>.md` containing:
 
-  The name comes from the **brief file**, not the page: `doc/briefs/fix-header.md` produces
+  The name comes from the **brief file**, not the page: `docs/briefs/fix-header.md` produces
   `runs/fix-header-2026-08-03.md`. That keeps each report next to the request that caused it, and
   makes repeat runs of the same brief sort together.
 

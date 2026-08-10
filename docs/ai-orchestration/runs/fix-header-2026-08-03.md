@@ -1,6 +1,6 @@
 # Run: site-wide header — 2026-08-03
 
-Brief: `doc/briefs/fix-header.md` · Target: the global header (verified on `/`)
+Brief: `docs/briefs/fix-header.md` · Target: the global header (verified on `/`)
 Mode: **`--human-decision`** — Charles decided what was applied. `revisionRounds` ignored.
 
 Resolved file list: `client/src/assets/css/theme.css` (changed),

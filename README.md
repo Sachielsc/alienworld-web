@@ -32,7 +32,7 @@ Production build check: run `npm run build`, then `npm start`, then open http://
 
 ## Deployment
 
-See [doc/deployment_guide.md](doc/deployment_guide.md) for the full CVM procedure
+See [docs/deployment_guide.md](docs/deployment_guide.md) for the full CVM procedure
 (Docker Compose, nginx, certbot).
 
 ## Auth model
@@ -43,7 +43,7 @@ See [doc/deployment_guide.md](doc/deployment_guide.md) for the full CVM procedur
 ## AI orchestration (dev tooling)
 Frontend work can be run through `/frontend-beautify`, where Claude Code implements the change and
 two external models (a UI/UX designer and a code reviewer) critique the result. See
-`doc/ai_orchestration_usage.md`.
+`docs/ai_orchestration_usage.md`.
 
 ## Modules
 - Workshop (state panel, skill tree, work reports, study notes, CV)

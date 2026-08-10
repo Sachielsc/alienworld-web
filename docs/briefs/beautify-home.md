@@ -24,7 +24,7 @@ seats:                       # OVERRIDES ONLY - any line you omit keeps its defa
 > takes one of these:
 >
 > ```
-> /frontend-beautify "C:\Users\gaide\repos\alienworld-web\doc\briefs\beautify-home.md"
+> /frontend-beautify "C:\Users\gaide\repos\alienworld-web\docs\briefs\beautify-home.md"
 > ```
 >
 > Copy it per page and edit the frontmatter and the sections below.

@@ -8,7 +8,7 @@ server/data
 .claude
 .playwright-mcp
 *.jpeg
-doc
+docs
 public
 server.js
 README.md

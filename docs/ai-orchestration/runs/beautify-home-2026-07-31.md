@@ -1,6 +1,6 @@
 # Run: home page — 2026-07-31
 
-Brief: `doc/briefs/beautify-home.md` · Target: `/` · revisionRounds: 1 (one pass, completed)
+Brief: `docs/briefs/beautify-home.md` · Target: `/` · revisionRounds: 1 (one pass, completed)
 
 Resolved file list: `client/src/views/HomeView.vue`, `client/src/assets/css/theme.css`,
 `client/src/App.vue` (read only — nav markup, not modified)
