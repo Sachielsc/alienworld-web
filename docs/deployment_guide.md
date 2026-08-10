@@ -1,22 +1,49 @@
 # Deployment Guide — Tencent Cloud CVM (Hong Kong)
 
-How to deploy alienworld-web v4 to the existing CVM (`seekschool-app-hk`). The stack is
-Docker Compose: `app` (Node/Express serving the built Vue client on internal port **3010**)
-+ `nginx` (ports 80/443, TLS) + `certbot` (on-demand, certificate issue/renew).
+How to deploy alienworld-web to the existing CVM (`seekschool-app-hk`) at
 
-Port 3010 was chosen because 3000–3002 are already taken by the seekschool/seekspot containers.
+**https://hobbies.seekschool.nz/alienworld/**
+
+The CVM's **host nginx already owns ports 80/443** for seekschool.nz and its subdomains, so
+it terminates TLS and reverse-proxies this app. Only the `app` container is started here; the
+`nginx` and `certbot` services in `docker-compose.yml` are for a bare host and stay switched
+off behind the `standalone` profile.
+
+```
+browser ──► host nginx :443 ──────────► alienworld app :3010 (127.0.0.1, container)
+            hobbies.seekschool.nz       Express + built Vue client
+              /alienworld/
+```
+
+Port 3010 was chosen because 3000–3003 are already taken by the seekschool/seekspot containers.
+
+## About the sub-path
+
+The site is served under `/alienworld/`, not at the subdomain root, so more hobby projects can
+join `hobbies.seekschool.nz` later. The prefix is **not** stripped by nginx — Express mounts the
+whole site under it, so the app behaves identically in `npm run dev`, in `npm start`, and in
+production. The prefix is set in two places and they must agree:
+
+| Where | Setting |
+|---|---|
+| `client/vite.config.js` | `base = '/alienworld/'` — baked into built asset URLs at **build** time |
+| `docker-compose.yml` | `BASE_PATH: /alienworld` — read by `server/index.js` at **runtime** |
+
+Changing the path means changing both **and rebuilding the image** — the client base is
+compiled in, not read from the environment.
 
 ## 0. One-time prerequisites
 
-1. **DNS**: create an `A` record for your domain (e.g. `alienworld.your-domain.nz`) pointing to the
-   CVM's public IP. Wait until `nslookup alienworld.your-domain.nz` resolves.
+1. **DNS**: create an `A` record for `hobbies.seekschool.nz` pointing to the CVM's public IP.
+   Wait until `nslookup hobbies.seekschool.nz` resolves.
    (CVM is in Hong Kong → no ICP filing needed.)
-2. **Tencent security group**: allow inbound TCP **80** and **443**.
-3. **Check nothing on the host uses 80/443** (containers don't, we saw; this checks the host too):
+2. **Tencent security group**: 80 and 443 are already open for the existing sites.
+3. **Confirm the host nginx owns 80/443**:
    ```bash
    sudo ss -tlnp | grep -E ':80 |:443 '
    ```
-   No output → free, continue. If a host nginx shows up, use the "Existing host nginx" section at the bottom instead of the nginx container.
+   Expect an `nginx` master process. If nothing is listening, you have a bare host — use the
+   *Bare-host alternative* section at the bottom instead.
 
 ## 1. Get the code onto the CVM
 
@@ -40,53 +67,65 @@ Fill in:
 
 `chmod 600 .env` is a good habit.
 
-## 3. Set the domain in nginx config
+## 3. Start the app container
 
 ```bash
-sed -i 's/YOUR_DOMAIN/alienworld.your-domain.nz/g' nginx/conf.d/alienworld.conf
+docker compose up -d --build                  # starts `app` only; nginx/certbot are profiled off
+curl -s localhost:3010/alienworld/api/health  # {"status":"ok"}
 ```
 
-## 4. First start + TLS certificate (bootstrap order matters)
+The container binds to `127.0.0.1:3010`, so it is not reachable from the internet until nginx
+proxies to it.
 
-nginx can't start its 443 block before a certificate exists, so first boot runs HTTP-only:
+## 4. Add the server block to the host nginx
+
+`nginx/conf.d/alienworld.conf` in this repo is the reference. If `hobbies.seekschool.nz` has no
+server block yet, copy the whole file; if it already has one, copy just the two `location` blocks
+into it.
 
 ```bash
-# temporarily disable the 443 server block (first run only)
-sed -i 's/^server {$/#server {/2' nginx/conf.d/alienworld.conf   # or comment the 443 block by hand
-
-docker compose up -d --build          # starts app + nginx (HTTP only)
-
-# issue the certificate via the ACME webroot
-docker compose run --rm certbot certonly --webroot -w /var/www/certbot \
-  -d alienworld.your-domain.nz --email sachielsc@gmail.com --agree-tos --no-eff-email
-
-# restore the 443 block (undo the comment), then:
-docker compose exec nginx nginx -s reload
+sudo cp nginx/conf.d/alienworld.conf /etc/nginx/conf.d/hobbies.seekschool.nz.conf
 ```
 
-Easier alternative for the comment/uncomment dance: keep a copy of the full config
-(`cp nginx/conf.d/alienworld.conf /tmp/full.conf`) before commenting, restore it after certbot.
-
-## 5. Verify
+nginx will not start with `ssl_certificate` pointing at a file that does not exist yet, so
+comment out the whole port-443 block for now, then:
 
 ```bash
-curl -I https://alienworld.your-domain.nz            # 200, HTTP redirects to HTTPS
-curl https://alienworld.your-domain.nz/api/health     # {"status":"ok"}
+sudo nginx -t && sudo systemctl reload nginx
 ```
 
-In a browser: click through the site, **Sign In** (secret-icon menu → Sign In) with the admin
-account, confirm Cover Letter and Work Log render; sign out and confirm they show the
-authorization prompt instead.
+## 5. TLS certificate
 
-## 6. Certificate renewal (cron)
-
-Let's Encrypt certs last 90 days. Add a monthly renewal:
+Use the **host** certbot — the certbot container shares no state with the host nginx:
 
 ```bash
-crontab -e
-# add:
-0 4 1 * * cd ~/alienworld-web && docker compose run --rm certbot renew && docker compose exec nginx nginx -s reload
+sudo certbot --nginx -d hobbies.seekschool.nz
 ```
+
+certbot writes the `ssl_certificate` lines and the port-443 block itself. Re-add anything from
+the reference config it did not create (the two `location` blocks, the HSTS header), then:
+
+```bash
+sudo nginx -t && sudo systemctl reload nginx
+```
+
+Renewal is already handled by the system certbot timer serving the other subdomains — confirm
+with `systemctl list-timers | grep certbot`. No extra cron needed.
+
+## 6. Verify
+
+```bash
+curl -I  https://hobbies.seekschool.nz/alienworld/            # 200
+curl -sI https://hobbies.seekschool.nz/alienworld | head -1   # 301 → /alienworld/
+curl -s  https://hobbies.seekschool.nz/alienworld/api/health  # {"status":"ok"}
+```
+
+In a browser at `https://hobbies.seekschool.nz/alienworld/`:
+- images and fonts load with no 404s in devtools — **this is what a sub-path most often breaks**
+- deep links survive a **hard refresh**, e.g. `/alienworld/about/workreport/report1`
+- **Sign In** (secret-icon menu → Sign In) with the admin account; confirm Cover Letter and Work
+  Log render, then sign out and confirm they show the authorization prompt instead
+- the session cookie shows `Path=/alienworld` under devtools → Application → Cookies
 
 ## Updating the site later
 
@@ -106,10 +145,37 @@ git checkout <commit>
 docker compose up -d --build
 ```
 
-## Alternative: existing host nginx on 80/443
+## Adding a second hobby project to this subdomain
 
-If the host already runs nginx, skip the `nginx`/`certbot` containers
-(`docker compose up -d --build app` only — the app listens on `127.0.0.1:3010`) and add a
-server block to the host nginx that proxies to `http://127.0.0.1:3010` with the same
-`proxy_set_header` lines as in `nginx/conf.d/alienworld.conf`, using `certbot --nginx` on the
-host for TLS.
+Give it its own port and its own `location` block beside `/alienworld/`:
+
+```nginx
+location /someproject/ {
+    proxy_pass http://127.0.0.1:3011;
+    # ...same proxy_set_header lines
+}
+```
+
+Each app scopes its session cookie to its own prefix, so they cannot read each other's sessions.
+
+## Bare-host alternative: no host nginx
+
+If nothing owns 80/443, this repo can run its own nginx + certbot. Point `proxy_pass` at the
+container (`http://app:3010`) instead of localhost, then:
+
+```bash
+# comment out the port-443 block for the first run - no certificate exists yet
+docker compose --profile standalone up -d --build
+
+docker compose run --rm certbot certonly --webroot -w /var/www/certbot \
+  -d hobbies.seekschool.nz --email sachielsc@gmail.com --agree-tos --no-eff-email
+
+# restore the 443 block, then:
+docker compose exec nginx nginx -s reload
+```
+
+Add a renewal cron, since there is no system certbot timer in this setup:
+
+```bash
+0 4 1 * * cd ~/alienworld-web && docker compose run --rm certbot renew && docker compose exec nginx nginx -s reload
+```

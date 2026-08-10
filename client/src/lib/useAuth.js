@@ -1,10 +1,11 @@
 import { ref, computed } from 'vue';
+import { apiUrl } from './apiUrl';
 
 const user = ref(null);
 const loaded = ref(false);
 
 async function api(path, body) {
-  const res = await fetch(path, body === undefined ? undefined : {
+  const res = await fetch(apiUrl(path), body === undefined ? undefined : {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body),

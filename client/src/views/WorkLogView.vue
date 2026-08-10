@@ -2,13 +2,14 @@
 import { ref, watchEffect } from 'vue';
 import ProtectedGate from '../components/ProtectedGate.vue';
 import { useAuth } from '../lib/useAuth';
+import { apiUrl } from '../lib/apiUrl';
 
 const { isAdmin } = useAuth();
 const html = ref('');
 
 watchEffect(async () => {
   if (!isAdmin.value || html.value) return;
-  const res = await fetch('/api/protected/worklog');
+  const res = await fetch(apiUrl('/api/protected/worklog'));
   if (res.ok) html.value = (await res.json()).html;
 });
 </script>

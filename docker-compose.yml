@@ -8,16 +8,21 @@ services:
     environment:
       NODE_ENV: production
       PORT: "3010"
+      # public sub-path; must match `base` in client/vite.config.js (no trailing slash)
+      BASE_PATH: /alienworld
     # bound to localhost only; nginx (container or host) is the public entrance
     ports:
       - "127.0.0.1:3010:3010"
     volumes:
       - app-data:/app/server/data
 
+  # Only for a bare host with nothing on 80/443: `docker compose --profile standalone up -d`.
+  # The CVM already runs a host nginx, so the default `up -d` starts `app` alone.
   nginx:
     image: nginx:1.27-alpine
     container_name: alienworld-nginx
     restart: unless-stopped
+    profiles: ["standalone"]
     depends_on:
       - app
     ports:

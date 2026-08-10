@@ -2,6 +2,7 @@
 import { ref, watchEffect } from 'vue';
 import ProtectedGate from '../components/ProtectedGate.vue';
 import { useAuth } from '../lib/useAuth';
+import { apiUrl } from '../lib/apiUrl';
 
 const { isAdmin } = useAuth();
 
@@ -14,7 +15,7 @@ const letterBody = ref('');
 
 watchEffect(async () => {
   if (!isAdmin.value || letterBody.value) return;
-  const res = await fetch('/api/protected/coverletter');
+  const res = await fetch(apiUrl('/api/protected/coverletter'));
   if (res.ok) letterBody.value = (await res.json()).html;
 });
 

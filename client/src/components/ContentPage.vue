@@ -10,12 +10,18 @@ const router = useRouter();
 const root = ref(null);
 const html = ref('');
 
+// Fragments are imported raw, so Vite's asset rewriting never sees them: public-folder
+// references have to be re-pointed at the deployed base path by hand. Only `src` is
+// touched - `href` links stay root-relative so onClick() can hand them to the router
+// (which prepends the base itself), and `url(...)` occurrences are code samples, not CSS.
+const withBase = (raw) => raw.replace(/src="\/(images|fonts)\//g, `src="${import.meta.env.BASE_URL}$1/`);
+
 watch(
   () => route.meta.content,
   async (key) => {
     if (!key) return;
     const loader = modules[`../content/${key}.html`];
-    html.value = loader ? await loader() : '<div class="container"><p>Content not found.</p></div>';
+    html.value = loader ? withBase(await loader()) : '<div class="container"><p>Content not found.</p></div>';
   },
   { immediate: true },
 );

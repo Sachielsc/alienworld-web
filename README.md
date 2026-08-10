@@ -24,16 +24,20 @@ cp .env.example .env   # fill in dev values (see comments in the file)
 npm run dev            # Express on :3010 + Vite dev server on :5173
 ```
 
-Open http://localhost:5173. The admin account is seeded from `ADMIN_USERNAME`/`ADMIN_PASSWORD`
-in `.env`.
+Open http://localhost:5173/alienworld/. The admin account is seeded from
+`ADMIN_USERNAME`/`ADMIN_PASSWORD` in `.env`.
 
-Production build check: run `npm run build`, then `npm start`, then open http://localhost:3010.
+Production build check: run `npm run build`, then `npm start`, then open
+http://localhost:3010/alienworld/ (`/` redirects there).
 (In Windows PowerShell 5.1 run them as two commands — `&&` isn't supported there.)
 
 ## Deployment
 
-See [docs/deployment_guide.md](docs/deployment_guide.md) for the full CVM procedure
-(Docker Compose, nginx, certbot).
+Deployed at **https://hobbies.seekschool.nz/alienworld/** — a sub-path, so other hobby
+projects can share the subdomain. The prefix is set in `client/vite.config.js` (`base`,
+build time) and `docker-compose.yml` (`BASE_PATH`, runtime); the two must agree.
+
+See [docs/deployment_guide.md](docs/deployment_guide.md) for the full CVM procedure.
 
 ## Auth model
 - Anyone can register a **member** account (foundation for future Community Hub features).
