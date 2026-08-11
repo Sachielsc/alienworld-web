@@ -16,13 +16,12 @@ services:
     volumes:
       - app-data:/app/server/data
 
-  # Only for a bare host with nothing on 80/443: `docker compose --profile standalone up -d`.
-  # The CVM already runs a host nginx, so the default `up -d` starts `app` alone.
+  # Verified 2026-08-11: nothing else on the CVM listens on 80/443, so this container owns
+  # them and terminates TLS. Starts with the default `docker compose up -d`.
   nginx:
     image: nginx:1.27-alpine
     container_name: alienworld-nginx
     restart: unless-stopped
-    profiles: ["standalone"]
     depends_on:
       - app
     ports:

@@ -44,6 +44,19 @@ See [docs/deployment_guide.md](docs/deployment_guide.md) for the full CVM proced
 - The **admin** account (env-seeded) is the only role that can view the protected pages
   (Cover Letter, Work Log); their content is served by the API, not as static files.
 
+Full breakdown — including what is deliberately *not* protected — in
+[docs/security_model.md](docs/security_model.md).
+
+## Docs
+| | |
+|---|---|
+| [docs/deployment_guide.md](docs/deployment_guide.md) | CVM deployment procedure |
+| [docs/infrastructure_notes.md](docs/infrastructure_notes.md) | seekschool.nz DNS/hosting map, CVM details |
+| [docs/security_model.md](docs/security_model.md) | What protects the admin-only content |
+| [docs/todo/future_work.md](docs/todo/future_work.md) | Deferred work and why |
+| [docs/local_dev_guide.md](docs/local_dev_guide.md) | Local development |
+| [docs/prompts_and_plans/](docs/prompts_and_plans/) | Design decisions and their rationale |
+
 ## AI orchestration (dev tooling)
 Frontend work can be run through `/frontend-beautify`, where Claude Code implements the change and
 two external models (a UI/UX designer and a code reviewer) critique the result. See

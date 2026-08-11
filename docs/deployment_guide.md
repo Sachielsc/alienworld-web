@@ -4,16 +4,29 @@ How to deploy alienworld-web to the existing CVM (`seekschool-app-hk`) at
 
 **https://hobbies.seekschool.nz/alienworld/**
 
-The CVM's **host nginx already owns ports 80/443** for seekschool.nz and its subdomains, so
-it terminates TLS and reverse-proxies this app. Only the `app` container is started here; the
-`nginx` and `certbot` services in `docker-compose.yml` are for a bare host and stay switched
-off behind the `standalone` profile.
+**Routing: direct `A` record, no CDN** (decided 2026-08-11). EdgeOne was considered and
+rejected — the mainland acceleration that justifies it for `preprod`/`sandbox` is irrelevant for
+an NZ/international audience, and putting a cache in front of an authenticated app is the one
+new way to leak the admin-only content. It is also cheap to reverse later: DNS + certificate +
+an nginx tweak, **no code changes**. Full trade-off in `docs/infrastructure_notes.md`.
+
+**There is no host nginx on this CVM** — verified 2026-08-11, nothing listens on 80 or 443. So
+this stack runs its own nginx and certbot containers, and `docker compose up -d` starts all
+three services. (An earlier draft of this guide assumed a host nginx; that came from believing
+`preprod` was proxied by this CVM. It is not — it is EdgeOne → COS.)
+
+> ✅ **Prerequisites are done** (2026-08-11): the `A` record resolves, and the security group
+> already allows 80/443 from anywhere. The ports currently answer *Connection refused* simply
+> because **nothing is bound to them yet** — the nginx container fixes that on first boot.
 
 ```
-browser ──► host nginx :443 ──────────► alienworld app :3010 (127.0.0.1, container)
-            hobbies.seekschool.nz       Express + built Vue client
-              /alienworld/
+browser ──► nginx container :443 ──────► app container :3010
+            hobbies.seekschool.nz        Express + built Vue client
+              /alienworld/               reached as `app:3010` over the compose network
 ```
+
+Port 3010 is published on `127.0.0.1` only, so the app is never directly reachable from the
+internet — all traffic goes through nginx.
 
 Port 3010 was chosen because 3000–3003 are already taken by the seekschool/seekspot containers.
 
@@ -34,16 +47,25 @@ compiled in, not read from the environment.
 
 ## 0. One-time prerequisites
 
-1. **DNS**: create an `A` record for `hobbies.seekschool.nz` pointing to the CVM's public IP.
+1. **DNS**: create an `A` record, host `hobbies` (the label only — the panel appends the zone),
+   value **`119.28.71.31`** — the CVM's public IP, see `docs/infrastructure_notes.md`.
    Wait until `nslookup hobbies.seekschool.nz` resolves.
    (CVM is in Hong Kong → no ICP filing needed.)
-2. **Tencent security group**: 80 and 443 are already open for the existing sites.
-3. **Confirm the host nginx owns 80/443**:
-   ```bash
-   sudo ss -tlnp | grep -E ':80 |:443 '
-   ```
-   Expect an `nginx` master process. If nothing is listening, you have a bare host — use the
-   *Bare-host alternative* section at the bottom instead.
+2. **Tencent security group — already correct, no change needed.** `sg-89tmzt27` allows
+   inbound `TCP:80` and `TCP:443` from `0.0.0.0/0` and `::/0`, and has since the instance was
+   created.
+
+   Note what this means: 80/443 answering *Connection refused* was **never a firewall issue**.
+   A blocked packet is dropped and the client hangs until timeout; a refusal is a TCP RST,
+   which only the host sends — i.e. the packet arrived and no process was listening. Keep the
+   rules scoped to 80/443 so the containers on 3000–3003 stay unreachable.
+3. **Set a billing alert** in the Tencent console. The instance is billed **by traffic**, so a
+   flood or a runaway bot shows up as money. This is the cheap answer to the risk a CDN would
+   otherwise cover.
+
+*(Already established 2026-08-11: `sudo ss -tlnp | grep -E ':80 |:443 '` returns nothing —
+no host nginx exists, which is why this guide runs nginx as a container. Re-run it if the box
+changes.)*
 
 ## 1. Get the code onto the CVM
 
@@ -67,50 +89,54 @@ Fill in:
 
 `chmod 600 .env` is a good habit.
 
-## 3. Start the app container
+## 3. First boot — HTTP only
+
+nginx cannot start the port-443 block before a certificate exists, so swap in the HTTP-only
+bootstrap config for the first run:
 
 ```bash
-docker compose up -d --build                  # starts `app` only; nginx/certbot are profiled off
-curl -s localhost:3010/alienworld/api/health  # {"status":"ok"}
+mv nginx/conf.d/alienworld.conf /tmp/alienworld.conf.real
+cp nginx/bootstrap-http-only.conf nginx/conf.d/alienworld.conf
+
+docker compose up -d --build      # app + nginx
+docker compose ps                 # both should be Up
 ```
 
-The container binds to `127.0.0.1:3010`, so it is not reachable from the internet until nginx
-proxies to it.
-
-## 4. Add the server block to the host nginx
-
-`nginx/conf.d/alienworld.conf` in this repo is the reference. If `hobbies.seekschool.nz` has no
-server block yet, copy the whole file; if it already has one, copy just the two `location` blocks
-into it.
+Check it end to end over plain HTTP before involving TLS:
 
 ```bash
-sudo cp nginx/conf.d/alienworld.conf /etc/nginx/conf.d/hobbies.seekschool.nz.conf
+curl -s http://hobbies.seekschool.nz/alienworld/api/health   # {"status":"ok"}
 ```
 
-nginx will not start with `ssl_certificate` pointing at a file that does not exist yet, so
-comment out the whole port-443 block for now, then:
+If that fails, fix it now — certbot will not succeed while the site is unreachable.
+
+## 4. TLS certificate
+
+The nginx and certbot containers share the `certbot-webroot` and `certbot-certs` volumes, so
+the webroot challenge works between them:
 
 ```bash
-sudo nginx -t && sudo systemctl reload nginx
+docker compose run --rm certbot certonly --webroot -w /var/www/certbot \
+  -d hobbies.seekschool.nz --email sachielsc@gmail.com --agree-tos --no-eff-email
 ```
 
-## 5. TLS certificate
-
-Use the **host** certbot — the certbot container shares no state with the host nginx:
+## 5. Restore the real config
 
 ```bash
-sudo certbot --nginx -d hobbies.seekschool.nz
+cp /tmp/alienworld.conf.real nginx/conf.d/alienworld.conf
+docker compose exec nginx nginx -t      # syntax + certificate both check out now
+docker compose exec nginx nginx -s reload
 ```
 
-certbot writes the `ssl_certificate` lines and the port-443 block itself. Re-add anything from
-the reference config it did not create (the two `location` blocks, the HSTS header), then:
+## 5b. Certificate renewal
+
+There is no host certbot timer here, so add a cron entry:
 
 ```bash
-sudo nginx -t && sudo systemctl reload nginx
+crontab -e
+# add:
+0 4 1 * * cd ~/alienworld-web && docker compose run --rm certbot renew && docker compose exec nginx nginx -s reload
 ```
-
-Renewal is already handled by the system certbot timer serving the other subdomains — confirm
-with `systemctl list-timers | grep certbot`. No extra cron needed.
 
 ## 6. Verify
 
@@ -147,35 +173,27 @@ docker compose up -d --build
 
 ## Adding a second hobby project to this subdomain
 
-Give it its own port and its own `location` block beside `/alienworld/`:
+Add it as a service in `docker-compose.yml` and give it a sibling `location` block. Reach it by
+**compose service name**, not localhost — inside the nginx container, `127.0.0.1` is the
+container itself:
 
 ```nginx
 location /someproject/ {
-    proxy_pass http://127.0.0.1:3011;
+    proxy_pass http://someproject:3011;
     # ...same proxy_set_header lines
 }
 ```
 
 Each app scopes its session cookie to its own prefix, so they cannot read each other's sessions.
 
-## Bare-host alternative: no host nginx
+## If a host nginx is ever added to this box
 
-If nothing owns 80/443, this repo can run its own nginx + certbot. Point `proxy_pass` at the
-container (`http://app:3010`) instead of localhost, then:
+Then this stack's nginx would conflict with it on 80/443. In that case:
 
-```bash
-# comment out the port-443 block for the first run - no certificate exists yet
-docker compose --profile standalone up -d --build
+- start the app alone: `docker compose up -d --build app`
+- copy `nginx/conf.d/alienworld.conf` into the host nginx as a server block, changing
+  `proxy_pass` to `http://127.0.0.1:3010` (the app publishes on localhost)
+- use `sudo certbot --nginx -d hobbies.seekschool.nz` for TLS instead of the certbot container,
+  and drop the renewal cron in favour of the host's certbot timer
 
-docker compose run --rm certbot certonly --webroot -w /var/www/certbot \
-  -d hobbies.seekschool.nz --email sachielsc@gmail.com --agree-tos --no-eff-email
-
-# restore the 443 block, then:
-docker compose exec nginx nginx -s reload
-```
-
-Add a renewal cron, since there is no system certbot timer in this setup:
-
-```bash
-0 4 1 * * cd ~/alienworld-web && docker compose run --rm certbot renew && docker compose exec nginx nginx -s reload
-```
+Nothing in the application changes — only who terminates TLS.
