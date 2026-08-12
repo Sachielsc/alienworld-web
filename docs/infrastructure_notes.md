@@ -55,7 +55,7 @@ between *direct to CVM* and *EdgeOne → CVM origin*.
 | Bandwidth | 10 Mbps, billed by traffic |
 | OS | Ubuntu Server 22.04 LTS |
 | Billing | **Monthly subscription**, expiry `2026-08-19`, auto-renew on |
-| Ports in use | 3000–3003 by seekschool/seekspot containers (inherited claim, **unverified**); alienworld uses **3010** |
+| Ports in use | Confirmed 2026-08-11 via `docker ps -a`: **3000** seekschool-backend-prod, **3001** seekschool-backend-preprod *(stopped for now)*, **3002** seekspot-backend-sandbox, **3003** seekspot-backend-demo. All published on `0.0.0.0` — only the 80/443-scoped security group keeps them off the internet. alienworld uses **3010** on `127.0.0.1` only; 3011+ left free for future hobby projects |
 | Security group | `sg-89tmzt27` — `TCP:80` + `TCP:443` from `0.0.0.0/0` and `::/0`; plus an ALL-ports rule for `192.168.0.0/16`, which is a **no-op** since this VPC subnet is `172.19.x` |
 | DNS | `hobbies.seekschool.nz` → `A` → `119.28.71.31`, created and propagated 2026-08-11 |
 

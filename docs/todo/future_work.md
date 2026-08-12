@@ -109,5 +109,54 @@ Prerequisites are now all settled (2026-08-11):
 - **no host nginx exists** (`ss -tlnp` shows nothing on 80/443), so the stack runs its own
   nginx + certbot containers
 
-Still outstanding: set a Tencent billing alert (the instance is billed by traffic), and verify
-the inherited claim that ports 3000–3003 are occupied (`docker ps`).
+Still outstanding: set a Tencent billing alert (the instance is billed by traffic).
+
+Port map confirmed on the CVM 2026-08-11 (`docker ps -a`): **3000** seekschool-backend-prod,
+**3001** seekschool-backend-preprod (stopped), **3002** seekspot-backend-sandbox, **3003**
+seekspot-backend-demo. Those publish on `0.0.0.0`, so the security group being scoped to 80/443
+is the only thing keeping them off the internet — keep it narrow. alienworld uses **3010**,
+published on `127.0.0.1` only, leaving 3011+ for future hobby projects.
+
+---
+
+## 6. Extract a shared `hobbies-gateway` (nginx + certbot)
+
+**Trigger: when a second project joins `hobbies.seekschool.nz`.** Do not do it before then —
+for a single app it is pure overhead.
+
+### The problem it fixes
+
+nginx and certbot currently live inside **alienworld-web's** `docker-compose.yml`. That makes
+alienworld the front door for the entire subdomain, so once project #2 exists:
+
+- project #2's traffic routes through **alienworld's** nginx container
+- `docker compose down` in alienworld-web takes project #2 offline with it
+- the certificate for `hobbies.seekschool.nz` is managed inside one app's project, though it
+  covers all of them
+- every new project means editing `nginx/conf.d/alienworld.conf` in **this** repo
+
+### The shape
+
+A small separate compose project — nginx + certbot only, owning 80/443, the certificate volumes,
+and one `location` block per app — plus a shared external Docker network:
+
+```bash
+docker network create hobbies-net
+```
+
+Each app then:
+
+- **stops** publishing 80/443 and stops shipping an nginx service
+- joins `hobbies-net` as an external network
+- is reached by the gateway as `<service>:<port>` over that network, exactly as
+  `proxy_pass http://app:3010` works today
+
+Nothing in the application code changes — `BASE_PATH`, the Vite `base`, and the sub-path
+handling are all unaffected. It is purely a question of which compose project owns the
+front door.
+
+### Migration note
+
+The certificate lives in the `certbot-certs` volume of *this* project. Moving it means either
+re-issuing with certbot in the new gateway project (simplest — Let's Encrypt is free and
+scriptable) or copying the volume across.
