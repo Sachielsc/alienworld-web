@@ -110,8 +110,13 @@ exist, and certbot cannot create that file until nginx serves the ACME challenge
 
 ```bash
 NGINX_CONF_DIR=./nginx/bootstrap docker compose up -d --build
-docker compose ps                 # app + nginx should both be Up
+docker compose ps                 # app: Up (healthy), nginx: Up
 ```
+
+nginx waits for the app's healthcheck to pass before starting, so this takes ~20–30s longer
+than the containers alone. If the app never becomes healthy, compose fails loudly with
+`dependency failed to start: container alienworld-app is unhealthy` — check
+`docker compose logs app` (a blank `SESSION_SECRET` in `.env` is the usual cause).
 
 Check it end to end over plain HTTP before involving TLS:
 
@@ -140,8 +145,10 @@ docker compose up -d
 docker compose exec nginx nginx -t      # syntax + certificate both check out now
 ```
 
-If `nginx -t` reports `host not found in upstream "app"`, the app container is down — nginx
-resolves upstream names at startup. Check `docker compose ps` before suspecting the config.
+nginx resolves the `app` hostname **per request** via Docker's embedded DNS, so it starts and
+passes `nginx -t` even when the app is down — you get **502** rather than a dead web server,
+and it recovers on its own once the app is back. A 502 therefore points at the app, not nginx:
+check `docker compose ps` and `docker compose logs app`.
 
 ## 5b. Certificate renewal
 

@@ -163,7 +163,14 @@ scriptable) or copying the volume across.
 
 ---
 
-## 7. Stop nginx crash-looping when the app is down
+## 7. Stop nginx crash-looping when the app is down — DONE 2026-08-13
+
+**Resolved.** Both fixes below were implemented and verified; kept here for the reasoning.
+
+Verified by killing the app container and restarting nginx — the exact scenario that failed
+during deployment. nginx now stays `running` with **0 restarts**, serves **502** while the app
+is absent, and **recovers on its own** (no restart needed) once the app returns. URI
+pass-through was re-checked byte-for-byte, query strings included.
 
 **Found during the 2026-08-13 deployment.** An unset `SESSION_SECRET` made the app exit on
 boot — correct fail-fast behaviour. But nginx then crash-looped *alongside* it:
@@ -192,6 +199,12 @@ Two independent fixes, ideally both:
    original URI automatically, hence the explicit `$request_uri`. Verify the sub-path still
    works end to end after this change; getting it wrong silently breaks `/alienworld/`.
 
-Fix 1 is the safer starting point. Fix 2 is what makes nginx genuinely independent — worth
-having before a second project shares this gateway (§6), where an app crash must not take down
-everyone else's site.
+Both were applied. Fix 1 (`docker-compose.yml`) makes a cold start ordered; fix 2
+(`nginx/conf.d/` **and** `nginx/bootstrap/`) makes nginx genuinely independent at runtime. That
+second property is what §6 depends on — once a shared gateway fronts several projects, one app
+crashing must not take down everyone else's site.
+
+**New failure signature to recognise:** with `condition: service_healthy`, a genuinely broken
+app now surfaces as
+`dependency failed to start: container alienworld-app is unhealthy` — an explicit error instead
+of two containers silently restarting forever. Check `docker-compose logs app`.

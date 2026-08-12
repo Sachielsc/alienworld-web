@@ -15,6 +15,14 @@ services:
       - "127.0.0.1:3010:3010"
     volumes:
       - app-data:/app/server/data
+    # Node has global fetch; the slim image ships neither curl nor wget. Derived from
+    # PORT/BASE_PATH so it stays correct if either changes.
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"const u='http://127.0.0.1:'+(process.env.PORT||3010)+(process.env.BASE_PATH||'')+'/api/health';fetch(u).then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))\""]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
 
   # Verified 2026-08-11: nothing else on the CVM listens on 80/443, so this container owns
   # them and terminates TLS. Starts with the default `docker compose up -d`.
@@ -22,8 +30,11 @@ services:
     image: nginx:1.27-alpine
     container_name: alienworld-nginx
     restart: unless-stopped
+    # service_healthy, not the bare list form: `depends_on: [app]` only waits for the
+    # container to START, which is why a crash-looping app used to drag nginx down with it.
     depends_on:
-      - app
+      app:
+        condition: service_healthy
     ports:
       - "80:80"
       - "443:443"
