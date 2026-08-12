@@ -44,7 +44,7 @@ These are conscious trade-offs, recorded so they are not mistaken for oversights
   git. `chmod 600 .env`.
 - The admin account is **re-seeded on every container start**, so changing `ADMIN_PASSWORD` in
   `.env` and restarting rotates the password.
-- ⚠️ The old site password `scsgdtcy3` is **public in git history**. Never reuse it.
+- ⚠️ The old site password is **public in git history**. Never reuse it.
 - `trust proxy` is set to `1` in production. If a CDN is ever added in front of nginx, that
   becomes **two** proxy hops and the value must be revisited — otherwise the rate limiter keys
   on the wrong IP and either lumps all visitors together or becomes spoofable.

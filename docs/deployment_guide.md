@@ -47,6 +47,18 @@ compiled in, not read from the environment.
 
 ## 0. One-time prerequisites
 
+> **Compose command on this CVM.** The box has Docker 28.2.2 with **Compose v2.40.3 as the
+> standalone `docker-compose` binary**, not as a `docker compose` CLI plugin — `docker compose`
+> returns *unknown command*. It is still V2, so everything in `docker-compose.yml` works
+> (`profiles:`, the omitted `version:` key, `${VAR:-default}`).
+>
+> **Read every `docker compose` below as `docker-compose`**, or register the plugin alias once:
+> ```bash
+> mkdir -p ~/.docker/cli-plugins
+> ln -s "$(which docker-compose)" ~/.docker/cli-plugins/docker-compose
+> ```
+> Do **not** install Compose V1 — it is end-of-life and cannot parse this file.
+
 1. **DNS**: create an `A` record, host `hobbies` (the label only — the panel appends the zone),
    value **`119.28.71.31`** — the CVM's public IP, see `docs/infrastructure_notes.md`.
    Wait until `nslookup hobbies.seekschool.nz` resolves.
@@ -83,9 +95,7 @@ nano .env
 
 Fill in:
 - `SESSION_SECRET`: output of `openssl rand -hex 32`
-- `ADMIN_USERNAME` / `ADMIN_PASSWORD`: your admin login. **Do not reuse the old site password
-  (`scsgdtcy3`) — it is public in git history.** The admin account is (re)seeded from these values
-  on every container start, so changing the password here + restarting also rotates it.
+- `ADMIN_USERNAME` / `ADMIN_PASSWORD`: your admin login.
 
 `chmod 600 .env` is a good habit.
 
