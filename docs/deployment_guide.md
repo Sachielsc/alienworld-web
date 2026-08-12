@@ -15,9 +15,10 @@ this stack runs its own nginx and certbot containers, and `docker compose up -d`
 three services. (An earlier draft of this guide assumed a host nginx; that came from believing
 `preprod` was proxied by this CVM. It is not — it is EdgeOne → COS.)
 
-> ✅ **Prerequisites are done** (2026-08-11): the `A` record resolves, and the security group
-> already allows 80/443 from anywhere. The ports currently answer *Connection refused* simply
-> because **nothing is bound to them yet** — the nginx container fixes that on first boot.
+> ✅ **Deployed and live since 2026-08-13.** DNS, security group, certificate, containers and
+> the renewal cron are all in place; production verification passed. This guide is now the
+> procedure for a **rebuild or a fresh host**, not a pending task. Certificate expires
+> **2026-11-10**, renewed weekly by cron.
 
 ```
 browser ──► nginx container :443 ──────► app container :3010

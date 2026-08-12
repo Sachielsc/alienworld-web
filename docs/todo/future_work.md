@@ -160,3 +160,38 @@ front door.
 The certificate lives in the `certbot-certs` volume of *this* project. Moving it means either
 re-issuing with certbot in the new gateway project (simplest — Let's Encrypt is free and
 scriptable) or copying the volume across.
+
+---
+
+## 7. Stop nginx crash-looping when the app is down
+
+**Found during the 2026-08-13 deployment.** An unset `SESSION_SECRET` made the app exit on
+boot — correct fail-fast behaviour. But nginx then crash-looped *alongside* it:
+
+```
+nginx: [emerg] host not found in upstream "app" in /etc/nginx/conf.d/alienworld.conf:32
+```
+
+nginx resolves upstream hostnames **once, at startup**. With no running `app` container, `app`
+does not exist in Docker's DNS, so nginx refuses to start and Docker restarts it forever with
+growing backoff. Net effect: **one bad `.env` took down the web server too**, and recovery
+needed a manual `docker-compose restart nginx` even after the app was healthy.
+
+Two independent fixes, ideally both:
+
+1. **Healthcheck + ordered start.** Give `app` a healthcheck hitting
+   `/alienworld/api/health`, and make nginx `depends_on: { app: { condition: service_healthy } }`.
+   `depends_on` alone only waits for the container to *start*, not to be usable.
+2. **Defer DNS resolution** so nginx starts regardless of the app's state:
+   ```nginx
+   resolver 127.0.0.11 valid=10s;          # Docker's embedded DNS
+   set $upstream http://app:3010;
+   proxy_pass $upstream$request_uri;
+   ```
+   ⚠️ Using a variable in `proxy_pass` changes URI handling — nginx no longer forwards the
+   original URI automatically, hence the explicit `$request_uri`. Verify the sub-path still
+   works end to end after this change; getting it wrong silently breaks `/alienworld/`.
+
+Fix 1 is the safer starting point. Fix 2 is what makes nginx genuinely independent — worth
+having before a second project shares this gateway (§6), where an app crash must not take down
+everyone else's site.
