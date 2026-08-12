@@ -91,15 +91,15 @@ Fill in:
 
 ## 3. First boot — HTTP only
 
-nginx cannot start the port-443 block before a certificate exists, so swap in the HTTP-only
-bootstrap config for the first run:
+Chicken-and-egg: nginx will not start while `ssl_certificate` points at a file that does not
+exist, and certbot cannot create that file until nginx serves the ACME challenge on port 80.
+
+`nginx/bootstrap/` holds an HTTP-only config for exactly this. Select it with an env var —
+**no files are edited or moved**:
 
 ```bash
-mv nginx/conf.d/alienworld.conf /tmp/alienworld.conf.real
-cp nginx/bootstrap-http-only.conf nginx/conf.d/alienworld.conf
-
-docker compose up -d --build      # app + nginx
-docker compose ps                 # both should be Up
+NGINX_CONF_DIR=./nginx/bootstrap docker compose up -d --build
+docker compose ps                 # app + nginx should both be Up
 ```
 
 Check it end to end over plain HTTP before involving TLS:
@@ -122,11 +122,15 @@ docker compose run --rm certbot certonly --webroot -w /var/www/certbot \
 
 ## 5. Restore the real config
 
+Drop the env var and compose remounts the real TLS config, recreating the nginx container:
+
 ```bash
-cp /tmp/alienworld.conf.real nginx/conf.d/alienworld.conf
+docker compose up -d
 docker compose exec nginx nginx -t      # syntax + certificate both check out now
-docker compose exec nginx nginx -s reload
 ```
+
+If `nginx -t` reports `host not found in upstream "app"`, the app container is down — nginx
+resolves upstream names at startup. Check `docker compose ps` before suspecting the config.
 
 ## 5b. Certificate renewal
 

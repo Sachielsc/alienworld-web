@@ -28,7 +28,11 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      # Defaults to the real TLS config. First boot has no certificate yet, so nginx cannot
+      # start that config - run it once with the HTTP-only bootstrap dir instead:
+      #   NGINX_CONF_DIR=./nginx/bootstrap docker compose up -d --build
+      # then issue the certificate and drop back to plain `docker compose up -d`.
+      - ${NGINX_CONF_DIR:-./nginx/conf.d}:/etc/nginx/conf.d:ro
       - certbot-webroot:/var/www/certbot
       - certbot-certs:/etc/letsencrypt
 
