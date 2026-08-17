@@ -161,7 +161,11 @@ async function main() {
   if (args.flags.has('preflight')) {
     if (!key) die(3, `seat "${name}" DOWN - ${seat.keyEnv} is not set in .env`);
     try {
-      await callWithRetry(name, seat, key, { model, messages: [{ role: 'user', content: 'ping' }], max_tokens: 1 }, 10000);
+      // Preflight keeps its own short budget so a dead seat is discovered cheaply, but an
+      // explicit --timeout must win: on a slow link Gemini needs >10s even for a 1-token
+      // ping, and hardcoding 10000 here reported a reachable seat as DOWN.
+      const preflightTimeout = args.timeout ? timeout : 10000;
+      await callWithRetry(name, seat, key, { model, messages: [{ role: 'user', content: 'ping' }], max_tokens: 1 }, preflightTimeout);
     } catch (err) {
       die(3, `seat "${name}" DOWN - ${err.message}`);
     }
@@ -207,9 +211,22 @@ async function main() {
   const text = json.choices?.[0]?.message?.content?.trim();
   if (!text) die(3, `seat "${name}" returned an empty response`);
 
+  // A seat that runs out of output budget still returns HTTP 200 with a partial answer,
+  // and a critique cut off mid-finding reads exactly like a complete one. Reasoning models
+  // make this routine - they spend the budget thinking before emitting a single word - so
+  // say so loudly rather than let half a review pass for the whole thing.
+  const finish = json.choices?.[0]?.finish_reason;
+  const truncated = finish === 'length';
+  if (truncated) {
+    console.error(
+      `ai-council: seat "${name}" TRUNCATED - finish_reason "length"; the answer is cut off. ` +
+      `Raise maxTokens for this seat in config.json and re-run before trusting it.`,
+    );
+  }
+
   if (args.out) {
     writeFileSync(resolve(process.cwd(), args.out), text);
-    console.error(`seat "${name}" OK - ${text.length} chars -> ${args.out}`);
+    console.error(`seat "${name}" ${truncated ? 'PARTIAL' : 'OK'} - ${text.length} chars -> ${args.out}`);
   } else {
     process.stdout.write(`${text}\n`);
   }

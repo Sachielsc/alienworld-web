@@ -362,6 +362,50 @@ body {
     color: #97ff77;
 }
 
+/* Movies page: section lead-ins and film metadata.
+   The page is one long column of cards. The two .white-frame cards announce a new
+   section ("video archive", then "movie collection") but were styled like every
+   other card, so the two halves of the page ran together. They get a green rule
+   and extra space above to act as a divider instead.
+   In the film cards, dt and dd computed identically (16px, #98a6ad, no indent -
+   Bootstrap zeroes dd's margin-left), so the metadata had no scannable structure. */
+
+.aw-movie.white-frame:not(:first-child) {
+    margin-top: calc(var(--aw-card-gap) * 2.5);
+}
+
+.aw-movie.white-frame {
+    border-left: 3px solid #97ff77;
+}
+
+.aw-movie dl {
+    margin-bottom: 0;
+}
+
+.aw-movie dt {
+    font-family: Inconsolata, monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: rgba(151, 255, 119, 0.75);
+    margin-top: 0.75rem;
+}
+
+.aw-movie dd {
+    margin-bottom: 0;
+    padding-left: 10px;
+    border-left: 1px solid rgba(152, 166, 173, 0.25);
+    /* Plot values are Wikipedia URLs. Without this an unbreakable URL paints past
+       the card edge - measured at up to 99px over at 390px wide. */
+    overflow-wrap: anywhere;
+}
+
+.aw-movie dd ul {
+    margin-bottom: 0;
+    padding-left: 1.1rem;
+}
+
 .meeting h4, .assignment h4, .card-box h4 {
     margin-top: 14px;
 }
