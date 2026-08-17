@@ -1,13 +1,9 @@
 # Charles' Alien World Project
-
-Charles' personal website, v4. A Vue 3 SPA served by an Express API, deployed with Docker on a
-Tencent Cloud CVM (Hong Kong). Rebuilt in 2026 from the original AngularJS 1.x / Heroku version
-(v3 — still available in git history).
-
-## Description
-This project is developed solely by **Charles**, an intermediate automation software tester.
+Charles' personal website, v4. Was developed solely by **Charles** in 2017. Reforged with AI in 2026.
 
 ## Stack
+A Vue 3 SPA served by an Express API, deployed with Docker on a
+Tencent Cloud CVM (Hong Kong). Rebuilt in 2026 from the original AngularJS 1.x / Heroku version (v3).
 - **client/** — Vue 3 + Vite + Vue Router (URLs preserved from the old ui-router states)
 - **server/** — Express, SQLite (better-sqlite3) user accounts, session auth, bcrypt
 - **nginx/** + **docker-compose.yml** — production reverse proxy with Let's Encrypt TLS
