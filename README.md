@@ -124,6 +124,26 @@ Frontend work can be run through `/frontend-beautify`, where Claude Code impleme
 two external models (a UI/UX designer and a code reviewer) critique the result. See
 `docs/ai_orchestration_usage.md`.
 
+### Two copies of this skill exist - pick deliberately
+The skill has been extracted into the reusable marketplace plugin
+[charles-claude-skills](https://github.com/CharlesXavier1126/charles-claude-skills), so this repo
+sees **both** it and its own local copy. They do not collide: plugin skills are namespaced by
+their plugin, so the two carry different invocation names.
+
+| Invocation | Which one |
+|---|---|
+| `/frontend-beautify` | the local, directory-scoped copy in `.claude/skills/` |
+| `/charles-claude-skills:frontend-beautify` | the marketplace one |
+
+Typing the bare name in this repo always gets the local copy. The only way to reach the
+marketplace version by accident is to describe the task in prose instead of typing the command,
+and let Claude pick.
+
+The two have diverged and will keep diverging. The local copy hardcodes this project (the router,
+the `ContentPage` indirection, `tools/ai-council/`); the marketplace copy discovers each repo at
+run time from `README.md` and `package.json`, bundles its own transport, and reads API keys from
+the process environment before falling back to `.env`. Fixes made in one do not reach the other.
+
 ## Modules
 - Workshop (state panel, skill tree, work reports, study notes, CV)
 - Community Hub (articles; forum planned)
