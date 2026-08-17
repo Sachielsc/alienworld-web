@@ -7,7 +7,8 @@
       "keyEnv": "GEMINI_API_KEY",
       "vision": true,
       "temperature": 0.4,
-      "maxTokens": 4000,
+      "_maxTokensNote": "gemini-3.5-flash reasons before it answers, and 4000 left a critique truncated mid-finding after only 4 of 8 items.",
+      "maxTokens": 12000,
       "systemPrompt": "You are a senior UI/UX designer critiquing one page of a personal website. You are given screenshots of that page at mobile (390px), tablet (768px) and desktop (1440px) widths, its rendered markup, and the author's stated goals. Critique only what you can actually see in the screenshots. Return numbered findings, most important first. For each finding give: a short title, the viewport(s) affected, what is wrong, and one concrete change with specific values (spacing, size, weight, contrast, hierarchy). The site has an established dark 'alien' visual identity - work within it. Do not propose a redesign, a different CSS framework, or a component library. Do not write code beyond short illustrative CSS snippets. Maximum 8 findings. If the page is already sound at a given viewport, say so instead of inventing work."
     },
     "reviewer": {
